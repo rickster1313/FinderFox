@@ -1,13 +1,16 @@
 var $j = jQuery.noConflict();
 		$j(document).ready(function(){
+			email_stats = false;
+			senha_stats = false;
+			telefone_stats = false;
+			cpf_cnpj_stats = false;
 
 			//mascaras de inputs
-			$j("#cpf").mask("000.000.000-00");
+			$j("#cpf_cnpj").mask("000.000.000-00");
 			$j("#telefone").mask("(00) 00000-0000");
-			$j("#cnpj").mask("00.000.000/0000-00");
 
 			//muda form par fisica ou juridica
-			var pessoa = "fisica";
+			pessoa = "fisica";
 			$j("input:radio[name=pessoa_txt]").bind("change", function(){
 				if ($j("input[name='pessoa_txt']:checked").val() == 'fisica') {
                 	pessoa = "fisica";
@@ -15,14 +18,16 @@ var $j = jQuery.noConflict();
             	if ($j("input[name='pessoa_txt']:checked").val() == 'juridica') {
                 	pessoa = "juridica";
             	}
+            	cpf_cnpj_stats = false;
+            	$j("#resp_pessoa").html("");
             	if(pessoa == "fisica"){
-            		$j("#div_cpf").css("display", "block");
-            		$j("#div_cnpj").css("display", "none");
-            		$j("#cpf").val("");
+            		$j("#cpf_cnpj").val("");
+            		$j("#cpf_cnpj").mask("000.000.000-00");
+            		$j("#labelPessoa").html("CPF");
             	}else{
-            		$j("#div_cpf").css("display", "none");
-            		$j("#div_cnpj").css("display", "block");
-            		$j("#cnpj").val("");
+     				$j("#cpf_cnpj").val("");
+     				$j("#cpf_cnpj").mask("00.000.000/0000-00");
+     				$j("#labelPessoa").html("CNPJ");
             	}
 			});
 			
@@ -51,21 +56,25 @@ var $j = jQuery.noConflict();
 				if(forca>=0 && forca <25){
 					$j("#forca").html("<strong>Senha Inválida</strong>");
 					$j("#forca").css("color", "gray");
+					senha_stats = false;
 				}
 				if(forca>=25 && forca <50){
 					$j("#forca").html("<strong>Fraca</strong>");
 					$j("#forca").css("color", "red");
+					senha_stats = false;
 				}else if(forca>=50 && forca <75){
 					$j("#forca").html("<strong>Média</strong>");
 					$j("#forca").css("color", "orange");
+					senha_stats = true;
 				}else if(forca>=75 && forca < 100){
 					$j("#forca").html("<strong>Forte</strong>");
 					$j("#forca").css("color", "green");
+					senha_stats = true;
 				}else if(forca==100){
 					$j("#forca").html("<strong>Muito Forte</strong>");
 					$j("#forca").css("color", "darkgreen");
+					senha_stats = true;
 				}
-				globalForca = forca;
 			});
 
 
@@ -86,8 +95,10 @@ var $j = jQuery.noConflict();
 			        		$j("#resp_email").html(json.texto);
 			        		if(json.status == true){
 			        			$j("#resp_email").css("color", "green");
+			        			email_stats = true;
 			        		}else{  
 			        			$j("#resp_email").css("color", "red");
+			        			email_stats = false;
 			        		}
 			        	},
 			        	error:function(){
@@ -100,10 +111,12 @@ var $j = jQuery.noConflict();
 			    }else{
 			        $j("#resp_email").html("E-mail inválido");  
 			        $j("#resp_email").css("color", "red"); 
+			        email_stats = false;
 			    }
 			}else{
 			    $j("#resp_email").html("Digite um e-mail");
 			    $j("#resp_email").css("color", "black");
+			    email_stats = false;
 			}
 
 			});
@@ -112,11 +125,43 @@ var $j = jQuery.noConflict();
 
 			var cpf_cnpj="";
 			
-				$j("#cpf").bind("keyup",function(){
+				$j("#cpf_cnpj").bind("keyup",function(){
 					cpf_cnpj = $j(this).val();
-					if(cpf_cnpj.length == 14){
-						cpf_cnpj = $j(this).serialize();
-			        	$j.ajax({
+					if(pessoa=="fisica"){
+						if(cpf_cnpj.length == 14){
+							cpf_cnpj = $j(this).serialize();
+				        	$j.ajax({
+					        	type:'GET',
+					        	url:'cadastro/verificaCPF_CNPJ',
+					        	data:cpf_cnpj,
+					        	dataType:'json',
+					        	success:function(json){
+					        		$j("#resp_pessoa").html(json.texto);
+					        		if(json.status == true){
+					        			$j("#resp_pessoa").css("color", "green");
+					        			cpf_cnpj_stats = true;
+					        		}else{  
+					        			$j("#resp_pessoa").css("color", "red");
+					        			cpf_cnpj_stats = false;
+					        		}
+					        	},
+					        	error:function(){
+					        		console.log("error no ajax");
+					        	}
+				        	});
+						}else if(cpf_cnpj.length == 0){
+							$j("#resp_pessoa").html("Digite um CPF");
+							$j("#resp_pessoa").css("color", "black");
+							cpf_cnpj_stats = false;
+						}else{
+							$j("#resp_pessoa").html("CPF inválido");
+							$j("#resp_pessoa").css("color", "red");
+							cpf_cnpj_stats = false;
+						}
+					}else{
+						if(cpf_cnpj.length == 18){
+							cpf_cnpj = $j(this).serialize();
+			        		$j.ajax({
 				        	type:'GET',
 				        	url:'cadastro/verificaCPF_CNPJ',
 				        	data:cpf_cnpj,
@@ -125,53 +170,68 @@ var $j = jQuery.noConflict();
 				        		$j("#resp_pessoa").html(json.texto);
 				        		if(json.status == true){
 				        			$j("#resp_pessoa").css("color", "green");
+				        			cpf_cnpj_stats = true;
 				        		}else{  
 				        			$j("#resp_pessoa").css("color", "red");
+				        			cpf_cnpj_stats = false;
 				        		}
 				        	},
 				        	error:function(){
 				        		console.log("error no ajax");
 				        	}
-			        	});
-					}else if(cpf_cnpj.length == 0){
-						$j("#resp_pessoa").html("Digite um CPF");
-						$j("#resp_pessoa").css("color", "black");
-					}else{
-						$j("#resp_pessoa").html("CPF inválido");
-						$j("#resp_pessoa").css("color", "red");
-					}
-				});
-			
-				$j("#cnpj").bind("keyup",function(){
-					cpf_cnpj = $j(this).val();
-					if(cpf_cnpj.length == 18){
-						cpf_cnpj = $j(this).serialize();
-			        	$j.ajax({
-				        	type:'GET',
-				        	url:'cadastro/verificaCPF_CNPJ',
-				        	data:cpf_cnpj,
-				        	dataType:'json',
-				        	success:function(json){
-				        		$j("#resp_pessoa").html(json.texto);
-				        		if(json.status == true){
-				        			$j("#resp_pessoa").css("color", "green");
-				        		}else{  
-				        			$j("#resp_pessoa").css("color", "red");
-				        		}
-				        	},
-				        	error:function(){
-				        		console.log("error no ajax");
-				        	}
-			        	});
-					}else if(cpf_cnpj.length == 0){
-						 $j("#resp_pessoa").html("Digite um CNPJ");
-						$j("#resp_pessoa").css("color", "black");
-					}else{
-						$j("#resp_pessoa").html("CNPJ inválido");
-						$j("#resp_pessoa").css("color", "red");
+			        		});
+						}else if(cpf_cnpj.length == 0){
+						    $j("#resp_pessoa").html("Digite um CNPJ");
+							$j("#resp_pessoa").css("color", "black");
+							cpf_cnpj_stats = false;
+						}else{
+							$j("#resp_pessoa").html("CNPJ inválido");
+							$j("#resp_pessoa").css("color", "red");
+							cpf_cnpj_stats = false;
+						}
 					}
 				});
 
+				
+
+				$j("#telefone").bind("keyup",function(){
+					var digitos = $j(this).val();
+					if(digitos.length == 15){
+						telefone_stats = true;
+					}else{
+						telefone_stats = false;
+					}
+				});
+
+				$j("#form_cadastro").bind("submit",function(e){
+					e.preventDefault();
+					if(!email_stats){
+						$j("#email").focus();
+					}else if(!senha_stats){
+						$j("#senha").focus();
+					}else if(!telefone_stats){
+						$j("#telefone").focus();
+					}else if(!cpf_cnpj_stats){
+						if(pessoa == "fisica"){
+							$j("#cpf").focus();
+						}else{
+							$j("#cnpj").focus();
+						}
+						
+					}else{
+						$j.ajax({
+				        	type:'POST',
+				        	url:'cadastro/cadastrar',
+				        	data:$j("#form_cadastro").serialize(),
+				        	success:function(){
+				        		window.location.href = "login";
+				        	},
+				        	error:function(){
+				        		console.log("error no ajax");
+				        	}
+			        	});
+					}
+				});
 
 
 		});

@@ -38,28 +38,39 @@
 		public function verificaCPF_CNPJ(){
 			$usuariosModel = new usuariosModel();
 			$array = array("status" => "", "texto" => "");
-			if(isset($_GET["CPF_txt"])){
-				$cpf = $_GET["CPF_txt"];
-				$sql = $usuariosModel->verificaCPF($cpf);
-				if($sql -> rowCount() > 0){
-					$array['status'] = false;
+			$cpf_cnpj = $_GET["CPF_CNPJ_txt"];
+			$sql = $usuariosModel->verificaCPF_CNPJ($cpf_cnpj);
+			if($sql -> rowCount() > 0){
+				$array['status'] = false;
+				if(strlen($cpf_cnpj) == 14){
 					$array['texto'] = "Este CPF já está em uso";
 				}else{
-					$array['status'] = true;
-					$array['texto'] = "CPF OK";
+					$array['texto'] = "Este CNPJ já está em uso";
 				}
 			}else{
-				$cnpj = $_GET["CNPJ_txt"];
-				$sql = $usuariosModel->verificaCNPJ($cnpj);
-				if($sql -> rowCount() > 0){
-					$array['status'] = false;
-					$array['texto'] = "Este CNPJ já está em uso";
+				$array['status'] = true;
+				if(strlen($cpf_cnpj) == 14){
+					$array['texto'] = "CPF OK";
 				}else{
-					$array['status'] = true;
 					$array['texto'] = "CNPJ OK";
 				}
+				
 			}
 			echo json_encode($array);
+		}
+		public function cadastrar(){
+
+			$nome = addslashes($_POST["nome_txt"]);
+			$data = addslashes($_POST["data_txt"]);
+			$email = addslashes($_POST["email_txt"]);
+			$senha =  password_hash(addslashes($_POST["senha_txt"]), PASSWORD_DEFAULT);
+			$endereco = addslashes($_POST["endereco_txt"]);
+			$telefone = addslashes($_POST["telefone_txt"]);
+			$sexo = addslashes($_POST["sexo_txt"]);
+			$cpf_cnpj = addslashes($_POST["CPF_CNPJ_txt"]);
+
+			$usuariosModel = new usuariosModel();
+			$usuariosModel->cadastraUsuario($nome, $data, $email, $senha, $endereco, $telefone, $sexo, $cpf_cnpj);
 		}
 	}
 

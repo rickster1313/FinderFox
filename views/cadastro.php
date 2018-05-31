@@ -25,7 +25,7 @@
 		
 
 		<label>Senha</label><br>
-		<input id="senha" type="password" name="senha_txt" required="required"><em> recomendado no mínimo 8 caracteres, incluindo letras minúsculas/maiúsculas e numeros</em>
+		<input id="senha" type="password" name="senha_txt" required="required"><em>recomendado no mínimo 8 caracteres, o uso de letras minúsculas/maiúsculas e numeros</em>
 		<div id="forca"></div>
 		<br><br>
 
@@ -36,20 +36,16 @@
 		<input id="telefone" type="text" name="telefone_txt" required="required" /><br><br>
 
 		<label>Sexo</label><br>
-		<input type="radio" name="sexo_txt" value="masculino" checked="checked" />Masculino<br>
-		<input type="radio" name="sexo_txt" value="feminino"/>Feminino<br>
-		<input type="radio" name="sexo_txt" value="outro"/>Outro<br><br>
+		<input type="radio" name="sexo_txt" value="Masculino" checked="checked" />Masculino<br>
+		<input type="radio" name="sexo_txt" value="Feminino"/>Feminino<br>
+		<input type="radio" name="sexo_txt" value="Outro"/>Outro<br><br>
 
 		<label>Tipo de Pessoa</label><br>
 		<input type="radio" name="pessoa_txt" checked="checked" value="fisica"/>Física
 		<input type="radio" name="pessoa_txt" value="juridica"/>Jurídica<br><br>
 		<div id="div_cpf">
-			<label>CPF</label><br>
-			<input id="cpf" type="text" name="CPF_txt"/>
-		</div>
-		<div id="div_cnpj" style="display: none">
-			<label>CNPJ</label><br>
-			<input id="cnpj" type="text" name="CNPJ_txt"/>
+			<label id="labelPessoa">CPF</label><br>
+			<input id="cpf_cnpj" type="text" name="CPF_CNPJ_txt" required="required" />
 		</div>
 		<div id="resp_pessoa"></div>
 
