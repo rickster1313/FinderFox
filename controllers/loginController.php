@@ -2,6 +2,7 @@
 	
 	class loginController extends Controller {
 		public function index(){
+			$this->testaLogin();
 			$nomePag = "login";
 			$dados = array();
 			$this->loadView($nomePag, $dados);
@@ -35,6 +36,19 @@
 			}
 		}
 
+		private function testaLogin(){
+			//testa para ver se ja tem usuario logado
+			if(isset($_SESSION["id"])){
+				if($_SESSION["nvl_acesso"] == "adm"){
+					header("Location:".BASE_URL."adm");
+				}else if($_SESSION["nvl_acesso"] == "empresario"){
+					header("Location:".BASE_URL."empresario");
+				}else{
+					echo "envia para area de clientes";
+				}
+			}
+		}
+
 		private function fazerLogin($dados){
 			//faz login depois dos dados estarem corretos
 			$_SESSION["id"] = $dados["id"];
@@ -43,7 +57,7 @@
 			if($dados["nvl_acesso"] == "adm"){
 				header("Location:".BASE_URL."adm");
 			}elseif ($dados["nvl_acesso"] == "empresario") {
-				echo "Mandar para painel de Empresarios";
+				header("Location:".BASE_URL."empresario");
 			}else{
 				echo "Mandar para painel de Clientes";
 			}

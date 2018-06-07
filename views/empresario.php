@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Página ADM</title>
+	<title>Página EMPRESÁRIO</title>
+
 	<meta charset="utf-8">
 	<style type="text/css">
-
 		body{
 			padding: 0px;
 			margin: 0px;
-		}
-		#container{
-			
 		}
 		#btn_sair{
 			position: absolute;
@@ -28,7 +25,6 @@
 			color: white;
 		}
 		#header{
-			z-index: 5;
 			padding-left: 10px;
 			position: absolute;
 			top: 0px;
@@ -37,29 +33,15 @@
 			background-color: rgba(30,30,146,1);
 			border-bottom: black solid 1px;
 		}
-		#menu{
-			z-index: 4;
-			padding-left: 10px;
-			position: absolute;
-			width: 200px;
-			height: 100%;
-			background-color: green;
-		}
 	</style>
 </head>
 <body>
-	<div id="container">
-		<div id="header">
+<div id="header">
 
-		<h1>Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
-		<a href="<?php echo BASE_URL ?>login/deslogar"><button id="btn_sair">SAIR</button></a>
-		
-		</div>
-		<div id="menu">
-			casd
-		</div>
+	<h1>Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
+	<a href="<?php echo BASE_URL ?>login/deslogar"><button id="btn_sair">SAIR</button></a>
 
-	</div>	
-	
+</div>
+
 </body>
 </html>
