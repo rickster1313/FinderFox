@@ -144,9 +144,9 @@ Eu + Outros | Ninguém
  |                   | do que os bens de       |                            |
  |                   | consumo duraveis        |                            |
  |-------------------|------------------------------------------------------|
- |					 | É comprado e consumido  |  							|
- | Não duravel       | em periodos de tempo    | Alimentos, produtos de 	|
- |					 | curtos                  | higiene pessoal			|
+ |					         | É comprado e consumido  |  							            |
+ | Não duravel       | em periodos de tempo    | Alimentos, produtos de 	  |
+ |					         | curtos                  | higiene pessoal			      |
  ----------------------------------------------------------------------------
 
 
@@ -163,3 +163,67 @@ Eu + Outros | Ninguém
   * A demonstração do resultado.
   * O balanço patrimonial
   * O fluxo de caixa
+
+
+
+
+
+     Matematica Financeira 
+
+  A formula básica dos juros simples
+
+  J = P * i
+
+  J -> juros recebido em um periodo
+  P -> É o principal valor investido
+  i -> É a taxa de juros
+
+  Imagine que você vai aplicar R$ 1 mil nume poupança que rende 2% ao mês
+  e pretende retirar os rendimentos mensais.
+
+  J = 1.000,00 * 0,02 = 20,00
+
+
+  A formula basica dos juros compostos
+
+  VF = VP * [(1 + i)^n]
+
+  VF -> Valor futuro
+  VP or p -> Valor presente
+  i -> Taxa de juros
+  n ->Numeros de periodos pelos quais o VP ficara
+
+  OBS: Lembrando q "n" é em mês
+
+  Se você depositar R$ 5 mil nume aplicação ou conta poupança, que rende 1% 
+  ao mês, e deixar o dinheiro durante 30 anos, quanto terá ao final desse periodo?
+
+  Resposta: VF = R$ 5.000,00
+
+
+  Agora imagine que você fosse comprar um PC de R$ 6.000,00, mas decide 
+  fazer em 2X R$ 3.000,00 e vai deixando dinehrio na poupança até o pagamento.
+
+  Qnato precisa deixar na poupança para a primeira parcela?
+
+
+       R$ 3.000,00
+  VP = -----------   = R$ 2.964,43
+        (1,012^1)
+
+
+  Qnato precisa deixar na poupança para a segunda parcela?
+
+        R$ 3.000,00
+  VP = -----------   = R$ 2.929,29
+        (1,012^1)
+
+
+
+  Entao vc teria que ter a somo de ambos (2.964,43 + 2.929,28 = 5.893,71)
+  Mas se ele der um desconto de 5% (5% de 6.000,00) vai compenssar mais, pois o 
+  valor a vista será:
+  6.000,00 - 300 = 5.700,00 < 5.893,71
+
+
+ 
