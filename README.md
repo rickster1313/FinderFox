@@ -1,4 +1,4 @@
 # FinderFox
 @Riquelme
-@Luciano
+@Luci
 @Gustavo
