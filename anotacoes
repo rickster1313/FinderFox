@@ -6,10 +6,10 @@ Utilizando recursos somente necessários
 
 O que torna as empresas realmente visionaria são algumas prática comum ao longo de suas historioa como:
  - Dar as ferramentas, não as soluções;
- - Estimular o progresso;
- - Metas audaciosas;
+ - Estimular o progresso; // Graficos e planilhas de estaticas
+ - Metas audaciosas; // Deixar como notas aos funcionarios ou clientes
  - Boa cultura orgazinizacional;
- - Gerentes treinados internamente;
+ - Gerentes treinados internamente; // Parte do sistema para treinalos
  - Inivação permanente;
 
                         
@@ -23,19 +23,19 @@ O que torna as empresas realmente visionaria são algumas prática comum ao long
 
 
 
-    Politica da entrega do produto:
+    Politica da entrega do produto: // Parte das funções
 
- - A entrega deve ocorrer no tempo que po cliente propois;
+ - A entrega deve ocorrer no tempo que o cliente propois; 
  - Caso o produto atrase ou esteja incorreto o cliente pode entrar em contato com a empresa e resolver o assunto.
 
-   Politica para o cancelamneto da entrega:
+   Politica para o cancelamneto da entrega: // Parte das funções
 
  - O cliente pode entrar em contato com a empresa e fazer seu cancelamento;
  - O cancelamento pode ser feito pelo telefone ou o site da empresa.
 
 
       Programa 
-   São planos detalhados que contêm:
+   São planos detalhados que contêm: // O dono do AV pode deixar notas 
   - Atividades que devem ser executadas.
   - Tempos ou prazos para cada uma.
 
@@ -43,7 +43,7 @@ O que torna as empresas realmente visionaria são algumas prática comum ao long
    Os orçamentos são planos operacionais que relacionam necessidades de recursos financeiros 
    com periodos de tempo e atividades a desempenhar
 
-     Regulamento
+     Regulamento // O dono do Av pode escolher um lugar para deixar isso em destaque
    Os regulamentos referem-se ao comportamento esperado das pessoas na organização. Definem o que as pessoas 
    podem ou não podem fazer, como devem comporta-se em diferentes situações
 
@@ -53,6 +53,7 @@ O que torna as empresas realmente visionaria são algumas prática comum ao long
    Antes de tomar uma decisão, da mais simples a mais importante, é necessario informar-se sobre o assunto.
   Um grupo de pessoas decidem abrir um açougue na cidade, porque não tem nenhm na cidade.
   Porem eles não buscam saber o porque e acabam descobrindo que todos da cidade são vegetarianos.
+  // Algoritimo que a semelha o tipo de negocio com o local, para uma analise amplificada
 
 
    Passo a Passo da pesquisa de mercado
@@ -65,7 +66,7 @@ O que torna as empresas realmente visionaria são algumas prática comum ao long
   * Tabulação e analise dos dados.
 
 
-  	Tipos de empresas
+  	Tipos de empresas // O dono pode saber em qual ele se encaixa
 
   MEI- Micro Empreendedor Individual
   ME - Micro Empresa
@@ -108,6 +109,7 @@ Eu + Outros | Ninguém
 
     Avaliação de desempenho
   "Um funcionario precisa saber se esta trabalhando bem";
+  // Função que permite aos funcionarios e dono saber se estão indo bem
 
 
 
@@ -119,6 +121,7 @@ Eu + Outros | Ninguém
    |
  Tangivel -> Casa
  Intangivel -> Marca
+ // Depois de incluir os dados ao sistema, o superior pode ver separadamente os bens tangiveis e intagiveis
 
   ______________________________________________________________________
  | Bem             |  Utilização               |  Exemplo              |
@@ -152,10 +155,12 @@ Eu + Outros | Ninguém
 
    Orçamento operacional: é a atividade da empresa detalhada em numeros:
  vendas, produção, materiais, salarios, emcargos sobre mão-de-obra, etc...
+ // Tabelas que mostrem isso 
 
-   Orçamento financeiro: é a projeçaõ dosrelatorios financeiro da organização,
- mostrando que resultados serão atingidos em termos enconomicos, financeitros e
+   Orçamento financeiro: é a projeçaõ dos relatorios financeiro da organização,
+ mostrando que resultados que serão atingidos em termos enconomicos, financeitros e
  patrimoniais, a partir do planejamento realizado.
+ // Aba parecida com Word para a realizaççao de relatórios
 
 
      Orçamento financeiro
@@ -166,6 +171,11 @@ Eu + Outros | Ninguém
 
 
 
+
+
+
+
+// Scripts que claculam diversos juros, tais como: Conta poupança, Dividas parecladas etc...
 
 
      Matematica Financeira 
