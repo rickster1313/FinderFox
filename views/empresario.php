@@ -1,47 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-	<title>Página EMPRESÁRIO</title>
-
 	<meta charset="utf-8">
-	<style type="text/css">
-		body{
-			padding: 0px;
-			margin: 0px;
-		}
-		#btn_sair{
-			position: absolute;
-			right: 20px;
-			top: 20px;
-			width: 100px;
-			height: 20px;
-			border: black solid 1px;
-			border-radius: 5px;
-			background:white;
-			color: rgba(30,30,146,1);
-		}
-		#btn_sair:hover{
-			background:black;
-			color: white;
-		}
-		#header{
-			padding-left: 10px;
-			position: absolute;
-			top: 0px;
-			width: 100%; 
-			height: 150px;
-			background-color: rgba(30,30,146,1);
-			border-bottom: black solid 1px;
-		}
-	</style>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Página EMPRESÁRIO</title>
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
+	
 </head>
 <body>
-<div id="header">
 
 	<h1>Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
 	<a href="<?php echo BASE_URL ?>login/deslogar"><button id="btn_sair">SAIR</button></a>
 
-</div>
 
+
+	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
+	
 </body>
 </html>
