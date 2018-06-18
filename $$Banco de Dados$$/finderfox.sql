@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Jun-2018 às 02:27
--- Versão do servidor: 10.1.22-MariaDB
--- PHP Version: 7.1.4
+-- Generation Time: 18-Jun-2018 às 16:50
+-- Versão do servidor: 10.1.19-MariaDB
+-- PHP Version: 5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -21,6 +19,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `finderfox`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_avs`
+--
+
+CREATE TABLE `tbl_avs` (
+  `id_av` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `url` varchar(220) NOT NULL,
+  `nome_av` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -58,6 +69,12 @@ INSERT INTO `tbl_usuarios` (`id`, `nome`, `data_nasc`, `nvl_acesso`, `email`, `s
 --
 
 --
+-- Indexes for table `tbl_avs`
+--
+ALTER TABLE `tbl_avs`
+  ADD PRIMARY KEY (`id_av`);
+
+--
 -- Indexes for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
@@ -68,12 +85,15 @@ ALTER TABLE `tbl_usuarios`
 --
 
 --
+-- AUTO_INCREMENT for table `tbl_avs`
+--
+ALTER TABLE `tbl_avs`
+  MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
