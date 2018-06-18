@@ -13,8 +13,7 @@
 
 	<style type="text/css">
 		.sidenav {
-    height: 100%;
-    width: 160px;
+    height: 100%; 
     position: fixed;
     z-index: 1;
     top: 0;
@@ -47,20 +46,57 @@
 <body>
 
 	<div class="container-fluid">
-	<div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
-</div>
+
+    <div class="row">
+
+      <div class="col-sm-2">
+        <div class="sidenav">
+        <ul class="nav">
+          <li class="active">
+      <a href="#av" data-toggle="tab">AV</a>
+    </li>
+      <li>
+      <a  href="#services" data-toggle="tab">dsdsdsdsd</a>
+    </li>
+      <li>
+      <a  href="#clients" data-toggle="tab">AdsdsddsdsV</a>
+    </li>
+      <li>
+      <a class=" href="#contact" data-toggle="tab">AsdsfgfgdsdsddV</a>
+    </li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm-10" style="background-color: red">
+        <h1 class="float-left">Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
+        <a class="float-right" href="<?php echo BASE_URL ?>login/deslogar"><button class="btn btn-outline-dark" id="btn_sair">SAIR</button></a>
+      </div>
+  <div class="container">
+
+<div class="tab-content">
+<div id="av" class="tab-pane in active">HOMEeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+
 </div>
 
-<div class="container">
+<div id="services" class="tab-pane fade">
+  <h2>SOBRE NÓSaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h2>
+</div>
 
-<h1 class="float-left">Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
-	<a href="<?php echo BASE_URL ?>login/deslogar"><button class="btn btn-outline-dark" id="btn_sair">SAIR</button></a>
+<div id="clients" class="tab-pane fade">BENEFICIOSssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+</div>
+
+<div id="contact" class="tab-pane fade">SUPORTE</div>
+</div>
 
 </div>
+    </div>  
+   
+
+  </div>
+
+
 
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
