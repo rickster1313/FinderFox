@@ -13,8 +13,7 @@
 
 	<style type="text/css">
 		.sidenav {
-    height: 100%;
-    width: 160px;
+    height: 100%; 
     position: fixed;
     z-index: 1;
     top: 0;
@@ -47,20 +46,28 @@
 <body>
 
 	<div class="container-fluid">
-	<div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
-</div>
-</div>
 
-<div class="container">
+    <div class="row">
 
-<h1 class="float-left">Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
-	<a href="<?php echo BASE_URL ?>login/deslogar"><button class="btn btn-outline-dark" id="btn_sair">SAIR</button></a>
+      <div class="col-sm-2">
+        <div class="sidenav">
+          <a href="#av">Ambiente Virtual</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
 
-</div>
+      <div class="col-sm-10" style="background-color: red">
+        <h1 class="float-left">Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
+        <a class="float-right" href="<?php echo BASE_URL ?>login/deslogar"><button class="btn btn-outline-dark" id="btn_sair">SAIR</button></a>
+      </div>
+
+    </div>  
+
+  </div>
+
+
 
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
