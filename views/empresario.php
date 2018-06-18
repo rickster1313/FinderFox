@@ -14,6 +14,7 @@
 	<style type="text/css">
 		.sidenav {
     height: 100%; 
+
     position: fixed;
     z-index: 1;
     top: 0;
@@ -32,7 +33,8 @@
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #000;
+    background-color: #fff;
 }
 
 
@@ -44,57 +46,53 @@
 	
 </head>
 <body>
-
-	<div class="container-fluid">
-
-    <div class="row">
-
-      <div class="col-sm-2">
+        
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-sm-2">
         <div class="sidenav">
-        <ul class="nav">
-          <li class="active">
-      <a href="#av" data-toggle="tab">AV</a>
+        <ul class="nav flex-column nav-pills">
+          <li class="nav-item">
+      <a href="#av" data-toggle="tab">Ambiente Virtual</a>
     </li>
-      <li>
-      <a  href="#services" data-toggle="tab">dsdsdsdsd</a>
+      <li class="nav-item">
+      <a  href="#services" data-toggle="pill">dsdsdsdsd</a>
     </li>
-      <li>
-      <a  href="#clients" data-toggle="tab">AdsdsddsdsV</a>
+      <li class="nav-item">
+      <a  href="#clients" data-toggle="pill">AdsdsddsdsV</a>
     </li>
-      <li>
-      <a class=" href="#contact" data-toggle="tab">AsdsfgfgdsdsddV</a>
+      <li class="nav-item">
+      <a href="#contact" data-toggle="pill">AsdsfgfgdsdsddV</a>
     </li>
           
           </ul>
         </div>
       </div>
-
-      <div class="col-sm-10" style="background-color: red">
-        <h1 class="float-left">Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
+      
+        <div class="col-sm-10">
+       <h1 class="float-left">Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
         <a class="float-right" href="<?php echo BASE_URL ?>login/deslogar"><button class="btn btn-outline-dark" id="btn_sair">SAIR</button></a>
-      </div>
-  <div class="container">
-
+      
+  
 <div class="tab-content">
-<div id="av" class="tab-pane in active">HOMEeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+<div id="av" class="tab-pane in active">Ambiente virtual
 
 </div>
 
 <div id="services" class="tab-pane fade">
-  <h2>SOBRE NÓSaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h2>
+  <h2>SOBRE NÓS</h2>
 </div>
 
-<div id="clients" class="tab-pane fade">BENEFICIOSssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+<div id="clients" class="tab-pane fade">BENEFICIOS
 </div>
 
 <div id="contact" class="tab-pane fade">SUPORTE</div>
 </div>
-
 </div>
-    </div>  
-   
+</div>
+     </div>
 
-  </div>
+
 
 
 
