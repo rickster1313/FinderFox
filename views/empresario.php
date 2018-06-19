@@ -66,7 +66,7 @@
                         <a href="#primeiro" data-toggle="tab">1 pagina</a>
                     </li>
                     <li class="nav-item">
-                        <a  href="#av" data-toggle="pill">Ambiente virtual</a>
+                        <a  href="#av_conteudo" id="menu_av" data-toggle="pill">Ambiente virtual</a>
                     </li>
                     <li class="nav-item">
                         <a  href="#terceiro" data-toggle="pill">3 pagina</a>
@@ -89,9 +89,7 @@
                     <h1>Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
                 </div>
 
-                <div id="av" class="tab-pane fade">
-                    AV
-                </div>
+                <div id="av_conteudo" class="tab-pane fade"></div>
 
                 <div id="terceiro" class="tab-pane fade">
                     3 pagina
@@ -112,5 +110,6 @@
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
 </body>
 </html>

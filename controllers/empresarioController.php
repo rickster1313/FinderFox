@@ -13,6 +13,22 @@
 
 		}
 
+		public function verificaAV(){
+			$array=array(
+				"exists"=>"",
+				"create"=> BASE_URL.'views/html/av_create.php',
+				"personalize"=> BASE_URL.'views/html/av_personalize.php'
+			);
+			$avsModel = new avsModel();
+			$avs_dados = $avsModel->procuraAV($_SESSION['id']);
+			if($avs_dados-> rowCount() > 0){
+				$array['exists'] = "yes";
+			}else{
+				$array['exists'] = "no";
+			}
+			echo json_encode($array);
+		}
+
 		private function seguranca(){
 			$seguro = true;
 			//teste se login está OK
