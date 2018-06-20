@@ -25,20 +25,20 @@
 		?>
 
 	<div class="container-fluid">
-    <div class="row">
-    <div class="col-sm-6" style="background-color:#17a2b8;">
-    IMAGEM
+    <div class="row" style="height: 800px;">
+    <div class="col-md-6 h-100" style="background-image: url(assets/images/pessoa_feliz.jpg); background-size: cover; background-color: #666;">
+
     </div>
-    <div class="col-sm-6">
-    <center>
-	<form method="POST" action="<?php echo BASE_URL."login/valida" ?>" class="justify-content-center"> 
-	<div class="input-group mb-3" style="width: 50%;">
+    <div class="col-md-6 h-80" style="background-color:#999;">
+    
+	<form method="POST" action="<?php echo BASE_URL."login/valida" ?>"> 
+	<div class="input-group mb-3 w-75">
       <div class="input-group-prepend">
         <span class="input-group-text">E-mail</span>
       </div>
-		<input  class="form-control" type="text" placeholder="E-Mail..." name="email_txt" required /><br><br>
+		<input class="form-control" type="text" placeholder="E-Mail..." name="email_txt" required /><br><br>
 		</div>
-		<div class="input-group mb-3" style="width: 50%;">
+		<div class="input-group mb-3 w-75">
 		<div class="input-group-prepend">
         <span class="input-group-text">Senha</span>
       </div>
@@ -46,7 +46,7 @@
 		</div>
 		<input class="btn btn-outline-dark" type="submit" name="enviar_login" value="Logar">
 	</form>
-	</center>
+
 	</div>
 	</div>
 	</div>

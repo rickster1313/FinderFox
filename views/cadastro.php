@@ -22,8 +22,8 @@
 			unset($_SESSION["msg"]);
 		} 
 	?>
-	<form method="POST" id="form_cadastro" >
-		<div class="input-group mb-3" style="width: 50%;">
+	<form method="POST" id="form_cadastro" class="">
+		<div class="input-group mb-3" style="width: 50%; ">
       <div class="input-group-prepend">
         <span class="input-group-text">Nome</span>
       </div>
