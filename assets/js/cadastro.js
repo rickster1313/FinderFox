@@ -212,12 +212,7 @@ var $j = jQuery.noConflict();
 					}else if(!telefone_stats){
 						$j("#telefone").focus();
 					}else if(!cpf_cnpj_stats){
-						if(pessoa == "fisica"){
-							$j("#cpf").focus();
-						}else{
-							$j("#cnpj").focus();
-						}
-						
+						$j("#cpf_cnpj").focus();
 					}else{
 						$j.ajax({
 				        	type:'POST',

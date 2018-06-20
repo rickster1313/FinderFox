@@ -17,12 +17,17 @@
         Nele você pode gerenciar as funções necessárias para ter uma melhor experiência e avanço!!<br> <br>
             Para começar informe algumas informações necessárias e criaremos uma Ambiente padrão para você:<hr>
     </div>
-    <form method="POST" id="form_newAV">
+    <form method="POST" id="form_newAV" enctype="multipart/form-data">
         
         <div>
             <label><strong>Nome do seu AV </strong></label><br>
             <input type="text" name="nome_empresa"> Dica: Nome de seu negócio/empresa (isso influenciará no link de sua página)
             <br> <em>ex.: Meu negócio online (www.finderfox.com/meu-negocio-online).</em>
+        </div>
+        <br>
+         <div>
+            <label><strong>Logo</strong></label><br>
+            <input type="file" name="nome_empresa_txt" size="70">
         </div>
         <br>
         <div>
