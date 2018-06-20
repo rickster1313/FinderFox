@@ -85,11 +85,11 @@
 <br>
     <label>Tipo de Pessoa</label><br>
         <div class="custom-control custom-radio custom-control-inline">
-    <input type="radio" class="custom-control-input" id="customRadio4" name="pessoa_text" checked="checked">
+    <input type="radio" class="custom-control-input" value="fisica" id="customRadio4" name="pessoa_txt" checked="checked">
     <label class="custom-control-label" for="customRadio4">Fisica</label>
   </div>
   <div class="custom-control custom-radio custom-control-inline">
-    <input type="radio" class="custom-control-input" id="customRadio5" name="pessoa_text">
+    <input type="radio" class="custom-control-input" value="juridica" id="customRadio5" name="pessoa_txt">
     <label class="custom-control-label" for="customRadio5">Juridica</label>
   </div> 
   <br><br>
@@ -97,7 +97,7 @@
 		
 		<div class="input-group mb-3" style="width: 50%;">
       <div class="input-group-prepend">
-        <span class="input-group-text">CPF</span>
+        <span id="labelPessoa" class="input-group-text">CPF</span>
       </div>
 		<div id="div_cpf">
 			<input class ="form-control" id="cpf_cnpj" type="text" name="CPF_CNPJ_txt" required="required" />
