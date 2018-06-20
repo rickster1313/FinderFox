@@ -68,14 +68,7 @@
 </div>
 
 <div id="Beneficios" class="tab-pane fade">BENEFICIOS
-</div>
-
-<div id="Suporte" class="tab-pane fade">SUPORTE</div>
-</div>
-
-</div>
-
-<section class="main">
+	<section class="main">
 			
 				<ul class="ch-grid">
 					<li>
@@ -105,6 +98,14 @@
 				</ul>
 				
 			</section>
+</div>
+
+<div id="Suporte" class="tab-pane fade">SUPORTE</div>
+</div>
+
+</div>
+
+
 
 
 

@@ -16,15 +16,15 @@
 }
 
 .ch-img-1 { 
-	background-image: url(assets/images/1.jpg);
+	background-image: url("./images/1.jpg");
 }
 
 .ch-img-2 { 
-	background-image: url(assets/images/2.jpg);
+	background-image: url(./images/2.jpg);
 }
 
 .ch-img-3 { 
-	background-image: url(assets/images/3.jpg);
+	background-image: url(./images/3.jpg);
 }
 
 .ch-info {
