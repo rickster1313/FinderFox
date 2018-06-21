@@ -29,24 +29,26 @@
     <div class="col-md-6 h-100" style="background-image: url(assets/images/pessoa_feliz.jpg); background-size: cover; background-color: #666;">
 
     </div>
-    <div class="col-md-6 h-80" style="background-color:#999;">
+    <div class="col-md-6 h-100">
     
-	<form method="POST" action="<?php echo BASE_URL."login/valida" ?>"> 
-	<div class="input-group mb-3 w-75">
+
+	<form method="POST" action="<?php echo BASE_URL."login/valida" ?>" style="position: relative; left: 50%; top: 50%; transform: translate(-50%,-50%);"> 
+		<h3 class="text-center">Faça Login é gratis</h3><br>
+	<div class="input-group mb-3 w-75 mx-auto">
       <div class="input-group-prepend">
         <span class="input-group-text">E-mail</span>
       </div>
-		<input class="form-control" type="text" placeholder="E-Mail..." name="email_txt" required /><br><br>
+		<input autofocus="autofocus" class="form-control" type="text" placeholder="E-Mail..." name="email_txt" required /><br><br>
 		</div>
-		<div class="input-group mb-3 w-75">
+		<div class="input-group mb-3 w-75 mx-auto ">
 		<div class="input-group-prepend">
         <span class="input-group-text">Senha</span>
       </div>
 		<input class="form-control" type="password" placeholder="Senha..." name="senha_txt" required /><br><br>
 		</div>
-		<input class="btn btn-outline-dark" type="submit" name="enviar_login" value="Logar">
+		<input class="btn btn-outline-dark mx-auto d-block w-25" type="submit" name="enviar_login" value="Logar" style="border-radius: 15px;">
 	</form>
-
+   
 	</div>
 	</div>
 	</div>
