@@ -17,12 +17,7 @@
 	<h1>Aqui é a página Login</h1>
 	<a href="<?php echo BASE_URL ?>"><button class="btn btn-outline-dark">Página Inicial</button></a>
 		<hr>
-		<?php 
-			if(isset($_SESSION["msg"])){
-				echo $_SESSION["msg"];
-				unset($_SESSION["msg"]);
-			} 
-		?>
+	
 
 	<div class="container-fluid">
     <div class="row" style="height: 800px;">
@@ -48,6 +43,12 @@
 		</div>
 		<input class="btn btn-outline-dark mx-auto d-block w-25" type="submit" name="enviar_login" value="Logar" style="border-radius: 15px;">
 	</form>
+        <?php 
+            if(isset($_SESSION["msg"])){
+                echo $_SESSION["msg"];
+                unset($_SESSION["msg"]);
+            } 
+        ?>
    
 	</div>
 	</div>

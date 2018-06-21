@@ -89,7 +89,11 @@
                     <h1>Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
                 </div>
 
-                <div id="av_conteudo" class="tab-pane fade"></div>
+                <div id="av_conteudo" class="tab-pane fade">
+                    <?php 
+                        include($av_status);
+                    ?>
+                </div>
 
                 <div id="terceiro" class="tab-pane fade">
                     3 pagina

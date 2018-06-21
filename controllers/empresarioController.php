@@ -7,26 +7,21 @@
 			$userDados = $usuariosModel->getDados($_SESSION['id']);
 			$userDados = $userDados->fetch();
 			$dados = array(
-				'nome' => $userDados["nome"]
+				'nome' => $userDados["nome"],
+				'av_status' => $this->verificaAV()
 			);
 			$this->loadView($nomePag, $dados);
 
 		}
 
 		public function verificaAV(){
-			$array=array(
-				"exists"=>"",
-				"create"=> BASE_URL.'views/html/av_create.php',
-				"personalize"=> BASE_URL.'views/html/av_personalize.php'
-			);
 			$avsModel = new avsModel();
 			$avs_dados = $avsModel->procuraAV($_SESSION['id']);
 			if($avs_dados-> rowCount() > 0){
-				$array['exists'] = "yes";
+				return 'html/av_personalize.php';
 			}else{
-				$array['exists'] = "no";
+				return 'html/av_create.php';
 			}
-			echo json_encode($array);
 		}
 
 		private function seguranca(){

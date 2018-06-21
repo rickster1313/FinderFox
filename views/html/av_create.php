@@ -9,36 +9,46 @@
         }
     </style>
 </head>
-<div class="main">
-    <h1> Crie seu AV </h1>
-    <hr>
-    <div class="descricao">
-        O Ambiente Virtual é o lugar onde você pode criar e gerenciar a sua página no site e divulgar seu negócio!!<br>
-        Nele você pode gerenciar as funções necessárias para ter uma melhor experiência e avanço!!<br> <br>
-            Para começar informe algumas informações necessárias e criaremos uma Ambiente padrão para você:<hr>
-    </div>
-    <form method="POST" id="form_newAV" enctype="multipart/form-data">
-        
-        <div>
-            <label><strong>Nome do seu AV </strong></label><br>
-            <input type="text" name="nome_empresa"> Dica: Nome de seu negócio/empresa (isso influenciará no link de sua página)
-            <br> <em>ex.: Meu negócio online (www.finderfox.com/meu-negocio-online).</em>
+<body>
+    <div class="main">
+        <h1> Crie seu AV </h1>
+        <hr>
+        <div class="descricao">
+            O Ambiente Virtual é o lugar onde você pode criar e gerenciar a sua página no site e divulgar seu negócio!!<br>
+            Nele você pode gerenciar as funções necessárias para ter uma melhor experiência e avanço!!<br> <br>
+                Para começar informe algumas informações necessárias e criaremos uma Ambiente padrão para você:<hr>
         </div>
-        <br>
-         <div>
-            <label><strong>Logo</strong></label><br>
-            <input type="file" name="nome_empresa_txt" size="70">
-        </div>
-        <br>
-        <div>
-            <label><strong>Slogan</strong></label><br>
-            <input type="text" name="nome_empresa_txt" size="70"> Dica: Uma frase simples para uma marca ser sempre lembrada
-            <br> <em>ex.: Gerenciando seu negócio online com maior eficiência.</em>
-        </div>
-        <br>
+        <form method="POST" id="form_newAV" enctype="multipart/form-data">
+            
+            <div>
+                <label><strong>Nome do seu AV </strong></label><br>
+                <input type="text" id="nome_av" name="nome_empresa_txt"> Dica: Nome de seu negócio/empresa (isso influenciará no link de sua página)
+                <br> <em>ex.: Meu negócio online (www.finderfox.com/meu-negocio-online).</em>
+            </div>
+            <br>
+            <div>
+                <label><strong>URL</strong></label><br>
+                <input type="text" id="url_av" name="url_txt" disabled="disabled"> Link que será do seu AV
+                <br> 
+                <input type="checkbox" id="edit_url">Habilitar edição de URL
+            </div>
+            <br>
+             <div>
+                <label><strong>Logo</strong></label><br>
+                <input type="file" name="logo_txt" size="70">
+            </div>
+            <br>
+            <div>
+                <label><strong>Slogan</strong></label><br>
+                <input type="text" name="slogan_txt" size="70"> Dica: Uma frase simples para uma marca ser sempre lembrada
+                <br> <em>ex.: Gerenciando seu negócio online com maior eficiência.</em>
+            </div>
+            <br>
 
-        <br><br>
-        <input class="btn btn-outline-dark" type="submit" name="enviar_cad" value="CRIAR" />
-    </form>
-</div>
+            <br><br>
+            <input class="btn btn-outline-dark" type="submit" name="enviar_cad" value="CRIAR" />
+        </form>
+    </div>
+</body>
+
 
