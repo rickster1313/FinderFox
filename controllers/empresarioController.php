@@ -23,6 +23,26 @@
 				return 'html/av_create.php';
 			}
 		}
+		
+		public function verificaNomeAV(){
+			$array = array(
+				'status' => ''
+			);
+
+
+			$nomeAv = $_POST['nome_empresa_txt'];
+			$avsModel = new avsModel();
+			$Av = $avsModel->procuraNomeAv($nomeAv);
+			if ($Av->rowCount() > 0 ) {
+				$array['status'] = 'yes';
+
+			}else{
+				$array['status'] = 'no';
+
+			}
+			echo json_encode($array);
+
+		}
 
 		private function seguranca(){
 			$seguro = true;

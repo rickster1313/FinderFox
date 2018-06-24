@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -43,7 +44,6 @@
       <a class="nav-link" href="#Home" data-toggle="tab">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#Sobre" data-toggle="tab">Sobre</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#Beneficios" data-toggle="tab">Beneficios</a>
