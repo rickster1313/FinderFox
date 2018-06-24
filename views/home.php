@@ -115,6 +115,7 @@
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.79639"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/filtros.js"></script>
 	
 
 
