@@ -16,7 +16,7 @@
 
 
 <style type="text/css">
-  
+ 
 </style>
 
 </head>
@@ -41,9 +41,10 @@
 <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center cl-effect-3" style="margin-top:-31.5px;">
   <ul class="navbar-nav nav">
     <li class="nav-item ">
-      <a class="nav-link" href="#Home" data-toggle="tab">Home</a>
+      <a id="home_p" class="nav-link" href="#Home" data-toggle="tab">Home</a>
     </li>
     <li class="nav-item">
+      <a class="nav-link" href="#interacao" data-toggle="tab">Interação</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#Beneficios" data-toggle="tab">Beneficios</a>
@@ -63,8 +64,24 @@
 
 </div>
 
-<div id="Sobre" class="tab-pane fade">
-  <h2>SOBRE NÓS</h2>
+<div id="interacao" class="tab-pane fade">
+  <h2>Area de Interação</h2>
+
+  <div class="container">
+  <img src="<?php echo BASE_URL; ?>assets/images/6.jpg" alt="Avatar" style="width:100%;">
+  <p>Curti forró?</p>
+  <span class="time-right">11:00</span>
+</div>
+
+<div class="container darker">
+  <img src="<?php echo BASE_URL; ?>assets/images/5.jpg" alt="Avatar" class="right" style="width:100%;">
+  <p>Naaaauunnnnnn</p>
+  <span class="time-left">11:01</span>
+</div>
+<div class="form-group">
+      <input type="text" class="form-control" placeholder="Digitar..." name="text2">
+    </div>
+
 </div>
 
 <div id="Beneficios" class="tab-pane fade">BENEFICIOS
@@ -105,17 +122,12 @@
 
 </div>
 
-
-
-
-
-
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.79639"></script>
-	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/filtros.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/home.js"></script>
 	
 
 
