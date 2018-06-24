@@ -14,9 +14,6 @@
 	</head>
 
 <body>
-	<h1>Aqui é a página Login</h1>
-	<a href="<?php echo BASE_URL ?>"><button class="btn btn-outline-dark">Página Inicial</button></a>
-		<hr>
 	
 
 	<div class="container-fluid">
@@ -33,13 +30,13 @@
       <div class="input-group-prepend">
         <span class="input-group-text">E-mail</span>
       </div>
-		<input autofocus="autofocus" class="form-control" type="text" placeholder="E-Mail..." name="email_txt" required /><br><br>
+		<input autofocus="autofocus" class="form-control" type="text" placeholder="exemplo@email.com..." name="email_txt" required /><br><br>
 		</div>
 		<div class="input-group mb-3 w-75 mx-auto ">
 		<div class="input-group-prepend">
         <span class="input-group-text">Senha</span>
       </div>
-		<input class="form-control" type="password" placeholder="Senha..." name="senha_txt" required /><br><br>
+		<input class="form-control" type="password" placeholder="************" name="senha_txt" required /><br><br>
 		</div>
 		<input class="btn btn-outline-dark mx-auto d-block w-25" type="submit" name="enviar_login" value="Logar" style="border-radius: 15px;">
 	</form>

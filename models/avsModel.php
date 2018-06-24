@@ -9,6 +9,16 @@
             return $sql;
         }
 
+        public function procuraNomeAv($nomeUser){
+            $sql = "SELECT * FROM tbl_avs WHERE nome_av = ?";
+            $sql = $this->pdo->prepare($sql);
+            $sql->bindValue(1, $nomeUser);
+            $sql->execute();
+            return $sql;
+        }
+
     }
+
+
 
 ?>
