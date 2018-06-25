@@ -61,7 +61,8 @@
 
 <div class="tab-content">
 <div id="Home" class="tab-pane in active">HOME
-
+    <h1>naaaaaaauuuuuumm</h1>
+    <img src="<?php echo BASE_URL; ?>assets/images/ana.jpg">
 </div>
 
 <div id="interacao" class="tab-pane fade">

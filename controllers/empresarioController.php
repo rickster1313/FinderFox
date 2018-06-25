@@ -30,10 +30,10 @@
 			);
 
 
-			$nomeAv = $_POST['nome_empresa_txt'];
+			$nomeAv = addslashes($_POST['nome_empresa_txt']);
 			$avsModel = new avsModel();
-			$Av = $avsModel->procuraNomeAv($nomeAv);
-			if ($Av->rowCount() > 0 ) {
+			$dados = $avsModel->procuraNomeAv($nomeAv);
+			if ($dados->rowCount() > 0 ) {
 				$array['status'] = 'yes';
 
 			}else{
@@ -42,6 +42,37 @@
 			}
 			echo json_encode($array);
 
+		}
+
+		public function verificaUrlAV(){
+			$array = array(
+				'status_url' => ''
+			);
+
+
+			$url = addslashes($_POST['url_txt']);
+			$avsModel = new avsModel();
+			$dados = $avsModel->procuraUrlAv($url);
+			if ($dados->rowCount() > 0 ) {
+				$array['status_url'] = 'yes';
+
+			}else{
+				$array['status_url'] = 'no';
+
+			}
+			echo json_encode($array);
+		}
+
+		public function novoAV(){
+			$nome_av = addslashes($_POST['nome_empresa_txt']);
+			$url = addslashes($_POST['url_txt']);
+			$slogan = addslashes($_POST['slogan_txt']);
+			$logo = $_FILES['logo_txt'];
+			$extensao_logo = explode("/", $logo['type']);
+			$nome_logo = "logo-".str_replace(" ", "-", $nome_av).".".$extensao_logo[1];
+			move_uploaded_file($logo['tmp_name'], "assets/images/AV/".$nome_logo);
+			$avsModel = new avsModel();
+			$avsModel->novoAV($_SESSION['id'], $url, $nome_av, $slogan, $nome_logo);
 		}
 
 		private function seguranca(){

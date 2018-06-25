@@ -18,7 +18,7 @@
 			}
 		}
 		public function verificaEmail(){
-			$email = $_GET['email_txt'];
+			$email = addslashes($_GET['email_txt']);
 			$usuariosModel = new usuariosModel();
 			$sql = $usuariosModel->verificaEmail($email);
 			$array=array(
@@ -38,7 +38,7 @@
 		public function verificaCPF_CNPJ(){
 			$usuariosModel = new usuariosModel();
 			$array = array("status" => "", "texto" => "");
-			$cpf_cnpj = $_GET["CPF_CNPJ_txt"];
+			$cpf_cnpj = addslashes($_GET["CPF_CNPJ_txt"]);
 			$sql = $usuariosModel->verificaCPF_CNPJ($cpf_cnpj);
 			if($sql -> rowCount() > 0){
 				$array['status'] = false;

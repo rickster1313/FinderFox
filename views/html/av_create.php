@@ -22,15 +22,14 @@
             
             <div>
                 <label><strong>Nome do seu AV </strong></label><br>
-                <input type="text" id="nome_av" name="nome_empresa_txt"> Dica: Nome de seu negócio/empresa (isso influenciará no link de sua página)
+                <input type="text" id="nome_av" name="nome_empresa_txt" style="outline: none;" required="required"> Dica: Nome de seu negócio/empresa (isso influenciará no link de sua página)
                 <br> <em>ex.: Meu negócio online (www.finderfox.com/meu-negocio-online).</em>
             </div>
             <br>
             <div>
                 <label><strong>URL</strong></label><br>
-                <input type="text" id="url_av" name="url_txt" disabled="disabled"> Link que será do seu AV
+                <div style="background-color: rgba(0,0,0,0.2); width: 550px"><?php echo $_SERVER['SERVER_NAME']; ?>/ <input type="text" id="url_av" name="url_txt" required="required" style="border: none;outline: none; background-color: rgba(0,0,0,0.1);width: 400px"> </div>
                 <br> 
-                <input type="checkbox" id="edit_url">Habilitar edição de URL
             </div>
             <br>
              <div>
@@ -40,7 +39,7 @@
             <br>
             <div>
                 <label><strong>Slogan</strong></label><br>
-                <input type="text" name="slogan_txt" size="70"> Dica: Uma frase simples para uma marca ser sempre lembrada
+                <input type="text" name="slogan_txt" size="70" required="required"> Dica: Uma frase simples para uma marca ser sempre lembrada
                 <br> <em>ex.: Gerenciando seu negócio online com maior eficiência.</em>
             </div>
             <br>
