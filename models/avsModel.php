@@ -25,6 +25,14 @@
             return $sql;
         }
 
+         public function getDadosAV($id){
+            $sql = "SELECT * FROM tbl_avs WHERE id_av = ?";
+            $sql = $this->pdo->prepare($sql);
+            $sql->bindValue(1, $id);
+            $sql->execute();
+            return $sql;
+        }
+
         public function novoAV($user, $url, $nome, $slogan, $logo){
             $sql = "INSERT INTO tbl_avs(user_id, url, nome_av, slogan_av, logo_av) VALUES (?, ?, ?, ?, ?)";
             $sql = $this->pdo->prepare($sql);

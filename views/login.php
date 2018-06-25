@@ -19,7 +19,7 @@
 	<div class="container-fluid">
     <div class="row" style="height: 800px;">
     <div class="col-md-6 h-100" style="background-image: url(assets/images/pessoa_feliz.jpg); background-size: cover; background-color: #666;">
-
+    	<a href="<?php echo BASE_URL; ?>"><button class="btn btn-outline-dark">Pagina Inicial</button></a>
     </div>
     <div class="col-md-6 h-100">
     
@@ -38,6 +38,7 @@
       </div>
 		<input class="form-control" type="password" placeholder="************" name="senha_txt" required /><br><br>
 		</div>
+
 		<input class="btn btn-outline-dark mx-auto d-block w-25" type="submit" name="enviar_login" value="Logar" style="border-radius: 15px;">
 	</form>
         <?php 
