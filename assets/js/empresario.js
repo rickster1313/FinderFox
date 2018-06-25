@@ -70,10 +70,10 @@ $j(document).ready(function(){
                 dataType:'json',
                 success:function(json){
                     if (json.status_url == 'yes') {
-                        nome_av_stats = false;
+                        url_av_stats = false;
                         $j('#url_av').css('color', 'red');
                     }else{
-                        nome_av_stats = true;
+                        url_av_stats = true;
                         $j('#url_av').css('color', 'green');
                     }
                 },
@@ -102,7 +102,7 @@ $j(document).ready(function(){
                 contentType:false,
                 processData:false,  
                 success:function(){
-                    alert("foi");
+                    window.location.href = "empresario";
                 },
                 error:function(){
                     console.log("error no ajax");
