@@ -22,56 +22,46 @@
 			unset($_SESSION["msg"]);
 		} 
 	?>
-	
-	<form method="POST" id="form_cadastro" class="">
+	<div class="container" >
+	<center>
+	<form method="POST" id="form_cadastro" class="" style="">
+	    <label >Nome:</label>
 		<div class="input-group mb-3" style="width: 50%; ">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Nome</span>
-      </div>
-		<input class="form-control" type="text" name="nome_txt" required="required" /><br><br>
+		<input class="form-control" style="border-radius: 15px;" type="text" name="nome_txt" required="required" placeholder="Nome..." /><br><br>
         </div>
-
+       
+        <label>Data de Nascimento:</label>
 		<div class="input-group mb-3" style="width: 50%;">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Data</span>
-      </div>
-		<input class="form-control" type="date" name="data_txt" required="required"><br><br>
+		<input class="form-control" style="border-radius: 15px;" type="date" name="data_txt" required="required"><br><br>
 		</div>
 
 
 		<div class="input-group mb-3" style="width: 50%;">
-      <div class="input-group-prepend">
-        <span class="input-group-text">E-mail</span>
-      </div>
-		<input class="form-control" id="email" type="email_txt" name="email_txt" required="required"><div id="resp_email"></div><br><br>
+      
+		<input class="form-control" style="border-radius: 15px;" id="email" type="email_txt" name="email_txt" required="required" placeholder="exemplo@email.com"><div id="resp_email"></div><br><br>
 		</div>
 
 		<div class="input-group mb-3" style="width: 50%;">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Senha</span>
-      </div>
-		<input class="form-control" id="senha" type="password" name="senha_txt" required="required"><em>recomendado no mínimo 8 caracteres, o uso de letras minúsculas/maiúsculas e numeros</em>
+      
+		<input class="form-control" style="border-radius: 15px;"s id="senha" type="password" name="senha_txt" required="required" placeholder="************">
 		<div id="forca"></div>
 	</div>
 
 		<div class="input-group mb-3" style="width: 50%;">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Endereço</span>
-      </div>
-		<input class="form-control" type="text" name="endereco_txt" required="required" /><br><br>
+     
+		<input class="form-control" style="border-radius: 15px;" type="text" name="endereco_txt"  placeholder="endereço..." required="required" /><br><br>
 </div>
 
 
 		<div class="input-group mb-3" style="width: 50%;">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Telefone</span>
-      </div>
-		<input class="form-control" id="telefone" type="text" name="telefone_txt" required="required" /><br><br>
+      
+		<input class="form-control" style="border-radius: 15px;" id="telefone" type="text"  placeholder="(XX) XXXXX-XXXX" name="telefone_txt" required="required" /><br><br>
          </div>
-
+</center>
+        <div class="" >
         <label>Sexo</label><br>
         <div class="custom-control custom-radio">
-    <input type="radio" class="custom-control-input" id="customRadio" name="sexo_text" checked="checked">
+    <input type="radio" class="custom-control-input"  id="customRadio" name="sexo_text" checked="checked">
     <label class="custom-control-label" for="customRadio">Masculino</label>
   </div>
   <div class="custom-control custom-radio">
@@ -82,7 +72,8 @@
     <input type="radio" class="custom-control-input" id="customRadio3" name="sexo_text">
     <label class="custom-control-label" for="customRadio3">Outros</label>
   </div> 
-
+  </div>
+  
 <br>
     <label>Tipo de Pessoa</label><br>
         <div class="custom-control custom-radio custom-control-inline">
@@ -97,17 +88,17 @@
 
 		
 		<div class="input-group mb-3" style="width: 50%;">
-      <div class="input-group-prepend">
-        <span id="labelPessoa" class="input-group-text">CPF</span>
-      </div>
+     
 		<div id="div_cpf">
-			<input class ="form-control" id="cpf_cnpj" type="text" name="CPF_CNPJ_txt" required="required" />
+			<input class ="form-control" id="cpf_cnpj" style="border-radius: 15px;" placeholder="CPF..." type="text" name="CPF_CNPJ_txt" required="required" />
 		</div>
 	</div>
 		<div id="resp_pessoa"></div>
 
-		<input class="btn btn-outline-dark" type="submit" name="enviar_cad" value="ENVIAR" /><br><br>
+		<input class="btn btn-outline-dark mx-auto d-block" type="submit" name="enviar_cad" value="ENVIAR" /><br><br>
 	</form>
+	</div>
+	
 	
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.mask.js"></script>

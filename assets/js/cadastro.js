@@ -23,11 +23,11 @@ var $j = jQuery.noConflict();
             	if(pessoa == "fisica"){
             		$j("#cpf_cnpj").val("");
             		$j("#cpf_cnpj").mask("000.000.000-00");
-            		$j("#labelPessoa").html("CPF");
+            		$j("#cpf_cnpj").attr("placeholder", "CPF...");
             	}else{
      				$j("#cpf_cnpj").val("");
      				$j("#cpf_cnpj").mask("00.000.000/0000-00");
-     				$j("#labelPessoa").html("CNPJ");
+     				$j("#cpf_cnpj").attr("placeholder", "CNPJ...");
             	}
 			});
 			
