@@ -21,7 +21,7 @@
 
 </head>
 	
-<body>
+<body background="assets/images/pessoa_feliz.jpg">
     
     
     <div class="container-fluid" style="padding: 0px;">
@@ -57,12 +57,76 @@
 </section>
 </div>
 
-<div class="container">
+<br>
 
+<div class="container">
 <div class="tab-content">
-<div id="Home" class="tab-pane in active">HOME
-    <h1>naaaaaaauuuuuumm</h1>
-    <img src="<?php echo BASE_URL; ?>assets/images/ana.jpg">
+<div id="Home" class="tab-pane in active">
+  <div class="ambiente bg-dark" style="width: 100%; height: 730px;">
+    <br>
+    <div class="row justify-content-center justify-content-around align-content-around">
+      <div class="col-md-3 bg-light" style="height: 130px;">
+        <div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div>
+      </div>
+      <div class="col-md-3 bg-primary" style="height: 130px;">
+        <div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div>
+      </div>
+
+      <div class="col-md-3 bg-success" style="height: 130px;">
+        <div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div>
+      </div>
+    </div>
+     <br>
+    <div class="row justify-content-center justify-content-around">
+      <div class="col-md-3 bg-light" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div></div>
+      <div class="col-md-3 bg-primary" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div></div>
+      <div class="col-md-3 bg-success" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div></div>
+    </div>
+     <br>
+    <div class="row justify-content-center justify-content-around">
+      <div class="col-md-3 bg-light" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div></div>
+      <div class="col-md-3 bg-primary" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div></div>
+      <div class="col-md-3 bg-success" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div></div>
+    </div>
+     <br>
+    <div class="row justify-content-center justify-content-around">
+      <div class="col-md-3 bg-light" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div></div>
+      <div class="col-md-3 bg-primary" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div></div>
+      <div class="col-md-3 bg-success" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
+          
+        </div></div>
+    </div>
+    <br>
+    <ul class="pagination justify-content-center" style="margin:20px 0">
+  <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+  <li class="page-item"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+</ul>
+  </div>
 </div>
 
 <div id="interacao" class="tab-pane fade">
@@ -74,11 +138,7 @@
   <span class="time-right">11:00</span>
 </div>
 
-<div class="container darker">
-  <img src="<?php echo BASE_URL; ?>assets/images/5.jpg" alt="Avatar" class="right" style="width:100%;">
-  <p>Naaaauunnnnnn</p>
-  <span class="time-left">11:01</span>
-</div>
+
 <div class="form-group">
       <input type="text" class="form-control" placeholder="Digitar..." name="text2">
     </div>
