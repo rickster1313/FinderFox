@@ -80,7 +80,7 @@
   
 
     <section class="color-6">
-<nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center cl-effect-3" style="margin-top:-31.5px;">
+<nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center cl-effect-3 slide" style="margin-top:-31.5px;">
   <ul class="navbar-nav nav">
     <li class="nav-item ">
       <a id="home_p" class="nav-link" href="#Home" data-toggle="tab">Home</a>
@@ -171,7 +171,7 @@
   </div>
 </div>
 
-<div id="interacao" class="tab-pane fade">
+<div id="interacao" class="tab-pane ">
   <h2>Area de Interação</h2>
 
   <div class="container">
@@ -233,7 +233,26 @@
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/home.js"></script>
 	
 
-
+<script type="text/javascript">
+  $j(function(){
+     $j('.nav-item').bind('click', function(){
+          $j('').animate({
+               
+          },{
+               duration:2000;
+               complete:function(){
+                    console.log("animação finalizada");
+               },
+               start:function(){
+                    console.log("animação iniciada");
+               },
+               step:function(){
+                    console.log("nem eu sei")
+               }
+          })
+     });
+});
+</script>
 
 </body>
 </html>
