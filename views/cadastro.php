@@ -15,8 +15,21 @@
 
 <style type="text/css">
 
-</style>
 
+@font-face {
+
+      font-family: "BPreplayBold";
+      src: url("assets/fonts/BPreplayBold.otf") format("opentype");
+
+      }
+
+
+.replay-font{
+    font-family: "BPreplayBold";
+    font-size: 16px;  
+       } 
+
+</style>
 </head>
 <body>
 	<h1>Aqui é a página de cadastro</h1>

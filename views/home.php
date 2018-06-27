@@ -33,6 +33,32 @@
    color: #D3D3D3;  
 }
 
+@font-face {
+
+      font-family: "BPreplayBold";
+      src: url("assets/fonts/BPreplayBold.otf") format("opentype");
+
+      }
+
+
+.replay-font{
+    font-family: "BPreplayBold";
+    font-size: 40px;  
+       } 
+
+    @font-face {
+
+      font-family: "Champagne & Limousines Bold";
+      src: url("assets/fonts/Champagne & Limousines Bold.ttf") format("truetype");
+
+      }
+
+
+.film-font{
+    font-family: "Champagne & Limousines Bold";
+    font-size: 25px;  
+       } 
+
 </style>
 
 </head>
@@ -47,9 +73,9 @@
 				<a href="<?php echo BASE_URL; ?>cadastro"><button class="btn btn-outline-dark">CADASTRO</button></a>
 			</div>
 	    	<img src="">
-	 	 	<h1 class="text-center">FinderFox</h1> 
-	 	 	<p class="text-center">Gerenciando seu negócio e vendendo pastel de flango na esquina do alberto</p>
-	 	 	<input class="form-control mx-auto d-block" id="myInput" type="text" placeholder="Pesquise o AV desejado..." style="width:40%; background: rgba(0,0,0,0.2); color: #fff;">
+	 	 	<h1 class="text-center replay-font">FinderFox</h1> 
+	 	 	<p class="text-center film-font">Gerenciando seu negócio e vendendo pastel de flango na esquina do alberto</p>
+	 	 	<input class="form-control mx-auto d-block" id="myInput" type="text" placeholder="Pesquise o AV desejado..." style="width:40%; background: rgba(0,0,0,0.2); color: #fff; box-shadow: 0 0 0 0">
 		</div>
   
 
