@@ -62,7 +62,7 @@
 <div class="container">
 <div class="tab-content">
 <div id="Home" class="tab-pane in active">
-  <div class="ambiente bg-dark" style="width: 100%; height: 730px;">
+  <div class="ambiente" style="width: 100%; height: 730px; background: rgba(0,0,0,0.6); ">
     <br>
     <div class="row justify-content-center justify-content-around align-content-around">
       <div class="col-md-3 bg-light" style="height: 130px;">
