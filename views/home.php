@@ -171,7 +171,7 @@
   </div>
 </div>
 
-<div id="interacao" class="tab-pane ">
+<div id="interacao" class="tab-pane fade">
   <h2>Area de Interação</h2>
 
   <div class="container">
