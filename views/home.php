@@ -16,12 +16,28 @@
 
 
 <style type="text/css">
- 
+
+ .form-control::-webkit-input-placeholder {
+   color: #D3D3D3;
+}
+
+.form-control:-moz-placeholder { /* Firefox 18- */
+   color: #D3D3D3;
+}
+
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+   color: #D3D3D3;
+}
+
+.form-control:-ms-input-placeholder {  
+   color: #D3D3D3;  
+}
+
 </style>
 
 </head>
 	
-<body background="assets/images/pessoa_feliz.jpg">
+<body style="background-color:#D3D3D3;">
     
     
     <div class="container-fluid" style="padding: 0px;">

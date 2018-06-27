@@ -11,6 +11,12 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
+
+
+<style type="text/css">
+
+</style>
+
 </head>
 <body>
 	<h1>Aqui é a página de cadastro</h1>
@@ -25,44 +31,46 @@
 	<div class="container" >
 	<center>
 	<form method="POST" id="form_cadastro" class="" style="">
-	    <label >Nome:</label>
+	    <label class="">Nome:</label>
 		<div class="input-group mb-3" style="width: 50%; ">
-		<input class="form-control" style="border-radius: 15px;" type="text" name="nome_txt" required="required" placeholder="Nome..." /><br><br>
+		<input class="form-control" style="border-radius: 15px; border: 2px solid #ddb3b3; background: #f2f2f3; box-shadow: 0 0 0 0" type="text" name="nome_txt" required="required" placeholder="Nome..."  /><br><br>
         </div>
        
         <label>Data de Nascimento:</label>
 		<div class="input-group mb-3" style="width: 50%;">
-		<input class="form-control" style="border-radius: 15px;" type="date" name="data_txt" required="required"><br><br>
+		<input class="form-control" style="border-radius: 15px; border: 2px solid #ddb3b3;background: #f2f2f3; box-shadow: 0 0 0 0" type="date" name="data_txt" required="required"><br><br>
 		</div>
 
-
+        <label>E-mail:</label>
 		<div class="input-group mb-3" style="width: 50%;">
       
-		<input class="form-control" style="border-radius: 15px;" id="email" type="email_txt" name="email_txt" required="required" placeholder="exemplo@email.com"><div id="resp_email"></div><br><br>
+		<input class="form-control" style="border-radius: 15px;border: 2px solid #ddb3b3;background: #f2f2f3; box-shadow: 0 0 0 0" id="email" type="email_txt" name="email_txt" required="required" placeholder="exemplo@email.com"><div id="resp_email"></div><br><br>
 		</div>
-
+         
+        <label>Senha:</label>
 		<div class="input-group mb-3" style="width: 50%;">
       
-		<input class="form-control" style="border-radius: 15px;"s id="senha" type="password" name="senha_txt" required="required" placeholder="************">
+		<input class="form-control" style="border-radius: 15px;border: 2px solid #ddb3b3;background: #f2f2f3; box-shadow: 0 0 0 0" id="senha" type="password" name="senha_txt" required="required" placeholder="************">
 		<div id="forca"></div>
 	</div>
 
+        <label>Endereço:</label>
 		<div class="input-group mb-3" style="width: 50%;">
      
-		<input class="form-control" style="border-radius: 15px;" type="text" name="endereco_txt"  placeholder="endereço..." required="required" /><br><br>
+		<input class="form-control" style="border-radius: 15px;border: 2px solid #ddb3b3;background: #f2f2f3; box-shadow: 0 0 0 0" type="text" name="endereco_txt"  placeholder="endereço..." required="required" /><br><br>
 </div>
 
-
+        <label>Telefone:</label>
 		<div class="input-group mb-3" style="width: 50%;">
       
-		<input class="form-control" style="border-radius: 15px;" id="telefone" type="text"  placeholder="(XX) XXXXX-XXXX" name="telefone_txt" required="required" /><br><br>
+		<input class="form-control" style="border-radius: 15px;border: 2px solid #ddb3b3;background: #f2f2f3; box-shadow: 0 0 0 0" id="telefone" type="text"  placeholder="(XX) XXXXX-XXXX" name="telefone_txt" required="required" /><br><br>
          </div>
 </center>
         <div class="" >
         <label>Sexo</label><br>
-        <div class="custom-control custom-radio">
-    <input type="radio" class="custom-control-input"  id="customRadio" name="sexo_text" checked="checked">
-    <label class="custom-control-label" for="customRadio">Masculino</label>
+        <div class="custom-control custom-radio" >
+    <input type="radio" class="custom-control-input"  id="customRadio" name="sexo_text" checked="checked" >
+    <label class="custom-control-label" for="customRadio" >Masculino</label>
   </div>
   <div class="custom-control custom-radio">
     <input type="radio" class="custom-control-input" id="customRadio2" name="sexo_text">
@@ -89,8 +97,8 @@
 		
 		<div class="input-group mb-3" style="width: 50%;">
      
-		<div id="div_cpf">
-			<input class ="form-control" id="cpf_cnpj" style="border-radius: 15px;" placeholder="CPF..." type="text" name="CPF_CNPJ_txt" required="required" />
+		  <div id="div_cpf">
+			<input class ="form-control" id="cpf_cnpj" style="border-radius: 15px;border: 2px solid #ddb3b3;background: #f2f2f3; box-shadow: 0 0 0 0" placeholder="CPF..." type="text" name="CPF_CNPJ_txt" required="required" />
 		</div>
 	</div>
 		<div id="resp_pessoa"></div>
