@@ -12,8 +12,7 @@ var $j = jQuery.noConflict();
 			    data:dados,
 			    dataType:'json',
 			    success:function(json){
-			        console.log(json.status);
-			        
+			       json.forEach(mostraAV);
 			    },
 			    error:function(){
 			    	console.log("error no ajax");

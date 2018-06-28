@@ -104,14 +104,17 @@
 <div class="container">
 <div class="tab-content">
 <div id="Home" class="tab-pane in active">
-  <div class="ambiente" style="width: 100%; height: 730px; background: rgba(0,0,0,0.6); ">
+  <div class="ambiente" id="resultado_av" style="width: 100%; height: 730px; background: rgba(0,0,0,0.6); ">
     <br>
+    <?php  ?>
+
     <div class="row justify-content-center justify-content-around align-content-around">
       <div class="col-md-3 bg-light" style="height: 130px;">
         <div class="logo" style="height: 130px; width:30%; background-color: #666;">
           
         </div>
       </div>
+
       <div class="col-md-3 bg-primary" style="height: 130px;">
         <div class="logo" style="height: 130px; width:30%; background-color: #666;">
           
@@ -124,41 +127,11 @@
         </div>
       </div>
     </div>
+
+    <?php ?>
      <br>
-    <div class="row justify-content-center justify-content-around">
-      <div class="col-md-3 bg-light" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
-          
-        </div></div>
-      <div class="col-md-3 bg-primary" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
-          
-        </div></div>
-      <div class="col-md-3 bg-success" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
-          
-        </div></div>
-    </div>
-     <br>
-    <div class="row justify-content-center justify-content-around">
-      <div class="col-md-3 bg-light" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
-          
-        </div></div>
-      <div class="col-md-3 bg-primary" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
-          
-        </div></div>
-      <div class="col-md-3 bg-success" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
-          
-        </div></div>
-    </div>
-     <br>
-    <div class="row justify-content-center justify-content-around">
-      <div class="col-md-3 bg-light" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
-          
-        </div></div>
-      <div class="col-md-3 bg-primary" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
-          
-        </div></div>
-      <div class="col-md-3 bg-success" style="height: 130px;"><div class="logo" style="height: 130px; width:30%; background-color: #666;">
-          
-        </div></div>
+    
+
     </div>
     <br>
     <ul class="pagination justify-content-center" style="margin:20px 0">

@@ -40,6 +40,23 @@
             return $sql;
         }
 
+        public function pesquisaAVs($filtro, $av){
+            if($filtro === "todos"){
+                $sql = "SELECT * FROM tbl_avs ORDER BY id_av DESC";
+                $sql = $this->pdo->prepare($sql);
+                $sql->execute();
+            }else if($filtro === "especifico"){
+                $av = "%".$av."%";
+                $sql = "SELECT * FROM tbl_avs WHERE nome_av LIKE ? OR slogan_av LIKE ? OR url LIKE ? ORDER BY id_av DESC";
+                $sql = $this->pdo->prepare($sql);
+                $sql->bindValue(1, $av);
+                $sql->bindValue(2, $av);
+                $sql->bindValue(3, $av);
+                $sql->execute();
+            }
+            return $sql;
+        }
+
         public function novoAV($user, $url, $nome, $slogan, $logo){
             $sql = "INSERT INTO tbl_avs(user_id, url, nome_av, slogan_av, logo_av) VALUES (?, ?, ?, ?, ?)";
             $sql = $this->pdo->prepare($sql);

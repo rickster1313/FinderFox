@@ -7,13 +7,16 @@
 		}
 
 		public function pesquisaAVs(){ 
-			$array = array("status" => "");
+			$array = array();
 			$av = addslashes($_GET['pesquisaAV_txt']);
 			if($av == ""){ 
-				$array['status'] = "pesquisa todos";
+				$avsModel = new avsModel();
+				$sql = $avsModel->pesquisaAVs("todos", NULL);
 			}else{ 
-				$array['status'] = "pesquisa av: ".$av;
+				$avsModel = new avsModel();
+				$sql = $avsModel->pesquisaAVs("especifico", $av);
 			}
+			$array = $sql->fetchAll();
 			echo json_encode($array);
 		}
 	}
