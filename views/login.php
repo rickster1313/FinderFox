@@ -21,10 +21,16 @@
     <div class="col-md-6 h-100" style="background-image: url(assets/images/pessoa_feliz.jpg); background-size: cover; background-color: #666;">
     	<a href="<?php echo BASE_URL; ?>"><button class="btn btn-outline-dark">Pagina Inicial</button></a>
     </div>
+
     <div class="col-md-6 h-100">
-    
 
 	<form method="POST" action="<?php echo BASE_URL."login/valida" ?>" style="position: relative; left: 50%; top: 50%; transform: translate(-50%,-50%);"> 
+	 <?php 
+            if(isset($_SESSION["msg"])){
+                echo $_SESSION["msg"];
+                unset($_SESSION["msg"]);
+            } 
+        ?>
 		<h3 class="text-center">Faça Login é gratis</h3><br>
 	<div class="input-group mb-3 w-75 mx-auto">
       <div class="input-group-prepend">
@@ -41,12 +47,7 @@
 
 		<input class="btn btn-outline-dark mx-auto d-block w-25" type="submit" name="enviar_login" value="Logar" style="border-radius: 15px;">
 	</form>
-        <?php 
-            if(isset($_SESSION["msg"])){
-                echo $_SESSION["msg"];
-                unset($_SESSION["msg"]);
-            } 
-        ?>
+        
    
 	</div>
 	</div>

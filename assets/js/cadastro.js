@@ -94,7 +94,7 @@ var $j = jQuery.noConflict();
 			        	success:function(json){
 			        		$j("#resp_email").html(json.texto);
 			        		if(json.status == true){
-			        			$j("#resp_email").css("color", "green");
+			        			$j("#resp_email").html("<img src='./assets/images/icone_ok1.png' height='29' width='29'>");
 			        			email_stats = true;
 			        		}else{  
 			        			$j("#resp_email").css("color", "red");
@@ -109,7 +109,7 @@ var $j = jQuery.noConflict();
 
 
 			    }else{
-			        $j("#resp_email").html("E-mail inválido");  
+			        $j("#resp_email").html("<img src='./assets/images/errado.png' height='29' width='29'>");  
 			        $j("#resp_email").css("color", "red"); 
 			        email_stats = false;
 			    }
@@ -138,7 +138,7 @@ var $j = jQuery.noConflict();
 					        	success:function(json){
 					        		$j("#resp_pessoa").html(json.texto);
 					        		if(json.status == true){
-					        			$j("#resp_pessoa").css("color", "green");
+					        			$j("#resp_pessoa").html("<img src='./assets/images/icone_ok1.png' height='29' width='29'>");
 					        			cpf_cnpj_stats = true;
 					        		}else{  
 					        			$j("#resp_pessoa").css("color", "red");
@@ -154,7 +154,7 @@ var $j = jQuery.noConflict();
 							$j("#resp_pessoa").css("color", "black");
 							cpf_cnpj_stats = false;
 						}else{
-							$j("#resp_pessoa").html("CPF inválido");
+							$j("#resp_pessoa").html("<img src='./assets/images/errado.png' height='29' width='29'>");
 							$j("#resp_pessoa").css("color", "red");
 							cpf_cnpj_stats = false;
 						}
@@ -169,7 +169,7 @@ var $j = jQuery.noConflict();
 				        	success:function(json){
 				        		$j("#resp_pessoa").html(json.texto);
 				        		if(json.status == true){
-				        			$j("#resp_pessoa").css("color", "green");
+				        			$j("#resp_pessoa").html("<img src='./assets/images/icone_ok1.png' height='29' width='29'>");
 				        			cpf_cnpj_stats = true;
 				        		}else{  
 				        			$j("#resp_pessoa").css("color", "red");
@@ -185,7 +185,7 @@ var $j = jQuery.noConflict();
 							$j("#resp_pessoa").css("color", "black");
 							cpf_cnpj_stats = false;
 						}else{
-							$j("#resp_pessoa").html("CNPJ inválido");
+							$j("#resp_pessoa").html("<img src='./assets/images/errado.png' height='29' width='29'>");
 							$j("#resp_pessoa").css("color", "red");
 							cpf_cnpj_stats = false;
 						}

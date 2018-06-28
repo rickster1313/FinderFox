@@ -33,6 +33,13 @@
             return $sql;
         }
 
+        public function getAVs(){
+            $sql = "SELECT * FROM tbl_avs";
+            $sql = $this->pdo->prepare($sql);
+            $sql->execute();
+            return $sql;
+        }
+
         public function novoAV($user, $url, $nome, $slogan, $logo){
             $sql = "INSERT INTO tbl_avs(user_id, url, nome_av, slogan_av, logo_av) VALUES (?, ?, ?, ?, ?)";
             $sql = $this->pdo->prepare($sql);

@@ -22,12 +22,16 @@
 						$this->fazerLogin($row);
 					}else{
 						//se a senha não conrresponder como email
-						$_SESSION["msg"] = "E-mail ou senha inválido";
+						$_SESSION["msg"] = "<div class='alert alert-danger'>
+    <strong>Erro!</strong> Email ou Senha invalidos.
+  </div>";
 						header("Location:".BASE_URL."login");
 					}
 				}else{
 					//se não encontar email correspondente
-					$_SESSION["msg"] = "E-mail ou senha inválido";
+					$_SESSION["msg"] = "<div class='alert alert-danger'>
+    <strong>Erro!</strong> Email ou Senha invalidos.
+  </div>";
 					header("Location:".BASE_URL."login");
 				}
 			}else{
@@ -65,7 +69,9 @@
 
 		public function deslogar(){
 			unset($_SESSION["id"] ,$_SESSION["nvl_acesso"]);
-			$_SESSION["msg"] = "Deslogado com sucesso";
+			$_SESSION["msg"] = "<div class='alert alert-success'>
+     Deslogado com sucesso.
+  </div>";
 			header("Location:".BASE_URL."login");
 		}
 	}
