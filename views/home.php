@@ -75,7 +75,7 @@
 	    	<img src="">
 	 	 	<h1 class="text-center replay-font">FinderFox</h1> 
 	 	 	<p class="text-center film-font">Gerenciando seu negócio e vendendo pastel de flango na esquina do alberto</p>
-	 	 	<input class="form-control mx-auto d-block" id="myInput" type="text" placeholder="Pesquise o AV desejado..." style="width:40%; background: rgba(0,0,0,0.2); color: #fff; box-shadow: 0 0 0 0">
+	 	 	<input class="form-control mx-auto d-block" name="pesquisaAV_txt" id="myInput" type="text" placeholder="Pesquise o AV desejado..." style="width:40%; background: rgba(0,0,0,0.2); color: #fff; box-shadow: 0 0 0 0">
 		</div>
   
 
@@ -229,7 +229,7 @@
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
-	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.79639"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.79639.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/home.js"></script>
 	
 
@@ -239,7 +239,7 @@
           $j('').animate({
                
           },{
-               duration:2000;
+               duration:2000,
                complete:function(){
                     console.log("animação finalizada");
                },
