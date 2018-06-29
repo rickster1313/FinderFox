@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/common.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">	
 
 
 <style type="text/css">
@@ -76,7 +76,7 @@
 			<h1 class="text-center replay-font">FinderFox</h1> 
 			<p class="text-center film-font">Gerenciando seu negócio e vendendo pastel de flango na esquina do alberto</p>
 			<input class="form-control mx-auto d-block" name="pesquisaAV_txt" id="myInput" type="text" placeholder="Pesquise o AV desejado..." style="width:40%; background: rgba(0,0,0,0.2); color: #fff; box-shadow: 0 0 0 0">
-		</div>
+		</div>	
 	
 
 		<section class="color-6">
@@ -104,10 +104,9 @@
 <div class="container">
 <div class="tab-content">
 <div id="Home" class="tab-pane in active">
-	<div class="ambiente" id="resultado_av" style="width: 100%; height: 730px; background: rgba(0,0,0,0.6); ">
+	<div class="ambiente" id="resultado_av" style="width: 100%; height: auto;padding-bottom:30px;  background: rgba(0,0,0,0.6); ">
 	
 	</div>
-	<br>
 
 	<ul class="pagination justify-content-center" style="margin:20px 0">
 		<li class="page-item"><a class="page-link" href="#">Anterior</a></li>
@@ -124,7 +123,7 @@
 
 	<div class="container">
 	<img src="<?php echo BASE_URL; ?>assets/images/6.jpg" alt="Avatar" style="width:100%;">
-	<p>Curti forró?</p>
+	<p>ELIZA: oi luciano xuxuzinho</p>
 	<span class="time-right">11:00</span>
 </div>
 
