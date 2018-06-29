@@ -6,7 +6,7 @@ var $j = jQuery.noConflict();
 
 		function mostraAV(valor){
 			if(nums == 1){
-				$j("#resultado_av").append("<div id = 'linha_av"+collum+"' class='row justify-content-center ' style='padding-top:30px'> <div class='col-md-3 bg-light' style='height: 130px'><div class='logo' style='height: 130px; width:30%; background-color: #666'><img src = ' assets/images/AV/"+valor.logo_av+"'></div>"+valor.nome_av+"</div>");
+				$j("#resultado_av").append("<div id = 'linha_av"+collum+"' class='row justify-content-center ' style='padding-top:30px'> <div class='col-md-3 bg-light' style='height: 130px'><div class='logo' style='height: 130px; width:30%; background-color: #666'><img src = ' assets/images/AV/"+valor.logo_av+"'></div>"+valor.nome_av+"</div></div>");
 			}else if(nums<3){
 				$j("#resultado_av #linha_av"+collum).append("<div class='col-md-3 bg-light' style='height: 130px'><div class='logo' style='height: 130px; width:30%; background-color: #666'><img src = 'assets/images/AV/"+valor.logo_av+"'></div>"+valor.nome_av+"</div>");
 				

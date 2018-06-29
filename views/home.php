@@ -2,9 +2,9 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
-  	<meta charset="utf-8">
+		<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<title>FinderFox</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-grid.min.css">
@@ -18,83 +18,83 @@
 <style type="text/css">
 
  .form-control::-webkit-input-placeholder {
-   color: #D3D3D3;
+	 color: #D3D3D3;
 }
 
 .form-control:-moz-placeholder { /* Firefox 18- */
-   color: #D3D3D3;
+	 color: #D3D3D3;
 }
 
 .form-control::-moz-placeholder {  /* Firefox 19+ */
-   color: #D3D3D3;
+	 color: #D3D3D3;
 }
 
 .form-control:-ms-input-placeholder {  
-   color: #D3D3D3;  
+	 color: #D3D3D3;  
 }
 
 @font-face {
 
-      font-family: "BPreplayBold";
-      src: url("assets/fonts/BPreplayBold.otf") format("opentype");
+			font-family: "BPreplayBold";
+			src: url("assets/fonts/BPreplayBold.otf") format("opentype");
 
-      }
+			}
 
 
 .replay-font{
-    font-family: "BPreplayBold";
-    font-size: 40px;  
-       } 
+		font-family: "BPreplayBold";
+		font-size: 40px;  
+			 } 
 
-    @font-face {
+		@font-face {
 
-      font-family: "Champagne & Limousines Bold";
-      src: url("assets/fonts/Champagne & Limousines Bold.ttf") format("truetype");
+			font-family: "Champagne & Limousines Bold";
+			src: url("assets/fonts/Champagne & Limousines Bold.ttf") format("truetype");
 
-      }
+			}
 
 
 .film-font{
-    font-family: "Champagne & Limousines Bold";
-    font-size: 25px;  
-       } 
+		font-family: "Champagne & Limousines Bold";
+		font-size: 25px;  
+			 } 
 
 </style>
 
 </head>
 	
 <body style="background-color:#D3D3D3;">
-    
-    
-    <div class="container-fluid" style="padding: 0px;">
-	    <div class="jumbotron" style="background-image: url(assets/images/pessoa_feliz.jpg);">
-	    	<div class="botoes" style="">
-	 	 		<a href="<?php echo BASE_URL; ?>login"><button class="btn btn-outline-dark ">LOGIN</button></a>
+		
+		
+		<div class="container-fluid" style="padding: 0px;">
+			<div class="jumbotron" style="background-image: url(assets/images/pessoa_feliz.jpg);">
+				<div class="botoes" style="">
+				<a href="<?php echo BASE_URL; ?>login"><button class="btn btn-outline-dark ">LOGIN</button></a>
 				<a href="<?php echo BASE_URL; ?>cadastro"><button class="btn btn-outline-dark">CADASTRO</button></a>
 			</div>
-	    	<img src="">
-	 	 	<h1 class="text-center replay-font">FinderFox</h1> 
-	 	 	<p class="text-center film-font">Gerenciando seu negócio e vendendo pastel de flango na esquina do alberto</p>
-	 	 	<input class="form-control mx-auto d-block" name="pesquisaAV_txt" id="myInput" type="text" placeholder="Pesquise o AV desejado..." style="width:40%; background: rgba(0,0,0,0.2); color: #fff; box-shadow: 0 0 0 0">
+				<img src="">
+			<h1 class="text-center replay-font">FinderFox</h1> 
+			<p class="text-center film-font">Gerenciando seu negócio e vendendo pastel de flango na esquina do alberto</p>
+			<input class="form-control mx-auto d-block" name="pesquisaAV_txt" id="myInput" type="text" placeholder="Pesquise o AV desejado..." style="width:40%; background: rgba(0,0,0,0.2); color: #fff; box-shadow: 0 0 0 0">
 		</div>
-  
+	
 
-    <section class="color-6">
+		<section class="color-6">
 <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center cl-effect-3 slide" style="margin-top:-31.5px;">
-  <ul class="navbar-nav nav">
-    <li class="nav-item ">
-      <a id="home_p" class="nav-link" href="#Home" data-toggle="tab">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#interacao" data-toggle="tab">Interação</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#Beneficios" data-toggle="tab">Beneficios</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#Suporte" data-toggle="tab">Suporte</a>
-    </li>
-  </ul>
+	<ul class="navbar-nav nav">
+		<li class="nav-item ">
+			<a id="home_p" class="nav-link" href="#Home" data-toggle="tab">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#interacao" data-toggle="tab">Interação</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#Beneficios" data-toggle="tab">Beneficios</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#Suporte" data-toggle="tab">Suporte</a>
+		</li>
+	</ul>
 </nav>
 </section>
 </div>
@@ -104,37 +104,34 @@
 <div class="container">
 <div class="tab-content">
 <div id="Home" class="tab-pane in active">
-  <div class="ambiente" id="resultado_av" style="width: 100%; height: 730px; background: rgba(0,0,0,0.6); ">
-    <br>
+	<div class="ambiente" id="resultado_av" style="width: 100%; height: 730px; background: rgba(0,0,0,0.6); ">
+	
+	</div>
+	<br>
 
-     <br>
-    
+	<ul class="pagination justify-content-center" style="margin:20px 0">
+		<li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+		<li class="page-item"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+	</ul>
 
-    </div>
-    <br>
-    <ul class="pagination justify-content-center" style="margin:20px 0">
-  <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-  <li class="page-item"><a class="page-link" href="#">1</a></li>
-  <li class="page-item"><a class="page-link" href="#">2</a></li>
-  <li class="page-item"><a class="page-link" href="#">3</a></li>
-  <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
-</ul>
-  </div>
 </div>
 
 <div id="interacao" class="tab-pane fade">
-  <h2>Area de Interação</h2>
+	<h2>Area de Interação</h2>
 
-  <div class="container">
-  <img src="<?php echo BASE_URL; ?>assets/images/6.jpg" alt="Avatar" style="width:100%;">
-  <p>Curti forró?</p>
-  <span class="time-right">11:00</span>
+	<div class="container">
+	<img src="<?php echo BASE_URL; ?>assets/images/6.jpg" alt="Avatar" style="width:100%;">
+	<p>Curti forró?</p>
+	<span class="time-right">11:00</span>
 </div>
 
 
 <div class="form-group">
-      <input type="text" class="form-control" placeholder="Digitar..." name="text2">
-    </div>
+			<input type="text" class="form-control" placeholder="Digitar..." name="text2">
+		</div>
 
 </div>
 
@@ -185,23 +182,23 @@
 	
 
 <script type="text/javascript">
-  $j(function(){
-     $j('.nav-item').bind('click', function(){
-          $j('').animate({
-               
-          },{
-               duration:2000,
-               complete:function(){
-                    console.log("animação finalizada");
-               },
-               start:function(){
-                    console.log("animação iniciada");
-               },
-               step:function(){
-                    console.log("nem eu sei")
-               }
-          })
-     });
+	$j(function(){
+		 $j('.nav-item').bind('click', function(){
+					$j('').animate({
+							 
+					},{
+							 duration:2000,
+							 complete:function(){
+										console.log("animação finalizada");
+							 },
+							 start:function(){
+										console.log("animação iniciada");
+							 },
+							 step:function(){
+										console.log("nem eu sei")
+							 }
+					})
+		 });
 });
 </script>
 
