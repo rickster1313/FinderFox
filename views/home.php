@@ -167,7 +167,35 @@
 			</section>
 </div>
 
-<div id="Suporte" class="tab-pane fade">SUPORTE</div>
+<div id="Suporte" class="tab-pane fade">
+
+	<div class="container">
+	<div class="row">
+		<div class="col-sm-5" >
+			<img src="<?php echo BASE_URL; ?>assets/images/43386.jpg" style="width: 65%;">
+		</div>
+		<div class="col-sm-7">
+			<form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Nome:</label>
+      <input type="email" class="form-control" id="nome" placeholder="fulano de tal" name="nome">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Email:</label>
+      <input type="email" class="form-control" id="pwd" placeholder="exemplo@gmail.com" name="email">
+    </div>
+     <div class="form-group">
+   <label for="comment">Comentario:</label>
+      <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Com oque podemos ajuda?"></textarea>
+      </div>
+    <button type="submit" class="btn btn-outline-dark "">Enviar</button>
+  </form>
+		</div>
+	</div>
+	</div>
+
+</div>
+
 </div>
 
 </div>
