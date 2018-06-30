@@ -59,6 +59,13 @@
 		font-family: "Champagne & Limousines Bold";
 		font-size: 25px;  
 			 } 
+.item-av{
+	width: 48%;
+	height: 100px;
+	border: solid black 1px;
+	float: left;	
+	margin: 1%;
+}
 
 </style>
 
@@ -127,18 +134,21 @@
       </select>
   </form>
   </div>
-	<div class="ambiente" id="resultado_av" style="width: 100%; height: auto;padding-bottom:30px;  background: rgba(0,0,0,0.6); ">
-	
+	<div class="ambiente" id="resultado_av" style="width: 100%; height: auto;padding-bottom:30px;position: relative;  background: rgba(0,0,0,0.6);overflow: hidden;">
+		<!-- ############### HOME - Pesquisa de AVs ################## -->
+		<div class="item-av"> av</div>
+		<div class="item-av"> av</div>
+		<div class="item-av"> av</div>
+		<div class="item-av"> av</div>
+		<div class="item-av"> av</div>
 	</div>
-
-	<ul class="pagination justify-content-center" style="margin:20px 0">
-		<li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-		<li class="page-item"><a class="page-link" href="#">1</a></li>
-		<li class="page-item"><a class="page-link" href="#">2</a></li>
-		<li class="page-item"><a class="page-link" href="#">3</a></li>
-		<li class="page-item"><a class="page-link" href="#">Próximo</a></li>
-	</ul>
-
+		<ul class="pagination justify-content-center" style="margin:20px;">
+			<li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+		</ul>
 </div>
 
 <div id="interacao" class="tab-pane fade">

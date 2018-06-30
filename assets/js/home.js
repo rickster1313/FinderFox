@@ -7,10 +7,6 @@ var $j = jQuery.noConflict();
 			$j('#home_p').trigger('click');
 		});
 		//$j('#resultado_av').DataTable();
-		function mostraAV(valor){
-
-		}
-
 		function pesquisaAV(){ 
 			var dados = $j("#myInput").serialize();
 			$j.ajax({
@@ -36,7 +32,7 @@ var $j = jQuery.noConflict();
 			});
 
 		}
-		pesquisaAV();
+		//pesquisaAV();
 
 		$j("#myInput").bind("keyup", function(){
 			pesquisaAV();
