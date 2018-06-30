@@ -35,10 +35,10 @@
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-  	<img src="<?php echo BASE_URL; ?>assets/images/AV/<?php echo $logo_av; ?>" class="mx-auto d-block img-fluid" width="200">
-    <h1 class="display-3 d-flex justify-content-center"><?php echo $nome_av;?></h1>      
+  	<img src="<?php echo BASE_URL; ?>assets/images/AV/<?php echo $logo_av; ?>" class="mx-auto float-left rounded  d-block img-fluid" style="height: 200px; width: 200px; " >
+    <p class="display-4 d-flex justify-content-center"><?php echo ucfirst($nome_av) ;?></p>      
     <p class="d-flex justify-content-center"><?php echo $slogan_av;?></p>
-    <a href="<?php echo BASE_URL; ?>home"><button class="btn btn-outline-dark mx-auto d-block">Voltar para as pesquisas</button></a>
+    <a href="<?php echo BASE_URL; ?>home"><button class="btn btn-outline-dark mx-auto d-block" >Voltar para as pesquisas</button></a>
   </div>
 </div>
 
