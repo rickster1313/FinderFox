@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/common.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">	
+	<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">-->
 
 
 <style type="text/css">
@@ -99,11 +100,17 @@
 </section>
 </div>
 
-<br>
+
 
 <div class="container">
 <div class="tab-content">
-<div id="Home" class="tab-pane in active">
+<div id="Home" class="tab-pane in active" >
+<hr id="filtro" data-toggle="collapse" data-target="#demo" style="background-color: red; ">
+  <div id="demo" class="collapse">
+    Aqui nós colocaremos os diferentes filtros,<br>
+    mas os cara tão com sono agora, então deixa pra amanhã,<br>
+    Vlw flw fui galeeraaaaa!!!
+  </div>
 	<div class="ambiente" id="resultado_av" style="width: 100%; height: auto;padding-bottom:30px;  background: rgba(0,0,0,0.6); ">
 	
 	</div>
@@ -172,7 +179,7 @@
 	<div class="container">
 	<div class="row">
 		<div class="col-sm-5" >
-			<img src="<?php echo BASE_URL; ?>assets/images/43386.jpg" style="width: 65%;">
+			<img src="<?php echo BASE_URL; ?>assets/images/43386.jpg" style="width: 333px;">
 		</div>
 		<div class="col-sm-7">
 			<form action="/action_page.php">
@@ -206,6 +213,7 @@
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.79639.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/home.js"></script>
+	<!--<script type="text/javascript" charset="utf8" src="htpps://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>-->
 	
 
 <script type="text/javascript">

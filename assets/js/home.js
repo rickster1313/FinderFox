@@ -3,7 +3,10 @@ var $j = jQuery.noConflict();
 		$j('#myInput').bind('click', function(){
 			$j('#home_p').trigger('click');
 		});
-
+		$j('#filtro').bind('click', function(){
+			$j('#home_p').trigger('click');
+		});
+		//$j('#resultado_av').DataTable();
 		function mostraAV(valor){
 
 		}
