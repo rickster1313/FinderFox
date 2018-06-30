@@ -86,7 +86,10 @@
 				$seguro = false;
 			}
 			if(!$seguro){
-				$_SESSION["msg"] = "Para ter acesso à essa página você precisa fazer login :)";
+				$_SESSION["msg"] = "
+				<div class='alert alert-warning'>
+  <strong>Opa! </strong> Para ter acesso à essa página você precisa fazer login
+</div>";
 				header("Location:".BASE_URL."login");
 			}
 		}

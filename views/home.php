@@ -12,10 +12,9 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/common.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">	
-	<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">-->
-
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">
+
+	<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">-->
 
 
 
@@ -112,7 +111,7 @@
   <div id="demo" class="collapse">
     Aqui nós colocaremos os diferentes filtros,<br>
     mas os cara tão com sono agora, então deixa pra amanhã,<br>
-    Vlw flw fui galeeraaaaa!!!
+    Vlw flw fui galeeraaaaa!!!<i class="fa chevron-down fa-2x" aria-hidden="true"></i>
   </div>
 	<div class="ambiente" id="resultado_av" style="width: 100%; height: auto;padding-bottom:30px;  background: rgba(0,0,0,0.6); ">
 	
