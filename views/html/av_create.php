@@ -34,7 +34,7 @@
             <br>
              <div>
                 <label><strong>Logo</strong></label><br>
-                <input type="file" name="logo_txt" size="70">
+                <input type="file" name="logo_txt" size="70"><i>Recomendado imagem  200 x 200 pixels</i>
             </div>
             <br>
             <div>
