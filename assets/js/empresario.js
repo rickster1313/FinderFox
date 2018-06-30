@@ -111,4 +111,10 @@ $j(document).ready(function(){
         }
         
     });
+
+    $j('[data-toggle="tooltip"]').tooltip();   
+    $j('[data-toggle="tooltip1"]').tooltip();  
+    $j('[data-toggle="popover"]').popover();  
+    $j('[data-toggle="popover1"]').popover();  
+
 });
