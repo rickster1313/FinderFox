@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Jun-2018 às 20:51
--- Versão do servidor: 10.1.22-MariaDB
--- PHP Version: 7.1.4
+-- Generation Time: 01-Jul-2018 às 00:06
+-- Versão do servidor: 10.1.21-MariaDB
+-- PHP Version: 7.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -34,16 +32,19 @@ CREATE TABLE `tbl_avs` (
   `url` varchar(220) NOT NULL,
   `nome_av` varchar(220) NOT NULL,
   `slogan_av` varchar(550) NOT NULL,
-  `logo_av` varchar(220) NOT NULL
+  `logo_av` varchar(220) NOT NULL,
+  `categoria` varchar(220) NOT NULL,
+  `func` varchar(5555) NOT NULL,
+  `created` varchar(220) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `tbl_avs`
 --
 
-INSERT INTO `tbl_avs` (`id_av`, `user_id`, `url`, `nome_av`, `slogan_av`, `logo_av`) VALUES
-(1, 3, 'empresario-ambiente-virtual', 'empresario ambiente virtual', 'o primeiro AV de muitos XDXDXDD', 'logo-empresario-ambiente-virtual.jpeg'),
-(3, 2, 'fulanozagem-mecanica', 'fulanozagem mecanica', 'fulano mecanicas', 'logo-fulanozagem-mecanica.jpeg');
+INSERT INTO `tbl_avs` (`id_av`, `user_id`, `url`, `nome_av`, `slogan_av`, `logo_av`, `categoria`, `func`, `created`) VALUES
+(1, 3, 'empresario-ambiente-virtual', 'empresario ambiente virtual', 'o primeiro AV de muitos XDXDXDD', 'logo-empresario-ambiente-virtual.jpeg', '', '', ''),
+(3, 2, 'fulanozagem-mecanica', 'fulanozagem mecanica', 'fulano mecanicas', 'logo-fulanozagem-mecanica.jpeg', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -101,14 +102,11 @@ ALTER TABLE `tbl_usuarios`
 --
 ALTER TABLE `tbl_avs`
   MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -16,10 +16,10 @@
 <body>
 	
 
-	<div class="container-fluid">
-    <div class="row" style="height: 800px;">
+	<div class="container-fluid" style="position: absolute;height: 100%">
+    <div class="row" style="height: 100%;">
     <div class="col-md-6 h-100" style="background-image: url(assets/images/pessoa_feliz.jpg); background-size: cover; background-color: #666;">
-    	<a href="<?php echo BASE_URL; ?>"><button class="btn btn-outline-dark">Pagina Inicial</button></a>
+    	<a href="<?php echo BASE_URL; ?>"><button class="btn btn-outline-dark" style="margin-top: 15px">Pagina Inicial</button></a>
     </div>
 
     <div class="col-md-6 h-100">
@@ -31,7 +31,7 @@
                 unset($_SESSION["msg"]);
             } 
         ?>
-		<h3 class="text-center">Faça Login é gratis</h3><br>
+		<h3 class="text-center">Faça Login, é gratis!</h3><br>
 	<div class="input-group mb-3 w-75 mx-auto">
       <div class="input-group-prepend">
         <span class="input-group-text">E-mail</span>
