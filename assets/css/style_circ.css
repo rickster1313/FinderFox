@@ -134,7 +134,11 @@
     max-width: 60px;
     width: 100%;
     margin-right: 20px;
+<<<<<<< HEAD
     /*border-radius: 50%;*/
+=======
+    border-radius: 0px;	
+>>>>>>> 10c2e2a9d32a4edbbe3271c65a22da794b4ecd0a
 }
 
 .container img.right {
