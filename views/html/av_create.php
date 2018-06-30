@@ -22,8 +22,10 @@
             
             <div>
                 <label><strong>Nome do seu AV </strong></label><br>
-                <input type="text" id="nome_av" name="nome_empresa_txt" style="outline: none;" required="required"> Dica: Nome de seu negócio/empresa (isso influenciará no link de sua página)
-                <br> <em>ex.: Meu negócio online (www.finderfox.com/meu-negocio-online).</em>
+                <input type="text" id="nome_av" name="nome_empresa_txt" style="outline: none;" required="required">
+                <a href="#" data-toggle="tooltip" title="Nome de seu negócio/empresa (isso influenciará no link de sua página)">???</a>
+                <br> 
+                <a href="#" title="Exemplo" data-toggle="popover" data-trigger="focus" data-content="Meu negócio online (www.finderfox.com/meu-negocio-online).">Exemplo</a>
             </div>
             <br>
             <div>
@@ -39,8 +41,10 @@
             <br>
             <div>
                 <label><strong>Slogan</strong></label><br>
-                <input type="text" name="slogan_txt" size="70" required="required"> Dica: Uma frase simples para uma marca ser sempre lembrada
-                <br> <em>ex.: Gerenciando seu negócio online com maior eficiência.</em>
+                <input type="text" name="slogan_txt" size="70" required="required">
+                <a href="#" data-toggle="tooltip1" title="Uma frase simples para uma marca ser sempre lembrada">???</a>
+                <br>
+                <a href="#" title="Exemplo" data-toggle="popover1" data-trigger="focus" data-content="Gerenciando seu negócio online com maior eficiência..">Exemplo</a> 
             </div>
             <br>
 
