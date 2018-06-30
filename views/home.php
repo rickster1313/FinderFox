@@ -12,18 +12,9 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/common.css">
-<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">
 
 	<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">-->
-
-=======
-	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">	
-	<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">-->
-	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">
->>>>>>> 920e4e4063bbc93e876f720a9931968369154bfb
-
 
 <style type="text/css">
 
@@ -116,11 +107,6 @@
 <div id="Home" class="tab-pane in active" >
 <hr id="filtro" data-toggle="collapse" data-target="#demo" style="background-color: red; ">
   <div id="demo" class="collapse">
-<<<<<<< HEAD
-    Aqui nós colocaremos os diferentes filtros,<br>
-    mas os cara tão com sono agora, então deixa pra amanhã,<br>
-    Vlw flw fui galeeraaaaa!!!<i class="fa chevron-down fa-2x" aria-hidden="true"></i>
-=======
    	<form action="" method="">
     <div class="checkbox">
       <label><input type="checkbox" value="" checked>Cabeleleiros</label> |
@@ -140,7 +126,6 @@
         <option>Ultimos meses</option>
       </select>
   </form>
->>>>>>> 920e4e4063bbc93e876f720a9931968369154bfb
   </div>
 	<div class="ambiente" id="resultado_av" style="width: 100%; height: auto;padding-bottom:30px;  background: rgba(0,0,0,0.6); ">
 	
