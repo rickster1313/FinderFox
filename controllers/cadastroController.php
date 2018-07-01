@@ -64,13 +64,12 @@
 			$data = addslashes($_POST["data_txt"]);
 			$email = addslashes($_POST["email_txt"]);
 			$senha =  password_hash(addslashes($_POST["senha_txt"]), PASSWORD_DEFAULT);
-			$endereco = addslashes($_POST["endereco_txt"]);
 			$telefone = addslashes($_POST["telefone_txt"]);
 			$sexo = addslashes($_POST["sexo_txt"]);
 			$cpf_cnpj = addslashes($_POST["CPF_CNPJ_txt"]);
 
 			$usuariosModel = new usuariosModel();
-			$usuariosModel->cadastraUsuario($nome, $data, $email, $senha, $endereco, $telefone, $sexo, $cpf_cnpj);
+			$usuariosModel->cadastraUsuario($nome, $data, $email, $senha, $telefone, $sexo, $cpf_cnpj);
 		}
 	}
 

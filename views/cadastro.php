@@ -67,11 +67,6 @@
 		<div id="forca"></div>
 	</div>
 
-        <label>Endereço:</label>
-		<div class="input-group mb-3" style="width: 50%;">
-     
-		<input class="form-control" style="border-radius: 15px;border: 2px solid #ddb3b3;background: #f2f2f3; box-shadow: 0 0 0 0" type="text" name="endereco_txt"  placeholder="endereço..." required="required" /><br><br>
-</div>
 
         <label>Telefone:</label>
 		<div class="input-group mb-3" style="width: 50%;">

@@ -22,10 +22,10 @@
             
             <div>
                 <label><strong>Nome do seu AV </strong></label><br>
-                <input type="text" id="nome_av" name="nome_empresa_txt" style="outline: none;" required="required">
-                <a href="#" data-toggle="tooltip" title="Nome de seu negócio/empresa (isso influenciará no link de sua página)">???</a>
+                <input type="text" id="nome_av" name="nome_empresa_txt" size="40" placeholder="Ex.: Meu Ambiente Virtual" style="outline: none;" required="required">
+                <a href="#" data-toggle="tooltip" title="Nome de seu negócio/empresa (isso influenciará no link de sua página). Ex.: www.finderfox.com/meu-ambiente-virtual "></a>
                 <br> 
-                <a href="#" title="Exemplo" data-toggle="popover" data-trigger="focus" data-content="Meu negócio online (www.finderfox.com/meu-negocio-online).">Exemplo</a>
+                
             </div>
             <br>
             <div>
@@ -36,7 +36,7 @@
             <br>
              <div>
                 <label><strong>Logo</strong></label><br>
-                <input type="file" name="logo_txt" size="70"><i>Recomendado imagem  200 x 200 pixels</i>
+                <input type="file" name="logo_txt" size="70"><br><i>Recomendado imagem  200 x 200 pixels</i>
             </div>
             <br>
             <div>
@@ -45,6 +45,14 @@
                 <a href="#" data-toggle="tooltip1" title="Uma frase simples para uma marca ser sempre lembrada">???</a>
                 <br>
                 <a href="#" title="Exemplo" data-toggle="popover1" data-trigger="focus" data-content="Gerenciando seu negócio online com maior eficiência..">Exemplo</a> 
+            </div>
+            <br>
+            <div>
+                <label><strong>CEP</strong></label><br>
+                <input type="text" name="cep_txt"  placeholder="00000000" required="required">
+                
+                <br>
+                <a href="#" title="Exemplo" data-toggle="popover1" data-trigger="focus" data-content="Gerenciando seu negócio online com maior eficiência..">Exemplo</a>
             </div>
             <br>
 
