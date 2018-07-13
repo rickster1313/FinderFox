@@ -42,9 +42,9 @@
 
 <div id="main">
 
-<div class="w3-teal">
-  <button id="openNav" class="w3-button w3-teal w3-xlarge">&#9776;</button>
-  <a href="<?php echo BASE_URL ?>login/deslogar" style="float: right; margin-right: 9px; margin-top: 9px;"><button id="btn_sair">SAIR</button></a>
+<div class="w3-black" style="overflow: hidden;">
+  <button id="openNav" style="outline-style: none;" class="w3-button w3-black w3-xlarge">&#9776;</button>
+  <a  href="<?php echo BASE_URL ?>login/deslogar" style="float: right; margin-right: 9px; margin-top: 9px;"><button class="btn btn-danger" id="btn_sair">SAIR</button></a>
 </div>
 	<div class="tab-content conteudo">   
                 <div id="est" class="tab-pane in active">

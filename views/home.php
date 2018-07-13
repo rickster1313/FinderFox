@@ -60,12 +60,22 @@
 		font-family: "Champagne & Limousines Bold";
 		font-size: 25px;  
 			 } 
+
 .item-av{
-	width: 48%;
+	width: 40%;
 	height: 100px;
 	border: solid black 1px;
 	float: left;	
 	margin: 1%;
+}
+#resultado_av{
+	width: 100%; 
+	height: auto;
+	padding-bottom:30px;
+	padding-left: 14%;
+	position: relative;  
+	background: rgba(0,0,0,0.6);
+	overflow: hidden;
 }
 
 </style>
@@ -135,7 +145,7 @@
       </select>
   </form>
   </div>
-	<div class="ambiente" id="resultado_av" style="width: 100%; height: auto;padding-bottom:30px;position: relative;  background: rgba(0,0,0,0.6);overflow: hidden;">
+	<div class="ambiente" id="resultado_av">
 		<!-- ############### HOME - Pesquisa de AVs ################## -->
 		<div class="item-av"> av</div>
 		<div class="item-av"> av</div>
