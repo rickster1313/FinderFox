@@ -88,13 +88,13 @@
 		<div class="container-fluid" style="padding: 0px;">
 			<div class="jumbotron" style="background-image: url(assets/images/pessoa_feliz.jpg);">
 				<div class="botoes" style="">
-				<a href="<?php echo BASE_URL; ?>login"><button class="btn btn-outline-dark ">LOGIN</button></a>
-				<a href="<?php echo BASE_URL; ?>cadastro"><button class="btn btn-outline-dark">CADASTRO</button></a>
+				<a href="<?php echo BASE_URL; ?>login"><button class="btn btn-outline-dark film-font" style="font-size: 18px;">LOGIN</button></a>
+				<a href="<?php echo BASE_URL; ?>cadastro"><button class="btn btn-outline-dark film-font" style="font-size: 18px;">CADASTRO</button></a>
 			</div>
 				<img src="">
 			<h1 class="text-center replay-font">FinderFox</h1> 
 			<p class="text-center film-font">Gerenciando seu negócio e vendendo pastel de flango na esquina do alberto</p>
-			<input class="form-control mx-auto d-block" name="pesquisaAV_txt" id="myInput" type="text" placeholder="Pesquise o AV desejado..." style="width:40%; background: rgba(0,0,0,0.2); color: #fff; box-shadow: 0 0 0 0">
+			<input class="form-control mx-auto d-block film-font" name="pesquisaAV_txt" id="myInput" type="text" placeholder="Pesquise o AV desejado..." style="width:40%; background: rgba(0,0,0,0.2); color: #fff; box-shadow: 0 0 0 0; font-size: 18px;">
 		</div>	
 	
 
@@ -219,20 +219,33 @@
 			<img src="<?php echo BASE_URL; ?>assets/images/43386.jpg" style="width: 333px;">
 		</div>
 		<div class="col-sm-7">
+
+		<br>
 			<form action="/action_page.php">
-    <div class="form-group">
-      <label for="email">Nome:</label>
-      <input type="email" class="form-control" id="nome" placeholder="fulano de tal" name="nome">
+			<center>
+			   <label for="email" class="film-font" style="font-size: 18px;">Nome:</label>
+			   </center>
+
+    <div class="input-group mb-3">
+      <input type="email" class="form-control" id="nome" placeholder="fulano de tal" name="nome" style="border-radius: 15px; border: 2px solid #ddb3b3; background: #f2f2f3; box-shadow: 0 0 0 0">
     </div>
-    <div class="form-group">
-      <label for="pwd">Email:</label>
-      <input type="email" class="form-control" id="pwd" placeholder="exemplo@gmail.com" name="email">
+    <br>
+    <center>
+     <label for="pwd" class="film-font" style="font-size: 18px;">Email:</label>
+     </center>
+    <div class="input-group mp-3">
+      <input type="email" class="form-control" id="pwd" placeholder="exemplo@gmail.com" name="email" style="border-radius: 15px; border: 2px solid #ddb3b3; background: #f2f2f3; box-shadow: 0 0 0 0">
     </div>
-     <div class="form-group">
-   <label for="comment">Comentario:</label>
-      <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Com oque podemos ajuda?"></textarea>
+    <br>
+    <center>
+       <label for="comment" class="film-font" style="font-size: 18px;">Comentario:</label>
+       </center>
+     <div class="input-group mb-3">
+      <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Com oque podemos ajuda?" style="border-radius: 15px; border: 2px solid #ddb3b3; background: #f2f2f3; box-shadow: 0 0 0 0"></textarea>
       </div>
-    <button type="submit" class="btn btn-outline-dark "">Enviar</button>
+      <center>
+    <button type="submit" class="btn btn-outline-dark film-font" style="font-size: 18px;">ENVIAR</button>
+    </center>
   </form>
 		</div>
 	</div>

@@ -11,6 +11,35 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
+
+
+<style type="text/css">
+	@font-face {
+
+      font-family: "BPreplayBold";
+      src: url("assets/fonts/BPreplayBold.otf") format("opentype");
+
+      }
+
+
+.replay-font{
+    font-family: "BPreplayBold";
+    font-size: 16px;  
+       }
+
+       @font-face {
+
+			font-family: "Champagne & Limousines Bold";
+			src: url("assets/fonts/Champagne & Limousines Bold.ttf") format("truetype");
+
+			}
+
+       .film-font{
+		font-family: "Champagne & Limousines Bold";
+		font-size: 25px;  
+			 }  
+</style>
+
 	</head>
 
 <body>
@@ -22,7 +51,7 @@
     	<a href="<?php echo BASE_URL; ?>"><button class="btn btn-outline-dark" style="margin-top: 15px">Pagina Inicial</button></a>
     </div>
 
-    <div class="col-md-6 h-100">
+    <div class="col-md-6 h-100" style="background: rgba(221, 179, 179, 0.2);">
 
 	<form method="POST" action="<?php echo BASE_URL."login/valida" ?>" style="position: relative; left: 50%; top: 50%; transform: translate(-50%,-50%);"> 
 	 <?php 
@@ -31,21 +60,22 @@
                 unset($_SESSION["msg"]);
             } 
         ?>
-		<h3 class="text-center">Faça Login, é gratis!</h3><br>
+		<h3 class="text-center film-font" style="font-size: 32px;">Faça Login, é gratis!</h3><br>
+		<center>
+		<label class="film-font" style="font-size: 18px;">E-Mail:</label>
+		</center>
+
 	<div class="input-group mb-3 w-75 mx-auto">
-      <div class="input-group-prepend">
-        <span class="input-group-text">E-mail</span>
-      </div>
-		<input autofocus="autofocus" class="form-control" type="text" placeholder="exemplo@email.com..." name="email_txt" required /><br><br>
+		<input style="border-radius: 15px; border: 2px solid #ddb3b3;background: #f2f2f3; box-shadow: 0 0 0 0" autofocus="autofocus" class="form-control" type="text" placeholder="exemplo@email.com..." name="email_txt" required /><br><br>
 		</div>
+		<center>
+        <label class="film-font" style="font-size: 18px;">Senha:</label>
+        </center>
 		<div class="input-group mb-3 w-75 mx-auto ">
-		<div class="input-group-prepend">
-        <span class="input-group-text">Senha</span>
-      </div>
-		<input class="form-control" type="password" placeholder="************" name="senha_txt" required /><br><br>
+		<input style="border-radius: 15px; border: 2px solid #ddb3b3;background: #f2f2f3; box-shadow: 0 0 0 0" class="form-control" type="password" placeholder="************" name="senha_txt" required /><br><br>
 		</div>
 
-		<input class="btn btn-outline-dark mx-auto d-block w-25" type="submit" name="enviar_login" value="Logar" style="border-radius: 15px;">
+		<input class="btn btn-outline-dark mx-auto d-block w-25 film-font" type="submit" name="enviar_login" value="LOGAR" style="border-radius: 15px; font-size: 18px;">
 	</form>
         
    
