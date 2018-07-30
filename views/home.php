@@ -161,8 +161,13 @@
         <div class="main">
             <div class="form">
                 <form>
+<<<<<<< HEAD
                     <input type="text" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
                     <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
+=======
+                    <input type="text" id="cep" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP">
+                    <input type="submit" name="enviar_cep" value="Buscar">
+>>>>>>> dc04c1c4cb9a0b97ca343e23df4212ea6bed1857
                 </form>
             </div>
 
@@ -174,6 +179,7 @@
 
 
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.mask.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>

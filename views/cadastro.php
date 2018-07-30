@@ -15,35 +15,13 @@
 <style type="text/css">
 
 
-@font-face {
 
-      font-family: "BPreplayBold";
-      src: url("assets/fonts/BPreplayBold.otf") format("opentype");
-
-      }
-
-
-.replay-font{
-    font-family: "BPreplayBold";
-    font-size: 16px;  
-       }
-
-       @font-face {
-
-			font-family: "Champagne & Limousines Bold";
-			src: url("assets/fonts/Champagne & Limousines Bold.ttf") format("truetype");
-
-			}
-
-       .film-font{
-		font-family: "Champagne & Limousines Bold";
-		font-size: 25px;  
-			 }  
 
 </style>
 </head>
 <body>
 	
+<<<<<<< HEAD
 
 <div class="container-fluid">
 
@@ -61,6 +39,9 @@
 </div>
 </div>
 </div>
+=======
+	
+>>>>>>> dc04c1c4cb9a0b97ca343e23df4212ea6bed1857
 	
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.mask.js"></script>
