@@ -26,7 +26,7 @@
 
     .header{
         width: 100%;
-        background-color: #232323; 
+        background-color: #361850; 
         overflow: hidden;
     }
     .nav{
@@ -36,12 +36,7 @@
     .nav li a{
         color: #ffffff;
     }
-    .nav-item{
-        background-color: #68319B;
-        border-radius: 2px;
-        margin: 60px 5px 10px 5px;
-        padding:;
-    }
+   
     .header img{
         float: left;
         margin-left: 50px;
@@ -111,6 +106,33 @@
        color: rgba(0,0,0,0.5);
        font-size: 20px;
     }
+
+@font-face {
+
+      font-family: "BPreplayBold";
+      src: url("assets/fonts/BPreplayBold.otf") format("opentype");
+
+      }
+
+
+.replay-font{
+    font-family: "BPreplayBold";
+    font-size: 16px;  
+       }
+
+       @font-face {
+
+            font-family: "Champagne & Limousines Bold";
+            src: url("assets/fonts/Champagne & Limousines Bold.ttf") format("truetype");
+
+            }
+
+       .film-font{
+        font-family: "Champagne & Limousines Bold";
+        font-size: 25px;  
+             }  
+
+
 </style>
 
 </head>
@@ -124,24 +146,23 @@
     -->
 		
     <div class="container-fluid">
-        <header class="header">
+        <header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
             <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/logo-falso.png">
-            <p>FinderFox</p>
-            <ul class="nav navbar-expand">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL; ?>login">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL; ?>cadastro">Cadastre-se já</a>
-                </li>
+            <p class="replay-font">FinderFox</p>
+            <ul class="nav navbar-expand" >
+                    <div class="botão" style="margin-top: 20%;">
+                    <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>login">LOGIN</a>
+                    <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
+                    </div>
+                
             </ul>
 
         </header>
         <div class="main">
             <div class="form">
                 <form>
-                    <input type="text" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP">
-                    <input type="submit" name="enviar_cep" value="Buscar">
+                    <input type="text" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
+                    <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
                 </form>
             </div>
 
