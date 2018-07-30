@@ -158,16 +158,18 @@
             </ul>
 
         </header>
-        <div class="main">
+        <div class="main" style="background: linear-gradient(45deg, #A491BA, #CFC1DE)">
+               
+               <div class="informação">
+                   <p class="replay-font">Informe-nos seu cep para que possamos encontrar o av's que localizam-se ao seu redor</p>
+               </div>
+                
             <div class="form">
                 <form>
-<<<<<<< HEAD
                     <input type="text" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
                     <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
-=======
-                    <input type="text" id="cep" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP">
-                    <input type="submit" name="enviar_cep" value="Buscar">
->>>>>>> dc04c1c4cb9a0b97ca343e23df4212ea6bed1857
+
+                    
                 </form>
             </div>
 
