@@ -140,7 +140,7 @@
         <div class="main">
             <div class="form">
                 <form>
-                    <input type="text" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP">
+                    <input type="text" id="cep" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP">
                     <input type="submit" name="enviar_cep" value="Buscar">
                 </form>
             </div>
@@ -153,6 +153,7 @@
 
 
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.mask.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
