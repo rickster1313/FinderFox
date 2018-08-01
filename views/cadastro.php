@@ -83,7 +83,9 @@
 			height: 200px;
 		}
 	}
-	
+	.botao-voltar{
+		position: absolute;
+	}
 
 </style>
 </head>
@@ -92,8 +94,9 @@
 
 
 	<div class="container-fluid">
-
+		<a class="btn btn-outline-light film-font botao-voltar" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
 		<div class="main">
+
 			<div class="esquerda">
 				<div class="qua-es">
 					//aqui vai ser uma imagem com o texto:<br>
