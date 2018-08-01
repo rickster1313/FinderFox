@@ -84,7 +84,20 @@
 		}
 	}
 	.botao-voltar{
+		border-radius: 15px; 
+		border: 2px solid; 
+		font-size: 18px;
 		position: absolute;
+		z-index: 2;
+		top: 5px;
+		left: 5px;
+	}
+	.formularios{
+		padding-top: 100px;
+		padding-left: 120px; 
+	}
+	.formularios form{
+		padding-left: 130px;
 	}
 
 </style>
@@ -94,7 +107,7 @@
 
 
 	<div class="container-fluid">
-		<a class="btn btn-outline-light film-font botao-voltar" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
+		<a class="btn btn-outline-light film-font botao-voltar" style="" href="<?php echo BASE_URL; ?>">Voltar ao Menu</a>
 		<div class="main">
 
 			<div class="esquerda">
@@ -113,10 +126,47 @@
 			</div>
 		</div>
 		<div class="formularioUser" style="color: white">
-			<h1>Formulario de usuario</h1>
+			<div class="formularios">
+				<h1>Dados de perfil do usuário</h1><hr>
+				<h3></h3>
+				<form>
+					<label>Nome</label> <input type="text" name=""><br>
+					<label>e-mail</label> <input type="e-mail" name=""><br>
+					<label>telefone</label> <input type="text" name=""><br>
+					<label>CPf / CNPJ</label> <input type="text" name=""><br>
+					<label>senha</label> <input type="password" name=""><br>
+					<input type="submit" name="" value="Cadastrar">
+				</form>
+			</div>
+			
 		</div>
 		<div class="formularioEmpre" style="color: white">
-			<h1>Formulario de Empresarios</h1>
+			<div class="formularios">
+				<hr><h1>Dados de perfil do Empresário</h1><br><br>
+			
+				<form>
+
+					<label>Nome</label> <input type="text" name=""><br>
+					<label>e-mail</label> <input type="e-mail" name=""><br>
+					<label>telefone</label> <input type="text" name=""><br>
+					<label>CPf / CNPJ</label> <input type="text" name=""><br>
+					<label>senha</label> <input type="password" name=""><br>
+
+					<hr><h1 style="margin-left: -130px">Dados de localização</h1><br><br>
+
+					<label>CEP</label> <input type="text" name="">
+					<button id="ok_cep">Confirmar</button><br>
+					<div id="localiza" style="display: none">
+						<label>Rua</label> <input type="text" disabled="disabled" name=""><br>
+						<label>Estado</label> <input type="text" disabled="disabled" name=""><br>
+						<label>Cidade</label> <input type="text" disabled="disabled" name=""><br>
+						<label>Nº</label> <input type="text" name=""><br>
+						<input type="submit" name="" value="Cadastrar">
+					</div>
+					
+
+				</form>
+			</div>
 		</div>
 
 

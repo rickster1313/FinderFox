@@ -13,7 +13,11 @@ var $j = jQuery.noConflict();
     				$j(".formularioEmpre").show();
   				});
 			});
-
+			$j("#ok_cep").bind("click", function(e){
+				e.preventDefault();
+				$j(this).hide();
+				$j("#localiza").show(300);
+			});
 
 
 		});
