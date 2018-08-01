@@ -129,13 +129,17 @@
 			<div class="formularios">
 				<h1>Dados de perfil do usuário</h1><hr>
 				<h3></h3>
-				<form>
-					<label>Nome</label> <input type="text" name=""><br>
-					<label>e-mail</label> <input type="e-mail" name=""><br>
-					<label>telefone</label> <input type="text" name=""><br>
-					<label>CPf / CNPJ</label> <input type="text" name=""><br>
-					<label>senha</label> <input type="password" name=""><br>
-					<input type="submit" name="" value="Cadastrar">
+				<form method="POST" id="novo_user">
+					<label>Nome</label> <input type="text" name="nome_txt" required="required"><br>
+					<label>E-mail</label> <input class="email" type="email" name="email_txt" required="required"><br>
+					<label>Telefone</label> <input class="telefone" type="text" name="telefone_txt" required="required"><br>
+					<label>Tipo de pessoa</label> <br>
+					<input type="radio" name="pessoa" value="fisica" checked="checked">Física 
+					<input type="radio" name="pessoa" value="juridica">Jurídica<br>
+					<input class="cpf_cnpj" type="text" name="cpf-cnpj_txt" required="required" placeholder="CPF..."><br><br>
+					<label>Senha</label> <input class="senha" type="password" name="senha_txt" required="required"> <br>
+					<label>Confirmar senha</label> <input type="password" name="senha_confirm" required="required"> <br>
+					<input type="submit" name="novo_user" value="Cadastrar">
 				</form>
 			</div>
 			
@@ -146,12 +150,15 @@
 			
 				<form>
 
-					<label>Nome</label> <input type="text" name=""><br>
-					<label>e-mail</label> <input type="e-mail" name=""><br>
-					<label>telefone</label> <input type="text" name=""><br>
-					<label>CPf / CNPJ</label> <input type="text" name=""><br>
-					<label>senha</label> <input type="password" name=""><br>
-
+					<label>Nome</label> <input type="text" name="" required="required"><br>
+					<label>e-mail</label> <input class="email" type="e-mail" name="" required="required"><br>
+					<label>telefone</label> <input class="telefone" type="text" name="" required="required"><br>
+					<label>Tipo de pessoa</label> - 
+					<input type="radio" name="pessoa" value="fisica" checked="checked">Física 
+					<input type="radio" name="pessoa" value="juridica">Jurídica<br>
+					<label>CPF</label><input class="cpf-cnpj" type="text" name="" required="required"><br>
+					<label>senha</label> <input type="password" name="senha_txt" required="required"><br>
+					<label>Confirmar senha</label> <input type="password" name="senha_confirm" required="required"> <br>
 					<hr><h1 style="margin-left: -130px">Dados de localização</h1><br><br>
 
 					<label>CEP</label> <input type="text" name="">

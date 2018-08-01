@@ -19,6 +19,60 @@ var $j = jQuery.noConflict();
 				$j("#localiza").show(300);
 			});
 
+			pessoa = "fisica";
+			$j("#novo_user .cpf_cnpj").mask("000.000.000-00");
+			$j("#novo_user input[name='pessoa']").bind("change", function(){
+				if ($j("#novo_user input[name='pessoa']:checked").val() == 'fisica') {
+                	pessoa = "fisica";
+            	}
+            	if ($j("#novo_user input[name='pessoa']:checked").val() == 'juridica') {
+                	pessoa = "juridica";
+            	}
+            	$j("#novo_user .cpf_cnpj").val("");
+            	if(pessoa == "fisica"){
+            		$j("#novo_user .cpf_cnpj").attr("placeholder", "CPF...");
+            		$j("#novo_user .cpf_cnpj").mask("000.000.000-00");
+            	}else{
+            		$j("#novo_user .cpf_cnpj").attr("placeholder", "CNPJ...");
+            		$j("#novo_user .cpf_cnpj").mask("00.000.000/0000-00");
+            	}
+			});
+
+			email_stats = false;
+			telefone_stats = false;
+			cpf_cnpj_stats = false;
+			senha_stats = false;
+
+
+			$j("#novo_user").bind("submit",function(e){
+				e.preventDefault();
+				var email = $j("#novo_user .email").val();
+				email = email.serialize();
+			    $j.ajax({
+			        type:'POST',
+			        url:"cadastro/verificaEmail",
+			        data:email,
+			        dataType:'json',
+			        success:function(json){
+			        	if(json.status==true){
+			        		email_stats = true;
+			        	}else{
+			        		email_stats = false;
+			        	}
+			        },
+			        error:function(){
+			        	console.log("error no ajax");
+			        }
+			    });
+
+			    
+			});
+
+			$j("#novo_user .telefone").mask("(00) 000000000");
+			    var telefone = $j("#novo_user .telefone").val();
+			    if(telefone.length >=13){
+			    	telefone_stats = true;
+			    }
 
 		});
 
