@@ -13,35 +13,112 @@
 
 
 <style type="text/css">
+	.container-fluid{
+		padding: 0px;
+	}
 
+	.main{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
 
+	.qua-es{
+		background-color: white;
+		border: #232323 solid 2px;
+	}
+	.qua-di{
+		background-color: white;
+		border: #232323 solid 2px;
+	}
 
+	.formularioUser{
+		display: none;
+		background-color: rgba(54,24,80,1);
+	}
+
+	.formularioEmpre{
+		display: none;
+		background-color: rgba(35,35,35,1);
+	}
+	.esquerda{
+		background-color: rgba(54,24,80,1);
+		position: absolute;
+		left: 0px;
+		width: 50%;
+		height: 100%;
+		display: flex;
+  		align-items: center;
+ 		justify-content: center;
+	}
+
+	.direita{
+		background-color: rgba(35,35,35,1);
+		position: absolute;
+		right: 0px;
+		width: 50%;
+		height: 100%;
+		display: flex;
+  		align-items: center;
+ 		justify-content: center;
+	}
+
+	@media only screen and (min-width: 780px){
+		.qua-es{
+			width: 360px;
+			height: 360px;
+		}
+		.qua-di{
+			width: 360px;
+			height: 360px;
+		}
+	}
+	@media only screen and (max-width: 780px){
+		.qua-es{
+			width: 200px;
+			height: 200px;
+		}
+		.qua-di{
+			width: 200px;
+			height: 200px;
+		}
+	}
+	
 
 </style>
 </head>
 <body>
 	
-<<<<<<< HEAD
 
-<div class="container-fluid">
 
-<div class="row">
-	<div class="col-md-6" style="background-color: #361850; height: 800px;">
-	<div class="cliente" style="height: 300px; width: 300px; background-color: #fff;" >
+	<div class="container-fluid">
+
+		<div class="main">
+			<div class="esquerda">
+				<div class="qua-es">
+					//aqui vai ser uma imagem com o texto:<br>
+					<h1>Cadastrar como novo usuário do FinderFox</h1>
+					<h5>Benefícios: usar funções dos ambientes e muito mais!</h5>
+				</div>
+			</div>
+			<div class="direita">
+				<div class="qua-di">
+					//aqui vai ser uma imagem com o texto:<br>
+					<h1>Cadastrar como novo /gestor/</h1>
+					<h5>Benefícios: criar seu próprio ambiente, liberar suas funções dentre outros!!</h5>
+				</div>
+			</div>
+		</div>
+		<div class="formularioUser" style="color: white">
+			<h1>Formulario de usuario</h1>
+		</div>
+		<div class="formularioEmpre" style="color: white">
+			<h1>Formulario de Empresarios</h1>
+		</div>
+
 
 	</div>
-	</div>
 
-	<div class="col-md-6" style="background-color: #68319B; height: 800px;">
-		<div class="empresario" style="height:300px; width: 300px; background-color: #fff;">
-	</div>
-
-</div>
-</div>
-</div>
-=======
-	
->>>>>>> dc04c1c4cb9a0b97ca343e23df4212ea6bed1857
 	
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.mask.js"></script>

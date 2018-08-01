@@ -1,5 +1,25 @@
 var $j = jQuery.noConflict();
 		$j(document).ready(function(){
+			$j(".qua-es").bind("click",function(){
+				$j("body").css("background-color", "rgba(54,24,80,1)");
+				$j(".main").fadeOut(400, function() {
+    				$j(".formularioUser").show();
+  				});
+  			});
+
+			$j(".qua-di").bind("click",function(){
+				$j("body").css("background-color", "rgba(35,35,35,1)");
+				$j(".main").fadeOut(400, function() {
+    				$j(".formularioEmpre").show();
+  				});
+			});
+
+
+
+		});
+
+
+			/*
 			function abrir(){
   				if(aberto == 1) {
 					aberto =2;
@@ -245,6 +265,6 @@ var $j = jQuery.noConflict();
 			        	});
 					}
 				});
+				*/
 
 
-		});

@@ -140,9 +140,9 @@
 <body>
     <!--  
     #68319B rgba(104,49,155,1) roxo claro
-    #361850 roxo escuro
-    #ffffff branco
-    #232323 cinza pah 
+    #361850 rgba(54,24,80,1) roxo escuro
+    #ffffff rgba(255,255,255,1) branco
+    #232323 rgba(35,35,35,1) cinza pah 
     -->
 		
     <div class="container-fluid">
@@ -161,13 +161,8 @@
         <div class="main">
             <div class="form">
                 <form>
-<<<<<<< HEAD
-                    <input type="text" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
+                    <input type="text" id="cep" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
                     <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
-=======
-                    <input type="text" id="cep" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP">
-                    <input type="submit" name="enviar_cep" value="Buscar">
->>>>>>> dc04c1c4cb9a0b97ca343e23df4212ea6bed1857
                 </form>
             </div>
 
