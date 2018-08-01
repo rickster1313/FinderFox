@@ -158,11 +158,17 @@
             </ul>
 
         </header>
-        <div class="main">
+        <div class="main" style="background: linear-gradient(45deg, #A491BA, #CFC1DE)">
+               
+               <div class="informação">
+                   <p class="replay-font">Informe-nos seu cep para que possamos encontrar os servicos disponiveis para sua localizacao</p>
+               </div>
+                
             <div class="form">
                 <form>
                     <input type="text" id="cep" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
                     <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
+
                 </form>
             </div>
 

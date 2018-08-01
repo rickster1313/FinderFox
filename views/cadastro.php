@@ -25,11 +25,11 @@
 
 	.qua-es{
 		background-color: white;
-		border: #232323 solid 2px;
+		border: #fff solid 2px;
 	}
 	.qua-di{
 		background-color: white;
-		border: #232323 solid 2px;
+		border: #fff solid 2px;
 	}
 
 	.formularioUser{
