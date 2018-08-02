@@ -148,7 +148,7 @@
     <div class="container-fluid">
         <header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
             <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/logo-falso.png">
-            <p class="replay-font">FinderFox</p>
+            <p class="replay-font" style="color: #ffffff">FinderFox</p>
             <ul class="nav navbar-expand" >
                     <div class="botão" style="margin-top: 20%;">
                     <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>login">LOGIN</a>
@@ -159,12 +159,11 @@
 
         </header>
         <div class="main" style="background: linear-gradient(45deg, #A491BA, #CFC1DE)">
-               
-               <div class="informação">
-                   <p class="replay-font">Informe-nos seu cep para que possamos encontrar os servicos disponiveis para sua localizacao</p>
-               </div>
                 
             <div class="form">
+                <div class="informação">
+                   <p class="replay-font" style="font-size: 30px;">Informe-nos seu cep para que<br> possamos encontrar os servicos disponiveis para sua localizacao</p>
+               </div>
                 <form>
       <div class="form-group">
                     <input type="text" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">

@@ -41,10 +41,10 @@
 
 	.formularioEmpre{
 		display: none;
-		background-color: rgba(35,35,35,1);
+		
 	}
 	.esquerda{
-		background-color: rgba(54,24,80,1);
+		background: linear-gradient(45deg, #68319B, #361850);
 		position: absolute;
 		left: 0px;
 		width: 50%;
@@ -55,7 +55,7 @@
 	}
 
 	.direita{
-		background-color: rgba(35,35,35,1);
+		background: linear-gradient(45deg, #A491BA, #CFC1DE);
 		position: absolute;
 		right: 0px;
 		width: 50%;
@@ -140,11 +140,11 @@
 			<div class="esquerda grid cs-style-1">
 				
 				<figure>
-						<img src="assets/images/1.png" alt="img01">
+						<div class="" style="width: 400px; height: 300px; border: 4px solid #fff"></div>
 						<figcaption>
-							<h3>Camera</h3>
-							<span>Jacob Cummings</span>
-							<button class="btn btn-outline-light qe">Cadastrar-se</button>
+							<h3>Usuario</h3>
+							
+							<button class="btn btn-outline-light qe film-font" style="border-radius: 15px;">Cadastrar-se</button>
 						</figcaption>
 					</figure>
 			
@@ -152,23 +152,26 @@
 			</div>
 			<div class="direita grid cs-style-1">
 				<figure>
-						<img src="assets/images/1.png" alt="img01">
+						<div class="" style="width: 400px; height: 300px; border: 4px solid #232323">
 						<figcaption>
-							<h3>Camera</h3>
-							<span>Jacob Cummings</span>
-							<button class="btn btn-outline-light qd">Cadastrar-se</button>
+							<h3>Empresário</h3>
+							
+							<button class="btn btn-outline-light qd film-font" style="border-radius: 15px;">Cadastrar-se</button>
 						</figcaption>
 					</figure>
 			</div>
 		</div>
 
 		<div class="container" style="background-image: url(assets/images/fundo.jpg); background-size: cover;">
+			<div class="row">
+				<div class="col-md-12" style="">
 		<div class="formularioUser" style="color: white">
 			<div class="formularios">
-				<h1 class="film-font">Dados de perfil do usuário</h1><hr>
+				<h1 class="film-font">Dados de perfil do usuário</h1>
+				<hr>
 				<h3></h3>
 
-				<form method="POST" id="novo_user">
+				<form method="POST" id="novo_user" class="" style=" left: 50%; transform: translate(-50%,);">
 					<div class="form-group">
 					<label class="film-font" style="font-size: 20px;">Nome</label> <input type="text" class="form-control" name="nome_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
 				</div>
@@ -206,8 +209,10 @@
 			
 		</div>
 	</div>
+	</div>
+	</div>
 
-	<div class="container">
+	<div class="container" style="background-image: url(assets/images/fundo2.jpg); background-size: cover;">
 		<div class="formularioEmpre" style="color: white">
 			<div class="formularios">
 				<hr><h1>Dados de perfil do Empresário</h1><br><br>
