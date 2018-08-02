@@ -10,42 +10,280 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/default.css" />
+
 
 
 <style type="text/css">
+	.container-fluid{
+		padding: 0px;
+	}
+
+	.main{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+
+	.qua-es{
+		background-color: white;
+		border: #fff solid 2px;
+	}
+	.qua-di{
+		background-color: white;
+		border: #fff solid 2px;
+	}
+
+	.formularioUser{
+		display: none;
+		
+	}
+
+	.formularioEmpre{
+		display: none;
+		background-color: rgba(35,35,35,1);
+	}
+	.esquerda{
+		background-color: rgba(54,24,80,1);
+		position: absolute;
+		left: 0px;
+		width: 50%;
+		height: 100%;
+		display: flex;
+  		align-items: center;
+ 		justify-content: center;
+	}
+
+	.direita{
+		background-color: rgba(35,35,35,1);
+		position: absolute;
+		right: 0px;
+		width: 50%;
+		height: 100%;
+		display: flex;
+  		align-items: center;
+ 		justify-content: center;
+	}
+
+	@media only screen and (min-width: 780px){
+		.qua-es{
+			width: 360px;
+			height: 360px;
+		}
+		.qua-di{
+			width: 360px;
+			height: 360px;
+		}
+	}
+	@media only screen and (max-width: 780px){
+		.qua-es{
+			width: 200px;
+			height: 200px;
+		}
+		.qua-di{
+			width: 200px;
+			height: 200px;
+		}
+	}
+	.botao-voltar{
+		border-radius: 15px; 
+		border: 2px solid; 
+		font-size: 18px;
+		position: absolute;
+		z-index: 2;
+		top: 5px;
+		left: 5px;
+	}
+	.formularios{
+		padding-top: 100px;
+		padding-left: 120px; 
+	}
+	.formularios form{
+		padding-left: 130px;
+	}
+
+	@font-face {
+
+      font-family: "BPreplayBold";
+      src: url("assets/fonts/BPreplayBold.otf") format("opentype");
+
+      }
 
 
+.replay-font{
+    font-family: "BPreplayBold";
+    font-size: 25px;  
+       }
 
+       @font-face {
+
+            font-family: "Champagne & Limousines Bold";
+            src: url("assets/fonts/Champagne & Limousines Bold.ttf") format("truetype");
+
+            }
+
+       .film-font{
+        font-family: "Champagne & Limousines Bold";
+        font-size: 20px;  
+             }  
 
 </style>
 </head>
 <body>
 	
-<<<<<<< HEAD
 
-<div class="container-fluid">
 
-<div class="row">
-	<div class="col-md-6" style="background-color: #361850; height: 800px;">
-	<div class="cliente" style="height: 300px; width: 300px; background-color: #fff;" >
+	<div class="container-fluid">
+		<a class="btn btn-outline-light film-font botao-voltar" style="" href="<?php echo BASE_URL; ?>">Voltar ao Menu</a>
+		<div class="main">
+
+			<div class="esquerda grid cs-style-1">
+				
+				<figure>
+						<img src="assets/images/1.png" alt="img01">
+						<figcaption>
+							<h3>Camera</h3>
+							<span>Jacob Cummings</span>
+							<button class="btn btn-outline-light qe">Cadastrar-se</button>
+						</figcaption>
+					</figure>
+			
+			
+			</div>
+			<div class="direita grid cs-style-1">
+				<figure>
+						<img src="assets/images/1.png" alt="img01">
+						<figcaption>
+							<h3>Camera</h3>
+							<span>Jacob Cummings</span>
+							<button class="btn btn-outline-light qd">Cadastrar-se</button>
+						</figcaption>
+					</figure>
+			</div>
+		</div>
+
+		<div class="container" style="background-image: url(assets/images/fundo.jpg); background-size: cover;">
+		<div class="formularioUser" style="color: white">
+			<div class="formularios">
+				<h1 class="film-font">Dados de perfil do usuário</h1><hr>
+				<h3></h3>
+
+				<form method="POST" id="novo_user">
+					<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Nome</label> <input type="text" class="form-control" name="nome_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">E-mail</label> <input class="email form-control" type="email" name="email_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Tipo de pessoa</label> <br>
+					<input type="radio" name="pessoa" value="fisica" checked="checked">Física 
+					<input type="radio" name="pessoa" value="juridica">Jurídica<br>
+				</div>
+
+				<div class="form-group">
+					<input class="cpf_cnpj form-control" type="text" name="cpf-cnpj_txt" required="required" placeholder="CPF..." style="background:transparent; border-radius: 15px;"><br><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Senha</label> <input class="senha form-control" type="password" name="senha_txt" required="required" style="background:transparent; border-radius: 15px;"> <br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control" name="senha_confirm" required="required" style="background:transparent; border-radius: 15px;"> <br>
+				</div>
+
+
+					<input type="submit" name="novo_user" value="Cadastrar" class="btn btn-outline-light film-font">
+				</form>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="formularioEmpre" style="color: white">
+			<div class="formularios">
+				<hr><h1>Dados de perfil do Empresário</h1><br><br>
+			
+				<form>
+                    <div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Nome</label> <input type="text" name="" class="form-control" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">e-mail</label> <input class="email form-control" type="e-mail" name="" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">telefone</label> <input class="telefone form-control" type="text" name="" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Tipo de pessoa</label> - 
+					<input type="radio" name="pessoa" value="fisica" checked="checked" class="film-font" style="font-size: 18px;">Física 
+					<input type="radio" name="pessoa" value="juridica" class="film-font" style="font-size: 18px;">Jurídica<br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">CPF</label><input class="cpf-cnpj form-control" type="text" name="" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">senha</label> <input type="password" class="form-control" name="senha_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control" name="senha_confirm" required="required" style="background:transparent; border-radius: 15px;"> <br>
+				</div>
+
+
+					<hr><h1 style="margin-left: -130px">Dados de localização</h1><br><br>
+                    <div class="form-group">
+					<label class="film-font" style="font-size: 20px;">CEP</label> <input type="text" name="" class="form-control" style="background:transparent; border-radius: 15px;">
+				</div>
+					<button id="ok_cep" class="btn btn-outline-light">Confirmar</button><br>
+					<div id="localiza" style="display: none">
+						<div class="form-group">
+						<label class="film-font" style="font-size: 20px;">Rua</label> <input type="text" disabled="disabled" name="" class="form-control" style="background:transparent; border-radius: 15px;"><br>
+					</div>
+
+					<div class="form-group">
+						<label class="film-font" style="font-size: 20px;">Estado</label> <input type="text" disabled="disabled" name="" class="form-control" style="background:transparent; border-radius: 15px;"><br>
+					</div>
+
+					<div class="form-group">
+						<label class="film-font" style="font-size: 20px;">Cidade</label> <input type="text" disabled="disabled" name="" class="form-control" style="background:transparent; border-radius: 15px;"><br>
+					</div>
+
+					<div class="form-group">
+						<label class="film-font" style="font-size: 20px;">Nº</label> <input type="text" name="" class="form-control" style="background:transparent; border-radius: 15px;"><br>
+					</div>
+
+						<input type="submit" name="" value="Cadastrar" class="btn btn-outline-light">
+					</div>
+					
+
+				</form>
+			</div>
+		</div>
+	</div>
+
 
 	</div>
-	</div>
 
-	<div class="col-md-6" style="background-color: #68319B; height: 800px;">
-		<div class="empresario" style="height:300px; width: 300px; background-color: #fff;">
-	</div>
-
-</div>
-</div>
-</div>
-=======
-	
->>>>>>> dc04c1c4cb9a0b97ca343e23df4212ea6bed1857
 	
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.mask.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/cadastro.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/toucheffects.js"></script>
         	
 </body>
 </html>

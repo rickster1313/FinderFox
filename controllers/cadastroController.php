@@ -18,20 +18,16 @@
 			}
 		}
 		public function verificaEmail(){
-			$email = addslashes($_GET['email_txt']);
+			$email = addslashes($_POST['email_txt']);
 			$usuariosModel = new usuariosModel();
 			$sql = $usuariosModel->verificaEmail($email);
 			$array=array(
-				'status'=>'',
-				'texto'=>''
-					);
-
+				'status'=>''
+			);
 			if($sql -> rowCount() > 0){
 				$array['status'] = false;
-				$array['texto'] = "Este e-mail já está em uso";
 			}else{
 				$array['status'] = true;
-				$array['texto'] = "E-mail OK";
 			}
 			echo json_encode($array);
 		}

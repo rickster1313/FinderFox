@@ -1,5 +1,110 @@
 var $j = jQuery.noConflict();
 		$j(document).ready(function(){
+			$j(".qe").bind("click",function(){
+				$j("body").css("background-color", "rgba(54,24,80,1)");
+				$j(".main").fadeOut(400, function() {
+    				$j(".formularioUser").show();
+  				});
+  			});
+
+			$j(".qd").bind("click",function(){
+				$j("body").css("background-color", "rgba(35,35,35,1)");
+				$j(".main").fadeOut(400, function() {
+    				$j(".formularioEmpre").show();
+  				});
+			});
+			$j("#ok_cep").bind("click", function(e){
+				e.preventDefault();
+				$j(this).hide();
+				$j("#localiza").show(300);
+			});
+
+			pessoa = "fisica";
+			$j("#novo_user .cpf_cnpj").mask("000.000.000-00");
+			$j("#novo_user input[name='pessoa']").bind("change", function(){
+				if ($j("#novo_user input[name='pessoa']:checked").val() == 'fisica') {
+                	pessoa = "fisica";
+            	}
+            	if ($j("#novo_user input[name='pessoa']:checked").val() == 'juridica') {
+                	pessoa = "juridica";
+            	}
+            	$j("#novo_user .cpf_cnpj").val("");
+            	if(pessoa == "fisica"){
+            		$j("#novo_user .cpf_cnpj").attr("placeholder", "CPF...");
+            		$j("#novo_user .cpf_cnpj").mask("000.000.000-00");
+            	}else{
+            		$j("#novo_user .cpf_cnpj").attr("placeholder", "CNPJ...");
+            		$j("#novo_user .cpf_cnpj").mask("00.000.000/0000-00");
+            	}
+			});
+
+			email_stats = false;
+			telefone_stats = false;
+			cpf_cnpj_stats = false;
+			senha_stats = false;
+
+			$j("#novo_user .telefone").mask("(00) 000000000");
+
+			$j("#novo_user").bind("submit",function(e){
+				e.preventDefault();
+				var email = $j("#novo_user .email").val();
+				email = email.serialize();
+			    $j.ajax({
+			        type:'POST',
+			        url:"cadastro/verificaEmail",
+			        data:email,
+			        dataType:'json',
+			        success:function(json){
+			        	if(json.status==true){
+			        		email_stats = true;
+			        	}else{
+			        		email_stats = false;
+			        	}
+			        },
+			        error:function(){
+			        	console.log("error no ajax");
+			        }
+			    });
+
+			    var telefone = $j("#novo_user .telefone").val();
+			    if(telefone.length >=13){
+			    	telefone_stats = true;
+			    }
+			   
+			   cpf_cnpj = $j(this).val();
+					
+						if((cpf_cnpj.length == 14 && pessoa=="fisica") || (cpf_cnpj.length == 18 && pessoa=="juridica")) {
+							cpf_cnpj = $j(this).serialize();
+				        	$j.ajax({
+					        	type:'POST',
+					        	url:'cadastro/verificaCPF_CNPJ',
+					        	data:cpf_cnpj,
+					        	dataType:'json',
+					        	success:function(json){
+
+					        	},
+					        	error:function(){
+					        		console.log("error no ajax");
+					        	}
+				        	});
+						}else{
+							cpf_cnpj_stats = false;
+						}
+
+							
+					
+
+
+			});
+
+			
+			    
+ 			
+		
+		});
+
+
+			/*
 			function abrir(){
   				if(aberto == 1) {
 					aberto =2;
@@ -49,53 +154,7 @@ var $j = jQuery.noConflict();
             	}
 			});
 			
-			//força de senha
-			$j("#senha").bind("keyup",function(){
-			var forca= 0;
-			var senha = $j(this).val();
-				if(senha.length >7){
-					forca += 40;
-				}
-				 var reg = new RegExp(/[a-z]/);
-				 if(reg.test(senha)){
-				 	forca += 20;
-				 }
-
-				 var reg = new RegExp(/[A-Z]/);
-				 if(reg.test(senha)){
-				 	forca += 20;
-				 }
-
-				 var reg = new RegExp(/[0-9]/);
-				 if(reg.test(senha)){
-				 	forca += 20;
-				 }
-				 
-				if(forca>=0 && forca <25){
-					$j("#forca").html("<strong>Senha Inválida</strong>");
-					$j("#forca").css("color", "gray");
-					senha_stats = false;
-				}
-				if(forca>=25 && forca <50){
-					$j("#forca").html("<strong>Fraca</strong>");
-					$j("#forca").css("color", "red");
-					senha_stats = false;
-				}else if(forca>=50 && forca <75){
-					$j("#forca").html("<strong>Média</strong>");
-					$j("#forca").css("color", "orange");
-					senha_stats = true;
-				}else if(forca>=75 && forca < 100){
-					$j("#forca").html("<strong>Forte</strong>");
-					$j("#forca").css("color", "green");
-					senha_stats = true;
-				}else if(forca==100){
-					$j("#forca").html("<strong>Muito Forte</strong>");
-					$j("#forca").css("color", "darkgreen");
-					senha_stats = true;
-				}
-			});
-
-
+			
 			//ajax verificando se email existe
 			var email = "";
 			$j("#email").bind("keyup", function(){
@@ -245,6 +304,6 @@ var $j = jQuery.noConflict();
 			        	});
 					}
 				});
+				*/
 
 
-		});

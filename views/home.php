@@ -140,9 +140,9 @@
 <body>
     <!--  
     #68319B rgba(104,49,155,1) roxo claro
-    #361850 roxo escuro
-    #ffffff branco
-    #232323 cinza pah 
+    #361850 rgba(54,24,80,1) roxo escuro
+    #ffffff rgba(255,255,255,1) branco
+    #232323 rgba(35,35,35,1) cinza pah 
     -->
 		
     <div class="container-fluid">
@@ -161,16 +161,16 @@
         <div class="main" style="background: linear-gradient(45deg, #A491BA, #CFC1DE)">
                
                <div class="informação">
-                   <p class="replay-font">Informe-nos seu cep para que possamos encontrar o av's que localizam-se ao seu redor</p>
+                   <p class="replay-font">Informe-nos seu cep para que possamos encontrar os servicos disponiveis para sua localizacao</p>
                </div>
                 
             <div class="form">
                 <form>
-                    <div class="form-group">
+      <div class="form-group">
                     <input type="text" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
                     <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
                     </div>
-                    
+
                 </form>
             </div>
 
