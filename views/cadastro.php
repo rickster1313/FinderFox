@@ -10,6 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/default.css" />
+
 
 
 <style type="text/css">
@@ -34,7 +36,7 @@
 
 	.formularioUser{
 		display: none;
-		background-color: rgba(54,24,80,1);
+		
 	}
 
 	.formularioEmpre{
@@ -100,6 +102,31 @@
 		padding-left: 130px;
 	}
 
+	@font-face {
+
+      font-family: "BPreplayBold";
+      src: url("assets/fonts/BPreplayBold.otf") format("opentype");
+
+      }
+
+
+.replay-font{
+    font-family: "BPreplayBold";
+    font-size: 25px;  
+       }
+
+       @font-face {
+
+            font-family: "Champagne & Limousines Bold";
+            src: url("assets/fonts/Champagne & Limousines Bold.ttf") format("truetype");
+
+            }
+
+       .film-font{
+        font-family: "Champagne & Limousines Bold";
+        font-size: 20px;  
+             }  
+
 </style>
 </head>
 <body>
@@ -110,72 +137,144 @@
 		<a class="btn btn-outline-light film-font botao-voltar" style="" href="<?php echo BASE_URL; ?>">Voltar ao Menu</a>
 		<div class="main">
 
-			<div class="esquerda">
-				<div class="qua-es">
-					//aqui vai ser uma imagem com o texto:<br>
-					<h1>Cadastrar como novo usuário do FinderFox</h1>
-					<h5>Benefícios: usar funções dos ambientes e muito mais!</h5>
-				</div>
+			<div class="esquerda grid cs-style-1">
+				
+				<figure>
+						<img src="assets/images/1.png" alt="img01">
+						<figcaption>
+							<h3>Camera</h3>
+							<span>Jacob Cummings</span>
+							<button class="btn btn-outline-light qe">Cadastrar-se</button>
+						</figcaption>
+					</figure>
+			
+			
 			</div>
-			<div class="direita">
-				<div class="qua-di">
-					//aqui vai ser uma imagem com o texto:<br>
-					<h1>Cadastrar como novo /gestor/</h1>
-					<h5>Benefícios: criar seu próprio ambiente, liberar suas funções dentre outros!!</h5>
-				</div>
+			<div class="direita grid cs-style-1">
+				<figure>
+						<img src="assets/images/1.png" alt="img01">
+						<figcaption>
+							<h3>Camera</h3>
+							<span>Jacob Cummings</span>
+							<button class="btn btn-outline-light qd">Cadastrar-se</button>
+						</figcaption>
+					</figure>
 			</div>
 		</div>
+
+		<div class="container" style="background-image: url(assets/images/fundo.jpg); background-size: cover;">
 		<div class="formularioUser" style="color: white">
 			<div class="formularios">
-				<h1>Dados de perfil do usuário</h1><hr>
+				<h1 class="film-font">Dados de perfil do usuário</h1><hr>
 				<h3></h3>
+
 				<form method="POST" id="novo_user">
-					<label>Nome</label> <input type="text" name="nome_txt" required="required"><br>
-					<label>E-mail</label> <input class="email" type="email" name="email_txt" required="required"><br>
-					<label>Telefone</label> <input class="telefone" type="text" name="telefone_txt" required="required"><br>
-					<label>Tipo de pessoa</label> <br>
+					<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Nome</label> <input type="text" class="form-control" name="nome_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">E-mail</label> <input class="email form-control" type="email" name="email_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Tipo de pessoa</label> <br>
 					<input type="radio" name="pessoa" value="fisica" checked="checked">Física 
 					<input type="radio" name="pessoa" value="juridica">Jurídica<br>
-					<input class="cpf_cnpj" type="text" name="cpf_cnpj_txt" required="required" placeholder="CPF..."><br><br>
-					<label>Senha</label> <input class="senha" type="password" name="senha_txt" required="required"> <br>
-					<label>Confirmar senha</label> <input class="senha_confirm" type="password" name="senha_confirm_txt" required="required"> <br>
-					<input type="submit" name="novo_user" value="Cadastrar">
+				</div>
+
+				<div class="form-group">
+					<input class="cpf_cnpj form-control" type="text" name="cpf-cnpj_txt" required="required" placeholder="CPF..." style="background:transparent; border-radius: 15px;"><br><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Senha</label> <input class="senha form-control" type="password" name="senha_txt" required="required" style="background:transparent; border-radius: 15px;"> <br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control senha_confirm" name="senha_confirm_txt" required="required" style="background:transparent; border-radius: 15px;"> <br>
+				</div>
+
+
+					<input type="submit" name="novo_user" value="Cadastrar" class="btn btn-outline-light film-font">
 				</form>
 			</div>
 			
 		</div>
+	</div>
+
+	<div class="container">
 		<div class="formularioEmpre" style="color: white">
 			<div class="formularios">
 				<hr><h1>Dados de perfil do Empresário</h1><br><br>
-			
+
 				<form method="POST" id="novo_empre">
+                    <div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Nome</label> <input type="text" name="nome_txt" class="form-control" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
 
-					<label>Nome</label> <input type="text" name="nome_txt" required="required"><br>
-					<label>e-mail</label> <input class="email" type="e-mail" name="email_txt" required="required"><br>
-					<label>telefone</label> <input class="telefone" type="text" name="telefone_txt" required="required"><br>
-					<label>Tipo de pessoa</label> - 
-					<input type="radio" name="pessoa" value="fisica" checked="checked">Física 
-					<input type="radio" name="pessoa" value="juridica">Jurídica<br>
-					<input class="cpf_cnpj" type="text" name="cpf_cnpj_txt" required="required" placeholder="CPF..."><br>
-					<label>senha</label> <input type="password" name="senha_txt" required="required"><br>
-					<label>Confirmar senha</label> <input type="password" name="senha_confirm" required="required"> <br>
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">e-mail</label> <input class="email form-control" type="e-mail" name="email_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Tipo de pessoa</label> - 
+					<input type="radio" name="pessoa" value="fisica" checked="checked" class="film-font" style="font-size: 18px;">Física 
+					<input type="radio" name="pessoa" value="juridica" class="film-font" style="font-size: 18px;">Jurídica<br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">CPF</label><input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">senha</label> <input type="password" class="form-control" name="senha_txt" required="required" style="background:transparent; border-radius: 15px;"><br>
+				</div>
+
+				<div class="form-group">
+					<label class="film-font" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control" name="senha_confirm" required="required" style="background:transparent; border-radius: 15px;"> <br>
+				</div>
+
+
 					<hr><h1 style="margin-left: -130px">Dados de localização</h1><br><br>
-
-					<label>CEP</label> <input id="CEP" type="text" name="cep_txt" required>
+                    <div class="form-group">
+					<label class="film-font" style="font-size: 20px;">CEP</label> <input id="CEP" type="text" name="cep_txt" class="form-control" style="background:transparent; border-radius: 15px;">
 					<label style="display: none;" id="erro">ERRO: cep invalido</label>
-					<button id="ok_cep">Confirmar</button><br>
+				</div>
+					<button id="ok_cep" class="btn btn-outline-light">Confirmar</button><br>
 					<div id="localiza" style="display: none">
-						<label>Rua</label> <input id="rua" type="text" name="rua_txt"><br>
-						<label>Estado</label> <input id="estado" type="text" name="estado_txt"><br>
-						<label>Cidade</label> <input id="cid" type="text" name="cid_txt"><br>
-						<label>Nº</label> <input id="num" type="text" name="num_txt"><br>
-						<input type="submit" name="novo_empre" value="Cadastrar">
+						<div class="form-group">
+						<label class="film-font" style="font-size: 20px;">Rua</label> <input id="rua" type="text" disabled="disabled" name="rua_txt" class="form-control" style="background:transparent; border-radius: 15px;"><br>
+					</div>
+
+					<div class="form-group">
+						<label class="film-font" style="font-size: 20px;">Estado</label> <input id="estado" type="text" disabled="disabled" name="estado_txt" class="form-control" style="background:transparent; border-radius: 15px;"><br>
+					</div>
+
+					<div class="form-group">
+						<label class="film-font" style="font-size: 20px;">Cidade</label> <input id="cid" type="text" disabled="disabled" name="cid_txt" class="form-control" style="background:transparent; border-radius: 15px;"><br>
+					</div>
+
+					<div class="form-group">
+						<label class="film-font" style="font-size: 20px;">Nº</label> <input id="num" type="text" name="num_txt" class="form-control" style="background:transparent; border-radius: 15px;"><br>
+					</div>
+
+						<input type="submit" name="novo_empre" value="Cadastrar" class="btn btn-outline-light">
 					</div>
 					
 
 				</form>
 			</div>
 		</div>
+	</div>
 
 
 	</div>
@@ -184,6 +283,8 @@
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.mask.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/cadastro.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/toucheffects.js"></script>
         	
 </body>
 </html>

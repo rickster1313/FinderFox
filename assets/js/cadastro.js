@@ -1,13 +1,13 @@
 var $j = jQuery.noConflict();
 		$j(document).ready(function(){
-			$j(".qua-es").bind("click",function(){
+			$j(".qe").bind("click",function(){
 				$j("body").css("background-color", "rgba(54,24,80,1)");
 				$j(".main").fadeOut(400, function() {
     				$j(".formularioUser").show();
   				});
   			});
 
-			$j(".qua-di").bind("click",function(){
+			$j(".qd").bind("click",function(){
 				$j("body").css("background-color", "rgba(35,35,35,1)");
 				$j(".main").fadeOut(400, function() {
     				$j(".formularioEmpre").show();
@@ -264,7 +264,7 @@ var $j = jQuery.noConflict();
 			        		if (json.status == 0) {
 			        			$j("#erro").css("display", "block");
 			        		}else{
-			        			$j(this).hide();
+			        			$j("#ok_cep").hide();
 								$j("#localiza").show(300);
 
 			        			$j("#rua").val(json.address);
