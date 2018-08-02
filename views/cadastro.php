@@ -188,7 +188,7 @@
 				</div>
 
 				<div class="form-group">
-					<input class="cpf_cnpj form-control" type="text" name="cpf-cnpj_txt" required="required" placeholder="CPF..." style="background:transparent; border-radius: 15px;"><br><br>
+					<input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" placeholder="CPF..." style="background:transparent; border-radius: 15px;"><br><br>
 				</div>
 
 				<div class="form-group">

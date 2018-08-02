@@ -20,8 +20,23 @@
 	</head>
 
 <body>
-	
+	<?php 
 
+	if (isset($_SESSION['msg'])) {
+			echo $_SESSION['msg'];
+			unset($_SESSION['msg']);
+	}
+
+	?>
+	
+	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login">
+		Email:
+		<input type="email" name="email_txt">
+		Senha:
+		<input type="password" name="senha_txt">
+
+		<input type="submit" name="enviar_login">
+	</form>
 
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.mask.js"></script>
