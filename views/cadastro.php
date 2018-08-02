@@ -136,9 +136,9 @@
 					<label>Tipo de pessoa</label> <br>
 					<input type="radio" name="pessoa" value="fisica" checked="checked">Física 
 					<input type="radio" name="pessoa" value="juridica">Jurídica<br>
-					<input class="cpf_cnpj" type="text" name="cpf-cnpj_txt" required="required" placeholder="CPF..."><br><br>
+					<input class="cpf_cnpj" type="text" name="cpf_cnpj_txt" required="required" placeholder="CPF..."><br><br>
 					<label>Senha</label> <input class="senha" type="password" name="senha_txt" required="required"> <br>
-					<label>Confirmar senha</label> <input type="password" name="senha_confirm" required="required"> <br>
+					<label>Confirmar senha</label> <input class="senha_confirm" type="password" name="senha_confirm_txt" required="required"> <br>
 					<input type="submit" name="novo_user" value="Cadastrar">
 				</form>
 			</div>
@@ -148,27 +148,28 @@
 			<div class="formularios">
 				<hr><h1>Dados de perfil do Empresário</h1><br><br>
 			
-				<form>
+				<form method="POST" id="novo_empre">
 
-					<label>Nome</label> <input type="text" name="" required="required"><br>
-					<label>e-mail</label> <input class="email" type="e-mail" name="" required="required"><br>
-					<label>telefone</label> <input class="telefone" type="text" name="" required="required"><br>
+					<label>Nome</label> <input type="text" name="nome_txt" required="required"><br>
+					<label>e-mail</label> <input class="email" type="e-mail" name="email_txt" required="required"><br>
+					<label>telefone</label> <input class="telefone" type="text" name="telefone_txt" required="required"><br>
 					<label>Tipo de pessoa</label> - 
 					<input type="radio" name="pessoa" value="fisica" checked="checked">Física 
 					<input type="radio" name="pessoa" value="juridica">Jurídica<br>
-					<label>CPF</label><input class="cpf-cnpj" type="text" name="" required="required"><br>
+					<input class="cpf_cnpj" type="text" name="cpf_cnpj_txt" required="required" placeholder="CPF..."><br>
 					<label>senha</label> <input type="password" name="senha_txt" required="required"><br>
 					<label>Confirmar senha</label> <input type="password" name="senha_confirm" required="required"> <br>
 					<hr><h1 style="margin-left: -130px">Dados de localização</h1><br><br>
 
-					<label>CEP</label> <input type="text" name="">
+					<label>CEP</label> <input id="CEP" type="text" name="cep_txt" required>
+					<label style="display: none;" id="erro">ERRO: cep invalido</label>
 					<button id="ok_cep">Confirmar</button><br>
 					<div id="localiza" style="display: none">
-						<label>Rua</label> <input type="text" disabled="disabled" name=""><br>
-						<label>Estado</label> <input type="text" disabled="disabled" name=""><br>
-						<label>Cidade</label> <input type="text" disabled="disabled" name=""><br>
-						<label>Nº</label> <input type="text" name=""><br>
-						<input type="submit" name="" value="Cadastrar">
+						<label>Rua</label> <input id="rua" type="text" name="rua_txt"><br>
+						<label>Estado</label> <input id="estado" type="text" name="estado_txt"><br>
+						<label>Cidade</label> <input id="cid" type="text" name="cid_txt"><br>
+						<label>Nº</label> <input id="num" type="text" name="num_txt"><br>
+						<input type="submit" name="novo_empre" value="Cadastrar">
 					</div>
 					
 
