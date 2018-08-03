@@ -133,6 +133,12 @@ var $j = jQuery.noConflict();
 			// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 			// Aqui é parte do Juridico
+			email_stats2 = false;
+			telefone_stats2 = false;
+			cpf_cnpj_stats2 = false;
+			senha_stats2 = false;
+			endereco_stats = false;
+
 			pessoa2 = "fisica";
 			$j("#novo_empre .cpf_cnpj").mask("000.000.000-00");
 			$j("#CEP").mask("00000-000");
@@ -145,19 +151,15 @@ var $j = jQuery.noConflict();
             	}
             	$j("#novo_empre .cpf_cnpj").val("");
             	if(pessoa2 == "fisica"){
-            		$j("#novo_empre .cpf_cnpj").attr("placeholder", "CPF...");
+            		$j("#novo_empre #label_cpf").html("CPF");
             		$j("#novo_empre .cpf_cnpj").mask("000.000.000-00");
             	}else{
-            		$j("#novo_empre .cpf_cnpj").attr("placeholder", "CNPJ...");
+            		$j("#novo_empre #label_cpf").html("CNPJ");
             		$j("#novo_empre .cpf_cnpj").mask("00.000.000/0000-00");
             	}
 			});
 
-			email_stats2 = false;
-			telefone_stats2 = false;
-			cpf_cnpj_stats2 = false;
-			senha_stats2 = false;
-			endereco_stats = false;
+			
 
 			$j("#novo_empre .telefone").mask("(00) 000000000");
 
@@ -191,7 +193,7 @@ var $j = jQuery.noConflict();
 			   
 			    cpf_cnpj = $j("#novo_empre .cpf_cnpj").val();
 					
-					if((cpf_cnpj.length == 14 && pessoa=="fisica") || (cpf_cnpj.length == 18 && pessoa=="juridica")) {
+					if((cpf_cnpj.length == 14 && pessoa2=="fisica") || (cpf_cnpj.length == 18 && pessoa2=="juridica")) {
 						cpf_cnpj = $j(this).serialize();
 				        $j.ajax({
 					        type:'POST',
@@ -239,7 +241,7 @@ var $j = jQuery.noConflict();
 				       	data:$j("#novo_empre").serialize()+"&user=two",
 				       	async: false,
 				        success:function(){
-				       		//window.location.href = "login";
+				       		window.location.href = "login";
 				      	},
 				        error:function(){
 				      		console.log("error no ajax");

@@ -246,7 +246,7 @@
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">CPF</label><input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="film-font" style="font-size: 20px;" id="label_cpf">CPF</label><input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
@@ -266,15 +266,15 @@
 					<button id="ok_cep" class="btn btn-outline-light">Confirmar</button><br>
 					<div id="localiza" style="display: none">
 						<div class="form-group slideInLeft animated">
-						<label class="film-font" style="font-size: 20px;">Rua</label> <input id="rua" type="text" disabled="disabled" name="rua_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+						<label class="film-font" style="font-size: 20px;">Rua</label> <input id="rua" type="text" name="rua_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 					</div>
 
 					<div class="form-group slideInRight animated">
-						<label class="film-font" style="font-size: 20px;">Estado</label> <input id="estado" type="text" disabled="disabled" name="estado_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+						<label class="film-font" style="font-size: 20px;">Estado</label> <input id="estado" type="text" name="estado_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 					</div>
 
 					<div class="form-group slideInLeft animated">
-						<label class="film-font" style="font-size: 20px;">Cidade</label> <input id="cid" type="text" disabled="disabled" name="cid_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+						<label class="film-font" style="font-size: 20px;">Cidade</label> <input id="cid" type="text" name="cid_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 					</div>
 
 					<div class="form-group slideInRight animated">
@@ -291,13 +291,7 @@
 	</div>
 
 <script>
-                wow = new WOW(
-                        {
-                            animateClass: 'animated',
-                            offset: 100
-                        }
-                );
-                wow.init();
+  
 
             </script>
 	
