@@ -49,7 +49,7 @@
         color:#68319B;
     }
     .main{
-        height: 600px;
+        height: 650px;
         width: 100%;
         background-color: rgba(104,49,155,0.2);
         text-align: center;

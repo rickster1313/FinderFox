@@ -75,6 +75,10 @@
 			width: 360px;
 			height: 360px;
 		}
+
+		.botao-voltar{
+			width: 100px;
+		}
 	}
 	@media only screen and (max-width: 780px){
 		.qua-es{
@@ -85,6 +89,8 @@
 			width: 200px;
 			height: 200px;
 		}
+
+
 	}
 	.botao-voltar{
 		border-radius: 15px; 
@@ -101,6 +107,7 @@
 	}
 	.formularios form{
 		padding-left: 130px;
+
 	}
 
 	@font-face {
@@ -135,7 +142,7 @@
 
 
 	<div class="container-fluid">
-		<a class="btn btn-outline-light film-font botao-voltar" style="" href="<?php echo BASE_URL; ?>">Voltar ao Menu</a>
+		<a class="btn btn-outline-light film-font botao-voltar" style="" href="<?php echo BASE_URL; ?>">Voltar</a>
 		<div class="main">
 
 			<div class="esquerda grid cs-style-1">
