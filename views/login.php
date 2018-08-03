@@ -43,8 +43,18 @@
 	</head>
 
 <body>
-	<?php 
+	
 
+	
+	
+
+	<div class="container-fluid">
+	<div class="row">
+
+		<div class="col-sm-6" style="width: 100%; height: 950px;background: linear-gradient(45deg, #A491BA, #CFC1DE)">
+		<div style="display:block; width:50%;left: 40%; top: 200px; transform: translate(40%, 200px);">
+		<?php 
+    
 	if (isset($_SESSION['msg'])) {
 			echo $_SESSION['msg'];
 			unset($_SESSION['msg']);
@@ -52,12 +62,7 @@
 
 	?>
 
-	
-	
-
-	<div class="container-fluid">
-	<div class="row">
-		<div class="col-sm-6" style="width: 100%; height: 950px;background: linear-gradient(45deg, #A491BA, #CFC1DE)">
+	</div>
 	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style=" transform: translate(20%, 100%);">
 		<div class="form-group w-50">
 		<label class="film-font" style="font-size: 20px;">Email:</label>
