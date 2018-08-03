@@ -40,18 +40,34 @@
 			return $sql;
 		}
 
-		public function cadastraUsuario($nome, $data, $email, $senha, $telefone, $sexo, $cpf_cnpj){
-			$sql = "INSERT INTO tbl_usuarios(nome, data_nasc, nvl_acesso, email, senha, CPF_CNPJ, telefone, sexo, status, created) VALUES (?, ?, 'empresario', ?, ?, ?, ?, ?, 0, NOW() ) ";
+		public function cadastraUsuario($nome, $email, $telefone, $cpf_cnpj, $senha, $tipo){
+			$sql = "INSERT INTO tbl_usuarios(nome, nvl_acesso, email, senha, CPF_CNPJ, telefone, status, created) VALUES (?, ?, ?, ?, ?, ?, 0, NOW() ) ";
 			$sql = $this->pdo->prepare($sql);
 			$sql->bindValue(1, $nome);
-			$sql->bindValue(2, $data);
+			$sql->bindValue(2, $tipo);
 			$sql->bindValue(3, $email);
 			$sql->bindValue(4, $senha);
 			$sql->bindValue(5, $cpf_cnpj);
-			$sql->bindValue(7, $telefone);
-			$sql->bindValue(8, $sexo);
+			$sql->bindValue(6, $telefone);
+			$sql->execute();
+
+			if ($tipo == "empresario") {
+				return $this->pdo->lastInsertId();
+			}
+		}
+
+		public function cadastraEndereco($id, $cep, $rua, $estado, $cidade, $num){
+			$sql = "INSERT INTO tbl_endereco(user_id, cep, rua, estado, cidade, numero, nome) VALUES (?, ?, ?, ?, ?, ?, 'principal' ) ";
+			$sql = $this->pdo->prepare($sql);
+			$sql->bindValue(1, $id);
+			$sql->bindValue(2, $cep);
+			$sql->bindValue(3, $rua);
+			$sql->bindValue(4, $estado);
+			$sql->bindValue(5, $cidade);
+			$sql->bindValue(6, $num);
 			$sql->execute();
 		}
+
 	}
 
 

@@ -21,9 +21,7 @@
 			$email = addslashes($_POST['email_txt']);
 			$usuariosModel = new usuariosModel();
 			$sql = $usuariosModel->verificaEmail($email);
-			$array=array(
-				'status'=>''
-			);
+			$array=array("status"=>"");
 			if($sql -> rowCount() > 0){
 				$array['status'] = false;
 			}else{
@@ -33,39 +31,45 @@
 		}
 		public function verificaCPF_CNPJ(){
 			$usuariosModel = new usuariosModel();
-			$array = array("status" => "", "texto" => "");
-			$cpf_cnpj = addslashes($_GET["CPF_CNPJ_txt"]);
+			$array = array("status" => "");
+			$cpf_cnpj = addslashes($_POST["cpf_cnpj_txt"]);
 			$sql = $usuariosModel->verificaCPF_CNPJ($cpf_cnpj);
 			if($sql -> rowCount() > 0){
 				$array['status'] = false;
-				if(strlen($cpf_cnpj) == 14){
-					$array['texto'] = "Este CPF já está em uso";
-				}else{
-					$array['texto'] = "Este CNPJ já está em uso";
-				}
 			}else{
 				$array['status'] = true;
-				if(strlen($cpf_cnpj) == 14){
-					$array['texto'] = "CPF OK";
-				}else{
-					$array['texto'] = "CNPJ OK";
-				}
-				
 			}
 			echo json_encode($array);
 		}
 		public function cadastrar(){
+			if ($_POST['user'] === "one") {
+				$tipo = "usuario";
+				$nome = addslashes($_POST["nome_txt"]);
+				$email = addslashes($_POST["email_txt"]);
+				$telefone = addslashes($_POST["telefone_txt"]);
+				$cpf_cnpj = addslashes($_POST["cpf_cnpj_txt"]);
+				$senha =  password_hash(addslashes($_POST["senha_txt"]), PASSWORD_DEFAULT);
+				$usuariosModel = new usuariosModel();
+				$usuariosModel->cadastraUsuario($nome, $email, $telefone, $cpf_cnpj, $senha, $tipo); 
 
-			$nome = addslashes($_POST["nome_txt"]);
-			$data = addslashes($_POST["data_txt"]);
-			$email = addslashes($_POST["email_txt"]);
-			$senha =  password_hash(addslashes($_POST["senha_txt"]), PASSWORD_DEFAULT);
-			$telefone = addslashes($_POST["telefone_txt"]);
-			$sexo = addslashes($_POST["sexo_txt"]);
-			$cpf_cnpj = addslashes($_POST["CPF_CNPJ_txt"]);
-
-			$usuariosModel = new usuariosModel();
-			$usuariosModel->cadastraUsuario($nome, $data, $email, $senha, $telefone, $sexo, $cpf_cnpj);
+			}else if($_POST['user'] === "two") {
+				$tipo = "empresario";
+				$nome = addslashes($_POST["nome_txt"]);
+				$email = addslashes($_POST["email_txt"]);
+				$telefone = addslashes($_POST["telefone_txt"]);
+				$cpf_cnpj = addslashes($_POST["cpf_cnpj_txt"]);
+				$senha =  password_hash(addslashes($_POST["senha_txt"]), PASSWORD_DEFAULT);
+				$cep = addslashes($_POST["cep_txt"]);
+				$rua = addslashes($_POST["rua_txt"]);
+				$estado = addslashes($_POST["estado_txt"]);
+				$cid = addslashes($_POST["cid_txt"]);
+				$num = addslashes($_POST["num_txt"]);
+				$usuariosModel = new usuariosModel();
+				$id = $usuariosModel->cadastraUsuario($nome, $email, $telefone, $cpf_cnpj, $senha, $tipo); 
+				
+				$usuariosModel->cadastraEndereco($id, $cep, $rua, $estado, $cid, $num);
+			} 
+			
 		}
 	}
 

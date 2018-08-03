@@ -21,7 +21,7 @@
 						//tudo certo, fazer login
 						$this->fazerLogin($row);
 					}else{
-						//se a senha não conrresponder como email
+						//se a    senha não conrresponder como email
 						$_SESSION["msg"] = "<div class='alert alert-danger'>
     <strong>Erro!</strong> Email ou Senha invalidos.
   </div>";
