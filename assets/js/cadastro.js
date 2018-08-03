@@ -8,7 +8,7 @@ var $j = jQuery.noConflict();
   			});
 
 			$j(".qd").bind("click",function(){
-				$j("body").css("background-color", "rgba(35,35,35,1)");
+				$j("body").css("background-color", "#232323");
 				$j(".main").fadeOut(400, function() {
     				$j(".formularioEmpre").show();
   				});
