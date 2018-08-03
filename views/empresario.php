@@ -21,7 +21,7 @@
 
         <div class="container-fluid" style="padding: 0px">
 
-            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;min-width: 180px" id="mySidebar">
             <div class="sidenav">
                 <ul class="nav flex-column nav-pills">
                     <li class="nav-item">
@@ -43,9 +43,9 @@
   <a href="#x" data-toggle="pill" class="w3-bar-item w3-button">Link 3</a>-->
 </div>
 
-<div id="main">
+<div id="main" style="overflow: auto;">
 
-<div class="w3-black" style="overflow: hidden;">
+<div class="w3-black">
   <button id="openNav" style="outline-style: none;" class="w3-button w3-black w3-xlarge">&#9776;</button>
   <a  href="<?php echo BASE_URL ?>login/deslogar" style="float: right; margin-right: 9px; margin-top: 9px;"><button class="btn btn-danger" id="btn_sair">SAIR</button></a>
 </div>
@@ -57,11 +57,15 @@
             <div class="tabela-end" style="margin: 40px;">
                 <table class="table table-bordered" >
                     <thead>
-                      <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
-                      </tr>
+                        <tr>
+                        <th>Nome</th>
+                        <th>Rua</th>
+                        <th width="10%">Número</th>
+                        <th>Estado</th>
+                        <th>Cidade</th>
+                        <th>CEP</th>
+
+                        </tr>
                     </thead>
                     <tbody>
                       <tr>

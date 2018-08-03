@@ -166,7 +166,7 @@
                </div>
                 <form>
       <div class="form-group">
-                    <input type="text" name="cep_txt" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
+                    <input type="text" name="cep_txt" id="cep" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
                     <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
                     </div>
 

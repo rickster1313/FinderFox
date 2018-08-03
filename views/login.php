@@ -14,6 +14,16 @@
 
 
 <style type="text/css">
+.botao-voltar{
+		border-radius: 15px; 
+		border: 2px solid; 
+		font-size: 18px;
+		position: absolute;
+		z-index: 2;
+		top: 5px;
+		left: 5px;
+	}
+
 	@font-face {
 
       font-family: "BPreplayBold";
@@ -49,6 +59,7 @@
 	
 
 	<div class="container-fluid">
+	<a class="btn btn-outline-dark film-font botao-voltar" style="" href="<?php echo BASE_URL; ?>">Voltar</a>
 	<div class="row">
 
 		<div class="col-sm-6" style="width: 100%; height: 950px;background: linear-gradient(45deg, #A491BA, #CFC1DE)">
