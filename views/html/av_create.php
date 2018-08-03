@@ -7,7 +7,7 @@
         .descricao{
             text-align: justify;
         }
-    </style>
+    </style> 
 </head>
 <body>
     <div class="main">
@@ -30,7 +30,7 @@
             <br>
             <div>
                 <label><strong>URL</strong></label><br>
-                <div style="background-color: rgba(0,0,0,0.2); width: 550px"><?php echo $_SERVER['SERVER_NAME']; ?>/ <input type="text" id="url_av" name="url_txt" required="required" style="border: none;outline: none; background-color: rgba(0,0,0,0.1);width: 400px"> </div>
+                <div style="background-color: rgba(0,0,0,0.2); width: 550px"><?php echo $_SERVER['SERVER_NAME']; ?>/ <input type="text" id="url_av" name="url_txt" required="required" style="border: none;outline: none; background-color: rgba(0,0,0,0.1);width: 400px"> </div><br>*Não pode conter espaços
                 <br> 
             </div>
             <br>

@@ -1,5 +1,5 @@
 var $j = jQuery.noConflict();
-$j(document).ready(function(){
+$j(document).ready(function(){ 
     function abrir(){
                 if(aberto == 1) {
                     aberto =2;
@@ -37,10 +37,10 @@ $j(document).ready(function(){
                 success:function(json){
                     if (json.status == 'yes') {
                         nome_av_stats = false;
-                        $j('#nome_av').css('border', 'red solid 2px');
+                        $j('#nome_av').css('border', 'red solid 1px');
                     }else{
                         nome_av_stats = true;
-                        $j('#nome_av').css('border', 'green solid 2px');
+                        $j('#nome_av').css('border', 'green solid 1px');
                     }
                 },
                 error:function(){
@@ -75,6 +75,10 @@ $j(document).ready(function(){
     });
 
     $j("#url_av").bind("keyup", function(){
+        var urlAv = $j(this).val();
+        urlAv = urlAv.replace(/ /g, '');
+        $j(this).val(urlAv);
+
         var dados = $j(this).val();
         if(dados == ""){
             nome_av_stats = false;

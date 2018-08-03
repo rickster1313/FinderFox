@@ -31,7 +31,7 @@
 	
 	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login">
 		Email:
-		<input type="email" name="email_txt">
+		<input type="text" name="email_txt">
 		Senha:
 		<input type="password" name="senha_txt">
 
