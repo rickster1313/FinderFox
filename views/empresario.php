@@ -28,6 +28,9 @@
                         <a href="#pag1" data-toggle="tab"  class="w3-bar-item w3-button">1 pagina</a>
                     </li>
                     <li class="nav-item">
+                        <a href="#enderecos" data-toggle="tab"  class="w3-bar-item w3-button">Endereços / sedes</a>
+                    </li>
+                    <li class="nav-item">
                         <a  href="#av_conteudo" id="menu_av" data-toggle="pill" class="w3-bar-item w3-button">Ambiente Virtual</a>
                     </li>
                     <li class="nav-item">
@@ -47,24 +50,47 @@
   <a  href="<?php echo BASE_URL ?>login/deslogar" style="float: right; margin-right: 9px; margin-top: 9px;"><button class="btn btn-danger" id="btn_sair">SAIR</button></a>
 </div>
     <div class="tab-content conteudo">   
-                <div id="pag1" class="tab-pane in active">
-                    <h1>Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
-                </div>
-
-                <div id="av_conteudo" class="tab-pane fade">
-                    <?php 
-                        include($av_status);
-                    ?>
-                </div>
-
-                <div id="pag3" class="tab-pane fade">
-                    3 pagina
-                </div>
-
+        <div id="pag1" class="tab-pane in active">
+            <h1>Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
+        </div>
+        <div id="enderecos" class="tab-pane fade">
+            <div class="tabela-end" style="margin: 40px;">
+                <table class="table table-bordered" >
+                    <thead>
+                      <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                      </tr>
+                    </tbody>
+                </table>
             </div>
+        </div>
+        <div id="av_conteudo" class="tab-pane fade">
+            <?php 
+                include($av_status);
+                ?>
+        </div>
+        <div id="pag3" class="tab-pane fade">
+            3 pagina
+        </div>
+
+    </div>
 </div>
 
-        </div>
+</div>
         
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>

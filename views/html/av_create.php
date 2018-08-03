@@ -48,8 +48,8 @@
             </div>
             <br>
             <div>
-                <label><strong>CEP</strong></label><br>
-                <input type="text" name="cep_txt"  placeholder="00000000" required="required">
+                <label><strong>Endereços</strong></label><br>
+                <input type="text" name=""  placeholder="" required="required">
                 
                 <br>
                 <a href="#" title="Exemplo" data-toggle="popover1" data-trigger="focus" data-content="Gerenciando seu negócio online com maior eficiência..">Exemplo</a>
