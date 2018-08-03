@@ -69,7 +69,8 @@
 				
 				$usuariosModel->cadastraEndereco($id, $cep, $rua, $estado, $cid, $num);
 			} 
-			
+		$_SESSION['msg']="<div class='alert alert-success'>Cadastrado com sucesso!
+  </div>";	
 		}
 	}
 
