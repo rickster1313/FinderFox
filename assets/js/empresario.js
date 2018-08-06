@@ -1,5 +1,6 @@
 var $j = jQuery.noConflict();
 $j(document).ready(function(){ 
+
     function abrir(){
                 if(aberto == 1) {
                     aberto =2;
@@ -138,5 +139,11 @@ $j(document).ready(function(){
     $j('[data-toggle="tooltip1"]').tooltip();  
     $j('[data-toggle="popover"]').popover();  
     $j('[data-toggle="popover1"]').popover();  
+
+    $j("#menu_av").bind('click', function() {
+        if (valor == 1) {
+            $j('#myModal').modal('show');
+        }
+    });
 
 });

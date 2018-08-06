@@ -1,6 +1,6 @@
 <?php 
 
-    class usuariosModel extends Model{
+    class enderecosModel extends Model{
         public function cadastraEndereco($id, $cep, $rua, $estado, $cidade, $num){
             $sql = "INSERT INTO tbl_endereco(user_id, cep, rua, estado, cidade, numero, nome) VALUES (?, ?, ?, ?, ?, ?, 'principal' ) ";
             $sql = $this->pdo->prepare($sql);

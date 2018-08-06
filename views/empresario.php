@@ -21,7 +21,7 @@
 
         <div class="container-fluid" style="padding: 0px">
 
-            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px" id="mySidebar">
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px;" id="mySidebar">
             <div class="sidenav">
                 <ul class="nav flex-column nav-pills">
                     <li class="nav-item">
@@ -45,8 +45,8 @@
 
 <div id="main" style="overflow: auto;">
 
-<div class="w3-black" style="width: 100%">
-  <button id="openNav" style="outline-style: none;" class="w3-button w3-black w3-xlarge">&#9776;</button>
+<div class="w3-black" style="width: 100%; background: linear-gradient(45deg, #68319b , #A491BA) ">
+  <button id="openNav" style="outline-style: none; background-color: #68319b;" class="w3-button w3-xlarge">&#9776;</button>
   <a  href="<?php echo BASE_URL ?>login/deslogar" style="float: right; margin-right: 9px; margin-top: 9px;"><button class="btn btn-outline-danger" id="btn_sair">SAIR</button></a>
 </div>
     <div class="tab-content conteudo">   
@@ -90,6 +90,12 @@
         <div id="av_conteudo" class="tab-pane fade">
             <?php 
                 include($av_status);
+                if ($av_status == "html/av_create.php") {?>
+                <script type="text/javascript">
+                    valor = 1;
+                </script>
+
+                <?php }
                 ?>
         </div>
         <div id="pag3" class="tab-pane fade">

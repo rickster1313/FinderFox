@@ -13,11 +13,28 @@
     <div class="main">
         <h1> Crie seu AV </h1>
         <hr>
-        <div class="descricao">
-            O Ambiente Virtual é o lugar onde você pode criar e gerenciar a sua página no site e divulgar seu negócio!!<br>
-            Nele você pode gerenciar as funções necessárias para ter uma melhor experiência e avanço!!<br> <br>
-                Para começar informe algumas informações necessárias e criaremos uma Ambiente padrão para você:<hr>
+        <!-- Trigger the modal with a button -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background: linear-gradient(45deg, #68319b , #A491BA)">
+          
+          <h4 class="modal-title">Crie seu  Ambiente Virtual</h4>
         </div>
+        <div class="modal-body" style="background: linear-gradient(45deg, #A491BA, #CFC1DE)">
+          <p>O Ambiente Virtual é o lugar onde você pode criar e gerenciar a sua página no site e divulgar seu negócio!!<br>
+            Nele você pode gerenciar as funções necessárias para ter uma melhor experiência e avanço!!<br><hr>
+                Para começar informe algumas informações necessárias e criaremos uma Ambiente padrão para você:</p>
+        </div>
+        <div class="modal-footer" style="background: linear-gradient(45deg, #68319b , #A491BA)">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
         <form method="POST" id="form_newAV" enctype="multipart/form-data">
             
             <div>
