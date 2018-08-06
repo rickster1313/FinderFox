@@ -1,8 +1,8 @@
 <?php 
 
     class enderecosModel extends Model{
-        public function cadastraEndereco($id, $cep, $rua, $estado, $cidade, $num){
-            $sql = "INSERT INTO tbl_endereco(user_id, cep, rua, estado, cidade, numero, nome, active) VALUES (?, ?, ?, ?, ?, ?, 'principal', 'nao' ) ";
+        public function cadastraEndereco($id, $cep, $rua, $estado, $cidade, $num, $nome){
+            $sql = "INSERT INTO tbl_endereco(user_id, cep, rua, estado, cidade, numero, nome, active) VALUES (?, ?, ?, ?, ?, ?, ?, 'nao' ) ";
             $sql = $this->pdo->prepare($sql);
             $sql->bindValue(1, $id);
             $sql->bindValue(2, $cep);
@@ -10,6 +10,7 @@
             $sql->bindValue(4, $estado);
             $sql->bindValue(5, $cidade);
             $sql->bindValue(6, $num);
+            $sql->bindValue(7, $nome);
             $sql->execute();
         }
 

@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/w3.css">
     <style type="text/css">
-<<<<<<< HEAD
+
         .legenda .quadradinho{
             width: 13px;
             height: 13px;
@@ -45,12 +45,6 @@
 
 
         }
-
-        input[type='file'] {
-            display: none
-        }
-
-=======
         body{
             background-color: #dfcdef;
         }
@@ -60,7 +54,6 @@
         .sla:hover {
             background-color: #dfcdef;
     }
->>>>>>> 390f83245d1c88113258160cf5af15cd083bf343
     </style>
 
 </head> 
@@ -132,7 +125,7 @@
                                 echo "<tr class='table-success' >";
                             }
                     ?>
-                        <tr>
+                        
                         <td> <strong><?php echo strtoupper($result['nome']); ?></strong></td>
                         <td><?php echo $result['rua']; ?></td>
                         <td><?php echo $result['cidade']; ?></td>

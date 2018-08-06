@@ -68,7 +68,7 @@
 				$enderecosModel = new enderecosModel();
 				$id = $usuariosModel->cadastraUsuario($nome, $email, $telefone, $cpf_cnpj, $senha, $tipo); 
 				
-				$enderecosModel->cadastraEndereco($id, $cep, $rua, $estado, $cid, $num);
+				$enderecosModel->cadastraEndereco($id, $cep, $rua, $estado, $cid, $num, "principal");
 				$_SESSION['msg']="<div class='alert alert-success'>Cadastrado com sucesso!</div>";
 			}else if($_POST['user'] === "three"){
 				$id = $_SESSION['id'];
@@ -79,7 +79,7 @@
 				$cid = addslashes($_POST["cid_txt"]);
 				$num = addslashes($_POST["num_txt"]);
 				$enderecosModel = new enderecosModel();
-				$enderecosModel->cadastraEndereco($id, $cep, $rua, $estado, $cid, $num);
+				$enderecosModel->cadastraEndereco($id, $cep, $rua, $estado, $cid, $num, $nome);
 				
 			}
 		}
