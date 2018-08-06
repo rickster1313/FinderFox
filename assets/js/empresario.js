@@ -3,9 +3,8 @@ $j(document).ready(function(){
     function abrir(){
                 if(aberto == 1) {
                     aberto =2;
-                    tamanhoMenu = document.getElementById("mySidebar").style.width;
-                    document.getElementById("main").style.marginLeft = tamanhoMenu;
-                    document.getElementById("mySidebar").style.width = "19%";
+                    document.getElementById("main").style.marginLeft = "180px";
+                    document.getElementById("mySidebar").style.width = "180px";
                     document.getElementById("mySidebar").style.display = "block";
                 } else {
                     aberto=1;

@@ -65,9 +65,10 @@
 				$cid = addslashes($_POST["cid_txt"]);
 				$num = addslashes($_POST["num_txt"]);
 				$usuariosModel = new usuariosModel();
+				$enderecosModel = new enderecosModel();
 				$id = $usuariosModel->cadastraUsuario($nome, $email, $telefone, $cpf_cnpj, $senha, $tipo); 
 				
-				$usuariosModel->cadastraEndereco($id, $cep, $rua, $estado, $cid, $num);
+				$enderecosModel->cadastraEndereco($id, $cep, $rua, $estado, $cid, $num);
 			} 
 		$_SESSION['msg']="<div class='alert alert-success'>Cadastrado com sucesso!
   </div>";	

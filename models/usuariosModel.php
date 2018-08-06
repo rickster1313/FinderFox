@@ -68,6 +68,12 @@
 			$sql->execute();
 		}
 
+		public function getEnderecos($id){
+			$sql = "SELECT * FROM tbl_";
+			$sql = $this->pdo->query($sql);
+			return $sql;
+		}
+
 	}
 
 
