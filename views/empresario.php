@@ -13,9 +13,15 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/w3.css">
 
     <style type="text/css">
+        body{
+            background-color: #dfcdef;
+        }
         input[type='file'] {
             display: none
         }
+        .sla:hover {
+            background-color: #dfcdef;
+    }
     </style>
 
 </head> 
@@ -26,20 +32,20 @@
 
         <div class="container-fluid" style="padding: 0px">
 
-            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px;" id="mySidebar">
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px; " id="mySidebar">
             <div class="sidenav">
                 <ul class="nav flex-column nav-pills">
                     <li class="nav-item">
-                        <a href="#pag1" data-toggle="tab"  class="w3-bar-item w3-button">Estatiscas</a>
+                        <a href="#pag1" data-toggle="tab"  class="w3-bar-item sla">Estatiscas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#enderecos" data-toggle="tab"  class="w3-bar-item w3-button">Endereços / sedes</a>
+                        <a href="#enderecos" data-toggle="tab"  class="w3-bar-item sla">Endereços / sedes</a>
                     </li>
                     <li class="nav-item">
-                        <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item w3-button">Ambiente Virtual</a>
+                        <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla">Ambiente Virtual</a>
                     </li>
                     <li class="nav-item">
-                        <a  href="#pag3" data-toggle="pill" class="w3-bar-item w3-button">4 pagina</a>
+                        <a  href="#pag3" data-toggle="pill" class="w3-bar-item sla">Funçõess</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +57,7 @@
 <div id="main" style="overflow: auto;">
 
 <div class="w3-black" style="width: 100%; background: linear-gradient(45deg, #68319b , #A491BA) ">
-  <button id="openNav" style="outline-style: none; background-color: #68319b;" class="w3-button w3-xlarge">&#9776;</button>
+  <button id="openNav" style="outline-style: none; background-color: #68319b;" class="w3-button w3-xlarge sla">&#9776;</button>
   <a  href="<?php echo BASE_URL ?>login/deslogar" style="float: right; margin-right: 9px; margin-top: 9px;"><button class="btn btn-outline-danger" id="btn_sair">SAIR</button></a>
 </div>
     <div class="tab-content conteudo">   
@@ -104,7 +110,7 @@
                 ?>
         </div>
         <div id="pag3" class="tab-pane fade">
-            4 pagina
+            Funções
         </div>
 
     </div>
