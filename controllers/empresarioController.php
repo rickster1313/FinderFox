@@ -2,7 +2,7 @@
 	class empresarioController extends Controller{
 		public function index(){
 			$this->seguranca();
-			$nomePag = "empresario";
+			$nomePag = "empresario"; 
 			$usuariosModel = new usuariosModel();
 			$userDados = $usuariosModel->getDados($_SESSION['id']);
 			$userDados = $userDados->fetch();
@@ -92,8 +92,6 @@
 				header("Location:".BASE_URL."login");
 			}
 		}
-		public function enderecos(){
-			
-		}
 	}
+		
 ?>
