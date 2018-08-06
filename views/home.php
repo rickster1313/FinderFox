@@ -162,7 +162,7 @@
                 
             <div class="form">
                 <div class="informação">
-                   <p class="replay-font" style="font-size: 30px;">Informe-nos seu cep para que<br> possamos encontrar os servicos disponiveis para sua localizacao</p>
+                   <p class="replay-font" style="font-size: 30px;">Informe-nos seu cep para que<br> possamos encontrar os servicos disponiveis para sua localizacao #somostodostrouxas<br>@felipe @jeffinho @riquelme</p>
                </div>
                 <form>
       <div class="form-group">

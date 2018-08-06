@@ -13,7 +13,7 @@ $j(document).ready(function(){
                     document.getElementById("openNav").style.display = "inline-block";
                 }
             }
-            aberto = 1;
+            aberto = 2;
             $j("#openNav").bind("click", function(){
                 abrir(); 
             }); 
@@ -138,5 +138,55 @@ $j(document).ready(function(){
     $j('[data-toggle="tooltip1"]').tooltip();  
     $j('[data-toggle="popover"]').popover();  
     $j('[data-toggle="popover1"]').popover();  
+
+    $j("#btn_novo_end").bind("click", function(){
+        $j("#modalEnd").modal("show");
+    });
+    $j("#cep_novo").mask("00000-000");
+    $j("#cep_novo").bind("keyup", function(){
+        cep = $j(this).val();
+        if(cep.length == 9){
+            $j.ajax({
+                type:'GET',
+                url:"http://apps.widenet.com.br/busca-cep/api/cep.json?code="+cep,
+                dataType:'json',
+                success:function(json){
+                    if (json.status == 0 ) {
+                        $j("#not_cep").css("display", "block");
+                        $j("#not_cep").html(json.message);
+                    }else{
+                        $j("#not_cep").css("display", "none");
+                        $j("#novo_part2").css("display", "block");
+                        $j("#rua").val(json.address);
+                        $j("#cid").val(json.city);
+                        $j("#est").val(json.state);
+
+                    }
+                },
+                error:function(){
+                    console.log("error no ajax");
+                }
+            });
+        }else{
+            $j("#not_cep").css("display", "none");
+        }
+    });
+    $j("#form_novo_end").bind("submit", function(e){
+        e.preventDefault();
+
+       $j.ajax({
+            type:'POST',
+            url:'cadastro/cadastrar',
+            data:$j("#form_novo_end").serialize()+"&user=three",
+            async: false,
+            success:function(){
+                window.location.href = "login";
+            },
+            error:function(){
+                 console.log("error no ajax");
+            }
+        });
+    });
+    
 
 });

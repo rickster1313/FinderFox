@@ -7,7 +7,7 @@
         .descricao{
             text-align: justify;
         }
-    </style> 
+    </style>  
 </head>
 <body>
     <div class="main">
