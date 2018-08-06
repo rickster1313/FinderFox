@@ -181,15 +181,15 @@
 
 				<form method="POST" id="novo_user" class="" style=" left: 30%; transform: translate(-20%);">
 					<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">Nome</label> <input type="text" class="form-control" name="nome_txt" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff; "><br>
+					<label class="film-font" style="font-size: 20px;">Nome</label> <input type="text" class="form-control" name="nome_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff; "><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
-					<label class="film-font" style="font-size: 20px;">E-mail</label> <input class="email form-control" type="email" name="email_txt" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="film-font" style="font-size: 20px;">E-mail</label> <input class="email form-control" type="email" name="email_txt" required="required" style="outline: none;color: #d3d3d3;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">Telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="film-font" style="font-size: 20px;">Telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
@@ -199,15 +199,15 @@
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" placeholder="CPF..." style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br><br>
+					<input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" placeholder="CPF..." style="color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"><br><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
-					<label class="film-font" style="font-size: 20px;">Senha</label> <input class="senha form-control" type="password" name="senha_txt" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
+					<label class="film-font" style="font-size: 20px;">Senha</label> <input class="senha form-control" type="password" name="senha_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control senha_confirm" name="senha_confirm_txt" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
+					<label class="film-font" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control senha_confirm" name="senha_confirm_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
 				</div>
 
 
@@ -228,15 +228,15 @@
 
 				<form method="POST" id="novo_empre" style=" left: 30%; transform: translate(-20%);">
                     <div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">Nome</label> <input type="text" name="nome_txt" class="form-control" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="film-font" style="font-size: 20px;">Nome</label> <input type="text" name="nome_txt" class="form-control" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
-					<label class="film-font" style="font-size: 20px;">e-mail</label> <input class="email form-control" type="e-mail" name="email_txt" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="film-font" style="font-size: 20px;">e-mail</label> <input class="email form-control" type="e-mail" name="email_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="film-font" style="font-size: 20px;">telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
@@ -246,15 +246,15 @@
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;" id="label_cpf">CPF</label><input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="film-font" style="font-size: 20px;" id="label_cpf">CPF</label><input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
-					<label class="film-font" style="font-size: 20px;">senha</label> <input type="password" class="form-control" name="senha_txt" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="film-font" style="font-size: 20px;">senha</label> <input type="password" class="form-control" name="senha_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control" name="senha_confirm" required="required" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
+					<label class="film-font" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control" name="senha_confirm" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
 				</div>
 
 
