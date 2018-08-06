@@ -12,8 +12,13 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/w3.css">
 
+    <style type="text/css">
+        input[type='file'] {
+            display: none
+        }
+    </style>
 
-</head>
+</head> 
 <body>
 
 
@@ -25,16 +30,16 @@
             <div class="sidenav">
                 <ul class="nav flex-column nav-pills">
                     <li class="nav-item">
-                        <a href="#pag1" data-toggle="tab"  class="w3-bar-item w3-button">1 pagina</a>
+                        <a href="#pag1" data-toggle="tab"  class="w3-bar-item w3-button">Estatiscas</a>
                     </li>
                     <li class="nav-item">
                         <a href="#enderecos" data-toggle="tab"  class="w3-bar-item w3-button">Endereços / sedes</a>
                     </li>
                     <li class="nav-item">
-                        <a  href="#av_conteudo" id="menu_av" data-toggle="pill" class="w3-bar-item w3-button">Ambiente Virtual</a>
+                        <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item w3-button">Ambiente Virtual</a>
                     </li>
                     <li class="nav-item">
-                        <a  href="#pag3" data-toggle="pill" class="w3-bar-item w3-button">3 pagina</a>
+                        <a  href="#pag3" data-toggle="pill" class="w3-bar-item w3-button">4 pagina</a>
                     </li>
                 </ul>
             </div>
@@ -99,7 +104,7 @@
                 ?>
         </div>
         <div id="pag3" class="tab-pane fade">
-            3 pagina
+            4 pagina
         </div>
 
     </div>
