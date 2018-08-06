@@ -61,9 +61,11 @@
             <div>
                 <label><strong>Slogan</strong></label><br>
                 <input type="text" name="slogan_txt" size="70" required="required" style="outline: none; border-radius: 6px; border: 1px solid #68319b;">
-                <a href="#" data-toggle="tooltip1" title="Uma frase simples para uma marca ser sempre lembrada">???</a>
+                <img href="#" data-toggle="tooltip1" title="Uma frase simples para uma marca ser sempre lembrada" style="width: 40px; height: 40px;" class="img-fluid" 
+                src="<?php echo BASE_URL; ?>assets/images/lampada.png">
+                
                 <br>
-                <a href="#" title="Exemplo" data-toggle="popover1" data-trigger="focus" data-content="Gerenciando seu negócio online com maior eficiência..">Exemplo</a> 
+                <!--<a href="#" title="Exemplo" data-toggle="popover1" data-trigger="focus" data-content="Gerenciando seu negócio online com maior eficiência..">Exemplo</a> -->
             </div>
             <br>
             <div>
