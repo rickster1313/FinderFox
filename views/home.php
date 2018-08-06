@@ -60,7 +60,7 @@
     }
 
     .form form input[type=text]{
-        width: 500px;
+        width: 50%;
         height: 60px;
         font-size: 25px;
         background-color: transparent;

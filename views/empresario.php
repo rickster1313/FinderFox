@@ -21,7 +21,7 @@
 
         <div class="container-fluid" style="padding: 0px">
 
-            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;min-width: 180px" id="mySidebar">
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px" id="mySidebar">
             <div class="sidenav">
                 <ul class="nav flex-column nav-pills">
                     <li class="nav-item">
@@ -45,9 +45,9 @@
 
 <div id="main" style="overflow: auto;">
 
-<div class="w3-black">
+<div class="w3-black" style="width: 100%">
   <button id="openNav" style="outline-style: none;" class="w3-button w3-black w3-xlarge">&#9776;</button>
-  <a  href="<?php echo BASE_URL ?>login/deslogar" style="float: right; margin-right: 9px; margin-top: 9px;"><button class="btn btn-danger" id="btn_sair">SAIR</button></a>
+  <a  href="<?php echo BASE_URL ?>login/deslogar" style="float: right; margin-right: 9px; margin-top: 9px;"><button class="btn btn-outline-danger" id="btn_sair">SAIR</button></a>
 </div>
     <div class="tab-content conteudo">   
         <div id="pag1" class="tab-pane in active">
@@ -60,23 +60,28 @@
                         <tr>
                         <th>Nome</th>
                         <th>Rua</th>
-                        <th width="10%">Número</th>
+                        <th>Número</th>
                         <th>Estado</th>
                         <th>Cidade</th>
                         <th>CEP</th>
+                        <th>opcoes</th>
 
                         </tr>
                     </thead>
                     <tbody>
+                    <?php 
+                        $enderecosModel = new enderecosModel();
+                        $enderecosModel->getEnderecos($_SESSION['id']);
+                       
+                    ?>
                       <tr>
                         <td>John</td>
                         <td>Doe</td>
                         <td>john@example.com</td>
-                      </tr>
-                      <tr>
                         <td>Mary</td>
                         <td>Moe</td>
                         <td>mary@example.com</td>
+                        <td>Mary</td>
                       </tr>
                     </tbody>
                 </table>
