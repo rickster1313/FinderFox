@@ -84,11 +84,8 @@
                         <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla">Ambiente Virtual</a>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
                         <a href="#pagina4" data-toggle="tab"  class="w3-bar-item w3-button">página 4</a>
-=======
-                        <a  href="#pag3" data-toggle="pill" class="w3-bar-item sla">Funçõess</a>
->>>>>>> 390f83245d1c88113258160cf5af15cd083bf343
+
                     </li>
 
                 </ul>
