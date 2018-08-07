@@ -7,6 +7,32 @@
         .descricao{
             text-align: justify;
         }
+
+         @font-face {
+
+      font-family: "BPreplayBold";
+      src: url("assets/fonts/BPreplayBold.otf") format("opentype");
+
+      }
+
+
+.replay-font{
+    font-family: "BPreplayBold";
+    font-size: 16px;  
+       }
+
+       @font-face {
+
+            font-family: "Champagne & Limousines";
+            src: url("assets/fonts/Champagne & Limousines.ttf") format("truetype");
+
+            }
+
+       .film-font{
+        font-family: "Champagne & Limousines";
+        font-size: 25px;  
+             }  
+
     </style>  
 </head>
 
@@ -21,9 +47,9 @@
       <div class="modal-content" style="border-radius: 14px;">
         <div class="modal-header" style="background: linear-gradient(45deg, #68319b , #A491BA)">
           
-          <h4 class="modal-title">Crie seu  Ambiente Virtual</h4>
+          <h4 class="modal-title replay-font" style="font-size: 20px;">Crie seu  Ambiente Virtual</h4>
         </div>
-        <div class="modal-body" style="background: linear-gradient(45deg, #A491BA, #CFC1DE)">
+        <div class="modal-body film-font" style="background: linear-gradient(45deg, #A491BA, #CFC1DE); font-size: 25px;">
           <p>O Ambiente Virtual é o lugar onde você pode criar e gerenciar a sua página no site e divulgar seu negócio!!<br>
             Nele você pode gerenciar as funções necessárias para ter uma melhor experiência e avanço!!<br><hr>
                 Para começar informe algumas informações necessárias e criaremos uma Ambiente padrão para você:</p>

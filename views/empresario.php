@@ -53,7 +53,35 @@
         }
         .sla:hover {
             background-color: #dfcdef;
+            text-decoration: none;
+            color: #232323;
     }
+
+    @font-face {
+
+      font-family: "BPreplayBold";
+      src: url("assets/fonts/BPreplayBold.otf") format("opentype");
+
+      }
+
+
+.replay-font{
+    font-family: "BPreplayBold";
+      
+       }
+
+       @font-face {
+
+            font-family: "Champagne & Limousines Bold";
+            src: url("assets/fonts/Champagne & Limousines Bold.ttf") format("truetype");
+
+            }
+
+       .film-font{
+        font-family: "Champagne & Limousines Bold";
+        font-size: 25px;  
+             }  
+
     </style>
 
 </head> 
@@ -64,20 +92,21 @@
 
         <div class="container-fluid" style="padding: 0px">
 
-            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px; " id="mySidebar">
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px; background-color: #A491BA; " id="mySidebar">
             <div class="sidenav">
                 <ul class="nav flex-column nav-pills">
                     <li class="nav-item">
-                        <a href="#pag1" data-toggle="tab"  class="w3-bar-item sla">Estatiscas</a>
+                        <a href="#pag1" data-toggle="tab"  class="w3-bar-item film-font sla" style="font-size: 26px;">Estatiscas <img src="https://png.icons8.com/metro/50/000000/positive-dynamic.png" width="26"></a>
+
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#enderecos" data-toggle="tab"  class="w3-bar-item sla film-font" style="font-size: 26px;">Endereços / sedes <img src="https://png.icons8.com/metro/50/000000/map-marker.png" width="26"></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#enderecos" data-toggle="tab"  class="w3-bar-item sla">Endereços / sedes</a>
+                        <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla film-font" style="font-size: 26px;">Ambiente Virtual <img src="https://png.icons8.com/metro/50/000000/monitor.png" width="26"></a>
                     </li>
                     <li class="nav-item">
-                        <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla">Ambiente Virtual</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#pagina4" data-toggle="tab"  class="w3-bar-item w3-button">página 4</a>
+                        <a href="#pagina4" data-toggle="tab"  class="w3-bar-item w3-button film-font sla" style="font-size: 26px;">página 4</a>
 
                     </li>
 
@@ -153,7 +182,7 @@
                     <strong>Alcance</strong> - Raio de distância máxima para prestar serviços
                 </div>
                 <br>
-                <button type="button" class="btn btn-outline-primary" id="btn_novo_end">Novo Endereço</button>
+                <button type="button" class="btn btn-outline-dark film-font" style="font-size: 18px; border: 2px solid" id="btn_novo_end">Novo Endereço</button>
 
             </div>
             <div class="modal fade" id="modalEnd">
@@ -161,22 +190,40 @@
                     <div class="modal-content">
 
                           <!-- Modal Header -->
-                          <div class="modal-header">
-                            <h4 class="modal-title">Novo Endereço / SEDE</h4>
+                          <div class="modal-header" style="background: linear-gradient(45deg, #68319b , #A491BA);">
+                            <h4 class="modal-title film-font">Novo Endereço / SEDE</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                           </div>
 
                           <!-- Modal body -->
                           <div class="modal-body">
                             <form id="form_novo_end" method="POST">
-                                <label>Nome</label> <input type="text" name="nome_txt" required="required"><br>
-                                <label>CEP</label> <input type="text" id="cep_novo" name="cep_txt" required="required"><span id="not_cep"></span><br>
+                                <div class="form-group">
+                                <label class="film-font" style="font-size: 18px; ">Nome</label> <input type="text" name="nome_txt" required="required" class="form-control"><br>
+                            </div>
+
+                                 <div class="form-group">
+                                <label class="film-font" style="font-size: 18px;">CEP</label> <input type="text" id="cep_novo" name="cep_txt" required="required" class="form-control"><span id="not_cep"></span><br>
+                            </div>
+
                                 <div id="novo_part2" style="display: none">
-                                    <label>Rua</label> <input type="text" id="rua" name="rua_txt"><br>
-                                    <label>Cidade</label> <input type="text" id="cid" name="cid_txt" required="required"><br>
-                                    <label>Estado</label> <input type="text" id="est" name="est_txt" required="required"><br>
-                                    <label>Número</label> <input type="text" id="num" name="num_txt" required="required"><br> 
-                                    <input type="submit" name="enviar_novo_end" value="Confirmar">
+                                    <div class="form-group">
+                                    <label class="film-font" style="font-size: 18px;">Rua</label> <input type="text" id="rua" name="rua_txt" class="form-control"><br>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="film-font" style="font-size: 18px;">Cidade</label> <input type="text" id="cid" name="cid_txt" required="required" class="form-control"><br>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="film-font" style="font-size: 18px;">Estado</label> <input type="text" id="est" name="est_txt" required="required" class="form-control"><br>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="film-font" style="font-size: 18px;">Número</label> <input type="text" id="num" name="num_txt" required="required" class="form-control"><br>
+                                </div>
+
+                                    <input type="submit" name="enviar_novo_end" value="Confirmar" class="btn btn-outline-dark film-font" style="font-size: 18px;" >
                                 </div>
                                 
                             </form>
@@ -184,8 +231,8 @@
                           </div>
 
                           <!-- Modal footer -->
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                          <div class="modal-footer" style="background: linear-gradient(45deg, #68319b , #A491BA);">
+                            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Fechar</button>
                           </div>
 
                     </div>
