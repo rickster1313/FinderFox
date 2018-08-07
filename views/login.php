@@ -48,6 +48,8 @@
         font-family: "Champagne & Limousines Bold";
         font-size: 20px;  
              }  
+             
+       
 </style>
 
 	</head>
@@ -77,7 +79,7 @@
 	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style=" transform: translate(20%, 100%);">
 		<div class="form-group w-50">
 		<label class="film-font" style="font-size: 20px;">Email:</label>
-		<input type="text" class="form-control" name="email_txt" style="border-radius: 15px; border: 2px solid #000">
+		<input type="text" class="form-control input-text" name="email_txt" style="border-radius: 15px; border: 2px solid #000">
 	</div>
 
 	<div class="form-group w-50">

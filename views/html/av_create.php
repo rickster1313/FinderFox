@@ -8,6 +8,8 @@
             text-align: justify;
         }
 
+        
+
          @font-face {
 
       font-family: "BPreplayBold";
@@ -64,14 +66,17 @@
         <form method="POST" id="form_newAV" enctype="multipart/form-data">
             
             <div>
+                <div class="form-group">
                 <label><strong>Nome do seu AV </strong></label><br>
-                <input type="text" id="nome_av" name="nome_empresa_txt" size="40" placeholder="Ex.: Meu Ambiente Virtual" style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
+                <input type="text" id="nome_av" name="nome_empresa_txt" size="40" placeholder="Ex.: Meu Ambiente Virtual" class="form-control w-25" style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
                 <a href="#" data-toggle="tooltip" title="Nome de seu negócio/empresa (isso influenciará no link de sua página). Ex.: www.finderfox.com/meu-ambiente-virtual "></a>
+            </div>
                 <br> 
                 
             </div>
             <br>
             <div>
+
                 <label><strong>URL</strong></label><br>
                 <div style="background-color: rgba(0,0,0,0.2); width: 550px"><?php echo $_SERVER['SERVER_NAME']; ?>/ <input type="text" id="url_av" name="url_txt" required="required" style="border: none;outline: none; background-color: rgba(0,0,0,0.1);width: 400px;"> </div><br>*Não pode conter espaços
                 <br> 
@@ -85,11 +90,12 @@
             </div>
             <br>
             <div>
+            
                 <label><strong>Slogan</strong></label><br>
                 <input type="text" name="slogan_txt" size="70" required="required" style="outline: none; border-radius: 6px; border: 1px solid #68319b;">
+
                 <img href="#" data-toggle="tooltip1" title="Uma frase simples para uma marca ser sempre lembrada" style="width: 40px; height: 40px;" class="img-fluid" 
                 src="<?php echo BASE_URL; ?>assets/images/lampada.png">
-                
                 <br>
                 <!--<a href="#" title="Exemplo" data-toggle="popover1" data-trigger="focus" data-content="Gerenciando seu negócio online com maior eficiência..">Exemplo</a> -->
             </div>

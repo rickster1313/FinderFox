@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/w3.css">
+    
     <style type="text/css">
 
         .legenda .quadradinho{
