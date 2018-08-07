@@ -11,6 +11,11 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set2.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set1.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/icons.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style2.css">
+   
 
 
     
@@ -84,6 +89,20 @@
         font-family: "Champagne & Limousines Bold";
         font-size: 25px;  
              }  
+
+             @font-face {
+
+            font-family: "Typo Hoop";
+            src: url("assets/fonts/Typo Hoop_Light Demo.otf") format("opentype");
+
+            }
+
+       .topfont{
+        font-family: "Typo Hoop";
+        font-size: 16px;  
+             }  
+
+
 
     </style>
 
@@ -254,34 +273,54 @@
                             <h4 class="modal-title film-font">Novo Endereço / SEDE</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                           </div>
-
+                        
                           <!-- Modal body -->
                           <div class="modal-body">
-                            <form id="form_novo_end" method="POST">
-                                <div class="form-group">
-                                <label class="film-font" style="font-size: 18px; ">Nome</label> <input type="text" name="nome_txt" required="required" class="form-control"><br>
-                            </div>
 
-                                 <div class="form-group">
-                                <label class="film-font" style="font-size: 18px;">CEP</label> <input type="text" id="cep_novo" name="cep_txt" required="required" class="form-control"><span id="not_cep"></span><br>
-                            </div>
+                            <form id="form_novo_end" method="POST">
+                               <span class="input input--yoko">
+                    <input class="input__field input__field--yoko" type="text" id="nome" required="required" name="nome_txt" />
+                    <label class="input__label input__label--yoko" for="nome">
+                        <span class="input__label-content input__label-content--yoko topfont">Nome</span>
+                    </label>
+                </span>
+
+                                 <span class="input input--yoko">
+                    <input class="input__field input__field--yoko" type="text" id="cep_novo" required="required" name="cep_txt" />
+                                <label class="input__label input__label--yoko" for="cep_novo">
+                                 <span class="input__label-content input__label-content--yoko topfont">CEP</span>
+                                 </label>
+                                <span id="not_cep"></span><br>
+                            </span>
 
                                 <div id="novo_part2" style="display: none">
-                                    <div class="form-group">
-                                    <label class="film-font" style="font-size: 18px;">Rua</label> <input type="text" id="rua" name="rua_txt" class="form-control"><br>
-                                </div>
+                                    <span class="input input--yoko">
+                    <input class="input__field input__field--yoko" type="text" id="rua" required="required" name="rua_txt" />
+                    <label class="input__label input__label--yoko" for="rua">
+                        <span class="input__label-content input__label-content--yoko topfont">Rua</span>
+                    </label>
+                </span>
 
-                                <div class="form-group">
-                                    <label class="film-font" style="font-size: 18px;">Cidade</label> <input type="text" id="cid" name="cid_txt" required="required" class="form-control"><br>
-                                </div>
+                                <span class="input input--yoko">
+                    <input class="input__field input__field--yoko" type="text" id="cid" required="required" name="cid_txt" />
+                    <label class="input__label input__label--yoko" for="cid">
+                        <span class="input__label-content input__label-content--yoko topfont">Cidade</span>
+                    </label>
+                </span>
 
-                                <div class="form-group">
-                                    <label class="film-font" style="font-size: 18px;">Estado</label> <input type="text" id="est" name="est_txt" required="required" class="form-control"><br>
-                                </div>
+                                <span class="input input--yoko">
+                    <input class="input__field input__field--yoko" type="text" id="est" required="required" name="est_txt" />
+                    <label class="input__label input__label--yoko" for="est">
+                        <span class="input__label-content input__label-content--yoko topfont">Estado</span>
+                    </label>
+                </span>
 
-                                <div class="form-group">
-                                    <label class="film-font" style="font-size: 18px;">Número</label> <input type="text" id="num" name="num_txt" required="required" class="form-control"><br>
-                                </div>
+                               <span class="input input--yoko">
+                    <input class="input__field input__field--yoko" type="text" id="num" required="required" name="num_txt" />
+                    <label class="input__label input__label--yoko" for="num">
+                        <span class="input__label-content input__label-content--yoko topfont">N°</span>
+                    </label>
+                </span>
 
                                     <input type="submit" name="enviar_novo_end" value="Confirmar" class="btn btn-outline-dark film-font" style="font-size: 18px;" >
                                 </div>
@@ -329,6 +368,43 @@
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/borderMenu.js"></script>
 
+<script>
+            (function() {
+                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                if (!String.prototype.trim) {
+                    (function() {
+                        // Make sure we trim BOM and NBSP
+                        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                        String.prototype.trim = function() {
+                            return this.replace(rtrim, '');
+                        };
+                    })();
+                }
+
+                [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+                    // in case the input is already filled..
+                    if( inputEl.value.trim() !== '' ) {
+                        classie.add( inputEl.parentNode, 'input--filled' );
+                    }
+
+                    // events:
+                    inputEl.addEventListener( 'focus', onInputFocus );
+                    inputEl.addEventListener( 'blur', onInputBlur );
+                } );
+
+                function onInputFocus( ev ) {
+                    classie.add( ev.target.parentNode, 'input--filled' );
+                }
+
+                function onInputBlur( ev ) {
+                    if( ev.target.value.trim() === '' ) {
+                        classie.remove( ev.target.parentNode, 'input--filled' );
+                    }
+                }
+            })();
+        </script>
 </body>
 </html>

@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set2.css">
 
 
 <style type="text/css">
@@ -76,19 +77,25 @@
 	?>
 
 	</div>
+
 	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style=" transform: translate(20%, 100%);">
-		<div class="form-group w-50">
-		<label class="film-font" style="font-size: 20px;">Email:</label>
-		<input type="text" class="form-control input-text" name="email_txt" style="border-radius: 15px; border: 2px solid #000">
-	</div>
-
-	<div class="form-group w-50">
-		<label class="film-font">Senha:</label>
-		<input type="password" class="form-control" name="senha_txt" style="border-radius: 15px; border: 2px solid #000">
-	</div>
-
+		<span class="input input--ruri">
+					<input class="input__field input__field--ruri" type="text" id="input-26" name="email_txt" />
+					<label class="input__label input__label--ruri" for="input-26">
+						<span class="input__label-content input__label-content--ruri">Email</span>
+					</label>
+         </span>
+         <br>
+	<span class="input input--ruri">
+					<input class="input__field input__field--ruri" type="password" id="input-27" name="senha_txt" />
+					<label class="input__label input__label--ruri" for="input-27">
+						<span class="input__label-content input__label-content--ruri">Senha</span>
+					</label>
+         </span>
+         <br>
 		<input type="submit" name="enviar_login" class="btn btn-outline-dark">
 	</form>
+
 </div>
 
 <div class="col-sm-6" style="height: 950px; background: url(assets/images/fundo3.jpg);">
@@ -104,7 +111,43 @@
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.mask.js"></script>
 	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/cadastro.js"></script>
-        	
+	<script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/classie.js"></script>
+        
+        <script>
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+		</script>	
 	
 </body>
 </html>
