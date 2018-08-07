@@ -75,6 +75,25 @@
 			$avsModel->novoAV($_SESSION['id'], $url, $nome_av, $slogan, $nome_logo);
 		}
 
+		public function alterarEnd(){
+			$id = addslashes($_POST['idpass']);
+			$nome = addslashes($_POST['nome_txt']);
+			$rua = addslashes($_POST['rua_txt']);
+			$num = addslashes($_POST['num_txt']);
+			$cid = addslashes($_POST['cid_txt']);
+			$est = addslashes($_POST['est_txt']);
+			$cep = addslashes($_POST['cep_txt']);
+			$raio = addslashes($_POST['raio_txt']);
+			$enderecosModel = new enderecosModel();
+			$enderecosModel->alterarEnd($id, $nome, $rua, $num, $cid, $est, $cep, $raio);
+		}
+
+		public function deleteEnd(){
+			$id = addslashes($_POST['iddel']);
+			$enderecosModel = new enderecosModel();
+			$enderecosModel->deletarEnd($id);
+		}
+
 		private function seguranca(){
 			$seguro = true;
 			//teste se login está OK

@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/w3.css">
+
+
     
     <style type="text/css">
 
@@ -163,7 +165,8 @@
                         <td><input type="text" class="raio" name="raio_txt" placeholder="ex.: 50.2" value="<?php echo $result['raio']; ?>"></td>
                         <td style="text-align: center;"> 
                             <button type="button" class="btn-tbl btn btn-outline-info">Ver detalhes</button>
-                            <button type="button" class="btn-tbl btn btn-outline-warning">Alterar</button>
+
+                            <button class="btn-tbl btn btn-outline-warning btn_alt" value="modalAlt<?php echo $result['id_end'];?>">Alterar</button><br>
                             <?php if($result['active'] == 'nao'){ ?>
                                 <button type="button" class="btn btn-success btn-tbl">Ativar</button>
                                 <?php 
@@ -171,12 +174,68 @@
                                 <button type="button" class="btn btn-danger btn-tbl">Desativar</button>
                                 <?php
                             } ?>
-                            <button type="button" class="btn-tbl btn btn-outline-danger">Excluir</button> </td>
+                            <?php if($retorno -> rowCount() > 1){ ?>
+                            <button type="button" class="btn-tbl btn btn-outline-danger btn_del" value="id<?php echo $result['id_end'];?>">Excluir</button> <?php }else{ ?> 
+                            <button type="button" class="btn-tbl btn btn-outline-danger btn_del" disabled="disabled" title="É obrigatório no mínimo 1 endereço! " value="id<?php echo $result['id_end'];?>">Excluir</button> <?php } ?>
+                            </td>
                       </tr>
+
                   <?php } ?>
                     </tbody>
                 </table>
                 </div>
+                <?php foreach ($sql as $resultAlt){ ?>
+                <!-- ################# modais de alterar ######################-->
+                    <!-- The Modal -->
+                    <div class="modal fade" id="modalAlt<?php echo $resultAlt['id_end'];?>">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                            <h4 class="modal-title">Alterar <strong><?php echo $resultAlt['nome']; ?></strong></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+
+                          <!-- Modal body -->
+                          <div class="modal-body">
+                            <form id="id<?php echo $resultAlt['id_end'];?>" name="form_alterar_end" method="POST">
+                                
+                           
+                                <div class="form-group">
+                                    <label class="film-font" style="font-size: 18px; ">Nome</label> <input type="text" name="nome_txt" required="required" class="form-control" value="<?php echo $resultAlt['nome']; ?>"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label class="film-font" style="font-size: 18px; ">Rua</label> <input type="text" name="rua_txt" required="required" class="form-control" value="<?php echo $resultAlt['rua']; ?>"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label class="film-font" style="font-size: 18px; ">Número</label> <input type="text" name="num_txt" required="required" class="form-control" value="<?php echo $resultAlt['numero']; ?>"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label class="film-font" style="font-size: 18px; ">Cidade</label> <input type="text" name="cid_txt" required="required" class="form-control" value="<?php echo $resultAlt['cidade']; ?>"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label class="film-font" style="font-size: 18px; ">Estado</label> <input type="text" name="est_txt" required="required" class="form-control" value="<?php echo $resultAlt['estado']; ?>"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label class="film-font" style="font-size: 18px; ">CEP</label> <input type="text" name="cep_txt" required="required" class="form-control" value="<?php echo $resultAlt['cep']; ?>"><br>
+                                </div>
+                                <div class="form-group">
+                                    <label class="film-font" style="font-size: 18px; ">Alcance(KM)</label> <input type="text" name="raio_txt"  class="form-control" value="<?php echo $resultAlt['raio']; ?>"><br>
+                                </div>
+                                <input type="submit" name="alterar_end" value="Alterar" class="btn btn-outline-dark film-font" style="font-size: 18px;" >
+                            </form>
+                          </div>
+
+                          <!-- Modal footer -->
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                <?php } ?>
                 <div class="legenda">
                     <div class="quadradinho bg-danger" > Desativo</div>
                     <div class="quadradinho bg-success"> Ativo</div>

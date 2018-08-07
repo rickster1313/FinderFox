@@ -154,6 +154,7 @@ $j(document).ready(function(){
                 success:function(json){
                     if (json.status == 0 ) {
                         $j("#not_cep").css("display", "block");
+                        $j("#novo_part2").css("display", "none");
                         $j("#not_cep").html(json.message);
                     }else{
                         $j("#not_cep").css("display", "none");
@@ -169,6 +170,7 @@ $j(document).ready(function(){
                 }
             });
         }else{
+            $j("#novo_part2").css("display", "none");
             $j("#not_cep").css("display", "none");
         }
     });
@@ -195,6 +197,45 @@ $j(document).ready(function(){
             $j('#myModal').modal('show');
         }
     });
-
+    $j(".btn_alt").bind("click", function(){
+        var model_alt = $j(this).val();
+        $j('#'+model_alt).modal('show');
+    });
+     $j(".btn_del").bind("click", function(){
+        var id = $j(this).val();
+        var newid = id.substring(2, id.length);
+        if(confirm("Deseja mesmo excluir este endereço?")){
+            $j.ajax({
+            type:'POST',
+            url:'empresario/deleteEnd',
+            data:'iddel='+newid,
+            async: false,
+            success:function(){
+                window.location.href = "login";
+            },
+            error:function(){
+                 console.log("error no ajax");
+            }
+        });
+        }
+        
+    });
+    $j("form[name=form_alterar_end]").bind("submit", function(form){
+        form.preventDefault();
+        var id = $j(this).attr("id");
+        var newid = id.substring(2, id.length);
+        $j.ajax({
+            type:'POST',
+            url:'empresario/alterarEnd',
+            data:$j(this).serialize()+"&idpass="+newid,
+            async: false,
+            success:function(){
+                window.location.href = "login";
+            },
+            error:function(){
+                 console.log("error no ajax");
+            }
+        });
+    });
 
 });
