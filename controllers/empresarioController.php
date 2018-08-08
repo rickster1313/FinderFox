@@ -97,16 +97,19 @@
 		public function activeEnd(){
 			$id = addslashes($_POST['idactive']);
 			$opcao = addslashes($_POST['opcao']);
-			/*$lat = ;
-			$lon = ;
-			$raio = ;
+			$raio = addslashes($_POST['raio']);
 			$enderecosModel = new enderecosModel();
-			if($opcao == "ativar"){
-
-				//$enderecosModel->onOffEnd("sim");
+			if($opcao == "ativar"){/*
+				$sql = $enderecosModel->getEnderecos($id);
+				$dados = $sql->fetch();
+				$funcaoController = new funcaoController();
+				$coordenadas = $funcaoController->coordenadasCep($dados['cep']);
+				$lat = ;
+				$lon = ;
+				$enderecosModel->onEnd("sim", $id, $raio);*/
 			}else{
-				//$enderecosModel->onOffEnd("nao");
-			}*/
+				$enderecosModel->offEnd("nao", $id, $raio);
+			}
 		}
 		private function seguranca(){
 			$seguro = true;
