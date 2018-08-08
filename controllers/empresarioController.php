@@ -94,6 +94,20 @@
 			$enderecosModel->deletarEnd($id);
 		}
 
+		public function activeEnd(){
+			$id = addslashes($_POST['idactive']);
+			$opcao = addslashes($_POST['opcao']);
+			/*$lat = ;
+			$lon = ;
+			$raio = ;
+			$enderecosModel = new enderecosModel();
+			if($opcao == "ativar"){
+
+				//$enderecosModel->onOffEnd("sim");
+			}else{
+				//$enderecosModel->onOffEnd("nao");
+			}*/
+		}
 		private function seguranca(){
 			$seguro = true;
 			//teste se login está OK

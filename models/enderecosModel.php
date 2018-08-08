@@ -39,6 +39,14 @@
             $sql = $this->pdo->query($sql);
             return $sql;
         }
+        public function onOffEnd($active, $id){
+             $sql = "UPDATE tbl_endereco SET  active = ?, nome = ?, raio = ? WHERE id_end = ?";
+            $sql = $this->pdo->prepare($sql);
+            $sql->bindValue(1, $active);
+            $sql->bindValue(2, $rua);
+            $sql->bindValue(3, $est);
+            $sql->execute();
+        }
 
     }
 ?>

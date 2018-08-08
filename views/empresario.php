@@ -181,16 +181,16 @@
                         <td><?php echo $result['rua']; ?></td>
                         <td><?php echo $result['cidade']; ?></td>
                         <td><?php echo $result['estado']; ?></td>
-                        <td><input type="text" class="raio" name="raio_txt" placeholder="ex.: 50.2" value="<?php echo $result['raio']; ?>"></td>
+                        <td><input type="text" id="raio<?php echo $result['id_end'];?>" class="raio" name="raio_txt" placeholder="ex.: 50.2" value="<?php echo $result['raio']; ?>"></td>
                         <td style="text-align: center;"> 
                             <button type="button" class="btn-tbl btn btn-outline-info">Ver detalhes</button>
 
                             <button class="btn-tbl btn btn-outline-warning btn_alt" value="modalAlt<?php echo $result['id_end'];?>">Alterar</button><br>
                             <?php if($result['active'] == 'nao'){ ?>
-                                <button type="button" class="btn btn-success btn-tbl">Ativar</button>
+                                <button name="btn_on_off" id="id<?php echo $result['id_end'];?>" value="ativar" type="button" class="btn btn-success btn-tbl">Ativar</button>
                                 <?php 
                             }else{ ?>
-                                <button type="button" class="btn btn-danger btn-tbl">Desativar</button>
+                                <button name="btn_on_off" id="id<?php echo $result['id_end'];?>" value="desativar" type="button" class="btn btn-danger btn-tbl">Desativar</button>
                                 <?php
                             } ?>
                             <?php if($retorno -> rowCount() > 1){ ?>
