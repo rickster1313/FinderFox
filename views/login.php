@@ -49,6 +49,11 @@
         font-family: "Champagne & Limousines Bold";
         font-size: 20px;  
              }  
+        .fundo-form{
+        	background-color: #F7F0E8;
+        	border-radius: 9px;
+        	box-shadow: 3px 3px 3px #EAE8E3;
+        }
              
        
 </style>
@@ -78,7 +83,8 @@
 
 	</div>
 
-	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style=" transform: translate(20%, 100%);">
+	<div class="fundo-form">
+	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login">
 		<span class="input input--ruri">
 					<input class="input__field input__field--ruri" type="text" id="input-26" name="email_txt" />
 					<label class="input__label input__label--ruri" for="input-26">
@@ -95,7 +101,7 @@
          <br>
 		<input type="submit" name="enviar_login" class="btn btn-outline-dark">
 	</form>
-
+</div>
 </div>
 
 <div class="col-sm-6" style="height: 950px; background: url(assets/images/fundo3.jpg);">

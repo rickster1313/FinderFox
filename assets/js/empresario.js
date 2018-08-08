@@ -4,8 +4,8 @@ $j(document).ready(function(){
     function abrir(){
                 if(aberto == 1) {
                     aberto =2;
-                    document.getElementById("main").style.marginLeft = "180px";
-                    document.getElementById("mySidebar").style.width = "180px";
+                    document.getElementById("main").style.marginLeft = "220px";
+                    document.getElementById("mySidebar").style.width = "220px";
                     document.getElementById("mySidebar").style.display = "block";
                 } else {
                     aberto=1;

@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set1.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/icons.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
    
 
 
@@ -32,8 +33,8 @@
         .legenda{
             padding: 3px;
             width: 40%;
-            border:1px black solid;
             float: right;
+            background-color: #EAE8E3;
         }
         .raio{
             margin: 0px;
@@ -43,15 +44,20 @@
         }
         .end-tbl{
             height: 600px;
-            border:1px black solid;
+            background-color: #EAE8E3;
             margin-bottom: 10px;
             overflow: auto;
+            border-radius: 10px;
+            box-shadow: 6px 6px 10px #777570;
         }
         .btn-tbl{
             width: 120px;
             margin: 2px;
 
 
+        }
+        .tam{
+            font-size: 15px;
         }
         body{
             background-color: #dfcdef;
@@ -102,7 +108,9 @@
         font-size: 16px;  
              }  
 
-
+             body{
+                font-family: 'Bree Serif', serif;
+             }
 
     </style>
 
@@ -115,20 +123,20 @@
         <div class="container-fluid" style="padding: 0px">
 
             <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px; background-color: #A491BA; " id="mySidebar">
-            <div class="sidenav">
+            <div class="sidenav ">
                 <ul class="nav flex-column nav-pills">
                     <li class="nav-item">
-                        <a href="#pag1" data-toggle="tab"  class="w3-bar-item film-font sla" style="font-size: 26px;">Estatiscas <img src="https://png.icons8.com/metro/50/000000/positive-dynamic.png" width="26"></a>
+                        <a href="#pag1" data-toggle="tab"  class="w3-bar-item  sla" style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/positive-dynamic.png" width="26">  Estatiscas </a>
 
                     </li>
                     <li class="nav-item ">
-                        <a href="#enderecos" data-toggle="tab"  class="w3-bar-item sla film-font" style="font-size: 26px;">Endereços / sedes <img src="https://png.icons8.com/metro/50/000000/map-marker.png" width="26"></a>
+                        <a href="#enderecos" data-toggle="tab"  class="w3-bar-item sla " style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/map-marker.png" width="26">  Endereços / sedes </a>
                     </li>
                     <li class="nav-item">
-                        <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla film-font" style="font-size: 26px;">Ambiente Virtual <img src="https://png.icons8.com/metro/50/000000/monitor.png" width="26"></a>
+                        <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla " style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/monitor.png" width="26">  Ambiente Virtual </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#pagina4" data-toggle="tab"  class="w3-bar-item w3-button film-font sla" style="font-size: 26px;">página 4</a>
+                        <a href="#pagina4" data-toggle="tab"  class="w3-bar-item w3-button  sla" style="font-size: 19px;">página 4</a>
 
                     </li>
 
