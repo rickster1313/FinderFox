@@ -340,7 +340,7 @@
                 </div>
                 </form>
             </div>
-      
+        </div>
 
         <div id="av_conteudo" class="tab-pane fade">
             <?php 
@@ -362,7 +362,7 @@
 
 </div>
 </div>
-</div>
+
 
 
         
