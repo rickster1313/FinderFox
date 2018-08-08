@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 03-Ago-2018 às 14:11
+-- Generation Time: 08-Ago-2018 às 13:19
 -- Versão do servidor: 10.1.19-MariaDB
 -- PHP Version: 5.5.38
 
@@ -53,17 +53,18 @@ CREATE TABLE `tbl_endereco` (
   `cidade` varchar(220) NOT NULL,
   `numero` varchar(220) NOT NULL,
   `nome` varchar(220) NOT NULL,
-  `active` int(11) DEFAULT NULL,
+  `active` varchar(50) DEFAULT NULL,
   `lat` varchar(50) DEFAULT NULL,
-  `lon` varchar(50) DEFAULT NULL
+  `lon` varchar(50) DEFAULT NULL,
+  `raio` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `tbl_endereco`
 --
 
-INSERT INTO `tbl_endereco` (`id_end`, `user_id`, `cep`, `rua`, `estado`, `cidade`, `numero`, `nome`, `active`, `lat`, `lon`) VALUES
-(2, 6, '13238-110', 'Rua das AmÃ©ricas', 'SP', 'Campo Limpo Paulista', '304', 'principal', 0, '', '');
+INSERT INTO `tbl_endereco` (`id_end`, `user_id`, `cep`, `rua`, `estado`, `cidade`, `numero`, `nome`, `active`, `lat`, `lon`, `raio`) VALUES
+(4, 6, '13238-110', 'Rua das AmÃ©ricas', 'SP', 'Campo Limpo Paulista', '08', 'principal', 'nao', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -126,7 +127,7 @@ ALTER TABLE `tbl_avs`
 -- AUTO_INCREMENT for table `tbl_endereco`
 --
 ALTER TABLE `tbl_endereco`
-  MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_usuarios`
 --

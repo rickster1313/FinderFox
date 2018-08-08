@@ -94,6 +94,23 @@
 			$enderecosModel->deletarEnd($id);
 		}
 
+		public function activeEnd(){
+			$id = addslashes($_POST['idactive']);
+			$opcao = addslashes($_POST['opcao']);
+			$raio = addslashes($_POST['raio']);
+			$enderecosModel = new enderecosModel();
+			if($opcao == "ativar"){/*
+				$sql = $enderecosModel->getEnderecos($id);
+				$dados = $sql->fetch();
+				$funcaoController = new funcaoController();
+				$coordenadas = $funcaoController->coordenadasCep($dados['cep']);
+				$lat = ;
+				$lon = ;
+				$enderecosModel->onEnd("sim", $id, $raio);*/
+			}else{
+				$enderecosModel->offEnd("nao", $id, $raio);
+			}
+		}
 		private function seguranca(){
 			$seguro = true;
 			//teste se login está OK

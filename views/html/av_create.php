@@ -1,5 +1,10 @@
 <head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
     <style type="text/css">
+
         .main2{
              padding-left: 20px;
 
@@ -35,6 +40,10 @@
         font-size: 25px;  
              }  
 
+             body{
+              font-family: 'bree serif', serif;
+             }
+
     </style>  
 </head>
 
@@ -49,9 +58,9 @@
       <div class="modal-content" style="border-radius: 14px;">
         <div class="modal-header" style="background: linear-gradient(45deg, #68319b , #A491BA)">
           
-          <h4 class="modal-title replay-font" style="font-size: 20px;">Crie seu  Ambiente Virtual</h4>
+          <h4 class="modal-title" style="">Crie seu  Ambiente Virtual</h4>
         </div>
-        <div class="modal-body film-font" style="background: linear-gradient(45deg, #A491BA, #CFC1DE); font-size: 25px;">
+        <div class="modal-body" style="background: linear-gradient(45deg, #A491BA, #CFC1DE);">
           <p>O Ambiente Virtual é o lugar onde você pode criar e gerenciar a sua página no site e divulgar seu negócio!!<br>
             Nele você pode gerenciar as funções necessárias para ter uma melhor experiência e avanço!!<br><hr>
                 Para começar informe algumas informações necessárias e criaremos uma Ambiente padrão para você:</p>

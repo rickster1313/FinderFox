@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set2.css">
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 
 
 <style type="text/css">
@@ -49,7 +50,21 @@
         font-family: "Champagne & Limousines Bold";
         font-size: 20px;  
              }  
-             
+        .fundo-form{
+        	background-color: #F7F0E8;
+        	border-radius: 9px;
+        	box-shadow: 3px 3px 6px #777570;
+        	height: 500px;
+        	width: 40%;
+        	display: flex;
+        	justify-content: center;
+        	align-content: center;
+        	align-items: center;
+        }
+
+        body{
+          font-family: 'Bree Serif', serif;
+        }
        
 </style>
 
@@ -62,11 +77,16 @@
 	
 
 	<div class="container-fluid">
-	<a class="btn btn-outline-dark film-font botao-voltar" style="" href="<?php echo BASE_URL; ?>">Voltar</a>
+	<a class="btn btn-outline-dark botao-voltar" style="font-family: 'Bree-Serif', serif;" href="<?php echo BASE_URL; ?>">Voltar</a>
 	<div class="row">
 
-		<div class="col-sm-6" style="width: 100%; height: 950px;background: linear-gradient(45deg, #A491BA, #CFC1DE)">
-		<div style="display:block; width:50%;left: 40%; top: 200px; transform: translate(40%, 200px);">
+		<div class="col-sm-6" style="width: 100%; height: 950px;background: linear-gradient(45deg, #A491BA, #CFC1DE); display: flex; justify-content: center; align-items: center;">
+		
+		
+
+
+
+	<div class="fundo-form">
 		<?php 
     
 	if (isset($_SESSION['msg'])) {
@@ -75,10 +95,7 @@
 	}
 
 	?>
-
-	</div>
-
-	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style=" transform: translate(20%, 100%);">
+	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style="width: 90%;">
 		<span class="input input--ruri">
 					<input class="input__field input__field--ruri" type="text" id="input-26" name="email_txt" />
 					<label class="input__label input__label--ruri" for="input-26">
@@ -95,7 +112,7 @@
          <br>
 		<input type="submit" name="enviar_login" class="btn btn-outline-dark">
 	</form>
-
+</div>
 </div>
 
 <div class="col-sm-6" style="height: 950px; background: url(assets/images/fundo3.jpg);">

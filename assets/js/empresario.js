@@ -4,8 +4,8 @@ $j(document).ready(function(){
     function abrir(){
                 if(aberto == 1) {
                     aberto =2;
-                    document.getElementById("main").style.marginLeft = "180px";
-                    document.getElementById("mySidebar").style.width = "180px";
+                    document.getElementById("main").style.marginLeft = "220px";
+                    document.getElementById("mySidebar").style.width = "220px";
                     document.getElementById("mySidebar").style.display = "block";
                 } else {
                     aberto=1;
@@ -236,6 +236,35 @@ $j(document).ready(function(){
                  console.log("error no ajax");
             }
         });
+    });
+
+    $j("button[name=btn_on_off]").bind("click", function(button){
+        var raio = $j("#raio"+newid).val();
+        if(raio.length > 0){
+            raio = raio.toLowerCase()
+            if(raio != "global"){
+                raio = raio.replace(/ /g, '');
+                raio = raio.replace(/,/g, '.');
+            }
+            var id =$j(this).attr("id");
+            var op =$j(this).val();
+            var newid = id.substring(2, id.length);
+            $j.ajax({
+                type:'POST',
+                url:'empresario/activeEnd',
+                data:"idactive="+newid+"&opcao="+op+"&raio="+raio,
+                async: false,
+                success:function(){
+                    window.location.href = "login";
+                },
+                error:function(){
+                     console.log("error no ajax");
+                }
+            });
+        }else{
+            $j("#raio"+newid).focus();
+        }
+       
     });
 
 });

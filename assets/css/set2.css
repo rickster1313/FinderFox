@@ -970,6 +970,7 @@
 .input__field--ruri:focus + .input__label--ruri .input__label-content--ruri,
 .input--filled .input__label--ruri .input__label-content--ruri {
 	color: #68319B;
+	font-size: 20px;
 	-webkit-transform: translate3d(0, 2em, 0) scale3d(0.655, 0.655, 1);
 	transform: translate3d(0, 2em, 0) scale3d(0.655, 0.655, 1);
 }

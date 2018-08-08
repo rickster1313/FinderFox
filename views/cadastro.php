@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/default.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/animate.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 
 
 
@@ -70,6 +71,9 @@
 		.qua-es{
 			width: 360px;
 			height: 360px;
+			justify-content: center;
+			display: flex;
+			align-items: center;
 		}
 		.qua-di{
 			width: 360px;
@@ -135,6 +139,10 @@
         font-size: 20px;  
              }  
 
+             body{
+            font-family: 'Bree Serif', serif;
+        }
+
 </style>
 </head>
 <body>
@@ -142,7 +150,7 @@
 
 
 	<div class="container-fluid">
-		<a class="btn btn-outline-light film-font botao-voltar" style="" href="<?php echo BASE_URL; ?>">Voltar</a>
+		<a class="btn btn-outline-light botao-voltar" style="" href="<?php echo BASE_URL; ?>">Voltar</a>
 		<div class="main">
 
 			<div class="esquerda grid cs-style-1">
@@ -152,7 +160,7 @@
 						<figcaption>
 							<h3>Usuario</h3>
 							
-							<button class="btn btn-outline-light qe film-font" style="border-radius: 15px;">Cadastrar-se</button>
+							<button class="btn btn-outline-light qe " style="border-radius: 15px;">Cadastrar-se</button>
 						</figcaption>
 					</figure>
 			
@@ -164,7 +172,7 @@
 						<figcaption>
 							<h3>Empresário</h3>
 							
-							<button class="btn btn-outline-light qd film-font" style="border-radius: 15px;">Cadastrar-se</button>
+							<button class="btn btn-outline-light qd " style="border-radius: 15px;">Cadastrar-se</button>
 						</figcaption>
 					</figure>
 			</div>
@@ -174,26 +182,26 @@
 			<div class="row">
 				<div class="col-md-12" style="">
 		<div class="formularioUser" style="color: white">
-			<div class="formularios">
-				<hr><h1 class="film-font">Dados de perfil do usuário</h1>
+			<div class="formularios" style="">
+				<hr><h1 class="">Dados de perfil do usuário</h1>
 				
 				
 
-				<form method="POST" id="novo_user" class="" style=" left: 30%; transform: translate(-20%);">
+				<form method="POST" id="novo_user" class="" style=" left: 20%; transform: translate(-20%);">
 					<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">Nome</label> <input type="text" class="form-control" name="nome_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff; "><br>
+					<label class="" style="font-size: 20px;">Nome</label> <input type="text" class="form-control" name="nome_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
-					<label class="film-font" style="font-size: 20px;">E-mail</label> <input class="email form-control" type="email" name="email_txt" required="required" style="outline: none;color: #d3d3d3;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="" style="font-size: 20px;">E-mail</label> <input class="email form-control" type="email" name="email_txt" required="required" style="outline: none;color: #d3d3d3;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">Telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="" style="font-size: 20px;">Telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
-					<label class="film-font" style="font-size: 20px;">Tipo de pessoa</label> <br>
+					<label class="" style="font-size: 20px;">Tipo de pessoa</label> <br>
 					<input type="radio" name="pessoa" value="fisica" checked="checked">Física 
 					<input type="radio" name="pessoa" value="juridica">Jurídica<br>
 				</div>
@@ -203,15 +211,15 @@
 				</div>
 
 				<div class="form-group slideInRight animated">
-					<label class="film-font" style="font-size: 20px;">Senha</label> <input class="senha form-control" type="password" name="senha_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
+					<label class="" style="font-size: 20px;">Senha</label> <input class="senha form-control" type="password" name="senha_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control senha_confirm" name="senha_confirm_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
+					<label class="" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control senha_confirm" name="senha_confirm_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
 				</div>
 
 
-					<input type="submit" name="novo_user" value="Cadastrar" class="btn btn-outline-light film-font wow slideInRight">
+					<input type="submit" name="novo_user" value="Cadastrar" class="btn btn-outline-light wow slideInRight">
 				</form>
 			</div>
 			
@@ -224,41 +232,41 @@
 		<div class="formularioEmpre" style="color: white">
 			<div class="formularios">
 				<hr>
-				<h1 class="film-font">Dados de perfil do Empresário</h1><br><br>
+				<h1 class="">Dados de perfil do Empresário</h1><br><br>
 
 				<form method="POST" id="novo_empre" style=" left: 30%; transform: translate(-20%);">
                     <div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">Nome</label> <input type="text" name="nome_txt" class="form-control" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="" style="font-size: 20px;">Nome</label> <input type="text" name="nome_txt" class="form-control" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
-					<label class="film-font" style="font-size: 20px;">e-mail</label> <input class="email form-control" type="e-mail" name="email_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="" style="font-size: 20px;">e-mail</label> <input class="email form-control" type="e-mail" name="email_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="" style="font-size: 20px;">telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
-					<label class="film-font" style="font-size: 20px;">Tipo de pessoa</label> - 
+					<label class="" style="font-size: 20px;">Tipo de pessoa</label> - 
 					<input type="radio" name="pessoa" value="fisica" checked="checked" class="film-font" style="font-size: 18px;">Física 
 					<input type="radio" name="pessoa" value="juridica" class="film-font" style="font-size: 18px;">Jurídica<br>
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;" id="label_cpf">CPF</label><input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="" style="font-size: 20px;" id="label_cpf">CPF</label><input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInRight animated">
-					<label class="film-font" style="font-size: 20px;">senha</label> <input type="password" class="form-control" name="senha_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+					<label class="" style="font-size: 20px;">senha</label> <input type="password" class="form-control" name="senha_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 				</div>
 
 				<div class="form-group slideInLeft animated">
-					<label class="film-font" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control" name="senha_confirm" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
+					<label class="" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control" name="senha_confirm" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
 				</div>
 
 
-					<hr><h1 style="" class="film-font">Dados de localização</h1><br><br>
+					<hr><h1 style="" class="">Dados de localização</h1><br><br>
                     <div class="form-group slideInRight animated">
 					<label class="film-font" style="font-size: 20px;">CEP</label> <input id="CEP" type="text" name="cep_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;">
 					<label style="display: none;" id="erro">ERRO: cep invalido</label>
@@ -266,19 +274,19 @@
 					<button id="ok_cep" class="btn btn-outline-light">Confirmar</button><br>
 					<div id="localiza" style="display: none">
 						<div class="form-group slideInLeft animated">
-						<label class="film-font" style="font-size: 20px;">Rua</label> <input id="rua" type="text" name="rua_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+						<label class="" style="font-size: 20px;">Rua</label> <input id="rua" type="text" name="rua_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 					</div>
 
 					<div class="form-group slideInRight animated">
-						<label class="film-font" style="font-size: 20px;">Estado</label> <input id="estado" type="text" name="estado_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+						<label class="" style="font-size: 20px;">Estado</label> <input id="estado" type="text" name="estado_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 					</div>
 
 					<div class="form-group slideInLeft animated">
-						<label class="film-font" style="font-size: 20px;">Cidade</label> <input id="cid" type="text" name="cid_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+						<label class="" style="font-size: 20px;">Cidade</label> <input id="cid" type="text" name="cid_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 					</div>
 
 					<div class="form-group slideInRight animated">
-						<label class="film-font" style="font-size: 20px;">Nº</label> <input id="num" type="text" name="num_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+						<label class="" style="font-size: 20px;">Nº</label> <input id="num" type="text" name="num_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
 					</div>
 
 						<input type="submit" name="novo_empre" value="Cadastrar" class="btn btn-outline-light">

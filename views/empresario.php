@@ -15,6 +15,9 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set1.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/icons.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component1.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+
    
 
 
@@ -32,8 +35,8 @@
         .legenda{
             padding: 3px;
             width: 40%;
-            border:1px black solid;
             float: right;
+            background-color: #EAE8E3;
         }
         .raio{
             margin: 0px;
@@ -43,9 +46,11 @@
         }
         .end-tbl{
             height: 600px;
-            border:1px black solid;
+            background-color: #EAE8E3;
             margin-bottom: 10px;
             overflow: auto;
+            border-radius: 10px;
+            box-shadow: 6px 6px 10px #777570;
         }
         .btn-tbl{
             width: 120px;
@@ -53,8 +58,12 @@
 
 
         }
+        .tam{
+            font-size: 15px;
+        }
         body{
             background-color: #dfcdef;
+            font-family: 'Bree Serif', serif;
         }
         input[type='file'] {
             display: none
@@ -102,7 +111,7 @@
         font-size: 16px;  
              }  
 
-
+             
 
     </style>
 
@@ -115,20 +124,20 @@
         <div class="container-fluid" style="padding: 0px">
 
             <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px; background-color: #A491BA; " id="mySidebar">
-            <div class="sidenav">
+            <div class="sidenav ">
                 <ul class="nav flex-column nav-pills">
                     <li class="nav-item">
-                        <a href="#pag1" data-toggle="tab"  class="w3-bar-item film-font sla" style="font-size: 26px;">Estatiscas <img src="https://png.icons8.com/metro/50/000000/positive-dynamic.png" width="26"></a>
+                        <a href="#pag1" data-toggle="tab"  class="w3-bar-item  sla" style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/positive-dynamic.png" width="26">  Estatiscas </a>
 
                     </li>
                     <li class="nav-item ">
-                        <a href="#enderecos" data-toggle="tab"  class="w3-bar-item sla film-font" style="font-size: 26px;">Endereços / sedes <img src="https://png.icons8.com/metro/50/000000/map-marker.png" width="26"></a>
+                        <a href="#enderecos" data-toggle="tab"  class="w3-bar-item sla " style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/map-marker.png" width="26">  Endereços / sedes </a>
                     </li>
                     <li class="nav-item">
-                        <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla film-font" style="font-size: 26px;">Ambiente Virtual <img src="https://png.icons8.com/metro/50/000000/monitor.png" width="26"></a>
+                        <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla " style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/monitor.png" width="26">  Ambiente Virtual </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#pagina4" data-toggle="tab"  class="w3-bar-item w3-button film-font sla" style="font-size: 26px;">página 4</a>
+                        <a href="#pagina4" data-toggle="tab"  class="w3-bar-item w3-button  sla" style="font-size: 19px;">página 4</a>
 
                     </li>
 
@@ -181,16 +190,16 @@
                         <td><?php echo $result['rua']; ?></td>
                         <td><?php echo $result['cidade']; ?></td>
                         <td><?php echo $result['estado']; ?></td>
-                        <td><input type="text" class="raio" name="raio_txt" placeholder="ex.: 50.2" value="<?php echo $result['raio']; ?>"></td>
+                        <td><input type="text" id="raio<?php echo $result['id_end'];?>" class="raio" name="raio_txt" placeholder="ex.: 50.2" value="<?php echo $result['raio']; ?>"></td>
                         <td style="text-align: center;"> 
                             <button type="button" class="btn-tbl btn btn-outline-info">Ver detalhes</button>
 
                             <button class="btn-tbl btn btn-outline-warning btn_alt" value="modalAlt<?php echo $result['id_end'];?>">Alterar</button><br>
                             <?php if($result['active'] == 'nao'){ ?>
-                                <button type="button" class="btn btn-success btn-tbl">Ativar</button>
+                                <button name="btn_on_off" id="id<?php echo $result['id_end'];?>" value="ativar" type="button" class="btn btn-success btn-tbl">Ativar</button>
                                 <?php 
                             }else{ ?>
-                                <button type="button" class="btn btn-danger btn-tbl">Desativar</button>
+                                <button name="btn_on_off" id="id<?php echo $result['id_end'];?>" value="desativar" type="button" class="btn btn-danger btn-tbl">Desativar</button>
                                 <?php
                             } ?>
                             <?php if($retorno -> rowCount() > 1){ ?>
@@ -217,38 +226,72 @@
                           </div>
 
                           <!-- Modal body -->
-                          <div class="modal-body">
+                          <div class="modal-body" style="display: flex; justify-content: center;">
                             <form id="id<?php echo $resultAlt['id_end'];?>" name="form_alterar_end" method="POST">
                                 
                            
-                                <div class="form-group">
-                                    <label class="film-font" style="font-size: 18px; ">Nome</label> <input type="text" name="nome_txt" required="required" class="form-control" value="<?php echo $resultAlt['nome']; ?>"><br>
-                                </div>
-                                <div class="form-group">
-                                    <label class="film-font" style="font-size: 18px; ">Rua</label> <input type="text" name="rua_txt" required="required" class="form-control" value="<?php echo $resultAlt['rua']; ?>"><br>
-                                </div>
-                                <div class="form-group">
-                                    <label class="film-font" style="font-size: 18px; ">Número</label> <input type="text" name="num_txt" required="required" class="form-control" value="<?php echo $resultAlt['numero']; ?>"><br>
-                                </div>
-                                <div class="form-group">
-                                    <label class="film-font" style="font-size: 18px; ">Cidade</label> <input type="text" name="cid_txt" required="required" class="form-control" value="<?php echo $resultAlt['cidade']; ?>"><br>
-                                </div>
-                                <div class="form-group">
-                                    <label class="film-font" style="font-size: 18px; ">Estado</label> <input type="text" name="est_txt" required="required" class="form-control" value="<?php echo $resultAlt['estado']; ?>"><br>
-                                </div>
-                                <div class="form-group">
-                                    <label class="film-font" style="font-size: 18px; ">CEP</label> <input type="text" name="cep_txt" required="required" class="form-control" value="<?php echo $resultAlt['cep']; ?>"><br>
-                                </div>
-                                <div class="form-group">
-                                    <label class="film-font" style="font-size: 18px; ">Alcance(KM)</label> <input type="text" name="raio_txt"  class="form-control" value="<?php echo $resultAlt['raio']; ?>"><br>
-                                </div>
-                                <input type="submit" name="alterar_end" value="Alterar" class="btn btn-outline-dark film-font" style="font-size: 18px;" >
+                                <span class="input input--yoko">
+                                    <input type="text" name="nome_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['nome']; ?>">
+                                    <label class="input__label input__label--yoko" for="nome">
+                                        <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Nome</span>
+                                    </label> 
+                                </span>
+                                  <br>
+
+                                <span class="input input--yoko">
+                                    <input type="text" name="rua_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['rua']; ?>">
+                                    <label class="input__label input__label--yoko" for="rua">
+                                        <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Rua</span>
+                                    </label> 
+                                </span>
+                                 <br>
+
+                                <span class="input input--yoko">
+                                    <input type="text" name="num_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['numero']; ?>">
+                                    <label class="input__label input__label--yoko" for="numero">
+                                        <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Numero</span>
+                                    </label> 
+                                </span>
+                                <br>
+
+                                <span class="input input--yoko">
+                                    <input type="text" name="cid_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['cidade']; ?>">
+                                    <label class="input__label input__label--yoko" for="cid">
+                                        <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Cidade</span>
+                                    </label> 
+                                </span>
+                                 <br>
+
+                                <span class="input input--yoko">
+                                    <input type="text" name="est_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['estado']; ?>">
+                                    <label class="input__label input__label--yoko" for="est">
+                                        <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Estado</span>
+                                    </label> 
+                                </span>
+                                <br>
+
+                                <span class="input input--yoko">
+                                    <input type="text" name="cep_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['cep']; ?>">
+                                    <label class="input__label input__label--yoko" for="cep">
+                                        <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">CEP</span>
+                                    </label> 
+                                </span>
+                                <br>
+
+                                <span class="input input--yoko">
+                                    <input type="text" name="raio_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['raio']; ?>">
+                                    <label class="input__label input__label--yoko" for="raio">
+                                        <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Alcance(KM)</span>
+                                    </label> 
+                                </span>
+                                <br>
+                                <input type="submit" name="alterar_end" value="Alterar" class="btn btn-outline-dark" style="font-size: 18px; box-shadow: 2px 2px 3px #232323;" >
                             </form>
                           </div>
 
                           <!-- Modal footer -->
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            
                           </div>
 
                         </div>
@@ -261,34 +304,35 @@
                     <strong>Alcance</strong> - Raio de distância máxima para prestar serviços
                 </div>
                 <br>
-                <button type="button" class="btn btn-outline-dark film-font" style="font-size: 18px; border: 2px solid" id="btn_novo_end">Novo Endereço</button>
+                <button type="button" class="btn btn-outline-dark " style="font-size: 18px; box-shadow: 2px 2px 3px #232323;" id="btn_novo_end">Novo Endereço</button>
 
             </div>
             <div class="modal fade" id="modalEnd">
+             <form id="form_novo_end" method="POST">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
 
                           <!-- Modal Header -->
                           <div class="modal-header" style="background: linear-gradient(45deg, #68319b , #A491BA);">
-                            <h4 class="modal-title film-font">Novo Endereço / SEDE</h4>
+                            <h4 class="modal-title">Novo Endereço / SEDE</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                           </div>
                         
                           <!-- Modal body -->
                           <div class="modal-body">
 
-                            <form id="form_novo_end" method="POST">
+                           
                                <span class="input input--yoko">
                     <input class="input__field input__field--yoko" type="text" id="nome" required="required" name="nome_txt" />
                     <label class="input__label input__label--yoko" for="nome">
-                        <span class="input__label-content input__label-content--yoko topfont">Nome</span>
+                        <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Nome</span>
                     </label>
                 </span>
 
                                  <span class="input input--yoko">
                     <input class="input__field input__field--yoko" type="text" id="cep_novo" required="required" name="cep_txt" />
                                 <label class="input__label input__label--yoko" for="cep_novo">
-                                 <span class="input__label-content input__label-content--yoko topfont">CEP</span>
+                                 <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">CEP</span>
                                  </label>
                                 <span id="not_cep"></span><br>
                             </span>
@@ -297,48 +341,49 @@
                                     <span class="input input--yoko">
                     <input class="input__field input__field--yoko" type="text" id="rua" required="required" name="rua_txt" />
                     <label class="input__label input__label--yoko" for="rua">
-                        <span class="input__label-content input__label-content--yoko topfont">Rua</span>
+                        <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Rua</span>
                     </label>
                 </span>
 
                                 <span class="input input--yoko">
                     <input class="input__field input__field--yoko" type="text" id="cid" required="required" name="cid_txt" />
                     <label class="input__label input__label--yoko" for="cid">
-                        <span class="input__label-content input__label-content--yoko topfont">Cidade</span>
+                        <span class="input__label-content input__label-content--yoko " style="font-size: 17px; color: #232323;">Cidade</span>
                     </label>
                 </span>
 
                                 <span class="input input--yoko">
                     <input class="input__field input__field--yoko" type="text" id="est" required="required" name="est_txt" />
                     <label class="input__label input__label--yoko" for="est">
-                        <span class="input__label-content input__label-content--yoko topfont">Estado</span>
+                        <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Estado</span>
                     </label>
                 </span>
 
                                <span class="input input--yoko">
                     <input class="input__field input__field--yoko" type="text" id="num" required="required" name="num_txt" />
                     <label class="input__label input__label--yoko" for="num">
-                        <span class="input__label-content input__label-content--yoko topfont">N°</span>
+                        <span class="input__label-content input__label-content--yoko " style="font-size: 17px; color: #232323;">N°</span>
                     </label>
                 </span>
 
-                                    <input type="submit" name="enviar_novo_end" value="Confirmar" class="btn btn-outline-dark film-font" style="font-size: 18px;" >
+                                    <input type="submit" name="enviar_novo_end" value="Confirmar" class="btn btn-outline-dark" style="font-size: 18px; box-shadow: 2px 2px 3px #232323;" >
                                 </div>
                                 
-                            </form>
+                           
                             
                           </div>
 
                           <!-- Modal footer -->
                           <div class="modal-footer" style="background: linear-gradient(45deg, #68319b , #A491BA);">
-                            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Fechar</button>
+                            <button type="button" id="btn_clear_new" class="btn btn-outline-dark" data-dismiss="modal">Fechar</button>
                           </div>
-
+                
                     </div>
+
                 </div>
+                </form>
             </div>
         </div>
-      
 
         <div id="av_conteudo" class="tab-pane fade">
             <?php 
@@ -353,14 +398,16 @@
 
         </div>
 
-          <div id="pagina4" class="tab-pane fade">
+        <div id="pagina4" class="tab-pane fade">
             <h1>página4</h1>
         </div> 
     </div>
 
 </div>
-
 </div>
+
+
+
         
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
