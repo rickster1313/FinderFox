@@ -239,9 +239,6 @@ $j(document).ready(function(){
     });
 
     $j("button[name=btn_on_off]").bind("click", function(button){
-        var id =$j(this).attr("id");
-        var op =$j(this).val();
-        var newid = id.substring(2, id.length);
         var raio = $j("#raio"+newid).val();
         if(raio.length > 0){
             raio = raio.toLowerCase()
@@ -249,24 +246,25 @@ $j(document).ready(function(){
                 raio = raio.replace(/ /g, '');
                 raio = raio.replace(/,/g, '.');
             }
-            
-
+            var id =$j(this).attr("id");
+            var op =$j(this).val();
+            var newid = id.substring(2, id.length);
+            $j.ajax({
+                type:'POST',
+                url:'empresario/activeEnd',
+                data:"idactive="+newid+"&opcao="+op+"&raio="+raio,
+                async: false,
+                success:function(){
+                    window.location.href = "login";
+                },
+                error:function(){
+                     console.log("error no ajax");
+                }
+            });
         }else{
             $j("#raio"+newid).focus();
         }
-        console.log("id:"+newid+" opcao:"+op+" pai:"+raio);/*
-        $j.ajax({
-            type:'POST',
-            url:'empresario/activeEnd',
-            data:"idactive="+newid+"&opcao="+op,
-            async: false,
-            success:function(){
-                window.location.href = "login";
-            },
-            error:function(){
-                 console.log("error no ajax");
-            }
-        });*/
+       
     });
 
 });
