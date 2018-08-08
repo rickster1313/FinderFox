@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set2.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set1.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/icons.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style2.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component1.css">
    
 
 
@@ -369,7 +369,7 @@
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/borderMenu.js"></script>
+
 
 <script>
             (function() {
