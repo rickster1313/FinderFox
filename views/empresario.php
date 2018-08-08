@@ -265,6 +265,7 @@
 
             </div>
             <div class="modal fade" id="modalEnd">
+             <form id="form_novo_end" method="POST">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
 
@@ -277,7 +278,7 @@
                           <!-- Modal body -->
                           <div class="modal-body">
 
-                            <form id="form_novo_end" method="POST">
+                           
                                <span class="input input--yoko">
                     <input class="input__field input__field--yoko" type="text" id="nome" required="required" name="nome_txt" />
                     <label class="input__label input__label--yoko" for="nome">
@@ -325,19 +326,20 @@
                                     <input type="submit" name="enviar_novo_end" value="Confirmar" class="btn btn-outline-dark film-font" style="font-size: 18px;" >
                                 </div>
                                 
-                            </form>
+                           
                             
                           </div>
 
                           <!-- Modal footer -->
                           <div class="modal-footer" style="background: linear-gradient(45deg, #68319b , #A491BA);">
-                            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Fechar</button>
+                            <button type="button" id="btn_clear_new" class="btn btn-outline-dark" data-dismiss="modal">Fechar</button>
                           </div>
-
+                
                     </div>
+
                 </div>
+                </form>
             </div>
-        </div>
       
 
         <div id="av_conteudo" class="tab-pane fade">
@@ -353,14 +355,16 @@
 
         </div>
 
-          <div id="pagina4" class="tab-pane fade">
+        <div id="pagina4" class="tab-pane fade">
             <h1>página4</h1>
         </div> 
     </div>
 
 </div>
-
 </div>
+</div>
+
+
         
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
@@ -369,7 +373,7 @@
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/borderMenu.js"></script>
+
 
 <script>
             (function() {
