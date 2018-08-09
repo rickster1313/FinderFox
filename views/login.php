@@ -58,7 +58,6 @@
         	width: 40%;
         	display: flex;
         	justify-content: center;
-        	align-content: center;
         	align-items: center;
         }
 
@@ -95,6 +94,7 @@
 	}
 
 	?>
+	
 	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style="width: 90%;">
 		<span class="input input--ruri">
 					<input class="input__field input__field--ruri" type="text" id="input-26" name="email_txt" />

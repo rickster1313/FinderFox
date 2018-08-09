@@ -156,7 +156,7 @@
 			<div class="esquerda grid cs-style-1">
 				
 				<figure>
-						<div class="display-3" style="width: 400px; height: 300px; border: 4px solid #fff; color: #232323">Usuario</div>
+						<div class="display-4" style="width: 400px; height: 300px; border: 4px solid #fff; color: #F9F9F9"> Usuario <img src="<?php echo BASE_URL; ?>assets/images/Guest_theapplication_2906.png" width="200" style="left: 25%; transform: translate(-25%;);"></div>
 						<figcaption>
 							<h3>Usuario</h3>
 							
@@ -166,9 +166,10 @@
 			
 			
 			</div>
-			<div class="direita grid cs-style-1">
+			<div class="direita grid cs-style-1" style="display: flex;justify-content: center;">
 				<figure>
-						<div class="display-3" style="width: 400px; height: 300px; border: 4px solid #232323; color: #232323">Empresário</div>
+						<div class="display-4" style="width: 400px; height: 300px; border: 4px solid #232323; color: #232323" >Empresário <img src="<?php echo BASE_URL; ?>assets/images/businessman_3435.png" width="200" style="left: 25%; transform: translate(-25%;);"></div>
+
 						<figcaption>
 							<h3>Empresário</h3>
 							
