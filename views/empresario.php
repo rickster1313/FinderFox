@@ -237,47 +237,51 @@
                                     </label> 
                                 </span>
                                   <br>
-
-                                <span class="input input--yoko">
-                                    <input type="text" name="rua_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['rua']; ?>">
-                                    <label class="input__label input__label--yoko" for="rua">
-                                        <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Rua</span>
-                                    </label> 
-                                </span>
-                                 <br>
-
-                                <span class="input input--yoko">
-                                    <input type="text" name="num_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['numero']; ?>">
-                                    <label class="input__label input__label--yoko" for="numero">
-                                        <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Numero</span>
-                                    </label> 
-                                </span>
-                                <br>
-
-                                <span class="input input--yoko">
-                                    <input type="text" name="cid_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['cidade']; ?>">
-                                    <label class="input__label input__label--yoko" for="cid">
-                                        <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Cidade</span>
-                                    </label> 
-                                </span>
-                                 <br>
-
-                                <span class="input input--yoko">
-                                    <input type="text" name="est_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['estado']; ?>">
-                                    <label class="input__label input__label--yoko" for="est">
-                                        <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Estado</span>
-                                    </label> 
-                                </span>
-                                <br>
-
-                                <span class="input input--yoko">
-                                    <input type="text" name="cep_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['cep']; ?>">
+                                  <span class="input input--yoko">
+                                    <input type="text" name="cep_txt" required="required" class=" cep_alt input__field input__field--yoko" value="<?php echo $resultAlt['cep']; ?>">
                                     <label class="input__label input__label--yoko" for="cep">
                                         <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">CEP</span>
-                                    </label> 
+                                    </label><span class="not_cep_alt"></span><br>
                                 </span>
                                 <br>
+                                <div class="alt_part2" name ="id<?php echo $resultAlt['id_end'];?>">
+                                    
+                                
+                                    <span class="input input--yoko">
+                                        <input type="text" name="rua_txt" required="required" class="alt_rua input__field input__field--yoko" value="<?php echo $resultAlt['rua']; ?>">
+                                        <label class="input__label input__label--yoko" for="rua">
+                                            <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Rua</span>
+                                        </label> 
+                                        
+                                    </span>
+                                     <br>
 
+                                    
+
+                                    <span class="input input--yoko">
+                                        <input type="text" name="cid_txt" required="required" class="alt_cid input__field input__field--yoko" value="<?php echo $resultAlt['cidade']; ?>">
+                                        <label class="input__label input__label--yoko" for="cid">
+                                            <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Cidade</span>
+                                        </label> 
+                                    </span>
+                                     <br>
+
+                                    <span class="input input--yoko">
+                                        <input type="text" name="est_txt" required="required" class="alt_est input__field input__field--yoko" value="<?php echo $resultAlt['estado']; ?>">
+                                        <label class="input__label input__label--yoko" for="est">
+                                            <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Estado</span>
+                                        </label> 
+                                    </span>
+                                    <br>
+
+                                    <span class="input input--yoko">
+                                        <input type="text" name="num_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['numero']; ?>">
+                                        <label class="input__label input__label--yoko" for="numero">
+                                            <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Numero</span>
+                                        </label> 
+                                    </span>
+                                    <br>
+                                
                                 <span class="input input--yoko">
                                     <input type="text" name="raio_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['raio']; ?>">
                                     <label class="input__label input__label--yoko" for="raio">
@@ -286,6 +290,7 @@
                                 </span>
                                 <br>
                                 <input type="submit" name="alterar_end" value="Alterar" class="btn btn-outline-dark" style="font-size: 18px; box-shadow: 2px 2px 3px #232323;" >
+                            </div>
                             </form>
                           </div>
 

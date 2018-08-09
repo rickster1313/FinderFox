@@ -84,8 +84,12 @@
 			$est = addslashes($_POST['est_txt']);
 			$cep = addslashes($_POST['cep_txt']);
 			$raio = addslashes($_POST['raio_txt']);
+			$funcaoController = new funcaoController();
+			$coordenadas = $funcaoController->coordenadasCep($cep);
+			$lat = $coordenadas['lat'];
+			$lon = $coordenadas['lon'];
 			$enderecosModel = new enderecosModel();
-			$enderecosModel->alterarEnd($id, $nome, $rua, $num, $cid, $est, $cep, $raio);
+			$enderecosModel->alterarEnd($id, $nome, $rua, $num, $cid, $est, $cep, $raio, $lat, $lon);
 		}
 
 		public function deleteEnd(){
@@ -99,18 +103,31 @@
 			$opcao = addslashes($_POST['opcao']);
 			$raio = addslashes($_POST['raio']);
 			$enderecosModel = new enderecosModel();
-			if($opcao == "ativar"){/*
-				$sql = $enderecosModel->getEnderecos($id);
+			if($opcao == "ativar"){
+				$sql = $enderecosModel->getEndId($id);
 				$dados = $sql->fetch();
 				$funcaoController = new funcaoController();
 				$coordenadas = $funcaoController->coordenadasCep($dados['cep']);
-				$lat = ;
-				$lon = ;
-				$enderecosModel->onEnd("sim", $id, $raio);*/
+
+				if($coordenadas['status'] == "ok"){
+				$lat = $coordenadas['lat'];
+				$lon = $coordenadas['lon'];
+				$enderecosModel->onEnd("sim", $id, $raio, $lat, $lon);
+				}else{
+					echo "erro";
+				}
 			}else{
 				$enderecosModel->offEnd("nao", $id, $raio);
 			}
 		}
+		public function teste($var){
+			$funcaoController = new funcaoController();
+			$coordenadas = $funcaoController->coordenadasCep($var[0]);
+
+			
+
+		}
+
 		private function seguranca(){
 			$seguro = true;
 			//teste se login está OK
