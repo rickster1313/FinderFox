@@ -54,7 +54,7 @@
         	background-color: #F7F0E8;
         	border-radius: 9px;
         	box-shadow: 3px 3px 6px #777570;
-        	height: 500px;
+        	height: 600px;
         	width: 40%;
         	display: flex;
         	justify-content: center;
@@ -63,6 +63,12 @@
 
         body{
           font-family: 'Bree Serif', serif;
+        }
+
+        .msg-deslogado{
+           display: block;
+           position: absolute;
+           top: 30%;
         }
        
 </style>
@@ -86,6 +92,7 @@
 
 
 	<div class="fundo-form">
+		<div class="msg-deslogado">
 		<?php 
     
 	if (isset($_SESSION['msg'])) {
@@ -94,6 +101,7 @@
 	}
 
 	?>
+</div>
 	
 	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style="width: 90%;">
 		<span class="input input--ruri">
