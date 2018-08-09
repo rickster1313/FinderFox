@@ -99,14 +99,14 @@
 		<span class="input input--ruri">
 					<input class="input__field input__field--ruri" type="text" id="input-26" name="email_txt" />
 					<label class="input__label input__label--ruri" for="input-26">
-						<span class="input__label-content input__label-content--ruri">Email</span>
+						<span class="input__label-content input__label-content--ruri"><img src="<?php echo BASE_URL ?>assets/images/newpost_email_3297.png" width="20"> Email </span>
 					</label>
          </span>
          <br>
 	<span class="input input--ruri">
 					<input class="input__field input__field--ruri" type="password" id="input-27" name="senha_txt" />
 					<label class="input__label input__label--ruri" for="input-27">
-						<span class="input__label-content input__label-content--ruri">Senha</span>
+						<span class="input__label-content input__label-content--ruri"><img src="<?php echo BASE_URL ?>assets/images/password_3715.png" width="20"> Senha</span>
 					</label>
          </span>
          <br>
