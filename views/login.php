@@ -54,7 +54,7 @@
         	background-color: #F7F0E8;
         	border-radius: 9px;
         	box-shadow: 3px 3px 6px #777570;
-        	height: 600px;
+        	height: 700px;
         	width: 40%;
         	display: flex;
         	justify-content: center;
@@ -63,25 +63,45 @@
 
         body{
           font-family: 'Bree Serif', serif;
+
         }
 
         .msg-deslogado{
            display: block;
            position: absolute;
-           top: 30%;
+           top: 15%;
         }
+
+        .header{
+        width: 100%;
+        background-color: #361850; 
+        overflow: hidden;
+    }
+
+    .container-fluid{
+        padding: 0px;
+    }
+
+    .replay-font{
+    font-family: "BPreplayBold";
+    font-size: 29px;
+    padding: 15px;
+    margin-left: 1100px;
+       }
        
 </style>
 
 	</head>
 
 <body>
-	
-
-	
-	
 
 	<div class="container-fluid">
+
+		<header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
+            <p class="replay-font" style="color: #ffffff">FinderFox</p>
+
+        </header>
+
 	<a class="btn btn-outline-dark botao-voltar" style="font-family: 'Bree-Serif', serif;" href="<?php echo BASE_URL; ?>">Voltar</a>
 	<div class="row">
 
@@ -103,6 +123,7 @@
 	?>
 </div>
 	
+	<img src="<?php echo BASE_URL ?>assets/images/Login_icon-icons.com_52028 (1).png" style="display: block; position: absolute;top:25%;">
 	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style="width: 90%;">
 		<span class="input input--ruri">
 					<input class="input__field input__field--ruri" type="text" id="input-26" name="email_txt" />

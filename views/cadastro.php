@@ -143,6 +143,24 @@
             font-family: 'Bree Serif', serif;
         }
 
+        .header{
+        width: 100%;
+        background-color: #361850; 
+        overflow: hidden;
+    }
+
+    .container-fluid{
+        padding: 0px;
+    }
+
+    .replay-font{
+    font-family: "BPreplayBold";
+    font-size: 29px;
+    padding: 15px;
+    margin-left: 1100px;
+       }
+
+
 </style>
 </head>
 <body>
@@ -150,13 +168,22 @@
 
 
 	<div class="container-fluid">
+
+		<div class="container-fluid">
+
+		<header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
+            <p class="replay-font" style="color: #ffffff">FinderFox</p>
+
+        </header>
+
 		<a class="btn btn-outline-light botao-voltar" style="" href="<?php echo BASE_URL; ?>">Voltar</a>
 		<div class="main">
 
 			<div class="esquerda grid cs-style-1">
 				
 				<figure>
-						<div class="display-4" style="width: 400px; height: 300px; border: 4px solid #fff; color: #F9F9F9"> Usuario <img src="<?php echo BASE_URL; ?>assets/images/Guest_theapplication_2906.png" width="200" style="left: 25%; transform: translate(-25%;);"></div>
+						<div class="display-4" style="width: 400px; height: 300px; border: 4px solid #fff; color: #F9F9F9"> Usuario 
+							<img src="<?php echo BASE_URL; ?>assets/images/Guest_theapplication_2906.png" width="200" style=" left:25%; transform: translate(-25%;);"></div>
 						<figcaption>
 							<h3>Usuario</h3>
 							
@@ -168,7 +195,7 @@
 			</div>
 			<div class="direita grid cs-style-1" style="display: flex;justify-content: center;">
 				<figure>
-						<div class="display-4" style="width: 400px; height: 300px; border: 4px solid #232323; color: #232323" >Empresário <img src="<?php echo BASE_URL; ?>assets/images/businessman_3435.png" width="200" style="left: 25%; transform: translate(-25%;);"></div>
+						<div class="display-4" style="width: 400px; height: 300px; border: 4px solid #232323; color: #232323" >Empresário <img src="<?php echo BASE_URL; ?>assets/images/businessman_3435.png" width="200" style="left:25%; transform: translate(-25%;);"></div>
 
 						<figcaption>
 							<h3>Empresário</h3>
