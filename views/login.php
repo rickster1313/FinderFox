@@ -64,18 +64,37 @@
         body{
           font-family: 'Bree Serif', serif;
         }
+
+        .header{
+        width: 100%;
+        background-color: #361850; 
+        overflow: hidden;
+    }
+
+    .container-fluid{
+        padding: 0px;
+    }
+
+    .replay-font{
+    font-family: "BPreplayBold";
+    font-size: 29px;
+    padding: 15px;
+    margin-left: 1100px;
+       }
        
 </style>
 
 	</head>
 
 <body>
-	
-
-	
-	
 
 	<div class="container-fluid">
+
+		<header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
+            <p class="replay-font" style="color: #ffffff">FinderFox</p>
+
+        </header>
+
 	<a class="btn btn-outline-dark botao-voltar" style="font-family: 'Bree-Serif', serif;" href="<?php echo BASE_URL; ?>">Voltar</a>
 	<div class="row">
 

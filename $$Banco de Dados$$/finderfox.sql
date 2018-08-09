@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.0.1
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Ago-2018 às 13:19
--- Versão do servidor: 10.1.19-MariaDB
--- PHP Version: 5.5.38
+-- Generation Time: 09-Ago-2018 às 23:55
+-- Versão do servidor: 10.1.22-MariaDB
+-- PHP Version: 7.1.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -53,10 +55,10 @@ CREATE TABLE `tbl_endereco` (
   `cidade` varchar(220) NOT NULL,
   `numero` varchar(220) NOT NULL,
   `nome` varchar(220) NOT NULL,
-  `active` varchar(50) DEFAULT NULL,
+  `active` varchar(20) DEFAULT NULL,
   `lat` varchar(50) DEFAULT NULL,
   `lon` varchar(50) DEFAULT NULL,
-  `raio` varchar(50) DEFAULT NULL
+  `raio` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -64,7 +66,15 @@ CREATE TABLE `tbl_endereco` (
 --
 
 INSERT INTO `tbl_endereco` (`id_end`, `user_id`, `cep`, `rua`, `estado`, `cidade`, `numero`, `nome`, `active`, `lat`, `lon`, `raio`) VALUES
-(4, 6, '13238-110', 'Rua das AmÃ©ricas', 'SP', 'Campo Limpo Paulista', '08', 'principal', 'nao', NULL, NULL, NULL);
+(5, 10, '13238-094', 'Rua Teodoro Feliciano de Moraes', 'SP', 'Campo Limpo Paulista', '13', 'principal', 'nao', NULL, NULL, ''),
+(6, 10, '13238-110', 'Rua das AmÃ©ricas', 'SP', 'Campo Limpo Paulista', '15', 'fulano02', 'nao', NULL, NULL, ''),
+(8, 6, '13238-110', 'Rua das AmÃ©ricas', 'SP', 'Campo Limpo Paulista', '232', 'principal', 'sim', '-23.2291995', '-46.7715631', '36'),
+(9, 6, '13238-094', 'Rua Teodoro Feliciano de Moraes', 'SP', 'Campo Limpo Paulista', '232', 'secundario2', 'sim', '-23.2274655', '-46.7794261', 'global'),
+(10, 6, '05785-020', 'Rua Armando Erse Figueiredo', 'SP', 'SÃ£o Paulo', '23', 'sao paulo 1', 'nao', NULL, NULL, ''),
+(11, 6, '05785-200', 'Rua Siriema', 'SP', 'SÃ£o Paulo', '76', 'sao paulo 2', 'sim', '-23.624607', '-46.7641732', '15'),
+(12, 6, '05788-430', 'Rua Professor Mamede de Oliveira', 'SP', 'SÃ£o Paulo', '765', 'sao paulo 3', 'nao', '-23.6281132', '-46.7698969', '10'),
+(13, 6, '88512-530', 'Rua AntÃ´nio Caldas', 'SC', 'Lages', '304', 'santa catarina 1', 'nao', '-27.8462626', '-50.3465943', '1'),
+(14, 11, '05785-200', 'Rua Siriema', 'SÃ£o Paulo', 'SP', '123', 'principal', 'nao', NULL, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -90,7 +100,9 @@ CREATE TABLE `tbl_usuarios` (
 --
 
 INSERT INTO `tbl_usuarios` (`id`, `nome`, `nvl_acesso`, `email`, `senha`, `CPF_CNPJ`, `telefone`, `status`, `created`, `modified`) VALUES
-(6, 'empresario', 'empresario', 'empre', '$2y$10$ur7mbGCxpLnNEirAYnI2ue0C3wra.TuH97l30fg5OGlxXi.MH5wcy', '23.423.452/2342-34', '(67) 567567565', 0, '2018-08-03 08:22:05', NULL);
+(6, 'empresario', 'empresario', 'empre', '$2y$10$ur7mbGCxpLnNEirAYnI2ue0C3wra.TuH97l30fg5OGlxXi.MH5wcy', '23.423.452/2342-34', '(67) 567567565', 0, '2018-08-03 08:22:05', NULL),
+(10, 'empresario2', 'empresario', 'empre2', '$2y$10$0J1NbqVDVVGimc8llPLXTOhx99jTWk7giUpOfaVmjy/6t/q08J4Im', '23.423.454/5435-54', '(23) 251553453', 0, '2018-08-06 02:59:10', NULL),
+(11, 'empre3', 'empresario', 'empre3@gmail.com', '$2y$10$ZC5qSz0Int0ZdfMTcKhXxebvBuHPkVMCP14nPWZnnlySadfMfLbem', '234.532.554-14', '(34) 553451345', 0, '2018-08-09 18:44:54', NULL);
 
 --
 -- Indexes for dumped tables
@@ -122,17 +134,21 @@ ALTER TABLE `tbl_usuarios`
 -- AUTO_INCREMENT for table `tbl_avs`
 --
 ALTER TABLE `tbl_avs`
-  MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `tbl_endereco`
 --
 ALTER TABLE `tbl_endereco`
-  MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
