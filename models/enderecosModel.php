@@ -20,8 +20,14 @@
             return $sql;
         }
 
-        public function alterarEnd($id, $nome, $rua, $num, $cid, $est, $cep, $raio){
-            $sql = "UPDATE tbl_endereco SET cep = ?, rua = ?, estado = ?, cidade = ?, numero = ?, nome = ?, raio = ? WHERE id_end = ?";
+        public function getEndId($id){
+            $sql = "SELECT * FROM tbl_endereco WHERE id_end = '$id'";
+            $sql = $this->pdo->query($sql);
+            return $sql;
+        }
+
+        public function alterarEnd($id, $nome, $rua, $num, $cid, $est, $cep, $raio, $lat, $lon){
+            $sql = "UPDATE tbl_endereco SET cep = ?, rua = ?, estado = ?, cidade = ?, numero = ?, nome = ?, raio = ?, lat = ?, lon = ? WHERE id_end = ?";
             $sql = $this->pdo->prepare($sql);
             $sql->bindValue(1, $cep);
             $sql->bindValue(2, $rua);
@@ -30,7 +36,9 @@
             $sql->bindValue(5, $num);
             $sql->bindValue(6, $nome);
             $sql->bindValue(7, $raio);
-            $sql->bindValue(8, $id);
+            $sql->bindValue(8, $lat);
+            $sql->bindValue(9, $lon);
+            $sql->bindValue(10, $id);
             $sql->execute();
         }
 
@@ -48,12 +56,14 @@
             $sql->execute();
         }
 
-        public function OnEnd($active, $id, $raio){
-             $sql = "UPDATE tbl_endereco SET  active = ?, raio = ? WHERE id_end = ?";
+        public function OnEnd($active, $id, $raio, $lat, $lon){
+             $sql = "UPDATE tbl_endereco SET  active = ?, raio = ?, lat = ?, lon = ? WHERE id_end = ?";
             $sql = $this->pdo->prepare($sql);
             $sql->bindValue(1, $active);
             $sql->bindValue(2, $raio);
-            $sql->bindValue(3, $id);
+            $sql->bindValue(3, $lat);
+            $sql->bindValue(4, $lon);
+            $sql->bindValue(5, $id);
             $sql->execute();
         }
 

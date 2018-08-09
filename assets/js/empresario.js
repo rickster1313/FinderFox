@@ -149,19 +149,19 @@ $j(document).ready(function(){
         if(cep.length == 9){
             $j.ajax({
                 type:'GET',
-                url:"http://apps.widenet.com.br/busca-cep/api/cep.json?code="+cep,
+                url:"https://viacep.com.br/ws/"+cep+"/json/",
                 dataType:'json',
                 success:function(json){
-                    if (json.status == 0 ) {
+                    if (typeof json.erro !== "undefined" || json.erro == true) {
                         $j("#not_cep").css("display", "block");
                         $j("#novo_part2").css("display", "none");
-                        $j("#not_cep").html(json.message);
+                        $j("#not_cep").html("CEP não encontrado");
                     }else{
                         $j("#not_cep").css("display", "none");
                         $j("#novo_part2").css("display", "block");
-                        $j("#rua").val(json.address);
-                        $j("#cid").val(json.city);
-                        $j("#est").val(json.state);
+                        $j("#rua").val(json.logradouro);
+                        $j("#cid").val(json.localidade);
+                        $j("#est").val(json.uf);
 
                     }
                 },
@@ -237,8 +237,43 @@ $j(document).ready(function(){
             }
         });
     });
+    $j(".cep_alt").mask("00000-000");
+    $j(".cep_alt").bind("keyup", function(){
+        cep = $j(this).val();
+        if(cep.length == 9){
+                $j.ajax({
+                    type:'GET',
+                    url:"https://viacep.com.br/ws/"+cep+"/json/",
+                    dataType:'json',
+                    success:function(json){
 
+                        if(typeof json.erro !== "undefined" || json.erro == true){
+                            $j(".not_cep_alt").css("display", "block");
+                            $j(".alt_part2").css("display", "none");
+                            $j(".not_cep_alt").html("CEP não encontrado");
+                        }else{
+                            $j(".not_cep_alt").css("display", "none");
+                            $j(".alt_part2").css("display", "block");
+                            $j(".alt_rua").val(json.logradouro);
+                            $j(".alt_cid").val(json.localidade);
+                            $j(".alt_est").val(json.uf);
+                        }
+                    },
+                    error:function(){
+                        console.log("error no ajax");
+                    }
+                });
+
+            
+        }else{
+            $j(".alt_part2").css("display", "none");
+            $j(".not_cep_alt").css("display", "none");
+        }
+    });
     $j("button[name=btn_on_off]").bind("click", function(button){
+        var id =$j(this).attr("id");
+        var op =$j(this).val();
+        var newid = id.substring(2, id.length);
         var raio = $j("#raio"+newid).val();
         if(raio.length > 0){
             raio = raio.toLowerCase()
@@ -246,9 +281,7 @@ $j(document).ready(function(){
                 raio = raio.replace(/ /g, '');
                 raio = raio.replace(/,/g, '.');
             }
-            var id =$j(this).attr("id");
-            var op =$j(this).val();
-            var newid = id.substring(2, id.length);
+
             $j.ajax({
                 type:'POST',
                 url:'empresario/activeEnd',

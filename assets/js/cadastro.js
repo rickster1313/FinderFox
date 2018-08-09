@@ -253,25 +253,23 @@ var $j = jQuery.noConflict();
 			}); // Fim do processo do form do empre
 
 
-			$j("#ok_cep").bind("click", function(e){
-				e.preventDefault();
+			$j("#CEP").bind("keyup", function(){
 				cep = $j("#CEP").val();
 				if (cep.length == 9) {
-
 					$j.ajax({
 			        	type:'GET',
-			        	url:"http://apps.widenet.com.br/busca-cep/api/cep.json?code="+cep,
+			        	url:"https://viacep.com.br/ws/"+cep+"/json/",
 			        	dataType:'json',
 			        	success:function(json){
-			        		if (json.status == 0) {
+			        		if (typeof json.erro !== "undefined" || json.erro == true) {
 			        			$j("#erro").css("display", "block");
+			        			$j("#localiza").css("display", "none");
 			        		}else{
-			        			$j("#ok_cep").hide();
-								$j("#localiza").show(300);
-
-			        			$j("#rua").val(json.address);
-			        			$j("#estado").val(json.state);
-			        			$j("#cid").val(json.city);
+			        			$j("#erro").css("display", "none");
+								$j("#localiza").css("display", "block");
+			        			$j("#rua").val(json.logradouro);
+			        			$j("#estado").val(json.localidade);
+			        			$j("#cid").val(json.uf);
 			        			endereco_stats = true;
 			        		}
 			        	},
@@ -280,6 +278,9 @@ var $j = jQuery.noConflict();
 			        	}
 
 			        	});
+				}else{
+					$j("#erro").css("display", "none");
+					$j("#localiza").css("display", "none");
 				}
 				
 			});

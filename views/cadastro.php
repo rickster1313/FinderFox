@@ -273,7 +273,6 @@
 					<label class="film-font" style="font-size: 20px;">CEP</label> <input id="CEP" type="text" name="cep_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;">
 					<label style="display: none;" id="erro">ERRO: cep invalido</label>
 				</div>
-					<button id="ok_cep" class="btn btn-outline-light">Confirmar</button><br>
 					<div id="localiza" style="display: none">
 						<div class="form-group slideInLeft animated">
 						<label class="" style="font-size: 20px;">Rua</label> <input id="rua" type="text" name="rua_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
