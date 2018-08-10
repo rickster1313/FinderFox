@@ -209,10 +209,7 @@
 
                                             <p>Veja as informações detalhadamente:</p>
 
-                                            <img src="<?php echo BASE_URL; ?>assets/images/Mapa_centro_Copenhague2.jpg" 
-                                          style=" width: 760px; height: 700px;" class="float-left img-thumbnail">
-                                          
-                                            <table style="border-radius: 3px;" class="table table-striped">
+                                            <table style="border-radius: 3px; position: absolute; top: 55%; width: 40%; left: 55%;" class="table table-striped">
                                                 <tbody>
                                                   <tr>
                                                     <td><strong>Nome</strong></td>
@@ -245,6 +242,11 @@
                                                 </tbody>
                                               </table>
 
+
+                                            <img src="<?php echo BASE_URL; ?>assets/images/Mapa_centro_Copenhague2.jpg" 
+                                          style=" width: 760px; height: 700px;" class="float-left img-thumbnail">
+                                          
+                                            
                                         </div>
                                         
                                         <!-- Modal footer   -->
