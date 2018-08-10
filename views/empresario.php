@@ -192,10 +192,10 @@
                         <td><?php echo $result['estado']; ?></td>
                         <td><input type="text" id="raio<?php echo $result['id_end'];?>" class="raio" name="raio_txt" placeholder="ex.: 50.2" value="<?php echo $result['raio']; ?>"></td>
                         <td style="text-align: center;"> 
-                            <button type="button" class="btn-tbl btn btn-outline-info" data-toggle="modal" data-target="#myModal">
+                            <button type="button" class="btn-tbl btn btn-outline-info" data-toggle="modal" data-target="#myModal2">
                             Ver detalhes</button>
 
-                                   <div class="modal fade" id="myModal">
+                                   <div class="modal fade" id="myModal2">
                                     <div class="modal-dialog modal-lg">
                                       <div style="background-color: #dfcdef;" class="modal-content">
                                       
