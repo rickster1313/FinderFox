@@ -192,7 +192,71 @@
                         <td><?php echo $result['estado']; ?></td>
                         <td><input type="text" id="raio<?php echo $result['id_end'];?>" class="raio" name="raio_txt" placeholder="ex.: 50.2" value="<?php echo $result['raio']; ?>"></td>
                         <td style="text-align: center;"> 
-                            <button type="button" class="btn-tbl btn btn-outline-info">Ver detalhes</button>
+                            <button type="button" class="btn-tbl btn btn-outline-info" data-toggle="modal" data-target="#myModal">
+                            Ver detalhes</button>
+
+                                   <div class="modal fade" id="myModal">
+                                    <div class="modal-dialog modal-lg">
+                                      <div style="background-color: #dfcdef;" class="modal-content">
+                                      
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                          <h4 class="modal-title">Detalhes</h4>
+                                        </div>
+                                       
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+
+                                            <p>Veja as informações detalhadamente:</p>
+
+                                            <table style="border-radius: 3px;" class="table table-striped">
+                                                <tbody>
+                                                  <tr>
+                                                    <td><strong>Nome</strong></td>
+                                                    <td>Principal</td> <!-- Variaveis do php -->
+                                                  </tr>
+                                                  <tr>
+                                                    <td><strong>Rua</strong></td>
+                                                    <td>Arapongas</td><!-- Variaveis do php -->
+                                                  </tr>
+                                                  <tr>
+                                                    <td><strong>Cidade</strong></td>
+                                                    <td>Campo Limpo Paulista</td><!-- Variaveis do php -->
+                                                  </tr>
+                                                  <tr>
+                                                    <td><strong>Rua</strong></td>
+                                                    <td>Arapongas</td><!-- Variaveis do php -->
+                                                  </tr>
+                                                  <tr>
+                                                    <td><strong>Estado</strong></td>
+                                                    <td>SP</td><!-- Variaveis do php -->
+                                                  </tr>
+                                                  <tr>
+                                                    <td><strong>Alcance</strong></td>
+                                                    <td>500 KM</td><!-- Variaveis do php -->
+                                                  </tr>
+                                                  <tr>
+                                                    <td><strong>Seila</strong></td>
+                                                    <td>Alguma coisa</td><!-- Variaveis do php -->
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+
+                                              <img src="<?php echo BASE_URL; ?>assets/images/Mapa_centro_Copenhague.jpg" 
+                                          style="width: 300px; height: 300px;" class="float-left img-thumbnail">
+                                          <p>Esse mapa ilustra é um exemplo do alcance da abobrinha sla doq, Olá Riquelme, sla man, só to pondo qualquer coisa, tlg? pra dps subtituir, mas ai dps modifica pra ficar bonitinho ali no meio e tals. Só pra ver como fica mesmo :)</p>
+                                          <p>Esse mapa ilustra é um exemplo do alcance da abobrinha sla doq, Olá Riquelme, sla man, só to pondo qualquer coisa, tlg? pra dps subtituir, mas ai dps modifica pra ficar bonitinho ali no meio e tals. Só pra ver como fica mesmo :)</p>
+
+                                        </div>
+                                        
+                                        <!-- Modal footer   -->
+                                        <div class="modal-footer">
+                                          <h5>@TrioMonstro</h5>
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
 
                             <button class="btn-tbl btn btn-outline-warning btn_alt" value="modalAlt<?php echo $result['id_end'];?>">Alterar</button><br>
                             <?php if($result['active'] == 'nao'){ ?>
