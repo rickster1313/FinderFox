@@ -151,8 +151,15 @@
             <p class="replay-font" style="color: #ffffff">FinderFox</p>
             <ul class="nav navbar-expand" >
                     <div class="botão" style="margin-top: 20%;">
-                    <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>login">LOGIN</a>
                     <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
+                    
+
+                    <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>login"><?php if (isset($_SESSION['id'])){ ?>
+                    <!-- aqui vem o ícone -->
+                    logado
+                    <?php }else{ ?>LOGIN
+                    <?php } ?></a>
+                    
                     </div>
                 
             </ul>
