@@ -95,11 +95,14 @@
              }  
     .form{
         padding-top: 80px;
+        left: 6%;
+        transform: translate(6%);
+
 
     }
 
     .form form input[type=text]{
-        width: 50%;
+        width: 70%;
         height: 60px;
         font-size: 25px;
         background-color: transparent;
@@ -109,6 +112,7 @@
         border-bottom-right-radius: 0px;
         outline: none;
         padding-left: 10px;
+
         
     }
     .form form input[type=submit]{
@@ -122,6 +126,8 @@
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         color: #ffffff;
+        margin-left: -7px;
+        margin-top: 2px;
 
     }
         .ladoBaixo{
@@ -139,6 +145,7 @@
             background-color: green;
             float: left;
             min-height: 900px;
+            
         }
 
     </style>
@@ -172,15 +179,25 @@
         <div class="ladoBaixo" style="">
             <div class="lados" style=""></div>
             <div class="centro" style="">
-                <div class="form">
+                <div class="form" style="overflow: hidden;">
                     <div class="form-group">
                         <form>
-                            <input type="text" name="cep_txt" id="cep" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
+                            <input type="text" name="cep_txt" id="cep" autocomplete="off" placeholder="Pesquisar..." class="film-font" style="font-size: 22px; border: 2px solid;">
                             <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
                         </form>
                     </div>
+               
+                    
+                    
                 </div>
+                 <button class="btn btn-outline-light btn-lg" style="float: right; margin-right: 95px;">Filtro</button>
+                <div class="alert alert-success alert-dismissible" style="width: 30%;margin-left: 50px; ">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>exemplo:</strong> 12345678912
+</div>
+                <hr>
             </div>
+ 
             <div class="lados" style=""></div>
         </div>   
         </div>
