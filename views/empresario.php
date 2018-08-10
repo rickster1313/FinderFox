@@ -209,6 +209,9 @@
 
                                             <p>Veja as informações detalhadamente:</p>
 
+                                            <img src="<?php echo BASE_URL; ?>assets/images/Mapa_centro_Copenhague2.jpg" 
+                                          style=" width: 760px; height: 700px;" class="float-left img-thumbnail">
+                                          
                                             <table style="border-radius: 3px;" class="table table-striped">
                                                 <tbody>
                                                   <tr>
@@ -241,11 +244,6 @@
                                                   </tr>
                                                 </tbody>
                                               </table>
-
-                                              <img src="<?php echo BASE_URL; ?>assets/images/Mapa_centro_Copenhague.jpg" 
-                                          style="width: 300px; height: 300px;" class="float-left img-thumbnail">
-                                          <p>Esse mapa ilustra é um exemplo do alcance da abobrinha sla doq, Olá Riquelme, sla man, só to pondo qualquer coisa, tlg? pra dps subtituir, mas ai dps modifica pra ficar bonitinho ali no meio e tals. Só pra ver como fica mesmo :)</p>
-                                          <p>Esse mapa ilustra é um exemplo do alcance da abobrinha sla doq, Olá Riquelme, sla man, só to pondo qualquer coisa, tlg? pra dps subtituir, mas ai dps modifica pra ficar bonitinho ali no meio e tals. Só pra ver como fica mesmo :)</p>
 
                                         </div>
                                         
