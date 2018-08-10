@@ -192,10 +192,12 @@
                         <td><?php echo $result['estado']; ?></td>
                         <td><input type="text" id="raio<?php echo $result['id_end'];?>" class="raio" name="raio_txt" placeholder="ex.: 50.2" value="<?php echo $result['raio']; ?>"></td>
                         <td style="text-align: center;"> 
-                            <button type="button" class="btn-tbl btn btn-outline-info" data-toggle="modal" data-target="#myModal2">
+
+                            <button type="button" class="btn-tbl btn btn-outline-info" data-toggle="modal" data-target="#my2Modal<?php echo $result['id_end']; ?>">
                             Ver detalhes</button>
 
-                                   <div class="modal fade" id="myModal2">
+                                   <div class="modal fade" id="my2Modal<?php echo $result['id_end']; ?>">
+                                    
                                     <div class="modal-dialog modal-lg">
                                       <div style="background-color: #dfcdef;" class="modal-content">
                                       
@@ -213,31 +215,31 @@
                                                 <tbody>
                                                   <tr>
                                                     <td><strong>Nome</strong></td>
-                                                    <td>Principal</td> <!-- Variaveis do php -->
+                                                    <td><?php echo $result['nome']; ?></td> <!-- Variaveis do php -->
                                                   </tr>
                                                   <tr>
                                                     <td><strong>Rua</strong></td>
-                                                    <td>Arapongas</td><!-- Variaveis do php -->
+                                                    <td><?php echo $result['rua']; ?></td><!-- Variaveis do php -->
+                                                  </tr>
+                                                  <tr>
+                                                    <td><strong>Número</strong></td>
+                                                    <td><?php echo $result['numero']; ?></td><!-- Variaveis do php -->
+                                                  </tr>
+                                                  <tr>
+                                                    <td><strong>CEP</strong></td>
+                                                    <td><?php echo $result['cep']; ?></td><!-- Variaveis do php -->
                                                   </tr>
                                                   <tr>
                                                     <td><strong>Cidade</strong></td>
-                                                    <td>Campo Limpo Paulista</td><!-- Variaveis do php -->
-                                                  </tr>
-                                                  <tr>
-                                                    <td><strong>Rua</strong></td>
-                                                    <td>Arapongas</td><!-- Variaveis do php -->
+                                                    <td><?php echo $result['cidade']; ?></td><!-- Variaveis do php -->
                                                   </tr>
                                                   <tr>
                                                     <td><strong>Estado</strong></td>
-                                                    <td>SP</td><!-- Variaveis do php -->
+                                                    <td><?php echo $result['estado']; ?></td><!-- Variaveis do php -->
                                                   </tr>
                                                   <tr>
-                                                    <td><strong>Alcance</strong></td>
-                                                    <td>500 KM</td><!-- Variaveis do php -->
-                                                  </tr>
-                                                  <tr>
-                                                    <td><strong>Seila</strong></td>
-                                                    <td>Alguma coisa</td><!-- Variaveis do php -->
+                                                    <td><strong>Alcance     </strong></td>
+                                                    <td><?php echo $result['raio']; ?> KM</td><!-- Variaveis do php -->
                                                   </tr>
                                                 </tbody>
                                               </table>
