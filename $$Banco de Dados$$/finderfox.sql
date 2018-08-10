@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 09-Ago-2018 às 23:55
--- Versão do servidor: 10.1.22-MariaDB
--- PHP Version: 7.1.4
+-- Generation Time: 10-Ago-2018 às 14:02
+-- Versão do servidor: 10.1.19-MariaDB
+-- PHP Version: 5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -39,6 +37,13 @@ CREATE TABLE `tbl_avs` (
   `func` varchar(5555) NOT NULL,
   `created` varchar(220) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `tbl_avs`
+--
+
+INSERT INTO `tbl_avs` (`id_av`, `user_id`, `url`, `nome_av`, `slogan_av`, `logo_av`, `categoria`, `func`, `created`) VALUES
+(1, 6, 'empre', 'empre', 'slogan de um empresario aleatÃ³rio', 'logo-empre.png', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -74,7 +79,9 @@ INSERT INTO `tbl_endereco` (`id_end`, `user_id`, `cep`, `rua`, `estado`, `cidade
 (11, 6, '05785-200', 'Rua Siriema', 'SP', 'SÃ£o Paulo', '76', 'sao paulo 2', 'sim', '-23.624607', '-46.7641732', '15'),
 (12, 6, '05788-430', 'Rua Professor Mamede de Oliveira', 'SP', 'SÃ£o Paulo', '765', 'sao paulo 3', 'nao', '-23.6281132', '-46.7698969', '10'),
 (13, 6, '88512-530', 'Rua AntÃ´nio Caldas', 'SC', 'Lages', '304', 'santa catarina 1', 'nao', '-27.8462626', '-50.3465943', '1'),
-(14, 11, '05785-200', 'Rua Siriema', 'SÃ£o Paulo', 'SP', '123', 'principal', 'nao', NULL, NULL, '');
+(14, 11, '05785-200', 'Rua Siriema', 'SÃ£o Paulo', 'SP', '123', 'principal', 'nao', NULL, NULL, ''),
+(15, 6, '07864-260', 'Rua Pardal', 'SP', 'Franco da Rocha', '108', 'melki', 'nao', NULL, NULL, ''),
+(16, 6, '15700-014', 'Rua 7', 'SP', 'Jales', '98', 'tupone', 'nao', '-20.272851', '-50.547839', '20');
 
 -- --------------------------------------------------------
 
@@ -134,21 +141,17 @@ ALTER TABLE `tbl_usuarios`
 -- AUTO_INCREMENT for table `tbl_avs`
 --
 ALTER TABLE `tbl_avs`
-  MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_endereco`
 --
 ALTER TABLE `tbl_endereco`
-  MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
+  MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
