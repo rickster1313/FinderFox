@@ -168,14 +168,20 @@
         <div class="main" style="background: linear-gradient(45deg, #A491BA, #CFC1DE)">
                 
             <div class="form">
+                <?php 
+                    if(isset($_SESSION['msg'])){
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
+                ?>
                 <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/finderlogopng.png" width="300">
                 <div class="informação">
 
                    <p class="replay-font" style="font-size: 25px;">Informe-nos seu cep<br></p>
                </div>
-                <form>
+                <form id="form_buscar_cep">
       <div class="form-group">
-                    <input type="text" name="cep_txt" id="cep" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
+                    <input type="text" name="cep_txt" id="cep_busca" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
                     <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
                     </div>
                     <p class="replay-font" style="font-size: 20px;"> encontraremos os servicos disponiveis para sua localizacao</p>

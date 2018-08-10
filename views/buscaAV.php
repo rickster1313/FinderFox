@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Empresário</title>
+    <title>Página de Busca</title>
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
@@ -145,6 +145,7 @@
             background-color: green;
             float: left;
             min-height: 900px;
+            overflow: hidden;
             
         }
 
@@ -181,8 +182,8 @@
             <div class="centro" style="">
                 <div class="form" style="overflow: hidden;">
                     <div class="form-group">
-                        <form>
-                            <input type="text" name="cep_txt" id="cep" autocomplete="off" placeholder="Pesquisar..." class="film-font" style="font-size: 22px; border: 2px solid;">
+                        <form >
+                            <input type="text" name="cep_txt" autocomplete="off" placeholder="Pesquisar..." class="film-font" style="font-size: 22px; border: 2px solid;">
                             <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
                         </form>
                     </div>
@@ -192,8 +193,8 @@
                 </div>
                  <button class="btn btn-outline-light btn-lg" style="float: right; margin-right: 95px;">Filtro</button>
                 <div class="alert alert-success alert-dismissible" style="width: 30%;margin-left: 50px; ">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>exemplo:</strong> 12345678912
+                        <button type="button" class="close" id="cancela_cep" data-dismiss="alert">&times;</button>
+  <strong>Seu cep:</strong> <?php echo $cep_ativo; ?>
 </div>
                 <hr>
             </div>
