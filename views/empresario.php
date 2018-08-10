@@ -209,10 +209,7 @@
 
                                             <p>Veja as informações detalhadamente:</p>
 
-                                            <img src="<?php echo BASE_URL; ?>assets/images/Mapa_centro_Copenhague2.jpg" 
-                                          style=" width: 760px; height: 700px;" class="float-left img-thumbnail">
-                                          
-                                            <table style="border-radius: 3px;" class="table table-striped">
+                                            <table style="border-radius: 3px; position: absolute; top: 55%; width: 40%; left: 55%;" class="table table-striped">
                                                 <tbody>
                                                   <tr>
                                                     <td><strong>Nome</strong></td>
@@ -245,6 +242,11 @@
                                                 </tbody>
                                               </table>
 
+
+                                            <img src="<?php echo BASE_URL; ?>assets/images/Mapa_centro_Copenhague2.jpg" 
+                                          style=" width: 760px; height: 700px;" class="float-left img-thumbnail">
+                                          
+                                            
                                         </div>
                                         
                                         <!-- Modal footer   -->
@@ -279,7 +281,7 @@
                     <!-- The Modal -->
                     <div class="modal fade" id="modalAlt<?php echo $resultAlt['id_end'];?>">
                       <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
+                        <div class="modal-content" style="background-color: #F4EDE8;">
 
                           <!-- Modal Header -->
                           <div class="modal-header">
@@ -288,7 +290,7 @@
                           </div>
 
                           <!-- Modal body -->
-                          <div class="modal-body" style="display: flex; justify-content: center;">
+                          <div class="modal-body" style="display: flex; justify-content: center; ">
                             <form id="id<?php echo $resultAlt['id_end'];?>" name="form_alterar_end" method="POST">
                                 
                            

@@ -55,7 +55,7 @@
         text-align: center;
     }
     .form{
-        padding-top: 250px;
+        padding-top: 100px;
 
     }
 
@@ -147,7 +147,7 @@
 		
     <div class="container-fluid">
         <header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
-            <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/logo-falso.png">
+            
             <p class="replay-font" style="color: #ffffff">FinderFox</p>
             <ul class="nav navbar-expand" >
                     <div class="botão" style="margin-top: 20%;">
@@ -161,14 +161,17 @@
         <div class="main" style="background: linear-gradient(45deg, #A491BA, #CFC1DE)">
                 
             <div class="form">
+                <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/finderlogopng.png" width="300">
                 <div class="informação">
-                   <p class="replay-font" style="font-size: 30px;">Informe-nos seu cep para que<br> possamos encontrar os servicos disponiveis para sua localizacao</p>
+
+                   <p class="replay-font" style="font-size: 25px;">Informe-nos seu cep<br></p>
                </div>
                 <form>
       <div class="form-group">
                     <input type="text" name="cep_txt" id="cep" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
                     <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
                     </div>
+                    <p class="replay-font" style="font-size: 20px;"> encontraremos os servicos disponiveis para sua localizacao</p>
 
                 </form>
             </div>

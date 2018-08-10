@@ -54,8 +54,8 @@
         	background-color: #F7F0E8;
         	border-radius: 9px;
         	box-shadow: 3px 3px 6px #777570;
-        	height: 500px;
-        	width: 40%;
+        	height: 700px;
+        	width: 50%;
         	display: flex;
         	justify-content: center;
         	align-items: center;
@@ -63,6 +63,13 @@
 
         body{
           font-family: 'Bree Serif', serif;
+
+        }
+
+        .msg-deslogado{
+           display: block;
+           position: absolute;
+           top: 15%;
         }
 
         .header{
@@ -81,6 +88,13 @@
     padding: 15px;
     margin-left: 1100px;
        }
+
+       #fundo-logo{
+       	width: 300px;
+       	height: 300px;
+       	background-color: #fff;
+       	position: absolute;
+       }
        
 </style>
 
@@ -90,21 +104,18 @@
 
 	<div class="container-fluid">
 
-		<header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
-            <p class="replay-font" style="color: #ffffff">FinderFox</p>
-
-        </header>
 
 	<a class="btn btn-outline-dark botao-voltar" style="font-family: 'Bree-Serif', serif;" href="<?php echo BASE_URL; ?>">Voltar</a>
 	<div class="row">
 
-		<div class="col-sm-6" style="width: 100%; height: 950px;background: linear-gradient(45deg, #A491BA, #CFC1DE); display: flex; justify-content: center; align-items: center;">
+		<div class="col-sm-6" style="width: 100%; height: 900px;background: linear-gradient(45deg, #A491BA, #CFC1DE); display: flex; justify-content: center; align-items: center;">
 		
 		
 
 
 
 	<div class="fundo-form">
+		<div class="msg-deslogado">
 		<?php 
     
 	if (isset($_SESSION['msg'])) {
@@ -113,12 +124,15 @@
 	}
 
 	?>
+</div>
 	
+	<img src="<?php echo BASE_URL ?>assets/images/Login_icon-icons.com_52028 (1).png" style="display: block; position: absolute;top:25%;">
 	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style="width: 90%;">
 		<span class="input input--ruri">
 					<input class="input__field input__field--ruri" type="text" id="input-26" name="email_txt" />
 					<label class="input__label input__label--ruri" for="input-26">
-						<span class="input__label-content input__label-content--ruri"><img src="<?php echo BASE_URL ?>assets/images/newpost_email_3297.png" width="20"> Email </span>
+						<span class="input__label-content input__label-content--ruri">
+							<img src="<?php echo BASE_URL ?>assets/images/newpost_email_3297.png" width="20"> Email </span>
 					</label>
          </span>
          <br>
@@ -129,12 +143,16 @@
 					</label>
          </span>
          <br>
-		<input type="submit" name="enviar_login" class="btn btn-outline-dark">
+		<input type="submit" name="enviar_login" class="btn btn-outline-dark btn-md" style="box-shadow: 1px 1px 3px #232323;">
 	</form>
 </div>
 </div>
 
-<div class="col-sm-6" style="height: 950px; background: url(assets/images/fundo3.jpg);">
+	
+	<div class="col-sm-6" style="height: 900px; background-color: #381850;">
+     	<div class="rounded-circle" id="fundo-logo" style="left:27%; top: 30%;">
+		   <img src="<?php echo BASE_URL ?>assets/images/finderLogopng.png" class="img-fluid" width="250" style="left: 10%; position: absolute; top: 10%;" >
+		</div>
 	</div>
 
 </div>
