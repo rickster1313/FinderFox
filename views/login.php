@@ -139,7 +139,7 @@
 					</label>
          </span>
          <br>
-		<input type="submit" name="enviar_login" class="btn btn-outline-dark">
+		<input type="submit" name="enviar_login" class="btn btn-outline-dark btn-md" style="box-shadow: 1px 1px 3px #232323;">
 	</form>
 </div>
 </div>
