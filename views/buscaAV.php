@@ -127,13 +127,13 @@
             overflow: hidden;
         }
         .lados{
-            width: 20%;  
+            width: 15%;  
             background-color:rgba(0,0,0,0.1); /*rgba(104,49,155,0.2);*/
             float: left;
             min-height: 900px;
         }
         .centro{
-            width: 60%; 
+            width: 70%; 
             background-color:rgba(0,0,0,0.07);
             /*background-color: white; linear-gradient(45deg,  #361850, #68319B);*/
             float: left;
@@ -150,9 +150,8 @@
             width: 50%;
             height: 180px;
             text-align: center;
-            padding-left:20px; 
-            padding-right: 20px;
-            display: flex;
+            padding-left:10px; 
+            padding-right:10px;
             align-items: center;
 
 
@@ -162,7 +161,6 @@
             height: 120px;
             width: 100%;
             padding: 10px;
-            overflow: hidden;
         }
         .av_info{
             float: left;
@@ -264,7 +262,8 @@
                                 <div class="av_info">
                                     <strong><span style="font-size: 18px "><?php echo $value[0]['nome_av'];?></span></strong><br>
                                     <p style="margin:0px;opacity: 0.7"><span>Distância:</span> <?php echo $value['distancia'];?>  KM (aprox.)</p>
-                                    <p style="margin:0px;opacity: 0.7"><span>Categoria:</span><?php echo $value[0]['categoria'];?></p>
+                                    <p style="margin:0px;opacity: 0.7"><span>Categoria: </span><?php echo $value[0]['categoria'];?></p>
+                                    <p style="margin:0px;opacity: 0.7"><span>Cidade: </span><?php echo $value['cidade']." - ".$value['estado'];?></p>
                                 </div>
                             </div>
                         </a>

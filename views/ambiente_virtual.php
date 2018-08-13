@@ -39,8 +39,8 @@
 		<div style="padding-left: 20px;overflow: hidden;">
 			<p class="display-4 "><?php echo ucfirst($nome_av);?></p>      
 			<p class=""><?php echo ucfirst($slogan_av);?></p>
-			<a href="<?php echo BASE_URL; ?>home">
-				<button class="btn btn-outline-dark float-right" >Voltar para as pesquisas</button>
+			<a href="javascript:window.history.go(-1)">
+				<button  class="btn btn-outline-dark float-right" >Voltar </button>
 			</a>
 		</div>
 	 

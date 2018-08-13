@@ -96,7 +96,7 @@
             foreach ($dadosEnd as $value) {
                 $distancia = $funcao->distanciaPontos($lat1, $lon1, $value['lat'], $value['lon']);
                 if($value['raio'] == 'global' || $value['raio'] >= $distancia){
-                    $endNoRaio[] = array('id' => $value['id_end'] , 'distancia' =>$distancia, 'user_id'=>$value['user_id']);
+                    $endNoRaio[] = array('id' => $value['id_end'] , 'distancia' =>$distancia, 'user_id'=>$value['user_id'], 'cidade'=>$value['cidade'], 'estado'=>$value['estado']);
                 }
             }
 
