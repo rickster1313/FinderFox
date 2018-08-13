@@ -66,6 +66,11 @@
             $sql->bindValue(5, $id);
             $sql->execute();
         }
+        public function endAtivos(){
+            $sql = "SELECT * FROM tbl_endereco WHERE active = 'sim'";
+            $sql = $this->pdo->query($sql);
+            return $sql;
+        }
 
     }
 ?>

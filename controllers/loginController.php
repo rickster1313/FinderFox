@@ -48,7 +48,7 @@
 				}else if($_SESSION["nvl_acesso"] == "empresario"){
 					header("Location:".BASE_URL."empresario");
 				}else{
-					echo "envia para area de clientes";
+					header("Location:".BASE_URL."usuario");
 				}
 			}
 		}
@@ -63,7 +63,7 @@
 			}elseif ($dados["nvl_acesso"] == "empresario") {
 				header("Location:".BASE_URL."empresario");
 			}else{
-				echo "Mandar para painel de Clientes";
+				header("Location:".BASE_URL."usuario");
 			}
 		}
 

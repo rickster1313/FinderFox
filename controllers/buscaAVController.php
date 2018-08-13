@@ -18,9 +18,9 @@
 			if($verificar['status'] == 'falso'){
   				header("Location:".BASE_URL);
 			}
-            
+            $dataAV = $this->loadAVs($verificar['lat'], $verificar['lon']);
 			$nomePag = "buscaAV";
-			$dados = array('cep_ativo' => $_SESSION['cep_ativo']);
+			$dados = array('cep_ativo' => $_SESSION['cep_ativo'], 'dataAV' => $dataAV);
 			$this->loadView($nomePag, $dados);
 		}
 		private function get($cep){
@@ -83,6 +83,45 @@
             }else{
                 echo "nao exite";
             }
+        }
+
+        private function loadAVs($lat1, $lon1){
+            $enderecosModel = new enderecosModel();
+            $avsModel = new avsModel();
+            $funcao = new funcaoController();
+            $sqlEnd = $enderecosModel->endAtivos();
+            $sqlAvs = $avsModel->getAVs();
+            $dadosEnd = $sqlEnd->FetchAll();
+            $dadosAvs = $sqlAvs->FetchAll();
+            foreach ($dadosEnd as $value) {
+                $distancia = $funcao->distanciaPontos($lat1, $lon1, $value['lat'], $value['lon']);
+                if($value['raio'] == 'global' || $value['raio'] >= $distancia){
+                    $endNoRaio[] = array('id' => $value['id_end'] , 'distancia' =>$distancia, 'user_id'=>$value['user_id']);
+                }
+            }
+
+            foreach ($dadosAvs as $key => $value) {
+                $userAvs[] = array('usuario_id'=> $value['user_id'], 'nome_av'=>$value['nome_av'], 'categoria' =>$value['categoria'], 'url' => $value['url'], 'img' =>$value['logo_av']);
+            }
+            foreach($endNoRaio as $key => $resp){
+                
+                foreach ($userAvs as $val_id) {
+                    if($val_id['usuario_id'] == $resp['user_id']){
+                        array_push($endNoRaio[$key], array('nome_av'=> $val_id['nome_av'], 'categoria' =>$val_id['categoria'], 'url' => $val_id['url'], 'img' => $val_id['img']));
+                        $deletar = false;
+                        break;
+                    }else{
+                        $deletar = true;
+                    }
+                }
+                if($deletar){
+                    unset($endNoRaio[$key]);
+                }
+            }
+
+            return($endNoRaio);
+            
+            
         }
 		
 	}

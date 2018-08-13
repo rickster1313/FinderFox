@@ -27,7 +27,7 @@
         padding: 0px;
     }
     .nav{
-        margin-right: 100px;
+        margin-right: 10px;
         float: right;
     }
     .nav li a{
@@ -52,7 +52,7 @@
     }
        
     body{
-        background-color: #dfcdef;
+        background-color: white;/*#dfcdef;*/
         font-family: 'Bree Serif', serif;
     }
 
@@ -67,7 +67,7 @@
 
 .replay-font{
     font-family: "BPreplayBold";
-      
+      font-size: 16px;
        }
 
        @font-face {
@@ -103,31 +103,23 @@
 
     .form form input[type=text]{
         width: 70%;
-        height: 60px;
-        font-size: 25px;
+        height: 40px;
+        font-size: 18px;
         background-color: transparent;
-        border:#232323 2px solid;
-        border-radius: 7px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
+        border:none;
+        box-shadow: -10px 2px 1px 0px rgba(54,24,80,0.37);
+        color: rgba(35,35,35,0.7);
         outline: none;
         padding-left: 10px;
 
         
     }
     .form form input[type=submit]{
-        width: 120px;
-        height: 60px;
-        font-size: 25px;
-        background-color: #232323    ;
-        border:#232323 2px solid;
-        border-radius: 7px;
-        outline: none;
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-        color: #ffffff;
-        margin-left: -7px;
-        margin-top: 2px;
+        width: 100px;
+        height: 40px;
+        font-size: 13px;
+
+
 
     }
         .ladoBaixo{
@@ -135,14 +127,15 @@
             overflow: hidden;
         }
         .lados{
-            width: 20%; 
-            background-color: yellow;
+            width: 20%;  
+            background-color:rgba(0,0,0,0.1); /*rgba(104,49,155,0.2);*/
             float: left;
             min-height: 900px;
         }
         .centro{
             width: 60%; 
-            background-color: green;
+            background-color:rgba(0,0,0,0.07);
+            /*background-color: white; linear-gradient(45deg,  #361850, #68319B);*/
             float: left;
             min-height: 900px;
             overflow: hidden;
@@ -150,12 +143,11 @@
         }
         .content_avs{
             background-color: blue;
-            height: auto;   
+            height: auto; 
         }
         .av_iten{
             float: left;
             width: 50%;
-            background-color: ;
             height: 180px;
             text-align: center;
             padding-left:20px; 
@@ -178,6 +170,7 @@
             text-align: left;
 
         }
+       
     </style>
 
 </head> 
@@ -187,59 +180,102 @@
 
     <div class="container-fluid" style="padding: 0px">
         <header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
-            <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/logo-falso.png">
-            <p class="replay-font" style="color: #ffffff">FinderFox</p>
+            
+            <p class="replay-font" style="color: #ffffff; text-shadow: 2px 8px 11px #232323;">FinderFox</p>
             <ul class="nav navbar-expand" >
-                    <div class="botão" style="margin-top: 20%;">
-                   <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
+                <div class="botão" style="margin-top: 20px;margin-right: 20px">
+                    <?php if (isset($_SESSION['id'])){ ?>
+                    <a href="<?php echo BASE_URL ?>login/deslogar" style= "float: right;margin: 0px;text-align: center;width: 50px;margin-left: 30px;text-decoration: none;color: white">
+                        <img src="<?php echo BASE_URL; ?>assets/images/entrar.png" style="width: 50px;margin: 0px">
+                        Deslogar
+                    </a>
+                    <?php }else{ ?>
+                    <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
+                    box-shadow: 3px 3px 5px #232323;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
+                    <?php } ?>
+                    
                     
 
-                    <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>login"><?php if (isset($_SESSION['id'])){ ?>
-                    <!-- aqui vem o ícone -->
-                    logado
-                    <?php }else{ ?>LOGIN
+                    <?php if (isset($_SESSION['id'])){ ?>
+                    <a href="<?php echo BASE_URL; ?>login" style= "float: right;text-align: center;width:50px;text-decoration: none;color: white">
+                        <img src="<?php echo BASE_URL; ?>assets/images/carinha.png" style="width: 50px; margin: 0px;" >
+                        Painel 
+                    </a>
+                    <?php }else{ ?>
+                    <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
+                    box-shadow: 3px 3px 5px #232323;" href="<?php echo BASE_URL; ?>login">LOGIN 
                     <?php } ?></a>
                     
-                    
-                    </div>
+                </div>
                 
             </ul>
 
-        </header> 
+        </header>
         <div class="ladoBaixo" >
             <div class="lados" ></div>
             <div class="centro" >
                 <div class="form" style="overflow: hidden;">
                     <div class="form-group">
                         <form >
-                            <input type="text" name="cep_txt" autocomplete="off" placeholder="Pesquisar..." class="film-font" style="font-size: 22px; border: 2px solid;">
-                            <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
+                            <input type="text" name="cep_txt" autocomplete="off" placeholder="Buscar serviços..." class="film-font" >
+                            <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font btn btn-outline-secondary"  >
                         </form>
                     </div>
-               
+                    <br></div>
+               <hr style="border-color: #232323;">
                     
                     
-                </div>
-                 <button class="btn btn-outline-light btn-lg" style="float: right; margin-right: 95px;">Filtro</button>
-                <div class="alert alert-success alert-dismissible" style="width: 30%;margin-left: 50px; ">
+                
+                 <button class="btn btn-outline-dark btn-lg" data-toggle="collapse" data-target="#demo"
+                  style="float: right; margin-right: 95px;font-size: 14px">Filtro</button>
+
+                <div class="alert alert-success alert-dismissible" style="width: 30%;margin-left: 50px;font-size: 14px; ">
                         <button type="button" class="close" id="cancela_cep" data-dismiss="alert">&times;</button>
                   <strong>Seu cep:</strong> <?php echo $cep_ativo; ?>
                 </div>
+                <div id="demo" class="collapse" style="padding-bottom: 0px;">
+                    <form style="padding-left: 20px">
+                        <label>Categoria</label><br>
+                      <select name="cars" class="custom-select custom-select mb-3" style="width: 249px;">
+                              <option selected>Todos</option>
+                              <option value="volvo">1/10</option>
+                              <option value="fiat">3/10</option>
+                              <option value="audi">6/10</option> 
+                              <option value="volvo">8/10</option>
+                              <option value="fiat">9/10</option>
+                              <option value="audi">10/10</option>  
+                        </select>
+                    </form>
+                  </div>    
+                  <hr style="margin-top: 0px;border-color: #232323">
+                 
                 
                 <div class="content_avs">
-                    <hr>
+                    <?php 
+                //print_r($dataAV);
+                foreach ($dataAV as $key => $value) {
+
+                ?>
+            
                     <div class="av_iten">
-                        <div class="av_block">
-                            <img src="<?php echo BASE_URL; ?>assets/images/AV/logo-zed.png" style="height: 100px; float: left;">
-                            <div class="av_info">
-                                <strong><span style="font-size: 18px ">NOME DO AV2</span></strong><br>
-                                <p style="margin:0px;opacity: 0.7"><span>Distância:</span> 26 KM (aprox.)</p>
-                                <p style="margin:0px;opacity: 0.7"><span>Categoria:</span> Restaurante</p>
+                        <a href="<?php echo BASE_URL.$value[0]['url']; ?>">
+                            <div class="av_block">
+                                <img src="<?php echo BASE_URL; ?>assets/images/AV/<?php echo $value[0]['img']; ?>" style="height: 100px; float: left;">
+                                <div class="av_info">
+                                    <strong><span style="font-size: 18px "><?php echo $value[0]['nome_av'];?></span></strong><br>
+                                    <p style="margin:0px;opacity: 0.7"><span>Distância:</span> <?php echo $value['distancia'];?>  KM (aprox.)</p>
+                                    <p style="margin:0px;opacity: 0.7"><span>Categoria:</span><?php echo $value[0]['categoria'];?></p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                     
+                <?php } ?>  
                 </div>
+
+
+                    
+                
+
             </div>
  
             <div class="lados" style=""></div>

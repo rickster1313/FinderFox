@@ -152,8 +152,16 @@
 
 <div class="w3-black" style="width: 100%; background: linear-gradient(45deg, #68319b , #A491BA) ">
   <button id="openNav" style="outline-style: none; background-color: #68319b;" class="w3-button w3-xlarge sla">&#9776;</button>
-  <a  href="<?php echo BASE_URL ?>login/deslogar" style="float: right; margin-right: 9px; margin-top: 9px;"><button class="btn btn-outline-danger" id="btn_sair">SAIR</button></a>
+  <a  href="<?php echo BASE_URL ?>login/deslogar" style="width: 30px; margin-top: 4px; float: right; margin-right: 39px;margin-left: 20px; text-align: center;text-decoration: none;color:black"> <!-- Tinha o id="btn_sair" -->
+    <img src="<?php echo BASE_URL; ?>assets/images/entrar.png" style="width: 30px;"> Sair
+  </a>
+  <a href="<?php echo BASE_URL; ?>home" style="width: 30px;margin-top: 4px; float: right; text-align: center;text-decoration: none;color:black">
+      <img src="<?php echo BASE_URL; ?>assets/images/casa.png"   style="width: 30px;">
+      Home
+  </a>
 </div>
+
+  
     <div class="tab-content conteudo ">   
         <div id="pag1" class="tab-pane fade">
             <h1>Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>

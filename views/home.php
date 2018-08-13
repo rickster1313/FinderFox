@@ -30,7 +30,7 @@
         overflow: hidden;
     }
     .nav{
-        margin-right: 100px;
+        margin-right: 10px;
         float: right;
     }
     .nav li a{
@@ -150,10 +150,11 @@
             
             <p class="replay-font" style="color: #ffffff; text-shadow: 2px 8px 11px #232323;">FinderFox</p>
             <ul class="nav navbar-expand" >
-                    <div class="botão" style="margin-top: 20%;">
+                <div class="botão" style="margin-top: 20px;margin-right: 20px">
                     <?php if (isset($_SESSION['id'])){ ?>
-                    <a  href="<?php echo BASE_URL ?>login/deslogar">
-                        <img src="<?php echo BASE_URL; ?>assets/images/entrar.png" style="width: 41px; margin-top: 8px;">
+                    <a href="<?php echo BASE_URL ?>login/deslogar" style= "float: right;margin: 0px;text-align: center;width: 50px;margin-left: 30px;text-decoration: none;color: white">
+                        <img src="<?php echo BASE_URL; ?>assets/images/entrar.png" style="width: 50px;margin: 0px">
+                        Deslogar
                     </a>
                     <?php }else{ ?>
                     <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
@@ -163,15 +164,16 @@
                     
 
                     <?php if (isset($_SESSION['id'])){ ?>
-                    <a href="<?php echo BASE_URL; ?>empresario">
-                        <img src="<?php echo BASE_URL; ?>assets/images/carinha.png" style="width: 51px; margin-top: 4px;" >
+                    <a href="<?php echo BASE_URL; ?>login" style= "float: right;text-align: center;width:50px;text-decoration: none;color: white">
+                        <img src="<?php echo BASE_URL; ?>assets/images/carinha.png" style="width: 50px; margin: 0px;" >
+                        Painel 
                     </a>
                     <?php }else{ ?>
                     <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
                     box-shadow: 3px 3px 5px #232323;" href="<?php echo BASE_URL; ?>login">LOGIN 
                     <?php } ?></a>
                     
-                    </div>
+                </div>
                 
             </ul>
 
