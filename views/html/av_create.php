@@ -108,13 +108,18 @@
                 <br>
                 <!--<a href="#" title="Exemplo" data-toggle="popover1" data-trigger="focus" data-content="Gerenciando seu negócio online com maior eficiência..">Exemplo</a> -->
             </div>
+                  
             <br>
-            <!--<div>
-                
-                <br>
-                <a href="#" title="Exemplo" data-toggle="popover1" data-trigger="focus" data-content="Gerenciando seu negócio online com maior eficiência..">Exemplo</a>
-            </div>
-            <br>-->
+                  <select name="cars" class="custom-select custom-select mb-3" style="width: 444px;">
+                                    <option selected>Selecione uma categoria</option>
+                                    <option value="volvo">1/10</option>
+                                    <option value="fiat">3/10</option>
+                                    <option value="audi">6/10</option>
+                                    <option value="volvo">8/10</option>
+                                    <option value="fiat">9/10</option>
+                                    <option value="audi">10/10</option>
+                                    
+                  </select>
 
             <br><br>
             <input class="btn btn-outline-dark" type="submit" name="enviar_cad" value="CRIAR" />

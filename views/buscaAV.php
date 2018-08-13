@@ -135,14 +135,14 @@
             overflow: hidden;
         }
         .lados{
-            width: 20%; 
-            background-color: yellow;
+            width: 20%;  
+            background-color: rgba(104,49,155,0.2);
             float: left;
             min-height: 900px;
         }
         .centro{
             width: 60%; 
-            background-color: green;
+            background-color: linear-gradient(45deg,  #361850, #68319B);
             float: left;
             min-height: 900px;
             overflow: hidden;
@@ -162,14 +162,20 @@
             <p class="replay-font" style="color: #ffffff">FinderFox</p>
             <ul class="nav navbar-expand" >
                     <div class="botão" style="margin-top: 20%;">
-                   <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
-                    
 
-                    <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>login"><?php if (isset($_SESSION['id'])){ ?>
-                    <!-- aqui vem o ícone -->
-                    logado
-                    <?php }else{ ?>LOGIN
-                    <?php } ?></a>
+                    <?php if (isset($_SESSION['id'])){ ?>
+                        <a href="<?php echo BASE_URL; ?>empresario">
+                            <img src="<?php echo BASE_URL; ?>assets/images/carinha.png" style="width: 51px;" >
+                        </a>
+                        <a  href="<?php echo BASE_URL ?>login/deslogar">
+                            <img src="<?php echo BASE_URL; ?>assets/images/entrar.png" style="width: 35px; margin-top: 5px; 
+                            margin-right: 9px;">
+                        </a>
+                    <?php }else{ ?>
+                    <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>login">LOGIN </a>
+                    <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
+                    <?php } ?>
+                    
                     
                     
                     </div>
@@ -191,11 +197,27 @@
                     
                     
                 </div>
-                 <button class="btn btn-outline-light btn-lg" style="float: right; margin-right: 95px;">Filtro</button>
+                 <button class="btn btn-outline-light btn-lg" data-toggle="collapse" data-target="#demo"
+                  style="float: right; margin-right: 95px;">Filtro</button>
+
                 <div class="alert alert-success alert-dismissible" style="width: 30%;margin-left: 50px; ">
                         <button type="button" class="close" id="cancela_cep" data-dismiss="alert">&times;</button>
-  <strong>Seu cep:</strong> <?php echo $cep_ativo; ?>
-</div>
+                        <strong>Seu cep:</strong> <?php echo $cep_ativo; ?>
+                </div>
+                    <div id="demo" class="collapse">
+                          <form>
+                            <select name="cars" class="custom-select custom-select mb-3" style="width: 249px;">
+                              <option selected>Selecione uma categoria</option>
+                              <option value="volvo">1/10</option>
+                              <option value="fiat">3/10</option>
+                              <option value="audi">6/10</option> 
+                              <option value="volvo">8/10</option>
+                              <option value="fiat">9/10</option>
+                              <option value="audi">10/10</option> 
+                              
+                            </select>
+                          </form>
+                  </div>
                 <hr>
             </div>
  
