@@ -171,9 +171,11 @@
 
 		<div class="container-fluid">
 
-		
+		<a href="<?php echo BASE_URL; ?>">
+				<img src="<?php echo BASE_URL; ?>assets/images/seta.png" style="width: 51px; position: absolute; z-index: 2;
+				margin-top: 11px; margin-left: 11px;">
+		</a>
 
-		<a class="btn btn-outline-light botao-voltar" style="" href="<?php echo BASE_URL; ?>">Voltar</a>
 		<div class="main">
 
 			<div class="esquerda grid cs-style-1">
