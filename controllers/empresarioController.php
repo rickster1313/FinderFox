@@ -8,10 +8,21 @@
 			$userDados = $userDados->fetch();
 			$dados = array(
 				'nome' => $userDados["nome"],
-				'av_status' => $this->verificaAV()
+				'av_status' => $this->verificaAV(),
+				'av_dados' => $this->getAv()
 			);
+			
 			$this->loadView($nomePag, $dados);
 
+		}
+		private function getAv(){
+			$avsModel = new avsModel();
+			$avs_dados = $avsModel->procuraAV($_SESSION['id']);
+			if($avs_dados-> rowCount() > 0){
+				return $avs_dados -> fetchAll() ;
+			}else{
+				return null;
+			}
 		}
 
 		public function verificaAV(){
@@ -119,13 +130,6 @@
 			}else{
 				$enderecosModel->offEnd("nao", $id, $raio);
 			}
-		}
-		public function teste($var){
-			$funcaoController = new funcaoController();
-			$coordenadas = $funcaoController->coordenadasCep($var[0]);
-
-			
-
 		}
 
 		private function seguranca(){

@@ -166,7 +166,7 @@
         <div id="pag1" class="tab-pane fade">
             <h1>Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
         </div>
-        <div id="enderecos" class="tab-pane in active">
+        <div id="enderecos" class="tab-pane fade">
             <div class="tabela-end" style="margin: 40px;">
                 <div class=" end-tbl">
                 <table class="table">
@@ -464,7 +464,7 @@
             </div>
         </div>
 
-        <div id="av_conteudo" class="tab-pane fade">
+        <div id="av_conteudo" class="tab-pane in active">
             <?php 
                 include($av_status);
 
