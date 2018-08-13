@@ -148,7 +148,36 @@
             overflow: hidden;
             
         }
+        .content_avs{
+            background-color: blue;
+            height: auto;   
+        }
+        .av_iten{
+            float: left;
+            width: 50%;
+            background-color: ;
+            height: 180px;
+            text-align: center;
+            padding-left:20px; 
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
 
+
+        }
+        .av_block{
+            border:black 1px solid;
+            height: 120px;
+            width: 100%;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .av_info{
+            float: left;
+            margin-left: 10px;
+            text-align: left;
+
+        }
     </style>
 
 </head> 
@@ -177,9 +206,9 @@
             </ul>
 
         </header> 
-        <div class="ladoBaixo" style="">
-            <div class="lados" style=""></div>
-            <div class="centro" style="">
+        <div class="ladoBaixo" >
+            <div class="lados" ></div>
+            <div class="centro" >
                 <div class="form" style="overflow: hidden;">
                     <div class="form-group">
                         <form >
@@ -194,9 +223,23 @@
                  <button class="btn btn-outline-light btn-lg" style="float: right; margin-right: 95px;">Filtro</button>
                 <div class="alert alert-success alert-dismissible" style="width: 30%;margin-left: 50px; ">
                         <button type="button" class="close" id="cancela_cep" data-dismiss="alert">&times;</button>
-  <strong>Seu cep:</strong> <?php echo $cep_ativo; ?>
-</div>
-                <hr>
+                  <strong>Seu cep:</strong> <?php echo $cep_ativo; ?>
+                </div>
+                
+                <div class="content_avs">
+                    <hr>
+                    <div class="av_iten">
+                        <div class="av_block">
+                            <img src="<?php echo BASE_URL; ?>assets/images/AV/logo-zed.png" style="height: 100px; float: left;">
+                            <div class="av_info">
+                                <strong><span style="font-size: 18px ">NOME DO AV2</span></strong><br>
+                                <p style="margin:0px;opacity: 0.7"><span>Distância:</span> 26 KM (aprox.)</p>
+                                <p style="margin:0px;opacity: 0.7"><span>Categoria:</span> Restaurante</p>
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
             </div>
  
             <div class="lados" style=""></div>
