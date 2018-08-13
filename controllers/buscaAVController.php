@@ -18,6 +18,7 @@
 			if($verificar['status'] == 'falso'){
   				header("Location:".BASE_URL);
 			}
+            
 			$nomePag = "buscaAV";
 			$dados = array('cep_ativo' => $_SESSION['cep_ativo']);
 			$this->loadView($nomePag, $dados);

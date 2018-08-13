@@ -104,27 +104,27 @@
 
 	<div class="container-fluid">
 
-
-	<a class="btn btn-outline-dark botao-voltar" style="font-family: 'Bree-Serif', serif;" href="<?php echo BASE_URL; ?>">Voltar</a>
 	<div class="row">
 
 		<div class="col-sm-6" style="width: 100%; height: 900px;background: linear-gradient(45deg, #A491BA, #CFC1DE); display: flex; justify-content: center; align-items: center;">
 		
 		
-
+			<a href="<?php echo BASE_URL; ?>">
+				<img src="<?php echo BASE_URL; ?>assets/images/seta.png" style="width: 41px; margin-top: -851PX; margin-left: -155PX">
+			</a>
 
 
 	<div class="fundo-form">
 		<div class="msg-deslogado">
-		<?php 
+			<?php 
     
-	if (isset($_SESSION['msg'])) {
-			echo $_SESSION['msg'];
-			unset($_SESSION['msg']);
-	}
+				if (isset($_SESSION['msg'])) {
+						echo $_SESSION['msg'];
+						unset($_SESSION['msg']);
+					}
 
-	?>
-</div>
+			?>
+		</div>
 	
 	<img src="<?php echo BASE_URL ?>assets/images/Login_icon-icons.com_52028 (1).png" style="display: block; position: absolute;top:25%;">
 	<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style="width: 90%;">
