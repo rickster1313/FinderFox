@@ -5,7 +5,7 @@ var $j = jQuery.noConflict();
 			e.preventDefault();
 			var cep = $j("#cep_busca").val();
 			if(cep.length == 9){
-				window.location.href = "buscaAV/get/"+cep;
+				window.location.href = "buscaAV/index/"+cep;
 			}else{
 				$j("#cep_busca").focus();
 			}
