@@ -128,17 +128,18 @@
         }
         .lados{
             width: 15%;  
-            background-color:rgba(0,0,0,0.1); /*rgba(104,49,155,0.2);*/
+         
             float: left;
             min-height: 900px;
         }
         .centro{
             width: 70%; 
-            background-color:rgba(0,0,0,0.07);
+            background-color:rgba(0,0,0,0.1); 
             /*background-color: white; linear-gradient(45deg,  #361850, #68319B);*/
             float: left;
             min-height: 900px;
             overflow: hidden;
+            
             
         }
         .content_avs{
@@ -155,12 +156,15 @@
             align-items: center;
 
 
+
         }
         .av_block{
-            border:black 1px solid;
+            background-color: #DDCCE8; 
             height: 120px;
             width: 100%;
             padding: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px #232323;
         }
         .av_info{
             float: left;

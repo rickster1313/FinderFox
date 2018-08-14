@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<title>FinderFox</title>
+	<title >FinderFox</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
@@ -13,6 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/common.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">
+    <link rel="icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
 
 	<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">-->
 
@@ -52,6 +54,13 @@
         height: 650px;
         width: 100%;
         background-color: rgba(104,49,155,0.2);
+        text-align: center;
+    }
+
+     .dados{
+        height: 650px;
+        width: 100%;
+        background: linear-gradient(45deg,  #361850, #68319B);
         text-align: center;
     }
     .form{
@@ -178,6 +187,7 @@
             </ul>
 
         </header>
+
         <div class="main" style="background: linear-gradient(45deg, #A491BA, #CFC1DE)">
                 
             <div class="form">
@@ -202,6 +212,10 @@
                 </form>
             </div>
 
+        </div>
+
+        <div class="dados">
+            
         </div>
 
     </div>
