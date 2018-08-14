@@ -95,7 +95,7 @@
                 <label><strong>Logo</strong></label><br>
                 <a href=""><label for='selecao-arquivo'><img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/logoAdd.png"></label></a>
                 <input id='selecao-arquivo' type="file" name="logo_txt" size="70"><br>
-                <i>Recomendado imagem  200 x 200 pixels</i>
+                <!-- <i>Recomendado imagem  200 x 200 pixels</i> -->
             </div>
             <br>
             <div>
