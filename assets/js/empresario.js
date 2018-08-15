@@ -299,5 +299,13 @@ $j(document).ready(function(){
         }
        
     });
+    $j("#check_sobre1").bind("change", function(){
+            if(this.checked){
+                $j("#content_sobre1").slideDown();
+            }else{
+                $j("#content_sobre1").slideUp();
+            }
+            
+        });
 
 });

@@ -5,57 +5,63 @@
 
 		<style type="text/css">
 			.iframe{
-				height:1311px;
 				width: 100%;
+                height: 100%;
 			}
+            .form-check-inline{
+                margin-bottom: 20px;
+            }
+            .sobre1{
+                width: 100%;
+                padding: 10px;
+                background-color: rgba(0,0,0,0.1);
+                border-radius: 5px;
+            }
 		</style>
 	</head>
 
 	<body>
 		<div class="row" style="width: 100%;margin: 0px">
 			
-    		<div class="col-sm-6" style="width: 100%;">
+    		<div class="col-sm-3" style="width: 100%;">
     			<form method="POST" id="form_newAV" enctype="multipart/form-data">
                 
                 <div>
-                <h2>Features</h2>
-                <div class="form-check-inline">
-    		      <label class="form-check-label" for="check1">
-    		        <input type="checkbox" class="form-check-input" id="check1" name="vehicle1" value="something" checked>Ativar
-    		      </label>
-        		</div>
-                	 <div class="form-group">
-    	                <strong>Titulo do 1º </strong>
-    	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Simple" class="form-control w-25" 
-    	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
+                <h2>SOBRE</h2>
+                <div class="sobre1">
+                    <strong style="font-size: 20px">Parte 1</strong><br>
+                    <div class="form-check-inline">
+        		      <label class="form-check-label" for="check1">
+        		        <input type="checkbox" class="form-check-input" id="check_sobre1" name="vehicle1" value="something" checked="checked" >Ativar
+        		      </label>
+            		</div>
+                    <div id="content_sobre1">
+                    	 <div class="form-group">
+        	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Simple" class="form-control w-25" 
+        	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
 
-    	                <label><strong>Conteudo do 1º</strong></label><br>
-                    	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
-                    	style="outline: none; border-radius: 6px; border: 1px solid #68319b;"></textarea>
-                	</div>
-                		<br>
-                	<div class="form-group">
-    	                <strong>Titulo do 2º </strong>
-    	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Customize" class="form-control w-25" 
-    	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
+                        	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
+                        	style="outline: none; border-radius: 6px; border: 1px solid #68319b;"></textarea>
+                    	</div>
+                    		<br>
+                    	<div class="form-group">
+        	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Customize" class="form-control w-25" 
+        	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
 
-    	                <label><strong>Conteudo do 2º</strong></label><br>
-                    	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
-                    	style="outline: none; border-radius: 6px; 
-                    	border: 1px solid #68319b;"></textarea>
-                	</div>
-                		<br>
-                	<div class="form-group">
-    	                <strong>Titulo do 3º </strong>
-    	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Secure" class="form-control w-25" 
-    	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
-
-    	                <label><strong>Conteudo do 3º</strong></label><br>
-                    	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
-                    	style="outline: none; border-radius: 6px; 
-                    	border: 1px solid #68319b;"></textarea>
-                	</div>
-
+                        	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
+                        	style="outline: none; border-radius: 6px; 
+                        	border: 1px solid #68319b;"></textarea>
+                    	</div>
+                    		<br>
+                    	<div class="form-group">
+        	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Secure" class="form-control w-25" 
+        	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
+                        	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
+                        	style="outline: none; border-radius: 6px; 
+                        	border: 1px solid #68319b;"></textarea>
+                    	</div>
+                    </div>
+                </div>
                 <hr>
                 <h2>Features 2º Parte</h2>
                 <div class="form-check-inline">
@@ -111,7 +117,7 @@
             </form>
     		</div>
 
-    		<div class="col-sm-6" style="width: 100%">
+    		<div class="col-sm-9" style="width: 100%">
     			<iframe class="iframe"  src="<?php echo BASE_URL.$av_dados[0]['url']; ?>" > </iframe> 
     		</div>
 

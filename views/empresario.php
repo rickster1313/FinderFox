@@ -148,7 +148,7 @@
   <a href="#x" data-toggle="pill" class="w3-bar-item w3-button">Link 3</a>-->
 </div>
 
-<div id="main" style="overflow: auto;">
+<div id="main">
 
 <div class="w3-black" style="width: 100%; background: linear-gradient(45deg, #68319b , #A491BA) ">
   <button id="openNav" style="outline-style: none; background-color: #68319b;" class="w3-button w3-xlarge sla">&#9776;</button>
