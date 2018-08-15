@@ -46,11 +46,10 @@
                         <a class="navbar-brand" href="index.html"><img src="<?php echo BASE_URL.'assets/images/AV/'.$logo_av; ?>" class="img-fluid" alt="logo" style="height: 50px" ></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"> <a class="nav-link active" href="#home">HOME <span class="sr-only">(current)</span></a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#features">FEATURES</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#gallery">GALLERY</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a> </li>
-                                <li class="nav-item"><a href="#" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Download</a></li>
+                                <li class="nav-item"> <a class="nav-link active" href="#home">HOME <span class="sr-only">(current)</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#features">SOBRE</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#gallery">GALERIA</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#contact">CONTATO</a> </li>
                             </ul>
                         </div>
                     </nav>
@@ -62,10 +61,10 @@
 
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
-            <h1>Mobile App Landing Page Template</h1>
-            <p class="tagline">The one and only solution for any kind of mobila app landing needs. Just change the screenshots and texts and you are good to go. </p>
+            <h1><?php echo $nome_av; ?></h1>
+            <p class="tagline"><?php echo $slogan_av; ?></p>
         </div>
-        <div class="img-holder mt-3"><img src="images/iphonex.png" alt="phone" class="img-fluid"></div>
+        <div class="img-holder mt-3"><img src="<?php echo BASE_URL.'assets/images/simbolo-imagen.jpg'; ?>" style="height: 350px" alt="phone" class="img-fluid"></div>
     </header>
 
     <div class="client-logos my-5" style="height:50px">
@@ -215,7 +214,7 @@
         <div class="container">
             <div class="section-title">
                 <small>GALLERY</small>
-                <h3>App Screenshots</h3>
+                <h3>Fotos</h3>
             </div>
 
             <div class="img-gallery owl-carousel owl-theme">
@@ -244,8 +243,8 @@
                 <p class="tagline">Available for all major mobile and desktop platforms. Rapidiously visualize optimal ROI rather than enterprise-wide methods of empowerment. </p>
                 <div class="my-4">
 
-                    <a href="#" class="btn btn-light"><img src="images/appleicon.png" alt="icon"> App Store</a>
-                    <a href="#" class="btn btn-light"><img src="images/playicon.png" alt="icon"> Google play</a>
+                    <a href="#" class="btn btn-light"><img src="<?php echo BASE_URL; ?>assets/images/appleicon.png" alt="icon"> App Store</a>
+                    <a href="#" class="btn btn-light"><img src="<?php echo BASE_URL; ?>assets/images/playicon.png" alt="icon"> Google play</a>
                 </div>
                 <p class="text-primary"><small><i>*Works on iOS 10.0.5+, Android Kitkat and above. </i></small></p>
             </div>
