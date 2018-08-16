@@ -317,6 +317,15 @@ $j(document).ready(function(){
             
         }); 
 
+    $j("#check_sobre0").bind("change", function(){
+            if(this.checked){
+                $j("#content_sobre0").slideDown();
+            }else{
+                $j("#content_sobre0").slideUp();
+            }
+            
+        });
+
     // %%%%%%%%%%%%%%  Aqui é a parte de salvar as config do av  %%%%%%%%%%%%%%%%%%%%%%%
 
     email_stats = false;

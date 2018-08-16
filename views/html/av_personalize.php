@@ -26,12 +26,24 @@
     		<div class="col-sm-3" style="width: 100%;">
     			<form method="POST" id="form_newAV" enctype="multipart/form-data">
                 
+                <div class="sobre1">
                     <div>
+
+                    <div class="form-check-inline">
+                      <label class="form-check-label" for="check1">
+                        <input type="checkbox" class="form-check-input" id="check_sobre0" name="vehicle1" value="something" checked="checked" >Ativar 
+                      </label>
+                    </div>
+                    <div id="content_sobre0">
                         <label><strong>IMG</strong></label><br>
                         <a href="#"><label for='selecao-arquivo1'><img class="img-fluid" style="width: 69px;" src="<?php echo BASE_URL; ?>assets/images/simbolo-imagen.jpg"></label></a>
                         <input id='selecao-arquivo1' type="file" name="logo_txt" size="70"><br>
                         <!-- <i>Recomendado imagem  200 x 200 pixels</i> -->
                     </div>
+
+                        
+                    </div>
+                </div>
 
                 <div>
                 <h2>SOBRE</h2>
