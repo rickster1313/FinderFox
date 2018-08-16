@@ -308,4 +308,20 @@ $j(document).ready(function(){
             
         });
 
+    $j("#check_sobre2").bind("change", function(){
+            if(this.checked){
+                $j("#content_sobre2").slideDown();
+            }else{
+                $j("#content_sobre2").slideUp();
+            }
+            
+        }); 
+
+    // %%%%%%%%%%%%%%  Aqui é a parte de salvar as config do av  %%%%%%%%%%%%%%%%%%%%%%%
+
+    email_stats = false;
+    telefone_stats = false;
+    cpf_cnpj_stats = false;
+    senha_stats = false;
+
 });
