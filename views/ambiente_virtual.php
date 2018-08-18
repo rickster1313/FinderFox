@@ -47,8 +47,12 @@
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item"> <a class="nav-link active" href="#home">HOME <span class="sr-only">(current)</span></a></li>
-                                <li class="nav-item"> <a class="nav-link" href="#features">SOBRE</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#gallery">GALERIA</a> </li>
+                                <?php if( $part1_active == "yes" || $part2_active == "yes" ){ ?>
+                                    <li class="nav-item"> <a class="nav-link" href="#features">SOBRE</a> </li>
+                                <?php } ?>
+                                <?php if( $galery_active == "yes" ){ ?>
+                                    <li class="nav-item"> <a class="nav-link" href="#gallery"><?php echo strtoupper($galery_title); ?></a> </li>
+                                <?php } ?>
                                 <li class="nav-item"> <a class="nav-link" href="#contact">CONTATO</a> </li>
                             </ul>
                         </div>
@@ -64,23 +68,23 @@
             <h1><?php echo $nome_av; ?></h1>
             <p class="tagline"><?php echo $slogan_av; ?></p>
         </div>
-        <div class="img-holder mt-3"><img src="<?php echo BASE_URL.'assets/images/simbolo-imagen.jpg'; ?>" style="height: 350px" alt="phone" class="img-fluid"></div>
+        <div class="img-holder mt-3"><img src="<?php echo BASE_URL."assets/images/AV/".$img_home; ?>" style="height: 350px" alt="imagem" class="img-fluid"></div>
     </header>
 
-    <div class="client-logos my-5" style="height:50px">
+    <div class="client-logos my-5" style="height:50px" id="features">
         <div class="container text-center">
             
         </div>
     </div>
+    <?php if($part1_active == "yes"){ ?>
+    <div class="section light-bg"  >
 
-    <div class="section light-bg" id="features">
+        
+        <div class="container" >
 
-
-        <div class="container">
-
-            <div class="section-title">
-                <small>HIGHLIGHTS</small>
-                <h3>Features you love</h3>
+            <div class="section-title" >
+                <!-- <small>HIGHLIGHTS</small> -->
+                <h3><?php echo $part1_title; ?></h3>
             </div>
 
 
@@ -91,8 +95,8 @@
                             <div class="media">
                                 <span class="ti-face-smile gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
-                                    <h4 class="card-title">Simple</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque </p>
+                                    <h4 class="card-title"><?php echo $part1_nome1; ?></h4>
+                                    <p class="card-text"><?php echo $part1_text1; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -104,8 +108,8 @@
                             <div class="media">
                                 <span class="ti-settings gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
-                                    <h4 class="card-title">Customize</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque </p>
+                                    <h4 class="card-title"><?php echo $part1_nome2; ?></h4>
+                                    <p class="card-text"><?php echo $part1_text2; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -117,8 +121,8 @@
                             <div class="media">
                                 <span class="ti-lock gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
-                                    <h4 class="card-title">Secure</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque </p>
+                                    <h4 class="card-title"><?php echo $part1_nome3; ?></h4>
+                                    <p class="card-text"><?php echo $part1_text3; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -131,10 +135,11 @@
 
 
     </div>
+<?php } ?>
     <!-- // end .section -->
 
 
-
+    <?php if($part2_active == "yes"){ ?>
     <div class="section light-bg">
 
         <div class="container">
@@ -144,28 +149,28 @@
                         <li class="media">
                             <div class="circle-icon mr-4">1</div>
                             <div class="media-body">
-                                <h5>Create an Account</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem </p>
+                                <h5><?php echo $part2_nome1; ?></h5>
+                                <p><?php echo $part2_text1; ?> </p>
                             </div>
                         </li>
                         <li class="media my-4">
                             <div class="circle-icon mr-4">2</div>
                             <div class="media-body">
-                                <h5>Share with friends</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem eveniet</p>
+                                <h5><?php echo $part2_nome2; ?></h5>
+                                <p><?php echo $part2_text2; ?> </p>
                             </div>
                         </li>
                         <li class="media">
                             <div class="circle-icon mr-4">3</div>
                             <div class="media-body">
-                                <h5>Enjoy your life</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem </p>
+                                <h5><?php echo $part2_nome3; ?></h5>
+                                <p><?php echo $part2_text3; ?> </p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <img src="images/iphonex.png" alt="iphone" class="img-fluid">
+                    <img src="<?php echo BASE_URL."assets/images/AV/".$part2_img; ?>" alt="imagem" class="img-fluid">
                 </div>
 
             </div>
@@ -173,9 +178,10 @@
         </div>
 
     </div>
+    <?php } ?>
     <!-- // end .section -->
 
-
+<!-- PARTE 3 
     <div class="section">
         <div class="container">
             <div class="section-title">
@@ -207,9 +213,9 @@
         </div>
 
     </div>
-    <!-- // end .section -->
+// fim PARTE 3 -->
 
-
+    <?php if( $galery_active == "yes" ){ ?>
     <div class="section light-bg" id="gallery">
         <div class="container">
             <div class="section-title">
@@ -227,26 +233,38 @@
         </div>
 
     </div>
+<?php } ?>
     <!-- // end .section -->
 
 
 
 
 
-
+    <?php  
+        $usuariosModel = new usuariosModel();
+        $sql = $usuariosModel->getDados($user_id);
+        $dadosUser = $sql->fetch();
+    ?>
     <div class="section bg-gradient">
         <div class="container">
             <div class="call-to-action">
 
                 <div class="box-icon"><span class="ti-mobile gradient-fill ti-3x"></span></div>
-                <h2>Download Anywhere</h2>
-                <p class="tagline">Available for all major mobile and desktop platforms. Rapidiously visualize optimal ROI rather than enterprise-wide methods of empowerment. </p>
+                <h2>Contato</h2>
+                <p class="tagline"> </p>
                 <div class="my-4">
-
-                    <a href="#" class="btn btn-light"><img src="<?php echo BASE_URL; ?>assets/images/appleicon.png" alt="icon"> App Store</a>
-                    <a href="#" class="btn btn-light"><img src="<?php echo BASE_URL; ?>assets/images/playicon.png" alt="icon"> Google play</a>
+                    <?php if(isset($tipos) && !empty($tipos)){
+                        $btns = explode(",", $tipos);
+                        $urls = explode("$!$", $tipos_val);
+                        foreach ($btns as $key => $value) {
+                    ?>
+                    <a href="<?php echo $urls[$key]; ?>" class="btn btn-light"><img src="<?php echo BASE_URL; ?>assets/images/<?php echo $value; ?>-icon.png" alt="icon"> <?php if($value == "youtube"){ echo "YouTube"; }elseif ($value == "face") { echo "Facebook"; }elseif($value == "twitter"){ echo "Twitter"; }else{echo "Instagram"; 
+} ?></a>
+                <?php } }else{ ?>
+                    <a class="btn btn-success"> Sem redes sociais</a>
+                <?php } ?>
                 </div>
-                <p class="text-primary"><small><i>*Works on iOS 10.0.5+, Android Kitkat and above. </i></small></p>
+                <p class="text-primary"><small><i>Acesse também nossas redes sociais. </i></small></p>
             </div>
         </div>
 
@@ -257,15 +275,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left">
-                    <p class="mb-2"> <span class="ti-location-pin mr-2"></span> 1485 Pacific St, Brooklyn, NY 11216 USA</p>
-                    <div class=" d-block d-sm-inline-block">
-                        <p class="mb-2">
-                            <span class="ti-email mr-2"></span> <a class="mr-4" href="mailto:support@mobileapp.com">support@mobileapp.com</a>
-                        </p>
-                    </div>
+                    <p class="mb-2"> <span class="ti-location-pin mr-2"></span> <strong>Sedes e Endereços</strong></p>
+                    <?php 
+                        $enderecosModel = new enderecosModel();
+                        $sql = $enderecosModel->getEnderecos($user_id);
+                        $enderecos = $sql->fetchAll();
+                        foreach ($enderecos as $value) {
+                    ?>
+                        <p class="mb-2"> <span class="ti-location-pin mr-2"></span> <?php echo $value['rua'].' nº '.$value['numero'].', '.$value['cidade'].' - '.$value['estado']; ?></p>
+                    <?php } ?>
                     <div class="d-block d-sm-inline-block">
                         <p class="mb-0">
-                            <span class="ti-headphone-alt mr-2"></span> <a href="tel:51836362800">518-3636-2800</a>
+                            <span class="ti-headphone-alt mr-2"></span> <a href="<?php echo $dadosUser['telefone']; ?>"><?php echo $dadosUser['telefone']; ?></a>
                         </p>
                     </div>
 
@@ -285,13 +306,8 @@
     <!-- // end .section -->
     <footer class="my-5 text-center">
         <!-- Copyright removal is not prohibited! -->
-        <p class="mb-2"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED. MOBAPP TEMPLATE BY <a href="https://colorlib.com">COLORLIB</a></small></p>
+        <p class="mb-2"><small>COPYRIGHT © 2018. TODOS OS DIREITOS RESERVADOS</small></p>
 
-        <small>
-            <a href="#" class="m-2">PRESS</a>
-            <a href="#" class="m-2">TERMS</a>
-            <a href="#" class="m-2">PRIVACY</a>
-        </small>
     </footer>
 <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/bootstrap.min.js"></script>

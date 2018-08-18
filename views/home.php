@@ -200,7 +200,7 @@
                 <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/finderlogopng.png" width="300">
                 <div class="informação">
 
-                   <p class="replay-font" style="font-size: 25px;">Informe-nos seu cep<br></p>
+                   <p class="replay-font" style="font-size: 25px;">Informe-nos seu cep <br></p>
                </div>
                 <form id="form_buscar_cep">
       <div class="form-group">

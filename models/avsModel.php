@@ -58,7 +58,7 @@
         }
 
         public function novoAV($user, $url, $nome, $slogan, $logo){
-            $sql = "INSERT INTO tbl_avs(user_id, url, nome_av, slogan_av, logo_av) VALUES (?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO tbl_avs(user_id, url, nome_av, slogan_av, logo_av, created) VALUES (?, ?, ?, ?, ?, NOW())";
             $sql = $this->pdo->prepare($sql);
             $sql->bindValue(1, $user);
             $sql->bindValue(2, $url);

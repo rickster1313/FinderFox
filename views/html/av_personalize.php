@@ -51,12 +51,17 @@
                     <strong style="font-size: 20px">Parte 1</strong><br>
                     <div class="form-check-inline">
         		      <label class="form-check-label" for="check1">
+
         		        <input type="checkbox" class="form-check-input" id="check_sobre1" name="vehicle1" value="something" checked="checked" >Ativar
         		      </label>
             		</div>
                     <div id="content_sobre1">
                     	 <div class="form-group">
-        	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Simple" class="form-control w-25" 
+                            <label><strong>Titulo</strong></label><br>
+                            <input type="text" id="primeiro" name="primeiro_t" size="60" placeholder="Simple" class="form-control" 
+                            style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required"><br>
+
+        	                <input type="text" id="primeiro" name="primeiro_t" size="60" placeholder="Simple" class="form-control" 
         	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
 
                         	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
@@ -64,7 +69,7 @@
                     	</div>
                     		<br>
                     	<div class="form-group">
-        	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Customize" class="form-control w-25" 
+        	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Customize" class="form-control" 
         	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
 
                         	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
@@ -73,7 +78,7 @@
                     	</div>
                     		<br>
                     	<div class="form-group">
-        	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Secure" class="form-control w-25" 
+        	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Secure" class="form-control" 
         	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
                         	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
                         	style="outline: none; border-radius: 6px; 
@@ -82,8 +87,8 @@
                     </div>
                 </div>
                 <hr>
-                <h2>Features 2º Parte</h2>
                 <div class="sobre1">
+                    <strong style="font-size: 20px">Parte 2</strong><br>
                 <div class="form-check-inline">
     		      <label class="form-check-label" for="check1">
     		        <input type="checkbox" class="form-check-input" id="check_sobre2" name="vehicle1" value="something" checked>Ativar
@@ -91,37 +96,30 @@
         		</div >
                 <div id="content_sobre2">
                     <div class="form-group">
-    	                <strong>Titulo do 1º </strong>
-    	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Create an Account" class="form-control w-25" 
-    	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
 
-    	                <label><strong>Conteudo do 1º</strong></label><br>
-                    	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
-                    	style="outline: none; border-radius: 6px; 
-                    	border: 1px solid #68319b;"></textarea>
-                	</div>
-                		<br>
-                	<div class="form-group">
-    	                <strong>Titulo do 2º </strong>
-    	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Share with friends" class="form-control w-25" 
-    	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
+                            <input type="text" id="primeiro" name="primeiro_t" size="60" placeholder="Simple" class="form-control" 
+                            style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
 
-    	                <label><strong>Conteudo do 2º</strong></label><br>
-                    	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
-                    	style="outline: none; border-radius: 6px; 
-                    	border: 1px solid #68319b;"></textarea> 
-                	</div>
-                		<br>
-                	<div class="form-group">
-    	                <strong>Titulo do 3º </strong>
-    	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Enjoy your life" class="form-control w-25" 
-    	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
+                            <textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
+                            style="outline: none; border-radius: 6px; border: 1px solid #68319b;"></textarea>
+                        </div>
+                            <br>
+                        <div class="form-group">
+                            <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Customize" class="form-control" 
+                            style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
 
-    	                <label><strong>Conteudo do 3º</strong></label><br>
-                    	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
-                    	style="outline: none; border-radius: 6px; 
-                    	border: 1px solid #68319b;"></textarea>
-                	</div>
+                            <textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
+                            style="outline: none; border-radius: 6px; 
+                            border: 1px solid #68319b;"></textarea>
+                        </div>
+                            <br>
+                        <div class="form-group">
+                            <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Secure" class="form-control" 
+                            style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required">
+                            <textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
+                            style="outline: none; border-radius: 6px; 
+                            border: 1px solid #68319b;"></textarea>
+                        </div>
                     </div>
                     </div>
                     <br> 

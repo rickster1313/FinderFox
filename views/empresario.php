@@ -420,21 +420,21 @@
 
                                 <div id="novo_part2" style="display: none">
                                     <span class="input input--yoko">
-                    <input class="input__field input__field--yoko" type="text" id="rua" required="required" name="rua_txt" />
+                    <input class="input__field input__field--yoko " style="background: #CFC1DE;opacity: 1" type="text" id="rua" required="required" name="rua_txt" />
                     <label class="input__label input__label--yoko" for="rua">
                         <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Rua</span>
                     </label>
                 </span>
 
                                 <span class="input input--yoko">
-                    <input class="input__field input__field--yoko" type="text" id="cid" required="required" name="cid_txt" />
+                    <input class="input__field input__field--yoko" style="background: #CFC1DE;opacity: 1" type="text" id="cid" required="required" name="cid_txt" />
                     <label class="input__label input__label--yoko" for="cid">
                         <span class="input__label-content input__label-content--yoko " style="font-size: 17px; color: #232323;">Cidade</span>
                     </label>
                 </span>
 
                                 <span class="input input--yoko">
-                    <input class="input__field input__field--yoko" type="text" id="est" required="required" name="est_txt" />
+                    <input class="input__field input__field--yoko" style="background: #CFC1DE;opacity: 1" type="text" id="est" required="required" name="est_txt" />
                     <label class="input__label input__label--yoko" for="est">
                         <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Estado</span>
                     </label>

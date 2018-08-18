@@ -6,11 +6,12 @@
 			$avsModel = new avsModel();
 			$av_pesquisa = $avsModel->getDadosAV($id_av);
 			$av_dados = $av_pesquisa->fetch();
-			$dados = array(
-				"logo_av" => $av_dados['logo_av'],
-				"nome_av" => $av_dados['nome_av'],
-				"slogan_av" => $av_dados['slogan_av']
-				);
+			$dados = array();
+			foreach ($av_dados as $key => $value) {
+				if(!is_numeric($key)){
+					$dados[$key] = $value;
+				}	
+			}
 			$this->loadView($nomePag, $dados);
 		}
 	}
