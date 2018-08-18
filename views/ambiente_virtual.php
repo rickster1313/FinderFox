@@ -29,8 +29,6 @@
 	border: solid 2px;
 	border-radius: 50px;
 }
-
- 
 	
 	</style>
 
@@ -51,7 +49,7 @@
                                     <li class="nav-item"> <a class="nav-link" href="#features">SOBRE</a> </li>
                                 <?php } ?>
                                 <?php if( $galery_active == "yes" ){ ?>
-                                    <li class="nav-item"> <a class="nav-link" href="#gallery"><?php echo strtoupper($galery_title); ?></a> </li>
+                                    <li class="nav-item"> <a class="nav-link" href="#gallery">GALERIA</a> </li>
                                 <?php } ?>
                                 <li class="nav-item"> <a class="nav-link" href="#contact">CONTATO</a> </li>
                             </ul>
@@ -68,7 +66,9 @@
             <h1><?php echo $nome_av; ?></h1>
             <p class="tagline"><?php echo $slogan_av; ?></p>
         </div>
-        <div class="img-holder mt-3"><img src="<?php echo BASE_URL."assets/images/AV/".$img_home; ?>" style="height: 350px" alt="imagem" class="img-fluid"></div>
+        
+        <div class="img-holder mt-3"><?php if ($img_home_active == "yes"){ ?><img src="<?php echo BASE_URL."assets/images/AV/".$img_home; ?>" style="height: 350px" alt="imagem" class="img-fluid"><?php } ?></div>
+
     </header>
 
     <div class="client-logos my-5" style="height:50px" id="features">
@@ -83,7 +83,7 @@
         <div class="container" >
 
             <div class="section-title" >
-                <!-- <small>HIGHLIGHTS</small> -->
+                 <small>SOBRE</small> 
                 <h3><?php echo $part1_title; ?></h3>
             </div>
 
@@ -219,15 +219,17 @@
     <div class="section light-bg" id="gallery">
         <div class="container">
             <div class="section-title">
-                <small>GALLERY</small>
-                <h3>Fotos</h3>
+                <small>GALERIA</small>
+                <h3><?php echo $galery_title; ?></h3>
             </div>
-
+           
             <div class="img-gallery owl-carousel owl-theme">
-                <img src="images/screen1.jpg" alt="image">
-                <img src="images/screen2.jpg" alt="image">
-                <img src="images/screen3.jpg" alt="image">
-                <img src="images/screen1.jpg" alt="image">
+                 <?php 
+                $photos = explode("$!$", $fotos);
+                foreach ($photos as $value) {
+                ?>
+                    <img src="<?php echo BASE_URL.'assets/images/AV/'.$value; ?>" alt="image">
+                <?php } ?>
             </div>
 
         </div>

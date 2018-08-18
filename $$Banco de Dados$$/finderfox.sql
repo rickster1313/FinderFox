@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 19-Ago-2018 às 01:13
+-- Generation Time: 19-Ago-2018 às 01:55
 -- Versão do servidor: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -38,6 +38,7 @@ CREATE TABLE `tbl_avs` (
   `categoria` varchar(220) NOT NULL,
   `func` varchar(5555) NOT NULL,
   `palavras_chave` varchar(550) NOT NULL,
+  `img_home_active` varchar(50) NOT NULL DEFAULT 'no',
   `img_home` varchar(220) NOT NULL,
   `part1_active` varchar(50) NOT NULL DEFAULT 'yes',
   `part1_title` varchar(110) NOT NULL DEFAULT 'Features you love',
@@ -67,9 +68,9 @@ CREATE TABLE `tbl_avs` (
 -- Extraindo dados da tabela `tbl_avs`
 --
 
-INSERT INTO `tbl_avs` (`id_av`, `user_id`, `url`, `nome_av`, `slogan_av`, `logo_av`, `categoria`, `func`, `palavras_chave`, `img_home`, `part1_active`, `part1_title`, `part1_nome1`, `part1_text1`, `part1_nome2`, `part1_text2`, `part1_nome3`, `part1_text3`, `part2_active`, `part2_nome1`, `part2_text1`, `part2_nome2`, `part2_text2`, `part2_nome3`, `part2_text3`, `part2_img`, `galery_active`, `galery_title`, `fotos`, `tipos`, `tipos_val`, `created`) VALUES
-(1, 6, 'empre', 'empre', 'slogan de um empresario aleatÃ³rio', 'logo-empre.png', 'alimentacao', '', '', '', 'yes', 'Features you loveee', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	', NULL, 'no', 'Galeria', 'screen1.jpg$!$screen3.jpg$!$screen2.jpg', 'youtube,face', 'https://www.youtube.com/$!$https://www.facebook.com/', ''),
-(4, 13, 'lolzeiros', 'lolzeiros BR', 'amor Ã© como o vento, estÃ¡ sempre ao seu lado', 'logo-lolzeiros-BR.jpeg', '', '', '', '', 'no', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'no', '', '', '', '', '2018-08-18 20:06:14');
+INSERT INTO `tbl_avs` (`id_av`, `user_id`, `url`, `nome_av`, `slogan_av`, `logo_av`, `categoria`, `func`, `palavras_chave`, `img_home_active`, `img_home`, `part1_active`, `part1_title`, `part1_nome1`, `part1_text1`, `part1_nome2`, `part1_text2`, `part1_nome3`, `part1_text3`, `part2_active`, `part2_nome1`, `part2_text1`, `part2_nome2`, `part2_text2`, `part2_nome3`, `part2_text3`, `part2_img`, `galery_active`, `galery_title`, `fotos`, `tipos`, `tipos_val`, `created`) VALUES
+(1, 6, 'empre', 'empre', 'slogan de um empresario aleatÃ³rio', 'logo-empre.png', 'alimentacao', '', '', 'no', '', 'yes', 'Features you loveee', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	', NULL, 'yes', 'Fotenhas', 'screen1.jpg$!$screen3.jpg$!$screen2.jpg', 'youtube,face', 'https://www.youtube.com/$!$https://www.facebook.com/', '2018-08-18 20:06:14'),
+(4, 13, 'lolzeiros', 'lolzeiros BR', 'amor Ã© como o vento, estÃ¡ sempre ao seu lado', 'logo-lolzeiros-BR.jpeg', '', '', '', 'no', '', 'no', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'no', '', '', '', '', '2018-08-18 20:06:14');
 
 -- --------------------------------------------------------
 

@@ -25,7 +25,7 @@
 			
     		<div class="col-sm-3" style="width: 100%;">
     			<form method="POST" id="form_newAV" enctype="multipart/form-data">
-                
+                <h2>HOME</h2>
                 <div class="sobre1">
                     <div>
 
@@ -35,8 +35,8 @@
                       </label>
                     </div>
                     <div id="content_sobre0">
-                        <label><strong>IMG</strong></label><br>
-                        <a href="#"><label for='selecao-arquivo1'><img class="img-fluid" style="width: 69px;" src="<?php echo BASE_URL; ?>assets/images/simbolo-imagen.jpg"></label></a>
+                        <label><strong>Imagem</strong></label><br>
+                        <a href="#"><label for='selecao-arquivo1'><img class="img-fluid" style="width: 69px;" src="<?php echo BASE_URL; ?>assets/images/logoAdd.png"></label></a>
                         <input id='selecao-arquivo1' type="file" name="logo_txt" size="70"><br>
                         <!-- <i>Recomendado imagem  200 x 200 pixels</i> -->
                     </div>
@@ -46,6 +46,7 @@
                 </div>
 
                 <div>
+                    <hr>
                 <h2>SOBRE</h2>
                 <div class="sobre1">
                     <strong style="font-size: 20px">Parte 1</strong><br>
@@ -86,7 +87,7 @@
                     	</div>
                     </div>
                 </div>
-                <hr>
+                <br>
                 <div class="sobre1">
                     <strong style="font-size: 20px">Parte 2</strong><br>
                 <div class="form-check-inline">
@@ -120,18 +121,45 @@
                             style="outline: none; border-radius: 6px; 
                             border: 1px solid #68319b;"></textarea>
                         </div>
+                        <div id="content_sobre0">
+                            <label><strong>Imagem</strong></label><br>
+                            <a href="#"><label for='selecao-arquivo1'><img class="img-fluid" style="width: 69px;" src="<?php echo BASE_URL; ?>assets/images/logoAdd.png"></label></a>
+                            <input id='selecao-arquivo1' type="file" name="logo_txt" size="70"><br>
+                            <!-- <i>Recomendado imagem  200 x 200 pixels</i> -->
+                        </div>
                     </div>
                     </div>
                     <br> 
+                    <hr>
+                    <h2>GALERIA</h2>
                     
                 </div>
-                 <div>
-                    <label><strong>Logo</strong></label><br>
-                    <a href=""><label for='selecao-arquivo2'><img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/logoAdd.png"></label></a>
-                    <input id='selecao-arquivo2' type="file" name="logo_txt" size="70"><br>
-                    <!-- <i>Recomendado imagem  200 x 200 pixels</i> -->
+                 <div class="sobre1">
+                    <div>
+
+                    <div class="form-check-inline">
+                      <label class="form-check-label" for="check1">
+                        <input type="checkbox" class="form-check-input" id="check_sobre3" name="vehicle1" value="something" checked="checked" >Ativar 
+                      </label>
+                    </div>
+                    <div id="content_sobre3">
+                        <label><strong>Selecione as Imagens</strong></label><br>
+                        <a href="#"><label for='selecao-arquivo2'><img class="img-fluid" style="width: 69px;" src="<?php echo BASE_URL; ?>assets/images/logoAdd.png"></label></a>
+                        <input id='selecao-arquivo2' type="file" name="logo_txt" multiple><br>
+                        <!-- <i>Recomendado imagem  200 x 200 pixels</i> -->
+                        <div class="form-check-inline">
+                      <label class="form-check-label" for="check1">
+                        <input type="checkbox" class="form-check-input" id="check_manter" name="vehicle1" value="something" checked="checked" ><label><strong>Manter imagens anteriores </strong></label><br>
+                        <i>Deselecionar esse caixa limpa as fotos antigas</i>
+                      </label>
+                    </div>
+                    </div>
+                    
+
+                        
+                    </div>
                 </div>
-    			<hr>
+    			
                 <br><br>
                 	<input class="btn btn-outline-dark" type="submit" name="salve" value="Salvar" />
 
