@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set1.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/icons.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component1.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/estilo.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style2.css">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
     <link rel="icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
@@ -136,7 +137,7 @@
         }
         .centro{
             width: 70%; 
-            background-color:rgba(0,0,0,0.1); 
+            background-color:#FFFFFF; 
             /*background-color: white; linear-gradient(45deg,  #361850, #68319B);*/
             float: left;
             min-height: 900px;
@@ -157,24 +158,32 @@
             padding-right:10px;
             align-items: center;
 
-
-
         }
+
+
         .av_block{
-            background-color: #DDCCE8; 
+            background-color: #8B57A7; 
             height: 120px;
             width: 100%;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 2px 2px 4px #232323;
+
         }
+
+        .av_block :hover{
+            color: #ffffff;
+        }
+
+
         .av_info{
             float: left;
             margin-left: 10px;
             text-align: left;
-
         }
-       
+
+
+
     </style>
 
 </head> 
@@ -222,7 +231,7 @@
                     <div class="form-group">
                         <form >
                             <input type="text" name="cep_txt" autocomplete="off" placeholder="Buscar serviços..." class="film-font" >
-                            <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font btn btn-outline-secondary"  >
+                            <button type="submit" name="enviar_cep" value="BUSCAR" class="btn-ef btn-5 btn-5b icon-cart"> <span>Buscar</span></button>
                         </form>
                     </div>
                     <br></div>
