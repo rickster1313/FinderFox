@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/icons.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component1.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style2.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/estilo.css">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
     <link rel="icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
     <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
@@ -139,7 +140,7 @@
                         <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla " style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/monitor.png" width="26">  Ambiente Virtual </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#pagina4" data-toggle="tab"  class="w3-bar-item w3-button  sla" style="font-size: 19px;">página 4</a>
+                        <a href="#pagina4" data-toggle="tab"  class="w3-bar-item w3-button  sla" style="font-size: 19px;"> <img src="<?php echo BASE_URL;?>assets/images/configuration_13194.png" width="26"> Gerenciar Funções</a>
 
                     </li>
 
@@ -479,10 +480,77 @@
 
         </div>
 
+        
         <div id="pagina4" class="tab-pane fade">
-            <h1>página4</h1>
-        </div> 
+          <div class="container">
+            <center>
+            <h1>Funções</h1>
+          </center>
+            <div class="row d-flex justify-content-center">
+              <section class="section section--menu" id="Sebastian">
+                <span class="link-copy"></span>
+                <nav class="menu menu--sebastian">
+                  <ul class="menu__list">
+                    <li class="menu__item menu__item--current"><a href="#" class="menu__link" style="font-size: 18px;">Funções</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" style="font-size: 18px;">Adicionar</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" style="font-size: 18px;">Premium</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" style="font-size: 18px;">Suporte</a></li>
+                  </ul>
+                </nav>
+              </section>
+              <div class="funcao" id="funcoes" style="width: 100%; background-color: #FFFFFF; height: 800px; border-radius: 10px; box-shadow: 3px 3px 9px #999">
+              
+            </div>
+             
+            <div class="funcao" id="adicionar" style="width: 100%; background-color: #FFFFFF; height: 800px; border-radius: 10px; box-shadow: 3px 3px 9px #999">
+
+
+                <div class="fun_lista" style="width: 30%; background-color: #9A89D1; height: 120px; border-radius: 10px; box-shadow: 3px 3px 9px #232323; margin-left:5%; margin-top: 5%; display:flex; align-items: center;">
+                <img src="<?php echo BASE_URL; ?>assets/images/notepad_bloc_notes_15548.png" style="margin-left: 5px;">
+                  <h3 style="margin-left: 10px;">Lembrete</h3>
+                  <a class="md-trigger" data-modal="modal-9"><img src="<?php echo BASE_URL; ?>assets/images/plus_icon-icons.com_61187.png" style=" margin-left: 80%; 
+                  margin-top: 80%;"></a>
+              </div>
+
+                  <div class="fun_lista" style="width: 30%; background-color: #9A89D1; height: 120px; border-radius: 10px; box-shadow: 3px 3px 9px #232323;
+                   display:flex; align-items: center; margin-top: -117px; margin-left: 65%;">
+                <img src="<?php echo BASE_URL; ?>assets/images/calendar-clock-icon_34472.png" style="margin-left: 5px;">
+                  <h3 style="margin-left: 10px;">Agendamento</h3>
+                  <a class="md-trigger" data-modal="modal-9"><img src="<?php echo BASE_URL; ?>assets/images/plus_icon-icons.com_61187.png" style=" margin-left: 80%; 
+                  margin-top: 80%;"></a>
+              </div>
+
+            </div>
+
+              <div class="md-modal md-effect-9" id="modal-9">
+      <div class="md-content">
+        <h3>Lembrete</h3>
+        <div>
+          <p>Vai ter uma img na esquerda e na direita uma explicação:</p>
+          <ul>  <!-- Conteudo do bd -->
+            <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+            <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+            <li><strong>Close:</strong> click on the button below to close the modal.</li>
+          </ul>
+          <button class="md-close">Close me!</button>
+        </div>
+      </div>
     </div>
+    <div class="md-overlay"></div>
+            <div class="funcao" id="premium" style="width: 100%; background-color: #FFFFFF; height: 800px; border-radius: 10px; box-shadow: 3px 3px 9px #999">
+
+            </div>
+
+            <div class="funcao" id="suporte" style="width: 100%; background-color: #FFFFFF; height: 800px; border-radius: 10px; box-shadow: 3px 3px 9px #999">
+
+            </div>
+ 
+
+          </div>
+        </div>
+      </div>
+
+  
 
 </div>
 </div>
@@ -497,6 +565,10 @@
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/clipboard.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/cssParser.js"></script>
+    
+    <script src="<?php echo BASE_URL; ?>assets/js/modalEffects.js"></script>
 
 
 <script>
@@ -533,6 +605,41 @@
                     }
                 }
             })();
+
+
+            (function() {
+      [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+        var menuItems = menu.querySelectorAll('.menu__link'),
+          setCurrent = function(ev) {
+            ev.preventDefault();
+            var item = ev.target.parentNode; // li
+            // return if already current
+            if (classie.has(item, 'menu__item--current')) {
+              return false;
+            }
+            // remove current
+            classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+            // set current
+            classie.add(item, 'menu__item--current');
+          };
+        [].slice.call(menuItems).forEach(function(el) {
+          el.addEventListener('click', setCurrent);
+        });
+      });
+      [].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+        link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+        new Clipboard(link);
+        link.addEventListener('click', function() {
+          classie.add(link, 'link-copy--animate');
+          setTimeout(function() {
+            classie.remove(link, 'link-copy--animate');
+          }, 300);
+        });
+      });
+    })(window);
+
+
+    var polyfilter_scriptpath = '/js/';
         </script>
 </body>
 </html>
