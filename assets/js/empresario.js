@@ -332,7 +332,27 @@ $j(document).ready(function(){
             }
             
         }); 
-    
+    if($j("#check_sobre0")[0].checked){
+        $j("#content_sobre0").slideDown();
+    }else{
+        $j("#content_sobre0").slideUp();
+    }
+    if($j("#check_sobre1")[0].checked){
+        $j("#content_sobre1").slideDown();
+    }else{
+        $j("#content_sobre1").slideUp();
+    }
+    if($j("#check_sobre2")[0].checked){
+        $j("#content_sobre2").slideDown();
+    }else{
+        $j("#content_sobre2").slideUp();
+    }
+    if($j("#check_sobre3")[0].checked){
+        $j("#content_sobre3 ").slideDown();
+    }else{
+        $j("#content_sobre3 ").slideUp();
+    }
+
 
     // %%%%%%%%%%%%%%  Aqui é a parte de salvar as config do av  %%%%%%%%%%%%%%%%%%%%%%%
 
