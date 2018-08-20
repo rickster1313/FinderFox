@@ -32,9 +32,6 @@
                     <li class="nav-item">
                         <a  href="#fun" id="menu_av" data-toggle="pill" class="w3-bar-item w3-button">Funções</a>
                     </li>
-                    <li class="nav-item">
-                        <a  href="#x" data-toggle="pill" class="w3-bar-item w3-button">3 pagina</a>
-                    </li>
                 </ul>
             </div>
   <!--<a href="#est" data-toggle="tab" class="w3-bar-item w3-button">Estatisticas</a>
@@ -50,16 +47,39 @@
 </div>
     <div class="tab-content conteudo">   
                 <div id="est" class="tab-pane in active">
-                    <h1>Olá <?php $newNome = explode(" ", $nome);echo strtoupper($newNome[0]);?></h1>
+                    <div style="padding-left:40px;padding-right: 40px;padding-top: 20px">
+            <table class="table table-dark table-striped" >
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>CEP</th>
+                <th>telefone</th>
+                <th>descricao</th>
+                <th>data</th>
+                <th>horario</th>
+                <th>status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Empresario tal tal</td>
+                <td>13238-094</td>
+                <td>(11) 912331234</td>
+                <td>19/10/2018</td>
+                <th>13h</th>
+                <td>Preciso de tal coisa bla bla bla bla loren ipsun</td>
+                 <th><button type="button" class="btn btn-warning w-100">Pendente</button></th>
+              </tr>
+             
+            </tbody>
+        </table></div>
                 </div>
 
                 <div id="fun" class="tab-pane fade">
-                    2 pagina
+                    
+
                 </div>
 
-                <div id="x" class="tab-pane fade">
-                    3 pagina
-                </div>
 
             </div>
 </div>
