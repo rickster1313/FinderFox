@@ -68,6 +68,12 @@
             $sql->execute();
         }
 
+        public function personalizeAV($img_home_active, $img_home, $part1_active, $part1_title, $part1_nome1, $part1_nome2, $part1_nome3, $part1_text1, $part1_text2, $part1_text3, $part2_active, $part2_nome1, $part2_nome2, $part2_nome3, $part2_text1, $part2_text2, $part2_text3, $part2_img, $galery_active, $galery_title, $fotos, $tipos, $tipos_val, $id){
+            $sql = "UPDATE tbl_avs SET img_home_active=?,img_home=?,part1_active=?,part1_title=?,part1_nome1=?,part1_text1=?,part1_nome2=?,part1_text2=?,part1_nome3=?,part1_text3=?,part2_active=?,part2_nome1=?,part2_text1=?,part2_nome2=?,part2_text2=?,part2_nome3=?,part2_text3=?,part2_img=?,galery_active=?,galery_title=?,fotos=?,tipos=?,tipos_val=? WHERE user_id = ?";
+            $sql = $this->pdo->prepare($sql);
+            $sql->execute(array($img_home_active, $img_home, $part1_active, $part1_title, $part1_nome1, $part1_text1, $part1_nome2, $part1_text2, $part1_nome3, $part1_text3, $part2_active, $part2_nome1, $part2_text1, $part2_nome2, $part2_text2, $part2_nome3, $part2_text3, $part2_img, $galery_active, $galery_title, $fotos, $tipos, $tipos_val, $id));
+        }
+
     }
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 19-Ago-2018 às 01:55
+-- Generation Time: 20-Ago-2018 às 04:47
 -- Versão do servidor: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -69,7 +69,7 @@ CREATE TABLE `tbl_avs` (
 --
 
 INSERT INTO `tbl_avs` (`id_av`, `user_id`, `url`, `nome_av`, `slogan_av`, `logo_av`, `categoria`, `func`, `palavras_chave`, `img_home_active`, `img_home`, `part1_active`, `part1_title`, `part1_nome1`, `part1_text1`, `part1_nome2`, `part1_text2`, `part1_nome3`, `part1_text3`, `part2_active`, `part2_nome1`, `part2_text1`, `part2_nome2`, `part2_text2`, `part2_nome3`, `part2_text3`, `part2_img`, `galery_active`, `galery_title`, `fotos`, `tipos`, `tipos_val`, `created`) VALUES
-(1, 6, 'empre', 'empre', 'slogan de um empresario aleatÃ³rio', 'logo-empre.png', 'alimentacao', '', '', 'no', '', 'yes', 'Features you loveee', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	', NULL, 'yes', 'Fotenhas', 'screen1.jpg$!$screen3.jpg$!$screen2.jpg', 'youtube,face', 'https://www.youtube.com/$!$https://www.facebook.com/', '2018-08-18 20:06:14'),
+(1, 6, 'empre', 'empre', 'slogan de um empresario aleatÃ³rio', 'logo-empre.png', 'alimentacao', '', '', 'yes', 'photoHome-6-20-08-2018-04-44-32.jpeg', 'yes', 'Features you love13', 'Simple13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque13', 'Customize13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque13', 'Secure13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque13', 'yes', 'Crie sua conta13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	     13          ', 'Compartilhe com seus amigos13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	13', 'Viva la vida13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	13', 'photoSobre-6-20-08-2018-04-41-26.jpeg', 'yes', 'Fotenhas minhas XD', 'photoGalery-6-20-08-2018-04-38-31-0.jpeg$!$photoGalery-6-20-08-2018-04-38-31-1.jpeg$!$photoGalery-6-20-08-2018-04-38-31-2.jpeg$!$photoGalery-6-20-08-2018-04-38-31-3.jpeg$!$photoGalery-6-20-08-2018-04-39-06-0.jpeg', 'youtube,face', 'https://www.youtube.com/$!$https://www.facebook.com/', '2018-08-18 20:06:14'),
 (4, 13, 'lolzeiros', 'lolzeiros BR', 'amor Ã© como o vento, estÃ¡ sempre ao seu lado', 'logo-lolzeiros-BR.jpeg', '', '', '', 'no', '', 'no', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'no', '', '', '', '', '2018-08-18 20:06:14');
 
 -- --------------------------------------------------------
@@ -133,7 +133,8 @@ INSERT INTO `tbl_usuarios` (`id`, `nome`, `nvl_acesso`, `email`, `senha`, `CPF_C
 (10, 'empresario2', 'empresario', 'empre2', '$2y$10$0J1NbqVDVVGimc8llPLXTOhx99jTWk7giUpOfaVmjy/6t/q08J4Im', '23.423.454/5435-54', '(23) 251553453', 0, '2018-08-06 02:59:10', NULL),
 (11, 'empre3', 'empresario', 'empre3', '$2y$10$ZC5qSz0Int0ZdfMTcKhXxebvBuHPkVMCP14nPWZnnlySadfMfLbem', '234.532.554-14', '(34) 553451345', 0, '2018-08-09 18:44:54', NULL),
 (12, 'usuario1', 'usuario', 'user', '$2y$10$ji0v6oAEKEJEV2qz.tGdPO3fe9mvxig3rp6uBVB8u5ouRSv5zXe5C', '123.242.135-12', '(21) 323123123', 0, '2018-08-13 02:15:25', NULL),
-(13, 'jefferson', 'empresario', 'jefferson@gmail.com', '$2y$10$KEY/rGSY94YsGwM5wV58W.hBR/ssJFw/lK0pIUB/Np7tR/av2aLem', '12.321.321/3213-12', '(12) 321312312', 0, '2018-08-15 18:33:57', NULL);
+(13, 'jefferson', 'empresario', 'jefferson@gmail.com', '$2y$10$KEY/rGSY94YsGwM5wV58W.hBR/ssJFw/lK0pIUB/Np7tR/av2aLem', '12.321.321/3213-12', '(12) 321312312', 0, '2018-08-15 18:33:57', NULL),
+(14, 'usuario1', 'usuario', 'user@gmail.com', '$2y$10$U6cOigneglU/M024iauGLOiLH4TPcPd5OWOF3.Rey9QK2/NjElV3y', '123.421.323-44', '(11) 214234213', 0, '2018-08-19 17:53:18', NULL);
 
 --
 -- Indexes for dumped tables
@@ -177,7 +178,7 @@ ALTER TABLE `tbl_endereco`
 -- AUTO_INCREMENT for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

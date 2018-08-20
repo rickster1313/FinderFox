@@ -352,7 +352,25 @@ $j(document).ready(function(){
     }else{
         $j("#content_sobre3 ").slideUp();
     }
+    $j("#form_att_av").bind("submit", function(e){
+        e.preventDefault();
+        var dataForm = new FormData($j("#form_att_av")[0]);
+         $j.ajax({
+                type:'POST',
+                url:'empresario/attAV',
+                data:dataForm,
+                contentType:false,
+                processData:false,
+                async: false,
+                success:function(){
+                     window.location.href = "empresario";
+                },
+                error:function(){
+                     console.log("error no ajax");
+                }
+            });
 
+    });
 
     // %%%%%%%%%%%%%%  Aqui é a parte de salvar as config do av  %%%%%%%%%%%%%%%%%%%%%%%
 

@@ -29,7 +29,7 @@
 		<div class="row" style="width: 100%;margin: 0px">
 			
     		<div class="col-sm-3" style="width: 100%;">
-    			<form method="POST" id="form_newAV" enctype="multipart/form-data">
+    			<form method="POST" id="form_att_av" enctype="multipart/form-data">
                 <h2>HOME</h2>
                 <div class="sobre1">
                     <div>
@@ -37,16 +37,16 @@
                     <div class="form-check-inline">
                       <label class="form-check-label" for="check1">
                         <?php if($dadosAV['img_home_active'] == "yes"){ ?> 
-                            <input type="checkbox" class="form-check-input" id="check_sobre0" name="vehicle1" value="something" checked="checked">
+                            <input type="checkbox" class="form-check-input" id="check_sobre0" name="check_img1" value="ativo" checked="checked">
                         <?php }else{ ?>
-                            <input type="checkbox" class="form-check-input" id="check_sobre0" name="vehicle1" value="something"> <?php } ?>
+                            <input type="checkbox" class="form-check-input" id="check_sobre0" name="check_img1" value="ativo"> <?php } ?>
                             Ativo 
                       </label>
                     </div>
                     <div id="content_sobre0">
                         <label><strong>Imagem</strong></label><br>
                         <a href="#"><label for='selecao-arquivo0'><img class="img-fluid" style="width: 69px;" src="<?php echo BASE_URL; ?>assets/images/logoAdd.png"></label></a>
-                        <input id='selecao-arquivo0' type="file" name="logo_txt" size="70"><br>
+                        <input id='selecao-arquivo0' type="file" name="img_home_txt"><br>
                         <!-- <i>Recomendado imagem  200 x 200 pixels</i> -->
                     </div>
 
@@ -62,37 +62,37 @@
                     <div class="form-check-inline">
         		      <label class="form-check-label" for="check1">
                         <?php if($dadosAV['part1_active'] == "yes"){ ?> 
-                            <input type="checkbox" class="form-check-input" id="check_sobre1" name="vehicle1" value="something" checked="checked">
+                            <input type="checkbox" class="form-check-input" id="check_sobre1" name="check_sobre1" value="ativo" checked="checked">
                         <?php }else{ ?>
-                            <input type="checkbox" class="form-check-input" id="check_sobre1" name="vehicle1" value="something"> <?php } ?>
+                            <input type="checkbox" class="form-check-input" id="check_sobre1" name="check_sobre1" value="ativo"> <?php } ?>
                             Ativo
         		      </label>
             		</div>
                     <div id="content_sobre1">
                     	 <div class="form-group">
                             <label><strong>Titulo</strong></label><br>
-                            <input type="text" id="primeiro" name="primeiro_t" size="60" placeholder="Simple" class="form-control" 
+                            <input type="text"  name="part1_title_txt" size="60" placeholder="Simple" class="form-control" 
                             style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required" value="<?php echo $dadosAV['part1_title']; ?>" ><br>
 
-        	                <input type="text" id="primeiro" name="primeiro_t" size="60" placeholder="Simple" class="form-control" 
+        	                <input type="text"  name="part1_nome1_txt" size="60" placeholder="Simple" class="form-control" 
         	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required" value="<?php echo $dadosAV['part1_nome1']; ?>" >
 
-                        	<textarea type="text" name="slogan_txt" class="form-control" placeholder="Lorem ipsum dolor sit amet..." required="required" style="outline: none; border-radius: 6px; border: 1px solid #68319b;height: 150px;resize: none;margin-top: 5px" ><?php echo $dadosAV['part1_text1']; ?></textarea>
+                        	<textarea type="text" name="part1_text1_txt" class="form-control" placeholder="Lorem ipsum dolor sit amet..." required="required" style="outline: none; border-radius: 6px; border: 1px solid #68319b;height: 150px;resize: none;margin-top: 5px" ><?php echo $dadosAV['part1_text1']; ?></textarea>
                     	</div>
                     		<br>
                     	<div class="form-group">
-        	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Customize" class="form-control" 
+        	                <input type="text"  name="part1_nome2_txt" size="40" placeholder="Customize" class="form-control" 
         	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required" value="<?php echo $dadosAV['part1_nome2']; ?>" >
 
-                        	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
+                        	<textarea type="text" name="part1_text2_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
                         	style="outline: none; border-radius: 6px; 
                         	border: 1px solid #68319b;height: 150px;resize: none;margin-top: 5px" ><?php echo $dadosAV['part1_text2']; ?></textarea>
                     	</div>
                     		<br>
                     	<div class="form-group">
-        	                <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Secure" class="form-control" 
+        	                <input type="text"  name="part1_nome3_txt" size="40" placeholder="Secure" class="form-control" 
         	                style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required" value="<?php echo $dadosAV['part1_nome3']; ?>" >
-                        	<textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
+                        	<textarea type="text" name="part1_text3_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
                         	style="outline: none; border-radius: 6px; 
                         	border: 1px solid #68319b;height: 150px;resize: none;margin-top: 5px" ><?php echo $dadosAV['part1_text3']; ?></textarea>
                     	</div>
@@ -104,42 +104,42 @@
                 <div class="form-check-inline">
     		      <label class="form-check-label" for="check1">
     		         <?php if($dadosAV['part2_active'] == "yes"){ ?> 
-                            <input type="checkbox" class="form-check-input" id="check_sobre2" name="vehicle1" value="something" checked="checked">
+                            <input type="checkbox" class="form-check-input" id="check_sobre2" name="check_sobre2" value="ativo" checked="checked">
                         <?php }else{ ?>
-                            <input type="checkbox" class="form-check-input" id="check_sobre2" name="vehicle1" value="something"> <?php } ?>
+                            <input type="checkbox" class="form-check-input" id="check_sobre2" name="check_sobre2" value="ativo"> <?php } ?>
                             Ativo
     		      </label>
         		</div >
                 <div id="content_sobre2">
                     <div class="form-group">
 
-                            <input type="text" id="primeiro" name="primeiro_t" size="60" placeholder="Simple" class="form-control" 
+                            <input type="text"  name="part2_nome1_txt" size="60" placeholder="Simple" class="form-control" 
                             style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required" value="<?php echo $dadosAV['part2_nome1']; ?>" >
 
-                            <textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
+                            <textarea type="text" name="part2_text1_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
                             style="outline: none; border-radius: 6px; border: 1px solid #68319b;height: 150px;resize: none;margin-top: 5px"><?php echo $dadosAV['part2_text1']; ?> </textarea>
                         </div>
                             <br>
                         <div class="form-group">
-                            <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Customize" class="form-control" 
+                            <input type="text"  name="part2_nome2_txt" size="40" placeholder="Customize" class="form-control" 
                             style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required" value="<?php echo $dadosAV['part2_nome2']; ?>" >
 
-                            <textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
+                            <textarea type="text" name="part2_text2_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
                             style="outline: none; border-radius: 6px; 
                             border: 1px solid #68319b;height: 150px;resize: none;margin-top: 5px"><?php echo $dadosAV['part2_text2']; ?></textarea>
                         </div>
                             <br>
                         <div class="form-group">
-                            <input type="text" id="primeiro" name="primeiro_t" size="40" placeholder="Secure" class="form-control" 
+                            <input type="text"  name="part2_nome3_txt" size="40" placeholder="Secure" class="form-control" 
                             style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required" value="<?php echo $dadosAV['part2_nome3']; ?>" >
-                            <textarea type="text" name="slogan_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
+                            <textarea type="text" name="part2_text3_txt" class="form-control" size="70" placeholder="Lorem ipsum dolor sit amet..." required="required" 
                             style="outline: none; border-radius: 6px; 
                             border: 1px solid #68319b;height: 150px;resize: none;margin-top: 5px"><?php echo $dadosAV['part2_text3']; ?></textarea>
                         </div>
                         <div id="content_sobre0">
                             <label><strong>Imagem</strong></label><br>
                             <a href="#"><label for='selecao-arquivo1'><img class="img-fluid" style="width: 69px;" src="<?php echo BASE_URL; ?>assets/images/logoAdd.png"></label></a>
-                            <input id='selecao-arquivo1' type="file" name="logo_txt" size="70"><br>
+                            <input id='selecao-arquivo1' type="file" name="part2_img_txt" ><br>
                             <!-- <i>Recomendado imagem  200 x 200 pixels</i> -->
                         </div>
                     </div>
@@ -155,20 +155,23 @@
                     <div class="form-check-inline">
                       <label class="form-check-label" for="check1">
                          <?php if($dadosAV['galery_active'] == "yes"){ ?> 
-                            <input type="checkbox" class="form-check-input" id="check_sobre3" name="vehicle1" value="something" checked="checked">
+                            <input type="checkbox" class="form-check-input" id="check_sobre3" name="check_galery" value="ativo" checked="checked">
                         <?php }else{ ?>
-                            <input type="checkbox" class="form-check-input" id="check_sobre3" name="vehicle1" value="something"> <?php } ?>
+                            <input type="checkbox" class="form-check-input" id="check_sobre3" name="check_galery" value="ativo"> <?php } ?>
                             Ativo 
                       </label>
                     </div>
                     <div id="content_sobre3">
+                        <label><strong>Titulo</strong></label><br>
+                        <input type="text" name="galery_title_txt" size="60" placeholder="titulo" class="form-control" 
+                            style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required" value="<?php echo $dadosAV['galery_title']; ?>" >
                         <label><strong>Selecione as Imagens</strong></label><br>
                         <a href="#"><label for='selecao-arquivo2'><img class="img-fluid" style="width: 69px;" src="<?php echo BASE_URL; ?>assets/images/logoAdd.png"></label></a>
-                        <input id='selecao-arquivo2' type="file" name="logo_txt" multiple><br>
+                        <input id='selecao-arquivo2' type="file" name="galery_imagens[]" multiple><br>
                         <!-- <i>Recomendado imagem  200 x 200 pixels</i> -->
                         <div class="form-check-inline">
                       <label class="form-check-label" for="check1">
-                        <input type="checkbox" class="form-check-input" id="check_manter" name="vehicle1" value="something" checked="checked" ><label><strong>Manter imagens anteriores </strong></label><br>
+                        <input type="checkbox" class="form-check-input" id="check_manter" name="check_manter" value="manter" checked="checked" ><label><strong>Manter imagens anteriores </strong></label><br>
                         <i>Deselecionar esse caixa limpa as fotos antigas</i>
                       </label>
                     </div>
@@ -190,19 +193,19 @@
                                 if(!isset($contatos[$x])){
                           ?>
                        
-                          <select class="form-control w-75" id="sel1">
-                            <option></option>
+                          <select class="form-control w-75" name="<?php echo 'select'.$x; ?>" >
+                            <option value="none"></option>
                             <option value="face" >Facebook</option>
                             <option value="twitter" >Instagram</option>
                             <option value="youtube" >YouTube</option>
                             <option value="insta" >Twitter</option>
                           </select>
 
-                       <input type="text" id="primeiro" name="primeiro_t" placeholder="https://seulink.com" class="form-control w-75" 
+                       <input type="text"  name="<?php echo 'select_url'.$x; ?>" placeholder="https://seulink.com" class="form-control w-75" 
                             style="outline: none; border-radius: 6px; border: 1px solid #68319b;margin-bottom: 8px;margin-top: 3px" value="" >
                         <?php }else{ ?>
-                            <select class="form-control w-75" id="sel1">
-                                <option></option>
+                            <select class="form-control w-75" name="<?php echo 'select'.$x; ?>" >
+                                <option value="none"></option>
                                 <?php if ($contatos[$x] == "face"){ ?><option selected="selected" value="face" >Facebook</option> <?php } else { ?> <option value="face" >Facebook</option><?php } ?>
                                 <?php if ($contatos[$x] == "twitter"){ ?><option selected="selected" value="Twitter" >Twitter</option> <?php } else { ?> <option value="twitter" >Instagram</option><?php } ?>
                                 <?php if ($contatos[$x] == "youtube"){ ?><option selected="selected" value="youtube" >YouTube</option> <?php } else { ?> <option value="youtube" >YouTube</option><?php } ?>
@@ -211,9 +214,10 @@
                                 
                                 
                           </select>
-                            <input type="text" id="primeiro" name="primeiro_t" placeholder="https://seulink.com" class="form-control w-75" 
+                            <input type="text"  name="<?php echo 'select_url'.$x; ?>" placeholder="https://seulink.com" class="form-control w-75" 
                             style="outline: none; border-radius: 6px; border: 1px solid #68319b;margin-bottom: 8px;margin-top: 3px" value="<?php echo$urls[$x]; ?>" >
                       <?php } } ?>
+                      <i>Deixar tipo em branco desativa o contato</i>
                     </div>
                 </div>
     			

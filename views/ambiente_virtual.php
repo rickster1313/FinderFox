@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-dark navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="<?php echo BASE_URL.'assets/images/AV/'.$logo_av; ?>" class="img-fluid" alt="logo" style="height: 50px" ></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <a class="navbar-brand"><img src="<?php echo BASE_URL.'assets/images/AV/'.$logo_av; ?>" class="img-fluid" alt="logo" style="height: 50px" ></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item"> <a class="nav-link active" href="#home">HOME <span class="sr-only">(current)</span></a></li>
@@ -170,7 +170,9 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <img src="<?php echo BASE_URL."assets/images/AV/".$part2_img; ?>" alt="imagem" class="img-fluid">
+                    <?php if(!empty($part2_img)){ ?>
+                        <img src="<?php echo BASE_URL."assets/images/AV/".$part2_img; ?>" alt="imagem" class="img-fluid">
+                    <?php } ?>
                 </div>
 
             </div>

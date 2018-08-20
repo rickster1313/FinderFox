@@ -149,6 +149,140 @@
 				header("Location:".BASE_URL."login");
 			}
 		}
+
+		public function attAV(){
+			$avsModel = new avsModel();
+			$funcao = new funcaoController();
+			$sql = $avsModel->procuraAV($_SESSION['id']);
+			$dadosBD = $sql->fetch();
+			if(isset($_POST['check_img1'])){
+				$img_home_active = "yes";
+				if(isset($_FILES['img_home_txt']['tmp_name']) && !empty($_FILES['img_home_txt']['tmp_name'])){
+					$retorno = $funcao->uploadImg($_FILES['img_home_txt'], "photoHome-".$_SESSION['id']."-".date("d-m-Y-H-i-s"), "assets/images/AV/");
+					if($retorno == "erro"){
+						$img_home = $dadosBD['img_home'];
+					}else{
+						$img_home = $retorno;
+						//unlink("assets/images/AV/".$dadosBD['img_home']);
+					}
+				}else{
+					$img_home = $dadosBD['img_home'];
+				}
+			}else{
+				$img_home_active = "no";
+				$img_home = $dadosBD['img_home'];
+			}
+			if(isset($_POST['check_sobre1'])){
+				$part1_active = "yes";
+				$part1_title = $_POST['part1_title_txt'];
+				$part1_nome1 = $_POST['part1_nome1_txt'];
+				$part1_text1 = $_POST['part1_text1_txt'];
+				$part1_nome2 = $_POST['part1_nome2_txt'];
+				$part1_text2 = $_POST['part1_text2_txt'];
+				$part1_nome3 = $_POST['part1_nome3_txt'];
+				$part1_text3 = $_POST['part1_text3_txt'];
+			}else{
+				$part1_active = "no";
+				$part1_title = $dadosBD['part1_title'];
+				$part1_nome1 = $dadosBD['part1_nome1'];
+				$part1_text1 = $dadosBD['part1_text1'];
+				$part1_nome2 = $dadosBD['part1_nome2'];
+				$part1_text2 = $dadosBD['part1_text2'];
+				$part1_nome3 = $dadosBD['part1_nome3'];
+				$part1_text3 = $dadosBD['part1_text3'];
+			}
+			if(isset($_POST['check_sobre2'])){
+				$part2_active = "yes";
+				$part2_nome1 = $_POST['part2_nome1_txt'];
+				$part2_text1 = $_POST['part2_text1_txt'];
+				$part2_nome2 = $_POST['part2_nome2_txt'];
+				$part2_text2 = $_POST['part2_text2_txt'];
+				$part2_nome3 = $_POST['part2_nome3_txt'];
+				$part2_text3 = $_POST['part2_text3_txt'];
+				if(isset($_FILES['part2_img_txt']['tmp_name']) && !empty($_FILES['part2_img_txt']['tmp_name'])){
+					$retorno = $funcao->uploadImg($_FILES['part2_img_txt'], "photoSobre-".$_SESSION['id']."-".date("d-m-Y-H-i-s"), "assets/images/AV/");
+					if($retorno == "erro"){
+						$part2_img = $dadosBD['part2_img'];
+					}else{
+						$part2_img = $retorno;
+						//unlink("assets/images/AV/".$dadosBD['part2_img']);
+					}
+				}else{
+					$part2_img = $dadosBD['part2_img'];
+				}
+
+			}else{
+				$part2_active = "no";
+				$part2_nome1 = $dadosBD['part2_nome1'];
+				$part2_text1 = $dadosBD['part2_text1'];
+				$part2_nome2 = $dadosBD['part2_nome2'];
+				$part2_text2 = $dadosBD['part2_text2'];
+				$part2_nome3 = $dadosBD['part2_nome3'];
+				$part2_text3 = $dadosBD['part2_text3'];
+				$part2_img = $dadosBD['part2_img'];
+			}
+			if(isset($_POST['check_galery'])){
+				$galery_active = "yes";
+				$galery_title = $_POST['galery_title_txt'];
+				
+				if( count($_FILES['galery_imagens']['tmp_name']) > 0){
+					if(!empty($_FILES['galery_imagens']['tmp_name'][0]) ){
+						$retorno = $funcao->uploadImgs($_FILES['galery_imagens'], "photoGalery-".$_SESSION['id']."-".date("d-m-Y-H-i-s"), "assets/images/AV/");
+						
+						if(isset($_POST['check_manter'])){
+							$fotos = $dadosBD['fotos']."$!$".$retorno;
+						}else{
+							$fotos = $retorno;
+							/*
+							$array_fotos = explode("$!$", $dadosBD['fotos']);
+							foreach ($array_fotos as $value) {
+								unlink("assets/images/AV/".$value);
+							}*/
+	
+						}
+					}else{
+						if(isset($_POST['check_manter'])){
+							$fotos = $dadosBD['fotos'];
+						}else{
+							$fotos = " ";
+							/*
+							$array_fotos = explode("$!$", $dadosBD['fotos']);
+							foreach ($array_fotos as $value) {
+								unlink("assets/images/AV/".$value);
+							}*/
+	
+						}
+					}
+				}else{
+					if(isset($_POST['check_manter'])){
+							$fotos = $dadosBD['fotos'];
+						}else{
+							$fotos = " ";
+							/*
+							$array_fotos = explode("$!$", $dadosBD['fotos']);
+							foreach ($array_fotos as $value) {
+								unlink("assets/images/AV/".$value);
+							}*/
+	
+						}
+				}
+	
+			}else{
+				$galery_active = "no";
+				$galery_title = $dadosBD['galery_title'];
+				$fotos = $dadosBD['fotos'];
+			}
+
+			for($x = 0;$x<=3;$x++){
+				if($_POST['select'.$x] != "none" && !empty($_POST['select_url'.$x])){
+					$array_tipos[] = $_POST['select'.$x];
+					$array_urls[] = $_POST['select_url'.$x];
+				}
+			}
+			$tipos = implode(",", $array_tipos);
+			$tipos_val = implode("$!$", $array_urls);
+			$avsModel->personalizeAV($img_home_active, $img_home, $part1_active, $part1_title, $part1_nome1, $part1_nome2, $part1_nome3, $part1_text1, $part1_text2, $part1_text3, $part2_active, $part2_nome1, $part2_nome2, $part2_nome3, $part2_text1, $part2_text2, $part2_text3, $part2_img, $galery_active, $galery_title, $fotos, $tipos, $tipos_val, $_SESSION['id']);
+		}
 	}
 		
 ?>
