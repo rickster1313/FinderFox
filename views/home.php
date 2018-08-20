@@ -51,7 +51,7 @@
         color:#68319B;
     }
     .main{
-        height: 650px;
+        height: 750px;
         width: 100%;
         background-color: rgba(104,49,155,0.2);
         text-align: center;
@@ -214,31 +214,7 @@
 
         </div>
 
-        <div class="dados">
-        <div id="fh5co-counter" class="fh5co-counters">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 text-center animate-box">
-                    <span class="fh5co-counter js-counter" data-from="0" data-to="40356" data-speed="5000" data-refresh-interval="50"></span>
-                    <span class="fh5co-counter-label">Students</span>
-                </div>
-                <div class="col-md-3 text-center animate-box">
-                    <span class="fh5co-counter js-counter" data-from="0" data-to="30290" data-speed="5000" data-refresh-interval="50"></span>
-                    <span class="fh5co-counter-label">Courses</span>
-                </div>
-                <div class="col-md-3 text-center animate-box">
-                    <span class="fh5co-counter js-counter" data-from="0" data-to="2039" data-speed="5000" data-refresh-interval="50"></span>
-                    <span class="fh5co-counter-label">Instructor</span>
-                </div>
-                <div class="col-md-3 text-center animate-box">
-                    <span class="fh5co-counter js-counter" data-from="0" data-to="997585" data-speed="5000" data-refresh-interval="50"></span>
-                    <span class="fh5co-counter-label">Earnings</span>
-                </div>
-            </div>
-        </div>
-    </div>
-            
-        </div>
+        
 
     </div>
 	
