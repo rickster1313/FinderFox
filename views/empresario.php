@@ -494,71 +494,7 @@
 
 
                     <div id="pagina4" class="tab-pane fade">
-                        <div class="container">
-                            <center>
-                                <h1>Funções</h1>
-                            </center>
-                            <div class="row d-flex justify-content-center">
-                                <section class="section section--menu" id="Sebastian">
-                                    <span class="link-copy"></span>
-                                    <nav class="menu menu--sebastian">
-                                        <ul class="menu__list">
-                                            <li class="menu__item menu__item--current"><a href="#" class="menu__link" style="font-size: 18px;">Funções</a></li>
-                                            <li class="menu__item"><a href="#" class="menu__link" style="font-size: 18px;">Adicionar</a></li>
-                                            <li class="menu__item"><a href="#" class="menu__link" style="font-size: 18px;">Premium</a></li>
-                                            <li class="menu__item"><a href="#" class="menu__link" style="font-size: 18px;">Suporte</a></li>
-                                        </ul>
-                                    </nav>
-                                </section>
-                                <div class="funcao" id="funcoes" style="width: 100%; background-color: #FFFFFF; height: 800px; border-radius: 10px; box-shadow: 3px 3px 9px #999">
-
-                                </div>
-
-                                <div class="funcao" id="adicionar" style="width: 100%; background-color: #FFFFFF; height: 800px; border-radius: 10px; box-shadow: 3px 3px 9px #999">
-
-
-                                    <div class="fun_lista" style="width: 30%; background-color: #9A89D1; height: 120px; border-radius: 10px; box-shadow: 3px 3px 9px #232323; margin-left:5%; margin-top: 5%; display:flex; align-items: center;">
-                                        <img src="<?php echo BASE_URL; ?>assets/images/notepad_bloc_notes_15548.png" style="margin-left: 5px;">
-                                        <h3 style="margin-left: 10px;">Lembrete</h3>
-                                        <a class="md-trigger" data-modal="modal-9"><img src="<?php echo BASE_URL; ?>assets/images/plus_icon-icons.com_61187.png" style=" margin-left: 80%; 
-                                                                                        margin-top: 80%;"></a>
-                                    </div>
-
-                                    <div class="fun_lista" style="width: 30%; background-color: #9A89D1; height: 120px; border-radius: 10px; box-shadow: 3px 3px 9px #232323;
-                                         display:flex; align-items: center; margin-top: -117px; margin-left: 65%;">
-                                        <img src="<?php echo BASE_URL; ?>assets/images/calendar-clock-icon_34472.png" style="margin-left: 5px;">
-                                        <h3 style="margin-left: 10px;">Agendamento</h3>
-                                        <a class="md-trigger" data-modal="modal-9"><img src="<?php echo BASE_URL; ?>assets/images/plus_icon-icons.com_61187.png" style=" margin-left: 80%; margin-top: 80%;"></a>
-                                    </div>
-
-                                </div>
-
-                                <div class="md-modal md-effect-9" id="modal-9">
-                                    <div class="md-content">
-                                        <h3>Lembrete</h3>
-                                        <div>
-                                            <p>Vai ter uma img na esquerda e na direita uma explicação:</p>
-                                            <ul>  <!-- Conteudo do bd -->
-                                                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                                                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                                                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-                                            </ul>
-                                            <button class="md-close">Close me!</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="md-overlay"></div>
-                                <div class="funcao" id="premium" style="width: 100%; background-color: #FFFFFF; height: 800px; border-radius: 10px; box-shadow: 3px 3px 9px #999">
-
-                                </div>
-
-                                <div class="funcao" id="suporte" style="width: 100%; background-color: #FFFFFF; height: 800px; border-radius: 10px; box-shadow: 3px 3px 9px #999">
-
-                                </div>
-
-
-                            </div>
-                        </div>
+                        funcoes
                     </div>
                     <div id="pagina5" class="tab-pane fade">
                         pagina 5

@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 20-Ago-2018 às 04:47
--- Versão do servidor: 10.1.22-MariaDB
--- PHP Version: 7.1.4
+-- Generation Time: 22-Ago-2018 às 16:38
+-- Versão do servidor: 10.1.19-MariaDB
+-- PHP Version: 5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -108,6 +106,19 @@ INSERT INTO `tbl_endereco` (`id_end`, `user_id`, `cep`, `rua`, `estado`, `cidade
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `tbl_funcoes`
+--
+
+CREATE TABLE `tbl_funcoes` (
+  `id_func` int(11) NOT NULL,
+  `nome_func` varchar(220) NOT NULL,
+  `tipo_func` varchar(110) NOT NULL,
+  `status_func` int(110) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `tbl_usuarios`
 --
 
@@ -153,6 +164,12 @@ ALTER TABLE `tbl_endereco`
   ADD PRIMARY KEY (`id_end`);
 
 --
+-- Indexes for table `tbl_funcoes`
+--
+ALTER TABLE `tbl_funcoes`
+  ADD PRIMARY KEY (`id_func`);
+
+--
 -- Indexes for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
@@ -167,20 +184,21 @@ ALTER TABLE `tbl_usuarios`
 --
 ALTER TABLE `tbl_avs`
   MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `tbl_endereco`
 --
 ALTER TABLE `tbl_endereco`
   MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
+--
+-- AUTO_INCREMENT for table `tbl_funcoes`
+--
+ALTER TABLE `tbl_funcoes`
+  MODIFY `id_func` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
