@@ -114,6 +114,27 @@
                 font-size: 16px;  
             }  
 
+            input[type=text]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            input[type=email]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            input[type=password]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            textarea[type=text]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            input:select{
+                box-shadow: none;
+                border-color: #fff;
+            }
+
 
 
         </style>
