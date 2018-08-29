@@ -59,7 +59,7 @@
             }
 
             .direita{
-                background: linear-gradient(45deg, #A491BA, #F9F9F9);
+                background: #fff;
                 position: absolute;
                 right: 0px;
                 width: 50%;
@@ -160,6 +160,19 @@
                 font-size: 29px;
                 padding: 15px;
                 margin-left: 1100px;
+            }
+
+            input[type=text]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            input[type=email]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            input[type=password]:focus{
+                box-shadow: none;
+                border-color: #fff;
             }
 
 
@@ -269,7 +282,7 @@
                             </div>
 
                             <div class="form-group slideInRight animated">
-                                <label class="" style="font-size: 20px;">e-mail</label> <input class="email form-control" type="e-mail" name="email_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+                                <label class="" style="font-size: 20px;">e-mail</label> <input class="email form-control" type="email" name="email_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
                             </div>
 
                             <div class="form-group slideInLeft animated">

@@ -188,7 +188,7 @@
 
             </header>
 
-            <div class="main" style="background: linear-gradient(45deg, #A491BA, #CFC1DE)">
+            <div class="main" style="background: #fff;">
 
                 <div class="form">
                     <?php

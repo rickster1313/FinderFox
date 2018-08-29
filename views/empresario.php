@@ -65,7 +65,7 @@
                 font-size: 15px;
             }
             body{
-                background-color: #dfcdef;
+                background-color: #fff;
                 font-family: 'Bree Serif', serif;
             }
             input[type='file'] {
@@ -161,7 +161,7 @@
 
             <div id="main">
 
-                <div class="w3-black" style="width: 100%; background: linear-gradient(45deg, #68319b , #A491BA) ">
+                <div class="" style="width: 100%; background: #68319b">
                     <button id="openNav" style="outline-style: none; background-color: #68319b;" class="w3-button w3-xlarge sla">&#9776;</button>
                     <a  href="<?php echo BASE_URL ?>login/deslogar" style="width: 30px; margin-top: 4px; float: right; margin-right: 39px;margin-left: 20px; text-align: center;text-decoration: none;color:black"> <!-- Tinha o id="btn_sair" -->
                         <img src="<?php echo BASE_URL; ?>assets/images/signout_106525.png" width="30"> Sair
