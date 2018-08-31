@@ -112,7 +112,37 @@
             .topfont{
                 font-family: "Typo Hoop";
                 font-size: 16px;  
-            }  
+            }
+
+
+            
+            .esquerda{
+                background: linear-gradient(45deg, #68319B, #361850);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 800px;
+            }
+
+            .direita{
+                background: #fff; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 800px;
+            }
+
+            @media only screen and (min-width: 780px){
+                
+            }
+            @media only screen and (max-width: 780px){
+                
+            }
+                 .main{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
 
             input[type=text]:focus{
                 box-shadow: none;
@@ -147,7 +177,7 @@
 
         <div class="container-fluid" style="padding: 0px">
 
-            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px; background-color: #A491BA; " id="mySidebar">
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px; background-color: #fff; " id="mySidebar">
                 <div class="sidenav ">
                     <ul class="nav flex-column nav-pills">
                         <li class="nav-item">
@@ -499,7 +529,7 @@
                         </div>
                     </div>
 
-                    <div id="av_conteudo" class="tab-pane in active">
+                    <div id="av_conteudo" class="tab-pane fade">
                         <?php
                         include($av_status);
 
@@ -514,9 +544,14 @@
                     </div>
 
 
-                    <div id="pagina4" class="tab-pane fade">
-                        funcoes
+                    <div id="pagina4" class="tab-pane in active">
+                    
+                                        <div class="main">
+                                        
+                            </div>
+                        
                     </div>
+
                     <div id="pagina5" class="tab-pane fade">
                         pagina 5
 

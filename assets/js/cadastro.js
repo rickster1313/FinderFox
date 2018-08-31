@@ -106,13 +106,13 @@ var $j = jQuery.noConflict();
 				
 				if(!email_stats){
 					$j("#novo_user .email").focus();
-					$j("#novo_user .email").css("border-color", "#ff0000");
+					$j("#novo_user .email").css("border-color", "#de777f");
 				}else if(!telefone_stats){
 					$j("#novo_user .telefone").focus();
-					$j("#novo_user .telefone").css("border-color", "#ff0000");
+					$j("#novo_user .telefone").css("border-color", "#de777f");
 				}else if(!cpf_cnpj_stats){
 					$j("#novo_user .cpf_cnpj").focus();
-					$j("#novo_user .cpf_cnpj").css("border-color", "#ff0000");
+					$j("#novo_user .cpf_cnpj").css("border-color", "#de777f");
 				}else if(!senha_stats){
 					$j("#novo_user .senha_confirm").focus();
 				}else{
@@ -228,17 +228,17 @@ var $j = jQuery.noConflict();
 				
 				if(!email_stats2){
 					$j("#novo_empre .email").focus();
-					$j("#novo_empre .email").css("border-color", '#ff0000');
-					alert(email_stats2);
+					$j("#novo_empre .email").css("border-color", '#de777f');
+					alert('Email Invalido');
 				}else if(!telefone_stats2){
 					$j("#novo_empre .telefone").focus();
-					$j("#novo_empre .telefone").css("border-color", '#ff0000');
+					$j("#novo_empre .telefone").css("border-color", '#de777f');
 				}else if(!cpf_cnpj_stats2){
 					$j("#novo_empre .cpf_cnpj").focus();
-					$j("#novo_empre .cpf_cnpj").css("border-color", '#ff0000');
+					$j("#novo_empre .cpf_cnpj").css("border-color", '#de777f');
 				}else if(!senha_stats2){
 					$j("#novo_empre .senha_confirm").focus();
-					$j("#novo_empre .senha_confirm").css("border-color", '#ff0000');
+					$j("#novo_empre .senha_confirm").css("border-color", '#de777f');
 				}else if(!endereco_stats){
 					$j("#CEP").focus();
 				}else{
@@ -252,7 +252,7 @@ var $j = jQuery.noConflict();
 				      	},
 				        error:function(){
 				      		console.log("error no ajax");
-				       	}
+				       	} 
 			        });
 				}		
 					
