@@ -17,6 +17,9 @@
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component1.css">
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style2.css">
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/owl.carousel.min.css">
+        <link href="<?php echo BASE_URL; ?>assets/css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
         <link rel="icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
         <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
@@ -546,11 +549,29 @@
 
                     <div id="pagina4" class="tab-pane in active">
                     
-                                        <div class="main">
                                         
-                            </div>
-                        
+
+                                    
+                <div class="container">
+                    <div class="section-title">
+                        <h3>Funções</h3>
                     </div>
+
+                    <div class="img-gallery owl-carousel owl-theme funcoes">
+                         <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
+                         <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
+                         <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
+                         <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
+                         <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
+                       
+
+                </div>
+
+            </div>
+                                        
+                            
+                        
+                    
 
                     <div id="pagina5" class="tab-pane fade">
                         pagina 5
@@ -617,7 +638,9 @@
             <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
             <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
             <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/clipboard.min.js"></script>
-            <script src="<?php echo BASE_URL; ?>assets/js/cssParser.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/owl.carousel.min.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/cssParser.js"></script>
 
             <script src="<?php echo BASE_URL; ?>assets/js/modalEffects.js"></script>
 
@@ -691,6 +714,14 @@
 
 
                                 var polyfilter_scriptpath = '/js/';
+            </script>
+
+            <script type="text/javascript">
+                $j(document).ready(function() {
+ 
+  $j(".funcoes").owlCarousel();
+ 
+});
             </script>
     </body>
 </html>
