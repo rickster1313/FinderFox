@@ -275,8 +275,8 @@ var $j = jQuery.noConflict();
 			        			$j("#erro").css("display", "none");
 								$j("#localiza").css("display", "block");
 			        			$j("#rua").val(json.logradouro);
-			        			$j("#estado").val(json.localidade);
-			        			$j("#cid").val(json.uf);
+			        			$j("#estado").val(json.uf);
+			        			$j("#cid").val(json.localidade);
 			        			endereco_stats = true;
 			        		}
 			        	},

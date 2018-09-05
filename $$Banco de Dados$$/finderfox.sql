@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Ago-2018 às 16:38
+-- Generation Time: 05-Set-2018 às 16:49
 -- Versão do servidor: 10.1.19-MariaDB
 -- PHP Version: 5.5.38
 
@@ -34,7 +34,7 @@ CREATE TABLE `tbl_avs` (
   `slogan_av` varchar(550) NOT NULL,
   `logo_av` varchar(220) NOT NULL,
   `categoria` varchar(220) NOT NULL,
-  `func` varchar(5555) NOT NULL,
+  `func` varchar(220) NOT NULL,
   `palavras_chave` varchar(550) NOT NULL,
   `img_home_active` varchar(50) NOT NULL DEFAULT 'no',
   `img_home` varchar(220) NOT NULL,
@@ -68,7 +68,8 @@ CREATE TABLE `tbl_avs` (
 
 INSERT INTO `tbl_avs` (`id_av`, `user_id`, `url`, `nome_av`, `slogan_av`, `logo_av`, `categoria`, `func`, `palavras_chave`, `img_home_active`, `img_home`, `part1_active`, `part1_title`, `part1_nome1`, `part1_text1`, `part1_nome2`, `part1_text2`, `part1_nome3`, `part1_text3`, `part2_active`, `part2_nome1`, `part2_text1`, `part2_nome2`, `part2_text2`, `part2_nome3`, `part2_text3`, `part2_img`, `galery_active`, `galery_title`, `fotos`, `tipos`, `tipos_val`, `created`) VALUES
 (1, 6, 'empre', 'empre', 'slogan de um empresario aleatÃ³rio', 'logo-empre.png', 'alimentacao', '', '', 'yes', 'photoHome-6-20-08-2018-04-44-32.jpeg', 'yes', 'Features you love13', 'Simple13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque13', 'Customize13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque13', 'Secure13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque13', 'yes', 'Crie sua conta13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	     13          ', 'Compartilhe com seus amigos13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	13', 'Viva la vida13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem	13', 'photoSobre-6-20-08-2018-04-41-26.jpeg', 'yes', 'Fotenhas minhas XD', 'photoGalery-6-20-08-2018-04-38-31-0.jpeg$!$photoGalery-6-20-08-2018-04-38-31-1.jpeg$!$photoGalery-6-20-08-2018-04-38-31-2.jpeg$!$photoGalery-6-20-08-2018-04-38-31-3.jpeg$!$photoGalery-6-20-08-2018-04-39-06-0.jpeg', 'youtube,face', 'https://www.youtube.com/$!$https://www.facebook.com/', '2018-08-18 20:06:14'),
-(4, 13, 'lolzeiros', 'lolzeiros BR', 'amor Ã© como o vento, estÃ¡ sempre ao seu lado', 'logo-lolzeiros-BR.jpeg', '', '', '', 'no', '', 'no', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'no', '', '', '', '', '2018-08-18 20:06:14');
+(4, 13, 'lolzeiros', 'lolzeiros BR', 'amor Ã© como o vento, estÃ¡ sempre ao seu lado', 'logo-lolzeiros-BR.jpeg', '', '', '', 'no', '', 'no', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'no', '', '', '', '', '2018-08-18 20:06:14'),
+(5, 15, 'andorinhas', 'andorinhas aviacao', 'nÃ³s somos andorinhas que vÃ£o e que vem', 'logo-andorinhas-aviacao.jpeg', '', '', '', 'no', '', 'yes', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'no', '', '', '', '', '2018-09-05 10:59:44');
 
 -- --------------------------------------------------------
 
@@ -101,7 +102,9 @@ INSERT INTO `tbl_endereco` (`id_end`, `user_id`, `cep`, `rua`, `estado`, `cidade
 (10, 10, '05785-020', 'Rua Armando Erse Figueiredo', 'SP', 'SÃ£o Paulo', '23', 'sao paulo 1', 'sim', '-23.6267112', '-46.7688442', 'global'),
 (14, 11, '05785-200', 'Rua Siriema', 'SP', 'SP', '123', 'principal', 'nao', NULL, NULL, ''),
 (17, 10, '03047-000', 'Rua 21 de Abril', 'SP', 'SÃ£o Paulo', '21', 'bras', 'sim', '-23.5427884', '-46.6076459', '70'),
-(18, 13, '13238-094', 'Rua Teodoro Feliciano de Moraes', 'Campo Limpo Paulista', 'SP', '232', 'principal', 'sim', '-23.2274655', '-46.7794261', '100');
+(18, 13, '13238-094', 'Rua Teodoro Feliciano de Moraes', 'Campo Limpo Paulista', 'SP', '232', 'principal', 'sim', '-23.2274655', '-46.7794261', '100'),
+(19, 15, '79002-001', 'Avenida CalÃ³geras', 'MS', 'Campo Grande', '131', 'principal', 'sim', NULL, NULL, 'global'),
+(20, 15, '13231-322', 'Rua Aracaju', 'SP', 'Campo Limpo Paulista', '131', 'vai viver', 'sim', NULL, NULL, 'global');
 
 -- --------------------------------------------------------
 
@@ -112,9 +115,21 @@ INSERT INTO `tbl_endereco` (`id_end`, `user_id`, `cep`, `rua`, `estado`, `cidade
 CREATE TABLE `tbl_funcoes` (
   `id_func` int(11) NOT NULL,
   `nome_func` varchar(220) NOT NULL,
+  `descricao` varchar(660) NOT NULL,
   `tipo_func` varchar(110) NOT NULL,
-  `status_func` int(110) NOT NULL
+  `status_func` varchar(110) NOT NULL,
+  `created` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `tbl_funcoes`
+--
+
+INSERT INTO `tbl_funcoes` (`id_func`, `nome_func`, `descricao`, `tipo_func`, `status_func`, `created`) VALUES
+(1, 'agendamento', '', 'sistema', ' ativo', '2018-09-05 00:00:00'),
+(2, 'formulário de contato', '', 'contato', 'ativo', '2018-09-05 00:00:00'),
+(3, 'anotações', '', 'organizacao', 'ativo', '2018-09-05 00:00:00'),
+(4, 'divulgação', '', 'comunicacao', 'ativo', '2018-09-05 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -145,7 +160,8 @@ INSERT INTO `tbl_usuarios` (`id`, `nome`, `nvl_acesso`, `email`, `senha`, `CPF_C
 (11, 'empre3', 'empresario', 'empre3', '$2y$10$ZC5qSz0Int0ZdfMTcKhXxebvBuHPkVMCP14nPWZnnlySadfMfLbem', '234.532.554-14', '(34) 553451345', 0, '2018-08-09 18:44:54', NULL),
 (12, 'usuario1', 'usuario', 'user', '$2y$10$ji0v6oAEKEJEV2qz.tGdPO3fe9mvxig3rp6uBVB8u5ouRSv5zXe5C', '123.242.135-12', '(21) 323123123', 0, '2018-08-13 02:15:25', NULL),
 (13, 'jefferson', 'empresario', 'jefferson@gmail.com', '$2y$10$KEY/rGSY94YsGwM5wV58W.hBR/ssJFw/lK0pIUB/Np7tR/av2aLem', '12.321.321/3213-12', '(12) 321312312', 0, '2018-08-15 18:33:57', NULL),
-(14, 'usuario1', 'usuario', 'user@gmail.com', '$2y$10$U6cOigneglU/M024iauGLOiLH4TPcPd5OWOF3.Rey9QK2/NjElV3y', '123.421.323-44', '(11) 214234213', 0, '2018-08-19 17:53:18', NULL);
+(14, 'usuario1', 'usuario', 'user@gmail.com', '$2y$10$U6cOigneglU/M024iauGLOiLH4TPcPd5OWOF3.Rey9QK2/NjElV3y', '123.421.323-44', '(11) 214234213', 0, '2018-08-19 17:53:18', NULL),
+(15, 'lucyana', 'empresario', 'lucy@gmail.com', '$2y$10$.G9KBoeBdlO0mERXbAUOVOjtYVqLqOSBLfJ46GWWn2aosedfIfxqq', '12.312.312/3123-21', '(12) 123131231', 0, '2018-09-05 10:56:40', NULL);
 
 --
 -- Indexes for dumped tables
@@ -183,22 +199,22 @@ ALTER TABLE `tbl_usuarios`
 -- AUTO_INCREMENT for table `tbl_avs`
 --
 ALTER TABLE `tbl_avs`
-  MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tbl_endereco`
 --
 ALTER TABLE `tbl_endereco`
-  MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `tbl_funcoes`
 --
 ALTER TABLE `tbl_funcoes`
-  MODIFY `id_func` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_func` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

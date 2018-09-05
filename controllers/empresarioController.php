@@ -119,6 +119,12 @@
 			$id = addslashes($_POST['idactive']);
 			$opcao = addslashes($_POST['opcao']);
 			$raio = addslashes($_POST['raio']);
+                        if(!is_numeric($raio)){
+                            $raio = strtolower($raio);
+                            if($raio != "global"){
+                                $raio = "global";
+                            }
+                        }
 			$enderecosModel = new enderecosModel();
 			if($opcao == "ativar"){
 				$sql = $enderecosModel->getEndId($id);

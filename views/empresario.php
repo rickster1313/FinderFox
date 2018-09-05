@@ -176,7 +176,7 @@
     <body>
 
 
-        <!--<h1>Olá <?php $newNome// = explode(" ", $nome);echo strtoupper($newNome[0]);                          ?></h1>-->
+        <!--<h1>Olá <?php $newNome// = explode(" ", $nome);echo strtoupper($newNome[0]);                           ?></h1>-->
 
         <div class="container-fluid" style="padding: 0px">
 
@@ -194,7 +194,7 @@
                             <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla " style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/monitor.png" width="26">  Ambiente Virtual </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#pagina4" data-toggle="tab" class="w3-bar-item w3-button sla" style="font-size: 19px;"> <img src="<?php echo BASE_URL; ?>assets/images/configuration_13194.png" width="26"> Gerenciar Funções</a>
+                            <a href="#funcoes" data-toggle="tab" class="w3-bar-item w3-button sla" style="font-size: 19px;"> <img src="<?php echo BASE_URL; ?>assets/images/configuration_13194.png" width="26"> Gerenciar Funções</a>
 
                         </li >
 
@@ -226,6 +226,7 @@
                             echo strtoupper($newNome[0]);
                             ?></h1>
                     </div>
+                    
                     <div id="enderecos" class="tab-pane fade">
                         <div class="tabela-end" style="margin: 40px;">
                             <div class=" end-tbl">
@@ -538,18 +539,16 @@
 
                     </div>
 
-
-                    <div id="pagina4" class="tab-pane in active">
-
-
-
-
+                    <div id="funcoes" class="tab-pane in active">
                         <div class="container">
                             <div class="section-title">
                                 <h3>Funções</h3>
                             </div>
 
                             <div class="img-gallery owl-carousel owl-theme funcoes">
+                                <?php 
+                                    
+                                ?>
                                 <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
                                 <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
                                 <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
@@ -583,74 +582,74 @@
 
 
                 <script>
+                            (function () {
+                                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                                if (!String.prototype.trim) {
                                     (function () {
-                                        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-                                        if (!String.prototype.trim) {
-                                            (function () {
-                                                // Make sure we trim BOM and NBSP
-                                                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-                                                String.prototype.trim = function () {
-                                                    return this.replace(rtrim, '');
-                                                };
-                                            })();
-                                        }
-
-                                        [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
-                                            // in case the input is already filled..
-                                            if (inputEl.value.trim() !== '') {
-                                                classie.add(inputEl.parentNode, 'input--filled');
-                                            }
-
-                                            // events:
-                                            inputEl.addEventListener('focus', onInputFocus);
-                                            inputEl.addEventListener('blur', onInputBlur);
-                                        });
-
-                                        function onInputFocus(ev) {
-                                            classie.add(ev.target.parentNode, 'input--filled');
-                                        }
-
-                                        function onInputBlur(ev) {
-                                            if (ev.target.value.trim() === '') {
-                                                classie.remove(ev.target.parentNode, 'input--filled');
-                                            }
-                                        }
+                                        // Make sure we trim BOM and NBSP
+                                        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                                        String.prototype.trim = function () {
+                                            return this.replace(rtrim, '');
+                                        };
                                     })();
+                                }
+
+                                [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+                                    // in case the input is already filled..
+                                    if (inputEl.value.trim() !== '') {
+                                        classie.add(inputEl.parentNode, 'input--filled');
+                                    }
+
+                                    // events:
+                                    inputEl.addEventListener('focus', onInputFocus);
+                                    inputEl.addEventListener('blur', onInputBlur);
+                                });
+
+                                function onInputFocus(ev) {
+                                    classie.add(ev.target.parentNode, 'input--filled');
+                                }
+
+                                function onInputBlur(ev) {
+                                    if (ev.target.value.trim() === '') {
+                                        classie.remove(ev.target.parentNode, 'input--filled');
+                                    }
+                                }
+                            })();
 
 
-                                    (function () {
-                                        [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
-                                            var menuItems = menu.querySelectorAll('.menu__link'),
-                                                    setCurrent = function (ev) {
-                                                        ev.preventDefault();
-                                                        var item = ev.target.parentNode; // li
-                                                        // return if already current
-                                                        if (classie.has(item, 'menu__item--current')) {
-                                                            return false;
-                                                        }
-                                                        // remove current
-                                                        classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
-                                                        // set current
-                                                        classie.add(item, 'menu__item--current');
-                                                    };
-                                            [].slice.call(menuItems).forEach(function (el) {
-                                                el.addEventListener('click', setCurrent);
-                                            });
-                                        });
-                                        [].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
-                                            link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
-                                            new Clipboard(link);
-                                            link.addEventListener('click', function () {
-                                                classie.add(link, 'link-copy--animate');
-                                                setTimeout(function () {
-                                                    classie.remove(link, 'link-copy--animate');
-                                                }, 300);
-                                            });
-                                        });
-                                    })(window);
+                            (function () {
+                                [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
+                                    var menuItems = menu.querySelectorAll('.menu__link'),
+                                            setCurrent = function (ev) {
+                                                ev.preventDefault();
+                                                var item = ev.target.parentNode; // li
+                                                // return if already current
+                                                if (classie.has(item, 'menu__item--current')) {
+                                                    return false;
+                                                }
+                                                // remove current
+                                                classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                                                // set current
+                                                classie.add(item, 'menu__item--current');
+                                            };
+                                    [].slice.call(menuItems).forEach(function (el) {
+                                        el.addEventListener('click', setCurrent);
+                                    });
+                                });
+                                [].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
+                                    link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+                                    new Clipboard(link);
+                                    link.addEventListener('click', function () {
+                                        classie.add(link, 'link-copy--animate');
+                                        setTimeout(function () {
+                                            classie.remove(link, 'link-copy--animate');
+                                        }, 300);
+                                    });
+                                });
+                            })(window);
 
 
-                                    var polyfilter_scriptpath = '/js/';
+                            var polyfilter_scriptpath = '/js/';
                 </script>
 
                 <script type="text/javascript">

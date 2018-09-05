@@ -1,6 +1,29 @@
 <?php 
     class funcaoController extends Controller{
         
+        //funcoes dos usuarios
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //funcoes usados para o sistema em si
         public function distanciaPontos($lat1, $lon1, $lat2, $lon2) {
 
             $lat1 = deg2rad($lat1);
@@ -54,7 +77,7 @@
             for($x=0;$x < count($imagem['tmp_name']); $x++){
                 if($imagem['error'][$x] === 0){
                     $tipo = explode("/", $imagem['type'][$x]);
-                    if ($tipo[0] == "image") {
+                    if ($tipo[0] == "image"){
                         $novo_name = $nome.'-'.$x.'.'.$tipo[1];
                         move_uploaded_file($imagem['tmp_name'][$x], $local.$novo_name);
                         $array_nome[] = $novo_name;
