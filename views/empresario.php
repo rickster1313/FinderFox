@@ -118,7 +118,7 @@
             }
 
 
-            
+
             .esquerda{
                 background: linear-gradient(45deg, #68319B, #361850);
                 display: flex;
@@ -136,12 +136,12 @@
             }
 
             @media only screen and (min-width: 780px){
-                
+
             }
             @media only screen and (max-width: 780px){
-                
+
             }
-                 .main{
+            .main{
                 position: absolute;
                 height: 100%;
                 width: 100%;
@@ -176,7 +176,7 @@
     <body>
 
 
-        <!--<h1>Olá <?php $newNome// = explode(" ", $nome);echo strtoupper($newNome[0]);                         ?></h1>-->
+        <!--<h1>Olá <?php $newNome// = explode(" ", $nome);echo strtoupper($newNome[0]);                          ?></h1>-->
 
         <div class="container-fluid" style="padding: 0px">
 
@@ -197,14 +197,6 @@
                             <a href="#pagina4" data-toggle="tab" class="w3-bar-item w3-button sla" style="font-size: 19px;"> <img src="<?php echo BASE_URL; ?>assets/images/configuration_13194.png" width="26"> Gerenciar Funções</a>
 
                         </li >
-                        <li class="nav-item">
-                            <a href="#pagina5" data-toggle="tab"  class="w3-bar-item w3-button  sla" style="font-size: 19px;"> #Lembrete</a>
-
-                        </li>
-                        <li class="nav-item">
-                            <a href="#pagina6" data-toggle="tab"  class="w3-bar-item w3-button  sla" style="font-size: 19px;">  #Agendamento</a>
-
-                        </li>
 
                     </ul>
                 </div>
@@ -427,7 +419,7 @@
                                                         <span class="input input--yoko">
                                                             <input type="text" name="raio_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['raio']; ?>">
                                                             <label class="input__label input__label--yoko" for="raio">
-                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Alcance(KM)</span>
+                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Alcance em KM(somente números) ou escreva 'global'(para alcance global)</span>
                                                             </label> 
                                                         </span>
                                                         <br>
@@ -548,180 +540,125 @@
 
 
                     <div id="pagina4" class="tab-pane in active">
-                    
-                                        
 
-                                    
-                <div class="container">
-                    <div class="section-title">
-                        <h3>Funções</h3>
+
+
+
+                        <div class="container">
+                            <div class="section-title">
+                                <h3>Funções</h3>
+                            </div>
+
+                            <div class="img-gallery owl-carousel owl-theme funcoes">
+                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
+                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
+                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
+                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
+                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
+
+
+                            </div>
+
+                        </div>
+
                     </div>
-
-                    <div class="img-gallery owl-carousel owl-theme funcoes">
-                         <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
-                         <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
-                         <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
-                         <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
-                         <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
-                       
-
                 </div>
 
-            </div>
-                                        
-                            
-                        
-                    
-
-                    <div id="pagina5" class="tab-pane fade">
-                        pagina 5
-
-                    </div>
-                    <div id="pagina6" class="tab-pane fade"><div style="padding-left:40px;padding-right: 40px">
-                            <table class="table table-dark table-striped" >
-                                <thead>
-                                    <tr>
-                                        <th>Nome</th>
-                                        <th>CEP</th>
-                                        <th>telefone</th>
-                                        <th>descricao</th>
-                                        <th>data</th>
-                                        <th>horario</th>
-                                        <th>acoes</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>John</td>
-                                        <td>13238-094</td>
-                                        <td>(11) 912331234</td>
-                                        <td>21/08/2018</td>
-                                        <th>15h</th>
-                                        <td>Preciso de tal coisa bla bla bla bla loren ipsun</td>
-                                        <th><button type="button" class="btn btn-success">Aceitar</button><button type="button" class="btn btn-danger">Negar</button></th>
-                                    </tr>
-                                    <tr>
-                                        <td>Marie</td>
-                                        <td>13238-094</td>
-                                        <td>(11) 912331234</td>
-                                        <td>28/08/2018</td>
-                                        <th>15h</th>
-                                        <td>Preciso de tal coisa bla bla bla bla loren ipsun</td>
-                                        <th><button type="button" class="btn btn-success">Aceitar</button><button type="button" class="btn btn-danger">Negar</button></th>
-                                    </tr>
-                                    <tr>
-                                        <td>User1</td>
-                                        <td>13238-094</td>
-                                        <td>(11) 912331234</td>
-                                        <td>19/10/2018</td>
-                                        <th>13h</th>
-                                        <td>Preciso de tal coisa bla bla bla bla loren ipsun</td>
-                                        <th><button type="button" class="btn btn-success">Aceitar</button><button type="button" class="btn btn-danger">Negar</button></th>
-                                    </tr>
-                                </tbody>
-                            </table></div>
-
-                    </div>
-
-
-                </div>
-            </div>
 
 
 
+                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
+                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
+                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
+                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
+                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
+                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
+                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
+                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/clipboard.min.js"></script>
+                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/owl.carousel.min.js"></script>
+                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
+                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/cssParser.js"></script>
 
-            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
-            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
-            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
-            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
-            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
-            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
-            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
-            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/clipboard.min.js"></script>
-            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/owl.carousel.min.js"></script>
-            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
-            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/cssParser.js"></script>
-
-            <script src="<?php echo BASE_URL; ?>assets/js/modalEffects.js"></script>
-
-
-            <script>
-                                (function () {
-                                    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-                                    if (!String.prototype.trim) {
-                                        (function () {
-                                            // Make sure we trim BOM and NBSP
-                                            var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-                                            String.prototype.trim = function () {
-                                                return this.replace(rtrim, '');
-                                            };
-                                        })();
-                                    }
-
-                                    [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
-                                        // in case the input is already filled..
-                                        if (inputEl.value.trim() !== '') {
-                                            classie.add(inputEl.parentNode, 'input--filled');
-                                        }
-
-                                        // events:
-                                        inputEl.addEventListener('focus', onInputFocus);
-                                        inputEl.addEventListener('blur', onInputBlur);
-                                    });
-
-                                    function onInputFocus(ev) {
-                                        classie.add(ev.target.parentNode, 'input--filled');
-                                    }
-
-                                    function onInputBlur(ev) {
-                                        if (ev.target.value.trim() === '') {
-                                            classie.remove(ev.target.parentNode, 'input--filled');
-                                        }
-                                    }
-                                })();
+                <script src="<?php echo BASE_URL; ?>assets/js/modalEffects.js"></script>
 
 
-                                (function () {
-                                    [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
-                                        var menuItems = menu.querySelectorAll('.menu__link'),
-                                                setCurrent = function (ev) {
-                                                    ev.preventDefault();
-                                                    var item = ev.target.parentNode; // li
-                                                    // return if already current
-                                                    if (classie.has(item, 'menu__item--current')) {
-                                                        return false;
-                                                    }
-                                                    // remove current
-                                                    classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
-                                                    // set current
-                                                    classie.add(item, 'menu__item--current');
+                <script>
+                                    (function () {
+                                        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                                        if (!String.prototype.trim) {
+                                            (function () {
+                                                // Make sure we trim BOM and NBSP
+                                                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                                                String.prototype.trim = function () {
+                                                    return this.replace(rtrim, '');
                                                 };
-                                        [].slice.call(menuItems).forEach(function (el) {
-                                            el.addEventListener('click', setCurrent);
+                                            })();
+                                        }
+
+                                        [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+                                            // in case the input is already filled..
+                                            if (inputEl.value.trim() !== '') {
+                                                classie.add(inputEl.parentNode, 'input--filled');
+                                            }
+
+                                            // events:
+                                            inputEl.addEventListener('focus', onInputFocus);
+                                            inputEl.addEventListener('blur', onInputBlur);
                                         });
-                                    });
-                                    [].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
-                                        link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
-                                        new Clipboard(link);
-                                        link.addEventListener('click', function () {
-                                            classie.add(link, 'link-copy--animate');
-                                            setTimeout(function () {
-                                                classie.remove(link, 'link-copy--animate');
-                                            }, 300);
+
+                                        function onInputFocus(ev) {
+                                            classie.add(ev.target.parentNode, 'input--filled');
+                                        }
+
+                                        function onInputBlur(ev) {
+                                            if (ev.target.value.trim() === '') {
+                                                classie.remove(ev.target.parentNode, 'input--filled');
+                                            }
+                                        }
+                                    })();
+
+
+                                    (function () {
+                                        [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
+                                            var menuItems = menu.querySelectorAll('.menu__link'),
+                                                    setCurrent = function (ev) {
+                                                        ev.preventDefault();
+                                                        var item = ev.target.parentNode; // li
+                                                        // return if already current
+                                                        if (classie.has(item, 'menu__item--current')) {
+                                                            return false;
+                                                        }
+                                                        // remove current
+                                                        classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                                                        // set current
+                                                        classie.add(item, 'menu__item--current');
+                                                    };
+                                            [].slice.call(menuItems).forEach(function (el) {
+                                                el.addEventListener('click', setCurrent);
+                                            });
                                         });
-                                    });
-                                })(window);
+                                        [].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
+                                            link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+                                            new Clipboard(link);
+                                            link.addEventListener('click', function () {
+                                                classie.add(link, 'link-copy--animate');
+                                                setTimeout(function () {
+                                                    classie.remove(link, 'link-copy--animate');
+                                                }, 300);
+                                            });
+                                        });
+                                    })(window);
 
 
-                                var polyfilter_scriptpath = '/js/';
-            </script>
+                                    var polyfilter_scriptpath = '/js/';
+                </script>
 
-            <script type="text/javascript">
-                $j(document).ready(function() {
- 
-  $j(".funcoes").owlCarousel();
- 
-});
-            </script>
-    </body>
-</html>
+                <script type="text/javascript">
+                    $j(document).ready(function () {
+
+                        $j(".funcoes").owlCarousel();
+
+                    });
+                </script>
+                </body>
+                </html>

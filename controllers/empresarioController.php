@@ -95,6 +95,12 @@
 			$est = addslashes($_POST['est_txt']);
 			$cep = addslashes($_POST['cep_txt']);
 			$raio = addslashes($_POST['raio_txt']);
+                        if(!is_numeric($raio)){
+                            $raio = strtolower($raio);
+                            if($raio != "global"){
+                                $raio = "global";
+                            }
+                        }
 			$funcaoController = new funcaoController();
 			$coordenadas = $funcaoController->coordenadasCep($cep);
 			$lat = $coordenadas['lat'];
