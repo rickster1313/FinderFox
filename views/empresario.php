@@ -548,13 +548,12 @@
                             <div class="img-gallery owl-carousel owl-theme funcoes">
                                 <?php 
                                     $funcaoModel = new funcaoModel();
-                                    $dados_func = $funcaoModel->getAll();
+                                    $sql2 = $funcaoModel->getAllactive();
+                                    $dadosFunc = $sql2  ->fetchAll();
+                                    foreach ($dadosFunc as $value) {
                                 ?>
-                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
-                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
-                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
-                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
-                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;"></div>
+                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;color: white"><?php echo $value['nome_func']; ?></div>
+                                    <?php } ?>
 
 
                             </div>
