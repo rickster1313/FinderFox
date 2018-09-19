@@ -197,7 +197,7 @@
 
                         <figure>
                             <div class="display-4" style="width: 400px; height: 300px; border: 4px solid #fff; color: #F9F9F9"> Usuario 
-                                <img src="<?php echo BASE_URL; ?>assets/images/Guest_theapplication_2906.png" width="200" style=" left:25%; transform: translate(-25%);"></div>
+                                <img src="<?php echo BASE_URL; ?>assets/images/Guest_theapplication_2906.png" width="200" style=" left:50%; transform: translate(-50%);"></div>
                             <figcaption>
                                 <h3>Usuario</h3>
 
@@ -209,7 +209,7 @@
                     </div>
                     <div class="direita grid cs-style-1" style="display: flex;justify-content: center;">
                         <figure>
-                            <div class="display-4" style="width: 400px; height: 300px; border: 4px solid #232323; color: #232323" >Empresário <img src="<?php echo BASE_URL; ?>assets/images/businessman_3435.png" width="200" style="left:25%; transform: translate(-25%);"></div>
+                            <div class="display-4" style="width: 400px; height: 300px; border: 4px solid #232323; color: #232323" >Empresário <img src="<?php echo BASE_URL; ?>assets/images/businessman_3435.png" width="200" style="left:50%; transform: translate(-50%);"></div>
 
                             <figcaption>
                                 <h3>Empresário</h3>
@@ -220,16 +220,16 @@
                     </div>
                 </div>
             </div>
-            <div class="container" style="background-image: url(assets/images/fundo.jpg); background-size: cover;">
+            <div class="container-fluid" style="background-image: url(assets/images/fundo.jpg); background-size: cover;">
                 <div class="row">
                     <div class="col-md-12" style="">
                         <div class="formularioUser" style="color: white">
                             <div class="formularios" style="">
-                                <hr><h1 class="">Dados de perfil do usuário</h1>
+                                <h1 class="">Dados de perfil do usuário</h1>
 
 
 
-                                <form method="POST" id="novo_user" class="" style=" left: 20%; transform: translate(-20%);">
+                                <form method="POST" id="novo_user" class="" style=" right: 10%; transform: translate(-10%);">
                                     <div class="form-group slideInLeft animated">
                                         <label class="" style="font-size: 20px;">Nome</label> <input type="text" class="form-control" name="nome_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
                                     </div>
@@ -270,13 +270,13 @@
                 </div>
             </div>
 
-            <div class="container" style="background-image: url(assets/images/fundo2.jpg); background-size: cover;">
+            <div class="container-fluid" style="background-image: url(assets/images/fundo2.jpg); background-size: cover;">
                 <div class="formularioEmpre" style="color: white">
                     <div class="formularios">
-                        <hr>
+                        
                         <h1 class="">Dados de perfil do Empresário</h1><br><br>
 
-                        <form method="POST" id="novo_empre" style=" left: 30%; transform: translate(-20%);">
+                        <form method="POST" id="novo_empre" style=" right: 10%; transform: translate(-10%);">
                             <div class="form-group slideInLeft animated">
                                 <label class="" style="font-size: 20px;">Nome</label> <input type="text" name="nome_txt" class="form-control" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
                             </div>

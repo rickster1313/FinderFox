@@ -53,9 +53,10 @@
                 font-size: 20px;  
             }  
             .fundo-form{
-                background-color: #F7F0E8;
+                background-color: transparent;
                 border-radius: 9px;
-                box-shadow: 3px 3px 6px #777570;
+                border-color: #232323;
+                border: 3px solid;
                 height: 700px;
                 width: 50%;
                 display: flex;
@@ -108,7 +109,7 @@
 
             <div class="row">
 
-                <div class="col-sm-6" style="width: 100%; height: 900px;background: linear-gradient(45deg, #A491BA, #CFC1DE); display: flex; justify-content: center; align-items: center;">
+                <div class="col-sm-6" style="width: 100%; height: 900px;background: #F7F0E8; display: flex; justify-content: center; align-items: center;">
 
 
                     <a href="<?php echo BASE_URL; ?>">
