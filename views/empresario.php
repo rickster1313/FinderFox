@@ -543,6 +543,7 @@
                         <div class="container">
                             <div class="section-title">
                                 <h3>Funções</h3>
+                                <a href="<?php echo BASE_URL; ?>views/template.php">lalalalal</a>
                             </div>
 
                             <div class="img-gallery owl-carousel owl-theme funcoes">
