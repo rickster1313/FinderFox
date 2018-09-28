@@ -45,11 +45,26 @@
                 </a>
             </div>
 
-            <ul class="nav">
+            <ul class="nav nav-tabs">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="#home" data-toggle="tab">
                         <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
+                        <p>menu 1</p>
+                    </a>
+
+                    <a href="#menu1" data-toggle="tab">
+                        <i class="pe-7s-graph"></i>
+                        <p>menu 2</p>
+                    </a>
+
+                    <a href="#menu2" data-toggle="tab">
+                        <i class="pe-7s-graph"></i>
+                        <p>menu 3</p>
+                    </a>
+
+                    <a href="#menu3" data-toggle="tab" >
+                        <i class="pe-7s-graph"></i>
+                        <p>menu 4</p>
                     </a>
                 </li>
 
@@ -93,7 +108,24 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-
+                 <div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <h3>HOME</h3>
+    <p>Some content.</p>
+  </div>
+  <div id="menu1" class="tab-pane fade">
+    <h3>Menu 1</h3>
+    <p>Some content in menu 1.</p>
+  </div>
+  <div id="menu2" class="tab-pane fade">
+    <h3>Menu 2</h3>
+    <p>Some content in menu 2.</p>
+  </div>
+  <div id="menu3" class="tab-pane fade">
+    <h3>Menu 3</h3>
+    <p>Some content in menu 3.</p>
+  </div>
+</div>
                 </div>
             </div>
         </div>
