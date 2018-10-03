@@ -49,22 +49,28 @@
                 <li class="active">
                     <a href="#home" data-toggle="tab">
                         <i class="pe-7s-graph"></i>
+                        <p>home</p>
+                    </a>
+                    </li>
+                   
+                   <li>
+                    <a href="#menu1" data-toggle="tab">
+                        <i class="pe-7s-graph"></i>
                         <p>menu 1</p>
                     </a>
+                    </li>
 
-                    <a href="#menu1" data-toggle="tab">
+                    <li>
+                    <a href="#menu2" data-toggle="tab">
                         <i class="pe-7s-graph"></i>
                         <p>menu 2</p>
                     </a>
+                        </li>
 
-                    <a href="#menu2" data-toggle="tab">
-                        <i class="pe-7s-graph"></i>
-                        <p>menu 3</p>
-                    </a>
-
+                        <li>
                     <a href="#menu3" data-toggle="tab" >
                         <i class="pe-7s-graph"></i>
-                        <p>menu 4</p>
+                        <p>menu 3</p>
                     </a>
                 </li>
 
@@ -108,19 +114,23 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
+
                  <div class="tab-content">
   <div id="home" class="tab-pane fade in active">
     <h3>HOME</h3>
     <p>Some content.</p>
   </div>
+
   <div id="menu1" class="tab-pane fade">
     <h3>Menu 1</h3>
     <p>Some content in menu 1.</p>
   </div>
+
   <div id="menu2" class="tab-pane fade">
     <h3>Menu 2</h3>
     <p>Some content in menu 2.</p>
   </div>
+
   <div id="menu3" class="tab-pane fade">
     <h3>Menu 3</h3>
     <p>Some content in menu 3.</p>
@@ -156,6 +166,9 @@
 </body>
 
     <!--   Core JS Files   -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="<?php echo BASE_URL; ?>assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
 	<script src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
 

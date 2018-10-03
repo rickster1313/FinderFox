@@ -33,9 +33,10 @@
     <!-- Main CSS-->
     <link href="<?php echo BASE_URL; ?>assets/css/theme.css" rel="stylesheet" media="all">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
     
 </head>
 
@@ -153,8 +154,8 @@
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
-                <nav class="navbar-sidebar">
-                    <ul class="list-unstyled navbar__list tab-navs">
+                <nav class="navbar-sidebar nav nav-tabs">
+                    <ul class="list-unstyled navbar__list">
                         <li class="active" >
                             <a data-toggle="tab" href="#home">
                                 <i class="fas fa-tachometer-alt"></i>Dashboardgg</a>
@@ -165,7 +166,7 @@
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a data-toggle="tab" href="table.html">
                                 <i class="fas fa-table"></i>Tables</a>
                         </li>
                         <li>
@@ -371,8 +372,8 @@
 
 
             <!-- MAIN CONTENT-->
-            <div class="main-content"> h
-                <div class="section__content section__content--p30">f
+            <div class="main-content"> 
+                <div class="section__content section__content--p30">
                     
                         <div class="tab-content">
                             <div id="home" class="tab-pane fade in active">
