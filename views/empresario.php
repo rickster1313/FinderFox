@@ -1,30 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Empresário</title>
+    <title>Empresário</title>
 
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
 
-    <!-- Bootstrap core CSS     -->
     <link href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Animation library for notifications   -->
     <link href="<?php echo BASE_URL; ?>assets/css/animate.min.css" rel="stylesheet"/>
-
-    <!--  Light Bootstrap Table core CSS    -->
     <link href="<?php echo BASE_URL; ?>assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
-
-    <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="<?php echo BASE_URL; ?>assets/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" />
-   
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/owl.carousel.min.css">
+
+    <style type="text/css"> 
+
+            .legenda .quadradinho{
+                width: 13px;
+                height: 13px;
+                display: flex;
+                align-items: center;    
+                padding-left: 13px;
+                margin-bottom:5px;
+            }
+            .legenda{
+                padding: 3px;
+                width: 40%;
+                float: right;
+                background-color: #EAE8E3;
+            }
+            .raio{
+                margin: 0px;
+                background-color: transparent;  
+                outline: none;
+                border: none;
+            }
+            .end-tbl{
+                height: 600px;
+                background-color: #EAE8E3;
+                margin-bottom: 10px;
+                overflow: auto;
+                border-radius: 10px;
+                box-shadow: 6px 6px 10px #777570;
+            }
+            .btn-tbl{
+                width: 120px;
+                margin: 2px;
+
+
+            }
+            .tam{
+                font-size: 15px;
+            }
+            body{
+                background-color: #fff;
+                font-family: 'Bree Serif', serif;
+            }
+            input[type='file'] {
+                display: none
+            }
+            .sla:hover {
+                background-color: #dfcdef;
+                text-decoration: none;
+                color: #232323;
+            }
+
+            @font-face {
+
+                font-family: "BPreplayBold";
+                src: url("assets/fonts/BPreplayBold.otf") format("opentype");
+
+            }
+
+
+            .replay-font{
+                font-family: "BPreplayBold";
+
+            }
+
+            @font-face {
+
+                font-family: "Champagne & Limousines Bold";
+                src: url("assets/fonts/Champagne & Limousines Bold.ttf") format("truetype");
+
+            }
+
+            .film-font{
+                font-family: "Champagne & Limousines Bold";
+                font-size: 25px;  
+            }  
+
+            @font-face {
+
+                font-family: "Typo Hoop";
+                src: url("assets/fonts/Typo Hoop_Light Demo.otf") format("opentype");
+
+            }
+
+            .topfont{
+                font-family: "Typo Hoop";
+                font-size: 16px;  
+            }
+
+
+
+            .esquerda{
+                background: linear-gradient(45deg, #68319B, #361850);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 800px;
+            }
+
+            .direita{
+                background: #fff; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 800px;
+            }
+
+            @media only screen and (min-width: 780px){
+
+            }
+            @media only screen and (max-width: 780px){
+
+            }
+            .main{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+
+            input[type=text]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            input[type=email]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            input[type=password]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            textarea[type=text]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            input:select{
+                box-shadow: none;
+                border-color: #fff;
+            }
+
+        </style>
 
 </head>
 <body>
@@ -39,46 +174,44 @@
 
     -->
 
-    	<div class="sidebar-wrapper">
+        <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
-                    Creative Tim
+                    Empresário
                 </a>
             </div>
-            <nav class="nav nav-tabs">
-            <ul class="list-unstyled navbar__list">
 
-                <li class="active">
-                    <a data-toggle="#home">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#menu1" class="nav-link active" data-toggle="tab">
                         <i class="pe-7s-graph"></i>
-                        <p>home</p>
+                        <p>Menu 1</p>
                     </a>
-                    </li>
-                   
-                   <li>
-                    <a  data-toggle="tab" href="#menu1">
-                        <i class="pe-7s-graph"></i>
-                        <p>menu 1</p>
-                    </a>
-                    </li>
+                </li>
 
-                    <li>
-                    <a  data-toggle="tab" href="#menu2">
+                <li class="nav-item">
+                    <a href="#menu2" data-toggle="tab" class="nav-link">
                         <i class="pe-7s-graph"></i>
-                        <p>menu 2</p>
+                        <p>Menu 2</p>
                     </a>
-                        </li>
+                </li>
 
-                        <li>
-                    <a  data-toggle="tab" href="#menu3" >
+                <li class="nav-item">
+                    <a href="#menu3" data-toggle="tab" class="nav-link">
                         <i class="pe-7s-graph"></i>
-                        <p>menu 3</p>
+                        <p>Menu 3</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#menu4" data-toggle="tab" class="nav-link">
+                        <i class="pe-7s-graph"></i>
+                        <p>Menu 4</p>
                     </a>
                 </li>
 
             </ul>
-            </nav>
-    	</div>
+        </div>
     </div>
 
     <div class="main-panel">
@@ -91,7 +224,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand" href="#">Inicio</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -114,27 +247,61 @@
         </nav>
 
 
-        <div class="content" style="background: #999;">
+        <div class="content">
             <div class="container-fluid">
                 <div class="row">
 
-                 <div class="tab-content">
-  <div id="home" class="tab-pane fade in active">
-   home
-  </div>
+                        <div class="tab-content">
+                                <div class="tab-pane active" id="menu1" style="">
+                                    <h1>Olá <?php
+                            $newNome = explode(" ", $nome);
+                            echo strtoupper($newNome[0]);
+                            ?></h1>
+                                </div>
 
-  <div id="menu1" class="tab-pane fade">
-   menu 1
-  </div>
+                                <div class="tab-pane fade" id="menu2">
+                                    MENU 2
+                                </div>
 
-  <div id="menu2" class="tab-pane fade">
- menu 2
-  </div>
+                                <div class="tab-pane fade" id="menu3">
+                            
+                                     <?php
+                        include($av_status);
 
-  <div id="menu3" class="tab-pane fade">
-    menu 3
-  </div>
-  </div>
+                        if ($av_status == "html/av_create.php") {
+                            ?>
+                            <script type="text/javascript">
+                                valor = 1;
+                            </script>
+
+                        <?php } ?>
+                                    <
+                                </div>
+
+                                <div class="tab-pane fade" id="menu4">
+                                    <div class="container">
+                            <div class="section-title">
+                                <h3>Funções</h3>
+                                <a href="<?php echo BASE_URL; ?>views/template.php">lalalalal</a>
+                            </div>
+
+                            <div class="img-gallery owl-carousel owl-theme funcoes">
+                                <?php 
+                                    $funcaoModel = new funcaoModel();
+                                    $sql2 = $funcaoModel->getAllactive();
+                                    $dadosFunc = $sql2  ->fetchAll();
+                                    foreach ($dadosFunc as $value) {
+                                ?>
+                                <div class="funcao1" style="width: 100%; height: 200px; background: #333;color: white"><?php echo $value['nome_func']; ?></div>
+                                    <?php } ?>
+
+
+                            </div>
+
+                        </div>
+
+                                </div>
+                        </div>
 
                 </div>
             </div>
@@ -163,30 +330,103 @@
 </div>
 
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!--  Charts Plugin -->
-    <script src="<?php echo BASE_URL; ?>assets/js/chartist.min.js"></script>
-
-    <!--  Notifications Plugin    -->
-    <script src="<?php echo BASE_URL; ?>assets/js/bootstrap-notify.js"></script>
-
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-
-    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-    <script src="<?php echo BASE_URL; ?>assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
-
-    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-    <script src="<?php echo BASE_URL; ?>assets/js/demo.js"></script>
-
-
 </body>
 
     <!--   Core JS Files   -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/chartist.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/bootstrap-notify.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/demo.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/cssParser.js"></script>
     
-     
+    <script>
+                            (function () {
+                                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                                if (!String.prototype.trim) {
+                                    (function () {
+                                        // Make sure we trim BOM and NBSP
+                                        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                                        String.prototype.trim = function () {
+                                            return this.replace(rtrim, '');
+                                        };
+                                    })();
+                                }
+
+                                [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+                                    // in case the input is already filled..
+                                    if (inputEl.value.trim() !== '') {
+                                        classie.add(inputEl.parentNode, 'input--filled');
+                                    }
+
+                                    // events:
+                                    inputEl.addEventListener('focus', onInputFocus);
+                                    inputEl.addEventListener('blur', onInputBlur);
+                                });
+
+                                function onInputFocus(ev) {
+                                    classie.add(ev.target.parentNode, 'input--filled');
+                                }
+
+                                function onInputBlur(ev) {
+                                    if (ev.target.value.trim() === '') {
+                                        classie.remove(ev.target.parentNode, 'input--filled');
+                                    }
+                                }
+                            })();
+
+
+                            (function () {
+                                [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
+                                    var menuItems = menu.querySelectorAll('.menu__link'),
+                                            setCurrent = function (ev) {
+                                                ev.preventDefault();
+                                                var item = ev.target.parentNode; // li
+                                                // return if already current
+                                                if (classie.has(item, 'menu__item--current')) {
+                                                    return false;
+                                                }
+                                                // remove current
+                                                classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                                                // set current
+                                                classie.add(item, 'menu__item--current');
+                                            };
+                                    [].slice.call(menuItems).forEach(function (el) {
+                                        el.addEventListener('click', setCurrent);
+                                    });
+                                });
+                                [].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
+                                    link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+                                    new Clipboard(link);
+                                    link.addEventListener('click', function () {
+                                        classie.add(link, 'link-copy--animate');
+                                        setTimeout(function () {
+                                            classie.remove(link, 'link-copy--animate');
+                                        }, 300);
+                                    });
+                                });
+                            })(window);
+
+
+                            var polyfilter_scriptpath = '/js/';
+                </script>
+
+                <script type="text/javascript">
+                    $j(document).ready(function () {
+
+                        $j(".funcoes").owlCarousel();
+
+                    });
+                </script>
 
 </html>
