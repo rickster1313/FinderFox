@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Light Bootstrap Dashboard by Creative Tim</title>
+	<title>Empresário</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -24,6 +24,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="<?php echo BASE_URL; ?>assets/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" />
+   
 
 </head>
 <body>
@@ -44,37 +45,39 @@
                     Creative Tim
                 </a>
             </div>
+            <nav class="nav nav-tabs">
+            <ul class="list-unstyled navbar__list">
 
-            <ul class="nav nav-tabs">
                 <li class="active">
-                    <a href="#home" data-toggle="tab">
+                    <a data-toggle="#home">
                         <i class="pe-7s-graph"></i>
                         <p>home</p>
                     </a>
                     </li>
                    
                    <li>
-                    <a href="#menu1" data-toggle="tab">
+                    <a  data-toggle="tab" href="#menu1">
                         <i class="pe-7s-graph"></i>
                         <p>menu 1</p>
                     </a>
                     </li>
 
                     <li>
-                    <a href="#menu2" data-toggle="tab">
+                    <a  data-toggle="tab" href="#menu2">
                         <i class="pe-7s-graph"></i>
                         <p>menu 2</p>
                     </a>
                         </li>
 
                         <li>
-                    <a href="#menu3" data-toggle="tab" >
+                    <a  data-toggle="tab" href="#menu3" >
                         <i class="pe-7s-graph"></i>
                         <p>menu 3</p>
                     </a>
                 </li>
 
             </ul>
+            </nav>
     	</div>
     </div>
 
@@ -111,31 +114,28 @@
         </nav>
 
 
-        <div class="content">
+        <div class="content" style="background: #999;">
             <div class="container-fluid">
                 <div class="row">
 
                  <div class="tab-content">
   <div id="home" class="tab-pane fade in active">
-    <h3>HOME</h3>
-    <p>Some content.</p>
+   home
   </div>
 
   <div id="menu1" class="tab-pane fade">
-    <h3>Menu 1</h3>
-    <p>Some content in menu 1.</p>
+   menu 1
   </div>
 
   <div id="menu2" class="tab-pane fade">
-    <h3>Menu 2</h3>
-    <p>Some content in menu 2.</p>
+ menu 2
   </div>
 
   <div id="menu3" class="tab-pane fade">
-    <h3>Menu 3</h3>
-    <p>Some content in menu 3.</p>
+    menu 3
   </div>
-</div>
+  </div>
+
                 </div>
             </div>
         </div>
@@ -163,17 +163,11 @@
 </div>
 
 
-</body>
 
-    <!--   Core JS Files   -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="<?php echo BASE_URL; ?>assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
-	<script src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-	<!--  Charts Plugin -->
-	<script src="<?php echo BASE_URL; ?>assets/js/chartist.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--  Charts Plugin -->
+    <script src="<?php echo BASE_URL; ?>assets/js/chartist.min.js"></script>
 
     <!--  Notifications Plugin    -->
     <script src="<?php echo BASE_URL; ?>assets/js/bootstrap-notify.js"></script>
@@ -182,10 +176,17 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="<?php echo BASE_URL; ?>assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
 
-	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-	<script src="<?php echo BASE_URL; ?>assets/js/demo.js"></script>
+    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script src="<?php echo BASE_URL; ?>assets/js/demo.js"></script>
 
+
+</body>
+
+    <!--   Core JS Files   -->
+
+    
+     
 
 </html>
