@@ -61,7 +61,13 @@
             body{
                 background-color: #fff;
                 font-family: 'Bree Serif', serif;
+                width: 100%;
             }
+
+           html{
+            width: 100%;
+           }
+
             input[type='file'] {
                 display: none
             }
@@ -159,6 +165,23 @@
                 border-color: #fff;
             }
 
+            .nav-item{
+                width: 245px;
+            }
+              
+              .nav-item:hover{
+                width: 245px;
+              }
+
+              .nav-tabs:hover{
+                width: 245px;
+              }
+
+              .nav-tabs{
+                width: 245px;
+              }
+
+             
         </style>
 
 </head>
@@ -176,37 +199,46 @@
 
         <div class="sidebar-wrapper">
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
-                    Empresário
+                <a href="#" class="simple-text">
+                   <h3> Empresário </h3>
+
+                    <img src="<?php echo BASE_URL; ?>assets/images/goku.jpg" class="rounded-circle" alt="Cinque Terre" width="200" height="200">
                 </a>
+
+              <br>
+
+                
+                 <a href="">  
+                 </a>
+                 
             </div>
 
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a href="#menu1" class="nav-link active" data-toggle="tab">
-                        <i class="pe-7s-graph"></i>
-                        <p>Menu 1</p>
+                        <i class="pe-7s-graph3"></i>
+                        <p>Estátisticas</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="#menu2" data-toggle="tab" class="nav-link">
-                        <i class="pe-7s-graph"></i>
-                        <p>Menu 2</p>
+                        <i class="pe-7s-map-2"></i>
+                        <p>Endereços/Sedes</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="#menu3" data-toggle="tab" class="nav-link">
-                        <i class="pe-7s-graph"></i>
-                        <p>Menu 3</p>
+                        <i class="pe-7s-monitor"></i>
+                        <p>Ambiente Virtual</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="#menu4" data-toggle="tab" class="nav-link">
-                        <i class="pe-7s-graph"></i>
-                        <p>Menu 4</p>
+                        <i class="pe-7s-tools"></i>
+                        <p>Gerenciar Funções</p>
                     </a>
                 </li>
 
@@ -246,7 +278,7 @@
             </div>
         </nav>
 
-
+        <div class="main">
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -275,7 +307,7 @@
                             </script>
 
                         <?php } ?>
-                                    <
+                                    
                                 </div>
 
                                 <div class="tab-pane fade" id="menu4">
@@ -326,6 +358,7 @@
             </div>
         </footer>
 
+    </div>
     </div>
 </div>
 
