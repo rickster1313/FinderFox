@@ -95,6 +95,12 @@
 			$est = addslashes($_POST['est_txt']);
 			$cep = addslashes($_POST['cep_txt']);
 			$raio = addslashes($_POST['raio_txt']);
+                        if(!is_numeric($raio)){
+                            $raio = strtolower($raio);
+                            if($raio != "global"){
+                                $raio = "global";
+                            }
+                        }
 			$funcaoController = new funcaoController();
 			$coordenadas = $funcaoController->coordenadasCep($cep);
 			$lat = $coordenadas['lat'];
@@ -113,6 +119,12 @@
 			$id = addslashes($_POST['idactive']);
 			$opcao = addslashes($_POST['opcao']);
 			$raio = addslashes($_POST['raio']);
+                        if(!is_numeric($raio)){
+                            $raio = strtolower($raio);
+                            if($raio != "global"){
+                                $raio = "global";
+                            }
+                        }
 			$enderecosModel = new enderecosModel();
 			if($opcao == "ativar"){
 				$sql = $enderecosModel->getEndId($id);
