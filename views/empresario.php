@@ -281,7 +281,301 @@
                                 </div>
 
                                 <div class="tab-pane fade" id="menu2">
-                                    MENU 2
+                                    <div class="tabela-end" style="margin: 40px;">
+                            <div class=" end-tbl">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Rua</th>
+                                            <th>Cidade</th>
+                                            <th>Estado</th>
+                                            <th>Alcance (KM)</th>
+                                            <th style="text-align: center;">Ações</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $enderecosModel = new enderecosModel();
+                                        $retorno = $enderecosModel->getEnderecos($_SESSION['id']);
+                                        $sql = $retorno->fetchAll();
+                                        foreach ($sql as $result) {
+                                            if ($result['active'] == 'nao') {
+                                                echo "<tr class='table-danger' >";
+                                            } else {
+                                                echo "<tr class='table-success' >";
+                                            }
+                                            ?>
+
+                                        <td> <strong><?php echo strtoupper($result['nome']); ?></strong></td>
+                                        <td><?php echo $result['rua']; ?></td>
+                                        <td><?php echo $result['cidade']; ?></td>
+                                        <td><?php echo $result['estado']; ?></td>
+                                        <td><input type="text" id="raio<?php echo $result['id_end']; ?>" class="raio" name="raio_txt" placeholder="ex.: 50.2" value="<?php echo $result['raio']; ?>"></td>
+                                        <td style="text-align: center;"> 
+
+                                            <button type="button" class="btn-tbl btn btn-outline-info" data-toggle="modal" data-target="#my2Modal<?php echo $result['id_end']; ?>">
+                                                Ver detalhes</button>
+
+                                            <div class="modal fade" id="my2Modal<?php echo $result['id_end']; ?>">
+
+                                                <div class="modal-dialog modal-lg">
+                                                    <div style="background-color: #dfcdef;" class="modal-content">
+
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Detalhes</h4>
+                                                        </div>
+
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body">
+
+                                                            <p>Veja as informações detalhadamente:</p>
+
+                                                            <table style="border-radius: 3px; position: absolute; top: 55%; width: 40%; left: 55%;" class="table table-striped">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><strong>Nome</strong></td>
+                                                                        <td><?php echo $result['nome']; ?></td> <!-- Variaveis do php -->
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><strong>Rua</strong></td>
+                                                                        <td><?php echo $result['rua']; ?></td><!-- Variaveis do php -->
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><strong>Número</strong></td>
+                                                                        <td><?php echo $result['numero']; ?></td><!-- Variaveis do php -->
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><strong>CEP</strong></td>
+                                                                        <td><?php echo $result['cep']; ?></td><!-- Variaveis do php -->
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><strong>Cidade</strong></td>
+                                                                        <td><?php echo $result['cidade']; ?></td><!-- Variaveis do php -->
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><strong>Estado</strong></td>
+                                                                        <td><?php echo $result['estado']; ?></td><!-- Variaveis do php -->
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><strong>Alcance     </strong></td>
+                                                                        <td><?php echo $result['raio']; ?> KM</td><!-- Variaveis do php -->
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+
+
+                                                            <img src="<?php echo BASE_URL; ?>assets/images/Mapa_centro_Copenhague2.jpg" 
+                                                                 style=" width: 760px; height: 700px;" class="float-left img-thumbnail">
+
+
+                                                        </div>
+
+                                                        <!-- Modal footer   -->
+                                                        <div class="modal-footer">
+                                                            <h5>@TrioMonstro</h5>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button class="btn-tbl btn btn-outline-warning btn_alt" value="modalAlt<?php echo $result['id_end']; ?>">Alterar</button><br>
+                                            <?php if ($result['active'] == 'nao') { ?>
+                                                <button name="btn_on_off" id="id<?php echo $result['id_end']; ?>" value="ativar" type="button" class="btn btn-success btn-tbl">Ativar</button>
+                                            <?php } else {
+                                                ?>
+                                                <button name="btn_on_off" id="id<?php echo $result['id_end']; ?>" value="desativar" type="button" class="btn btn-danger btn-tbl">Desativar</button>
+                                            <?php }
+                                            ?>
+                                            <?php if ($retorno->rowCount() > 1) { ?>
+                                                <button type="button" class="btn-tbl btn btn-outline-danger btn_del" value="id<?php echo $result['id_end']; ?>">Excluir</button> <?php } else { ?> 
+                                                <button type="button" class="btn-tbl btn btn-outline-danger btn_del" disabled="disabled" title="É obrigatório no mínimo 1 endereço! " value="id<?php echo $result['id_end']; ?>">Excluir</button> <?php } ?>
+                                        </td>
+                                        </tr>
+
+                                    <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <?php foreach ($sql as $resultAlt) { ?>
+                                <!-- ################# modais de alterar ######################-->
+                                <!-- The Modal -->
+                                <div class="modal fade" id="modalAlt<?php echo $resultAlt['id_end']; ?>">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content" style="background-color: #F4EDE8;">
+
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Alterar <strong><?php echo $resultAlt['nome']; ?></strong></h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+
+                                            <!-- Modal body -->
+                                            <div class="modal-body" style="display: flex; justify-content: center; ">
+                                                <form id="id<?php echo $resultAlt['id_end']; ?>" name="form_alterar_end" method="POST">
+
+
+                                                    <span class="input input--yoko">
+                                                        <input type="text" name="nome_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['nome']; ?>">
+                                                        <label class="input__label input__label--yoko" for="nome">
+                                                            <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Nome</span>
+                                                        </label> 
+                                                    </span>
+                                                    <br>
+                                                    <span class="input input--yoko">
+                                                        <input type="text" name="cep_txt" required="required" class=" cep_alt input__field input__field--yoko" value="<?php echo $resultAlt['cep']; ?>">
+                                                        <label class="input__label input__label--yoko" for="cep">
+                                                            <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">CEP</span>
+                                                        </label><span class="not_cep_alt"></span><br>
+                                                    </span>
+                                                    <br>
+                                                    <div class="alt_part2" name ="id<?php echo $resultAlt['id_end']; ?>">
+
+
+                                                        <span class="input input--yoko">
+                                                            <input type="text" name="rua_txt" required="required" class="alt_rua input__field input__field--yoko" value="<?php echo $resultAlt['rua']; ?>">
+                                                            <label class="input__label input__label--yoko" for="rua">
+                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Rua</span>
+                                                            </label> 
+
+                                                        </span>
+                                                        <br>
+
+
+
+                                                        <span class="input input--yoko">
+                                                            <input type="text" name="cid_txt" required="required" class="alt_cid input__field input__field--yoko" value="<?php echo $resultAlt['cidade']; ?>">
+                                                            <label class="input__label input__label--yoko" for="cid">
+                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Cidade</span>
+                                                            </label> 
+                                                        </span>
+                                                        <br>
+
+                                                        <span class="input input--yoko">
+                                                            <input type="text" name="est_txt" required="required" class="alt_est input__field input__field--yoko" value="<?php echo $resultAlt['estado']; ?>">
+                                                            <label class="input__label input__label--yoko" for="est">
+                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Estado</span>
+                                                            </label> 
+                                                        </span>
+                                                        <br>
+
+                                                        <span class="input input--yoko">
+                                                            <input type="text" name="num_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['numero']; ?>">
+                                                            <label class="input__label input__label--yoko" for="numero">
+                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Numero</span>
+                                                            </label> 
+                                                        </span>
+                                                        <br>
+
+                                                        <span class="input input--yoko">
+                                                            <input type="text" name="raio_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['raio']; ?>">
+                                                            <label class="input__label input__label--yoko" for="raio">
+                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Alcance em KM(somente números) ou escreva 'global'(para alcance global)</span>
+                                                            </label> 
+                                                        </span>
+                                                        <br>
+                                                        <input type="submit" name="alterar_end" value="Alterar" class="btn btn-outline-dark" style="font-size: 18px; box-shadow: 2px 2px 3px #232323;" >
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                            <div class="legenda">
+                                <div class="quadradinho bg-danger" > Desativo</div>
+                                <div class="quadradinho bg-success"> Ativo</div>
+                                <strong>Alcance</strong> - Raio de distância máxima para prestar serviços
+                            </div>
+                            <br>
+                            <button type="button" class="btn btn-outline-dark " style="font-size: 18px; box-shadow: 2px 2px 3px #232323;" id="btn_novo_end">Novo Endereço</button>
+
+                        </div>
+                        <div class="modal fade" id="modalEnd">
+                            <form id="form_novo_end" method="POST">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header" style="background: linear-gradient(45deg, #68319b , #A491BA);">
+                                            <h4 class="modal-title">Novo Endereço / SEDE</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+
+
+                                            <span class="input input--yoko">
+                                                <input class="input__field input__field--yoko" type="text" id="nome" required="required" name="nome_txt" />
+                                                <label class="input__label input__label--yoko" for="nome">
+                                                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Nome</span>
+                                                </label>
+                                            </span>
+
+                                            <span class="input input--yoko">
+                                                <input class="input__field input__field--yoko" type="text" id="cep_novo" required="required" name="cep_txt" />
+                                                <label class="input__label input__label--yoko" for="cep_novo">
+                                                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">CEP</span>
+                                                </label>
+                                                <span id="not_cep"></span><br>
+                                            </span>
+
+                                            <div id="novo_part2" style="display: none">
+                                                <span class="input input--yoko">
+                                                    <input class="input__field input__field--yoko " style="background: #CFC1DE;opacity: 1" type="text" id="rua" required="required" name="rua_txt" />
+                                                    <label class="input__label input__label--yoko" for="rua">
+                                                        <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Rua</span>
+                                                    </label>
+                                                </span>
+
+                                                <span class="input input--yoko">
+                                                    <input class="input__field input__field--yoko" style="background: #CFC1DE;opacity: 1" type="text" id="cid" required="required" name="cid_txt" />
+                                                    <label class="input__label input__label--yoko" for="cid">
+                                                        <span class="input__label-content input__label-content--yoko " style="font-size: 17px; color: #232323;">Cidade</span>
+                                                    </label>
+                                                </span>
+
+                                                <span class="input input--yoko">
+                                                    <input class="input__field input__field--yoko" style="background: #CFC1DE;opacity: 1" type="text" id="est" required="required" name="est_txt" />
+                                                    <label class="input__label input__label--yoko" for="est">
+                                                        <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Estado</span>
+                                                    </label>
+                                                </span>
+
+                                                <span class="input input--yoko">
+                                                    <input class="input__field input__field--yoko" type="text" id="num" required="required" name="num_txt" />
+                                                    <label class="input__label input__label--yoko" for="num">
+                                                        <span class="input__label-content input__label-content--yoko " style="font-size: 17px; color: #232323;">N°</span>
+                                                    </label>
+                                                </span>
+
+                                                <input type="submit" name="enviar_novo_end" value="Confirmar" class="btn btn-outline-dark" style="font-size: 18px; box-shadow: 2px 2px 3px #232323;" >
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer" style="background: linear-gradient(45deg, #68319b , #A491BA);">
+                                            <button type="button" id="btn_clear_new" class="btn btn-outline-dark" data-dismiss="modal">Fechar</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
                                 </div>
 
                                 <div class="tab-pane fade" id="menu3">
@@ -342,7 +636,6 @@
     <script src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<?php echo BASE_URL; ?>assets/js/chartist.min.js"></script>
     <script src="<?php echo BASE_URL; ?>assets/js/bootstrap-notify.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <script src="<?php echo BASE_URL; ?>assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
     <script src="<?php echo BASE_URL; ?>assets/js/demo.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>

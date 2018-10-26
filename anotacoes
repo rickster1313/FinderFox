@@ -239,6 +239,6 @@ Eu + Outros | Ninguém
 **************************************************************
 APIs:
 https://apps.widenet.com.br/busca-cep/api-de-consulta 
-https://maps.googleapis.com/maps/api/geocode/json?address=
+https://maps.googleapis.com/maps/api/geocode/json?address=13238-094&key=key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM
 
  
