@@ -53,7 +53,7 @@
                 $array = str_split($_SESSION['cep_ativo'], 5);
                 $_SESSION['cep_ativo'] = implode("-", $array);
 				do{
-                    $conteudo = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=".$_SESSION['cep_ativo']);
+                    $conteudo = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=".$_SESSION['cep_ativo']."&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM");
 					$json = json_decode($conteudo); 	
 				}while($json->status == "OVER_QUERY_LIMIT");
 				if($json->status == "INVALID_REQUEST"){
