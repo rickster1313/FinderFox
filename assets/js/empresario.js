@@ -1,24 +1,7 @@
 var $j = jQuery.noConflict();
 $j(document).ready(function(){ 
 
-    function abrir(){
-                if(aberto == 1) {
-                    aberto =2;
-                    document.getElementById("main").style.marginLeft = "220px";
-                    document.getElementById("mySidebar").style.width = "220px";
-                    document.getElementById("mySidebar").style.display = "block";
-                } else {
-                    aberto=1;
-                    document.getElementById("main").style.marginLeft = "0%";
-                    document.getElementById("mySidebar").style.display = "none";
-                    document.getElementById("openNav").style.display = "inline-block";
-                }
-            }
-            aberto = 2;
-            $j("#openNav").bind("click", function(){
-                abrir(); 
-            }); 
-            abrir();
+
     nome_av_stats = false;
     url_av_stats = false;
 

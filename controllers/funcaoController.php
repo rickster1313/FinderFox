@@ -40,7 +40,7 @@
             $retorno = array('status' => '', 'lat' => '', 'lon' => '');
             if($cep != ""){
                 do{
-                    $url = "https://maps.googleapis.com/maps/api/geocode/json?address=".$cep;
+                    $url = "https://maps.googleapis.com/maps/api/geocode/json?address=".$cep."&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM";
                     $json = json_decode(file_get_contents($url));
                 }while($json->status == "OVER_QUERY_LIMIT");
                 if($json->status == "ZERO_RESULTS"){
