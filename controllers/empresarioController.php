@@ -163,7 +163,7 @@
 						$img_home = $dadosBD['img_home'];
 					}else{
 						$img_home = $retorno;
-						//unlink("assets/images/AV/".$dadosBD['img_home']);
+						unlink("assets/images/AV/".$dadosBD['img_home']);
 					}
 				}else{
 					$img_home = $dadosBD['img_home'];
@@ -205,7 +205,7 @@
 						$part2_img = $dadosBD['part2_img'];
 					}else{
 						$part2_img = $retorno;
-						//unlink("assets/images/AV/".$dadosBD['part2_img']);
+						unlink("assets/images/AV/".$dadosBD['part2_img']);
 					}
 				}else{
 					$part2_img = $dadosBD['part2_img'];
@@ -233,11 +233,11 @@
 							$fotos = $dadosBD['fotos']."$!$".$retorno;
 						}else{
 							$fotos = $retorno;
-							/*
+							
 							$array_fotos = explode("$!$", $dadosBD['fotos']);
 							foreach ($array_fotos as $value) {
 								unlink("assets/images/AV/".$value);
-							}*/
+							}
 	
 						}
 					}else{
@@ -245,11 +245,11 @@
 							$fotos = $dadosBD['fotos'];
 						}else{
 							$fotos = " ";
-							/*
+							
 							$array_fotos = explode("$!$", $dadosBD['fotos']);
 							foreach ($array_fotos as $value) {
 								unlink("assets/images/AV/".$value);
-							}*/
+							}
 	
 						}
 					}

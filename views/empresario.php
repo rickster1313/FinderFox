@@ -140,10 +140,18 @@
                         <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla " style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/monitor.png" width="26">  Ambiente Virtual </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#pagina4" data-toggle="tab"  class="w3-bar-item w3-button  sla" style="font-size: 19px;"> <img src="<?php echo BASE_URL;?>assets/images/configuration_13194.png" width="26"> Gerenciar Funções</a>
+                        <a href="#pagina4" data-toggle="tab" class="w3-bar-item w3-button sla" style="font-size: 19px;"> <img src="<?php echo BASE_URL;?>assets/images/configuration_13194.png" width="26"> Gerenciar Funções</a>
+
+                    </li >
+                        <li class="nav-item">
+                        <a href="#pagina5" data-toggle="tab"  class="w3-bar-item w3-button  sla" style="font-size: 19px;"> #Lembrete</a>
 
                     </li>
+                    <li class="nav-item">
+                        <a href="#pagina6" data-toggle="tab"  class="w3-bar-item w3-button  sla" style="font-size: 19px;">  #Agendamento</a>
 
+                    </li>
+                
                 </ul>
             </div>
   <!--<a href="#est" data-toggle="tab" class="w3-bar-item w3-button">Estatisticas</a>
@@ -547,7 +555,55 @@
           </div>
         </div>
       </div>
+        <div id="pagina5" class="tab-pane fade">
+            pagina 5
 
+        </div>
+      <div id="pagina6" class="tab-pane fade"><div style="padding-left:40px;padding-right: 40px">
+            <table class="table table-dark table-striped" >
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>CEP</th>
+                <th>telefone</th>
+                <th>descricao</th>
+                <th>data</th>
+                <th>horario</th>
+                <th>acoes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>13238-094</td>
+                <td>(11) 912331234</td>
+                <td>21/08/2018</td>
+                <th>15h</th>
+                <td>Preciso de tal coisa bla bla bla bla loren ipsun</td>
+                 <th><button type="button" class="btn btn-success">Aceitar</button><button type="button" class="btn btn-danger">Negar</button></th>
+              </tr>
+              <tr>
+                <td>Marie</td>
+                <td>13238-094</td>
+                <td>(11) 912331234</td>
+                <td>28/08/2018</td>
+                <th>15h</th>
+                <td>Preciso de tal coisa bla bla bla bla loren ipsun</td>
+                 <th><button type="button" class="btn btn-success">Aceitar</button><button type="button" class="btn btn-danger">Negar</button></th>
+              </tr>
+              <tr>
+                <td>User1</td>
+                <td>13238-094</td>
+                <td>(11) 912331234</td>
+                <td>19/10/2018</td>
+                <th>13h</th>
+                <td>Preciso de tal coisa bla bla bla bla loren ipsun</td>
+                 <th><button type="button" class="btn btn-success">Aceitar</button><button type="button" class="btn btn-danger">Negar</button></th>
+              </tr>
+            </tbody>
+        </table></div>
+
+        </div>
   
 
 </div>
