@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Página Empresário</title>
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-grid.min.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/w3.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set2.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set1.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/icons.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component1.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style2.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/estilo.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/estilo.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/owl.carousel.min.css">
-        <link href="<?php echo BASE_URL; ?>assets/css/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
-        <link rel="icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
-        <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Empresário</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
 
 
+    <link href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<?php echo BASE_URL; ?>assets/css/animate.min.css" rel="stylesheet"/>
+    <link href="<?php echo BASE_URL; ?>assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="<?php echo BASE_URL; ?>assets/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/owl.carousel.min.css">
 
-
-
-        <style type="text/css"> 
+    <style type="text/css"> 
 
             .legenda .quadradinho{
                 width: 13px;
@@ -70,7 +61,13 @@
             body{
                 background-color: #fff;
                 font-family: 'Bree Serif', serif;
+                width: 100%;
             }
+
+           html{
+            width: 100%;
+           }
+
             input[type='file'] {
                 display: none
             }
@@ -168,365 +165,139 @@
                 border-color: #fff;
             }
 
+            .nav-item{
+                width: 245px;
+            }
+              
+              .nav-item:hover{
+                width: 245px;
+              }
 
+              .nav-tabs:hover{
+                width: 245px;
+              }
 
+              .nav-tabs{
+                width: 245px;
+              }
+
+             
         </style>
 
-    </head> 
-    <body>
+</head>
+<body>
 
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="<?php echo BASE_URL; ?>assets/img/sidebar-5.jpg">
 
-        <!--<h1>Olá <?php $newNome// = explode(" ", $nome);echo strtoupper($newNome[0]);                           ?></h1>-->
+    <!--
 
-        <div class="container-fluid" style="padding: 0px">
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
 
-            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width: 180px; background-color: #fff; " id="mySidebar">
-                <div class="sidenav ">
-                    <ul class="nav flex-column nav-pills">
-                        <li class="nav-item">
-                            <a href="#pag1" data-toggle="tab"  class="w3-bar-item  sla" style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/positive-dynamic.png" width="26">  Estatiscas </a>
+    -->
 
-                        </li>
-                        <li class="nav-item ">
-                            <a href="#enderecos" data-toggle="tab"  class="w3-bar-item sla " style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/map-marker.png" width="26">  Endereços / sedes </a>
-                        </li>
-                        <li class="nav-item">
-                            <a  href="#av_conteudo" id="menu_av" data-toggle="tab" class="w3-bar-item sla " style="font-size: 19px;"><img src="https://png.icons8.com/metro/50/000000/monitor.png" width="26">  Ambiente Virtual </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#funcoes" data-toggle="tab" class="w3-bar-item w3-button sla" style="font-size: 19px;"> <img src="<?php echo BASE_URL; ?>assets/images/configuration_13194.png" width="26"> Gerenciar Funções</a>
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#" class="simple-text">
+                   <h3> Empresário </h3>
 
-                        </li >
+                    <img src="<?php echo BASE_URL; ?>assets/images/goku.jpg" class="rounded-circle" alt="Cinque Terre" width="200" height="200">
+                </a>
 
-                    </ul>
-                </div>
-                <!--<a href="#est" data-toggle="tab" class="w3-bar-item w3-button">Estatisticas</a>
-                <a href="#fun" data-toggle="pill" class="w3-bar-item w3-button">Funções</a>
-                <a href="#x" data-toggle="pill" class="w3-bar-item w3-button">Link 3</a>-->
+              <br>
+
+                
+                 <a href="">  
+                 </a>
+                 
             </div>
 
-            <div id="main">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#menu1" class="nav-link active" data-toggle="tab">
+                        <i class="pe-7s-graph3"></i>
+                        <p>Estátisticas</p>
+                    </a>
+                </li>
 
-                <div class="" style="width: 100%; background: #68319b">
-                    <button id="openNav" style="outline-style: none; background-color: #68319b;" class="w3-button w3-xlarge sla">&#9776;</button>
-                    <a  href="<?php echo BASE_URL ?>login/deslogar" style="width: 30px; margin-top: 4px; float: right; margin-right: 39px;margin-left: 20px; text-align: center;text-decoration: none;color:black"> <!-- Tinha o id="btn_sair" -->
-                        <img src="<?php echo BASE_URL; ?>assets/images/signout_106525.png" width="30"> Sair
+                <li class="nav-item">
+                    <a href="#menu2" data-toggle="tab" class="nav-link">
+                        <i class="pe-7s-map-2"></i>
+                        <p>Endereços/Sedes</p>
                     </a>
-                    <a href="<?php echo BASE_URL; ?>home" style="width: 30px;margin-top: 4px; float: right; text-align: center;text-decoration: none;color:black">
-                        <img src="<?php echo BASE_URL; ?>assets/images/homeminimono_105801.png" width="30">
-                        Home
+                </li>
+
+                <li class="nav-item">
+                    <a href="#menu3" data-toggle="tab" class="nav-link">
+                        <i class="pe-7s-monitor"></i>
+                        <p>Ambiente Virtual</p>
                     </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#menu4" data-toggle="tab" class="nav-link">
+                        <i class="pe-7s-tools"></i>
+                        <p>Gerenciar Funções</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Inicio</a>
                 </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-dashboard"></i>
+                            </a>
+                        </li>
+                    </ul>
 
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="">
+                               Account
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-                <div class="tab-content conteudo ">   
-                    <div id="pag1" class="tab-pane fade">
-                        <h1>Olá <?php
+        <div class="main">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+                        <div class="tab-content">
+                                <div class="tab-pane active" id="menu1" style="">
+                                    <h1>Olá <?php
                             $newNome = explode(" ", $nome);
                             echo strtoupper($newNome[0]);
                             ?></h1>
-                    </div>
-                    
-                    <div id="enderecos" class="tab-pane fade">
-                        <div class="tabela-end" style="margin: 40px;">
-                            <div class=" end-tbl">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Nome</th>
-                                            <th>Rua</th>
-                                            <th>Cidade</th>
-                                            <th>Estado</th>
-                                            <th>Alcance (KM)</th>
-                                            <th style="text-align: center;">Ações</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        $enderecosModel = new enderecosModel();
-                                        $retorno = $enderecosModel->getEnderecos($_SESSION['id']);
-                                        $sql = $retorno->fetchAll();
-                                        foreach ($sql as $result) {
-                                            if ($result['active'] == 'nao') {
-                                                echo "<tr class='table-danger' >";
-                                            } else {
-                                                echo "<tr class='table-success' >";
-                                            }
-                                            ?>
-
-                                        <td> <strong><?php echo strtoupper($result['nome']); ?></strong></td>
-                                        <td><?php echo $result['rua']; ?></td>
-                                        <td><?php echo $result['cidade']; ?></td>
-                                        <td><?php echo $result['estado']; ?></td>
-                                        <td><input type="text" id="raio<?php echo $result['id_end']; ?>" class="raio" name="raio_txt" placeholder="ex.: 50.2" value="<?php echo $result['raio']; ?>"></td>
-                                        <td style="text-align: center;"> 
-
-                                            <button type="button" class="btn-tbl btn btn-outline-info" data-toggle="modal" data-target="#my2Modal<?php echo $result['id_end']; ?>">
-                                                Ver detalhes</button>
-
-                                            <div class="modal fade" id="my2Modal<?php echo $result['id_end']; ?>">
-
-                                                <div class="modal-dialog modal-lg">
-                                                    <div style="background-color: #dfcdef;" class="modal-content">
-
-                                                        <!-- Modal Header -->
-                                                        <div class="modal-header">
-                                                            <h4 class="modal-title">Detalhes</h4>
-                                                        </div>
-
-                                                        <!-- Modal body -->
-                                                        <div class="modal-body">
-
-                                                            <p>Veja as informações detalhadamente:</p>
-
-                                                            <table style="border-radius: 3px; position: absolute; top: 55%; width: 40%; left: 55%;" class="table table-striped">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td><strong>Nome</strong></td>
-                                                                        <td><?php echo $result['nome']; ?></td> <!-- Variaveis do php -->
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><strong>Rua</strong></td>
-                                                                        <td><?php echo $result['rua']; ?></td><!-- Variaveis do php -->
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><strong>Número</strong></td>
-                                                                        <td><?php echo $result['numero']; ?></td><!-- Variaveis do php -->
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><strong>CEP</strong></td>
-                                                                        <td><?php echo $result['cep']; ?></td><!-- Variaveis do php -->
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><strong>Cidade</strong></td>
-                                                                        <td><?php echo $result['cidade']; ?></td><!-- Variaveis do php -->
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><strong>Estado</strong></td>
-                                                                        <td><?php echo $result['estado']; ?></td><!-- Variaveis do php -->
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><strong>Alcance     </strong></td>
-                                                                        <td><?php echo $result['raio']; ?> KM</td><!-- Variaveis do php -->
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-
-
-                                                            <img src="<?php echo BASE_URL; ?>assets/images/Mapa_centro_Copenhague2.jpg" 
-                                                                 style=" width: 760px; height: 700px;" class="float-left img-thumbnail">
-
-
-                                                        </div>
-
-                                                        <!-- Modal footer   -->
-                                                        <div class="modal-footer">
-                                                            <h5>@TrioMonstro</h5>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <button class="btn-tbl btn btn-outline-warning btn_alt" value="modalAlt<?php echo $result['id_end']; ?>">Alterar</button><br>
-                                            <?php if ($result['active'] == 'nao') { ?>
-                                                <button name="btn_on_off" id="id<?php echo $result['id_end']; ?>" value="ativar" type="button" class="btn btn-success btn-tbl">Ativar</button>
-                                            <?php } else {
-                                                ?>
-                                                <button name="btn_on_off" id="id<?php echo $result['id_end']; ?>" value="desativar" type="button" class="btn btn-danger btn-tbl">Desativar</button>
-                                            <?php }
-                                            ?>
-                                            <?php if ($retorno->rowCount() > 1) { ?>
-                                                <button type="button" class="btn-tbl btn btn-outline-danger btn_del" value="id<?php echo $result['id_end']; ?>">Excluir</button> <?php } else { ?> 
-                                                <button type="button" class="btn-tbl btn btn-outline-danger btn_del" disabled="disabled" title="É obrigatório no mínimo 1 endereço! " value="id<?php echo $result['id_end']; ?>">Excluir</button> <?php } ?>
-                                        </td>
-                                        </tr>
-
-                                    <?php } ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <?php foreach ($sql as $resultAlt) { ?>
-                                <!-- ################# modais de alterar ######################-->
-                                <!-- The Modal -->
-                                <div class="modal fade" id="modalAlt<?php echo $resultAlt['id_end']; ?>">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content" style="background-color: #F4EDE8;">
-
-                                            <!-- Modal Header -->
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Alterar <strong><?php echo $resultAlt['nome']; ?></strong></h4>
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            </div>
-
-                                            <!-- Modal body -->
-                                            <div class="modal-body" style="display: flex; justify-content: center; ">
-                                                <form id="id<?php echo $resultAlt['id_end']; ?>" name="form_alterar_end" method="POST">
-
-
-                                                    <span class="input input--yoko">
-                                                        <input type="text" name="nome_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['nome']; ?>">
-                                                        <label class="input__label input__label--yoko" for="nome">
-                                                            <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Nome</span>
-                                                        </label> 
-                                                    </span>
-                                                    <br>
-                                                    <span class="input input--yoko">
-                                                        <input type="text" name="cep_txt" required="required" class=" cep_alt input__field input__field--yoko" value="<?php echo $resultAlt['cep']; ?>">
-                                                        <label class="input__label input__label--yoko" for="cep">
-                                                            <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">CEP</span>
-                                                        </label><span class="not_cep_alt"></span><br>
-                                                    </span>
-                                                    <br>
-                                                    <div class="alt_part2" name ="id<?php echo $resultAlt['id_end']; ?>">
-
-
-                                                        <span class="input input--yoko">
-                                                            <input type="text" name="rua_txt" required="required" class="alt_rua input__field input__field--yoko" value="<?php echo $resultAlt['rua']; ?>">
-                                                            <label class="input__label input__label--yoko" for="rua">
-                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Rua</span>
-                                                            </label> 
-
-                                                        </span>
-                                                        <br>
-
-
-
-                                                        <span class="input input--yoko">
-                                                            <input type="text" name="cid_txt" required="required" class="alt_cid input__field input__field--yoko" value="<?php echo $resultAlt['cidade']; ?>">
-                                                            <label class="input__label input__label--yoko" for="cid">
-                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Cidade</span>
-                                                            </label> 
-                                                        </span>
-                                                        <br>
-
-                                                        <span class="input input--yoko">
-                                                            <input type="text" name="est_txt" required="required" class="alt_est input__field input__field--yoko" value="<?php echo $resultAlt['estado']; ?>">
-                                                            <label class="input__label input__label--yoko" for="est">
-                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Estado</span>
-                                                            </label> 
-                                                        </span>
-                                                        <br>
-
-                                                        <span class="input input--yoko">
-                                                            <input type="text" name="num_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['numero']; ?>">
-                                                            <label class="input__label input__label--yoko" for="numero">
-                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Numero</span>
-                                                            </label> 
-                                                        </span>
-                                                        <br>
-
-                                                        <span class="input input--yoko">
-                                                            <input type="text" name="raio_txt" required="required" class="input__field input__field--yoko" value="<?php echo $resultAlt['raio']; ?>">
-                                                            <label class="input__label input__label--yoko" for="raio">
-                                                                <span class="input__label-content input__label-content--yoko" style="font-size: 16px;">Alcance em KM(somente números) ou escreva 'global'(para alcance global)</span>
-                                                            </label> 
-                                                        </span>
-                                                        <br>
-                                                        <input type="submit" name="alterar_end" value="Alterar" class="btn btn-outline-dark" style="font-size: 18px; box-shadow: 2px 2px 3px #232323;" >
-                                                    </div>
-                                                </form>
-                                            </div>
-
-                                            <!-- Modal footer -->
-                                            <div class="modal-footer">
-
-                                            </div>
-
-                                        </div>
-                                    </div>
                                 </div>
-                            <?php } ?>
-                            <div class="legenda">
-                                <div class="quadradinho bg-danger" > Desativo</div>
-                                <div class="quadradinho bg-success"> Ativo</div>
-                                <strong>Alcance</strong> - Raio de distância máxima para prestar serviços
-                            </div>
-                            <br>
-                            <button type="button" class="btn btn-outline-dark " style="font-size: 18px; box-shadow: 2px 2px 3px #232323;" id="btn_novo_end">Novo Endereço</button>
 
-                        </div>
-                        <div class="modal fade" id="modalEnd">
-                            <form id="form_novo_end" method="POST">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-
-                                        <!-- Modal Header -->
-                                        <div class="modal-header" style="background: linear-gradient(45deg, #68319b , #A491BA);">
-                                            <h4 class="modal-title">Novo Endereço / SEDE</h4>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-
-                                        <!-- Modal body -->
-                                        <div class="modal-body">
-
-
-                                            <span class="input input--yoko">
-                                                <input class="input__field input__field--yoko" type="text" id="nome" required="required" name="nome_txt" />
-                                                <label class="input__label input__label--yoko" for="nome">
-                                                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Nome</span>
-                                                </label>
-                                            </span>
-
-                                            <span class="input input--yoko">
-                                                <input class="input__field input__field--yoko" type="text" id="cep_novo" required="required" name="cep_txt" />
-                                                <label class="input__label input__label--yoko" for="cep_novo">
-                                                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">CEP</span>
-                                                </label>
-                                                <span id="not_cep"></span><br>
-                                            </span>
-
-                                            <div id="novo_part2" style="display: none">
-                                                <span class="input input--yoko">
-                                                    <input class="input__field input__field--yoko " style="background: #CFC1DE;opacity: 1" type="text" id="rua" required="required" name="rua_txt" />
-                                                    <label class="input__label input__label--yoko" for="rua">
-                                                        <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Rua</span>
-                                                    </label>
-                                                </span>
-
-                                                <span class="input input--yoko">
-                                                    <input class="input__field input__field--yoko" style="background: #CFC1DE;opacity: 1" type="text" id="cid" required="required" name="cid_txt" />
-                                                    <label class="input__label input__label--yoko" for="cid">
-                                                        <span class="input__label-content input__label-content--yoko " style="font-size: 17px; color: #232323;">Cidade</span>
-                                                    </label>
-                                                </span>
-
-                                                <span class="input input--yoko">
-                                                    <input class="input__field input__field--yoko" style="background: #CFC1DE;opacity: 1" type="text" id="est" required="required" name="est_txt" />
-                                                    <label class="input__label input__label--yoko" for="est">
-                                                        <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Estado</span>
-                                                    </label>
-                                                </span>
-
-                                                <span class="input input--yoko">
-                                                    <input class="input__field input__field--yoko" type="text" id="num" required="required" name="num_txt" />
-                                                    <label class="input__label input__label--yoko" for="num">
-                                                        <span class="input__label-content input__label-content--yoko " style="font-size: 17px; color: #232323;">N°</span>
-                                                    </label>
-                                                </span>
-
-                                                <input type="submit" name="enviar_novo_end" value="Confirmar" class="btn btn-outline-dark" style="font-size: 18px; box-shadow: 2px 2px 3px #232323;" >
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <!-- Modal footer -->
-                                        <div class="modal-footer" style="background: linear-gradient(45deg, #68319b , #A491BA);">
-                                            <button type="button" id="btn_clear_new" class="btn btn-outline-dark" data-dismiss="modal">Fechar</button>
-                                        </div>
-
-                                    </div>
-
+                                <div class="tab-pane fade" id="menu2">
+                                    MENU 2
                                 </div>
-                            </form>
-                        </div>
-                    </div>
 
-                    <div id="av_conteudo" class="tab-pane fade">
-                        <?php
+                                <div class="tab-pane fade" id="menu3">
+                            
+                                     <?php
                         include($av_status);
 
                         if ($av_status == "html/av_create.php") {
@@ -536,13 +307,14 @@
                             </script>
 
                         <?php } ?>
+                                    
+                                </div>
 
-                    </div>
-
-                    <div id="funcoes" class="tab-pane in active">
-                        <div class="container">
+                                <div class="tab-pane fade" id="menu4">
+                                    <div class="container">
                             <div class="section-title">
                                 <h3>Funções</h3>
+                                <a href="<?php echo BASE_URL; ?>views/template.php">lalalalal</a>
                             </div>
 
                             <div class="img-gallery owl-carousel owl-theme funcoes">
@@ -560,28 +332,58 @@
 
                         </div>
 
-                    </div>
+                                </div>
+                        </div>
+
                 </div>
+            </div>
+        </div>
 
 
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                </p>
+            </div>
+        </footer>
+
+    </div>
+    </div>
+</div>
 
 
-                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
-                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
-                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
-                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
-                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
-                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
-                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
-                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/clipboard.min.js"></script>
-                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/owl.carousel.min.js"></script>
-                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
-                <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/cssParser.js"></script>
+</body>
 
-                <script src="<?php echo BASE_URL; ?>assets/js/modalEffects.js"></script>
-
-
-                <script>
+    <!--   Core JS Files   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/chartist.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/bootstrap-notify.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/demo.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/cssParser.js"></script>
+    
+    <script>
                             (function () {
                                 // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
                                 if (!String.prototype.trim) {
@@ -659,5 +461,5 @@
 
                     });
                 </script>
-                </body>
-                </html>
+
+</html>
