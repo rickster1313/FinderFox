@@ -1,31 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>LOGIN</title>
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-grid.min.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set2.css">
-        <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
-        <link rel="icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
-        <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/util-login.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/main-login.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link rel="icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
 
+  <style type="text/css">
+      body{
+                font-family: 'Bree Serif', serif;
 
-        <style type="text/css">
-            .botao-voltar{
-                border-radius: 15px; 
-                border: 2px solid; 
-                font-size: 18px;
+            }
+
+            .msg-deslogado{
+                display: block;
                 position: absolute;
-                z-index: 2;
-                top: 5px;
-                left: 5px;
+                top: 15%;
             }
 
             @font-face {
@@ -52,73 +53,29 @@
                 font-family: "Champagne & Limousines Bold";
                 font-size: 20px;  
             }  
-            .fundo-form{
-                background-color: transparent;
-                border-radius: 9px;
-                border-color: #232323;
-                border: 3px solid;
-                height: 700px;
-                width: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            body{
-                font-family: 'Bree Serif', serif;
-
-            }
-
-            .msg-deslogado{
-                display: block;
-                position: absolute;
-                top: 15%;
-            }
-
-            .header{
-                width: 100%;
-                background-color: #361850; 
-                overflow: hidden;
-            }
-
-            .container-fluid{
-                padding: 0px;
-            }
-
-            .replay-font{
-                font-family: "BPreplayBold";
-                font-size: 29px;
-                padding: 15px;
-                margin-left: 1100px;
-            }
-
-            #fundo-logo{
-                width: 300px;
-                height: 300px;
-                background-color: #fff;
-                position: absolute;
-            }
-
-        </style>
-
-    </head>
-
-    <body>
-
-        <div class="container-fluid">
-
-            <div class="row">
-
-                <div class="col-sm-6" style="width: 100%; height: 900px;background: #F7F0E8; display: flex; justify-content: center; align-items: center;">
+  </style>
 
 
-                    <a href="<?php echo BASE_URL; ?>">
-                        <img src="<?php echo BASE_URL; ?>assets/images/seta.png" style="width: 41px; margin-top: -851PX; margin-left: -155PX">
+
+</head>
+<body>
+
+ 
+
+	
+	<div class="limiter">
+
+                    
+       
+		<div class="container-login100">
+            <a href="<?php echo BASE_URL; ?>">
+                        <img src="<?php echo BASE_URL; ?>assets/images/seta.png" style="width: 40px;" class="float-right">
                     </a>
-
-
-                    <div class="fundo-form">
-                        <div class="msg-deslogado">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" alt="IMG">
+				</div>
+                      <div class="msg-deslogado">
                             <?php
                             if (isset($_SESSION['msg'])) {
                                 echo $_SESSION['msg'];
@@ -126,83 +83,59 @@
                             }
                             ?>
                         </div>
+				<form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" class="login100-form validate-form">
+					<span class="login100-form-title film-font" style="font-size: 28px;">
+						BEM-VINDO
+					</span>
 
-                        <img src="<?php echo BASE_URL ?>assets/images/Login_icon-icons.com_52028 (1).png" style="display: block; position: absolute;top:25%;">
-                        <form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" style="width: 90%;">
-                            <span class="input input--ruri">
-                                <input class="input__field input__field--ruri" type="text" id="input-26" name="email_txt" />
-                                <label class="input__label input__label--ruri" for="input-26">
-                                    <span class="input__label-content input__label-content--ruri">
-                                        <img src="<?php echo BASE_URL ?>assets/images/newpost_email_3297.png" width="20"> Email </span>
-                                </label>
-                            </span>
-                            <br>
-                            <span class="input input--ruri">
-                                <input class="input__field input__field--ruri" type="password" id="input-27" name="senha_txt" />
-                                <label class="input__label input__label--ruri" for="input-27">
-                                    <span class="input__label-content input__label-content--ruri"><img src="<?php echo BASE_URL ?>assets/images/password_3715.png" width="20"> Senha</span>
-                                </label>
-                            </span>
-                            <br>
-                            <input type="submit" name="enviar_login" class="btn btn-outline-dark btn-md" style="box-shadow: 1px 1px 3px #232323;">
-                        </form>
-                    </div>
-                </div>
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="email_txt" placeholder="Email" autocomplete="off">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
 
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="password" name="senha_txt" placeholder="Senha">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn film-font" type="submit" name="enviar_login">
+							Login
+						</button>
+					</div>
 
-                <div class="col-sm-6" style="height: 900px; background-color: #381850;">
-                    <div class="rounded-circle" id="fundo-logo" style="left:27%; top: 30%;">
-                        <img src="<?php echo BASE_URL ?>assets/images/finderLogopng.png" class="img-fluid" width="250" style="left: 10%; position: absolute; top: 10%;" >
-                    </div>
-                </div>
+					<div class="text-center p-t-12">
+						<span class="txt1 film-font">
+							Esqueceu
+						</span>
+						<a class="txt2 film-font" href="#">
+							Email / Senha?
+						</a>
+					</div>
 
-            </div>
-        </div>
+					<div class="text-center p-t-136">
+						<a class="txt2 film-font" href="#">
+							Crie sua conta
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+    <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL ?>assets/vendor/tilt/tilt.jquery.min.js"></script>
+	<script src="<?php echo BASE_URL; ?>assets/js/main-login.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.mask.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/cadastro.js"></script>
 
-
-
-
-
-        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.mask.js"></script>
-        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/cadastro.js"></script>
-        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/classie.js"></script>
-
-        <script>
-            (function () {
-                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-                if (!String.prototype.trim) {
-                    (function () {
-                        // Make sure we trim BOM and NBSP
-                        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-                        String.prototype.trim = function () {
-                            return this.replace(rtrim, '');
-                        };
-                    })();
-                }
-
-                [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
-                    // in case the input is already filled..
-                    if (inputEl.value.trim() !== '') {
-                        classie.add(inputEl.parentNode, 'input--filled');
-                    }
-
-                    // events:
-                    inputEl.addEventListener('focus', onInputFocus);
-                    inputEl.addEventListener('blur', onInputBlur);
-                });
-
-                function onInputFocus(ev) {
-                    classie.add(ev.target.parentNode, 'input--filled');
-                }
-
-                function onInputBlur(ev) {
-                    if (ev.target.value.trim() === '') {
-                        classie.remove(ev.target.parentNode, 'input--filled');
-                    }
-                }
-            })();
-        </script>	
-
-    </body>
+</body>
 </html>

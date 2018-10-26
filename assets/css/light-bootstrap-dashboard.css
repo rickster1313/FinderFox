@@ -210,6 +210,7 @@ input:focus {
     transition: all 150ms ease-in;
 }
 
+/
 .btn {
     -webkit-transition: all 100ms ease-in;
     -moz-transition: all 100ms ease-in;
@@ -498,13 +499,13 @@ input:focus {
 }
 
 .sidebar[data-color="purple"]:after {
-    background: #9368E9;
-    background: -moz-linear-gradient(top, #9368E9 0%, #943bea 100%);
+    background: #361820;
+    background: -moz-linear-gradient(top, #361850 0%, #943bea 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9368E9), color-stop(100%, #943bea));
-    background: -webkit-linear-gradient(top, #9368E9 0%, #943bea 100%);
-    background: -o-linear-gradient(top, #9368E9 0%, #943bea 100%);
-    background: -ms-linear-gradient(top, #9368E9 0%, #943bea 100%);
-    background: linear-gradient(to bottom, #9368E9 0%, #943bea 100%);
+    background: -webkit-linear-gradient(top, #361850 0%, #943bea 100%);
+    background: -o-linear-gradient(top, #361850 0%, #943bea 100%);
+    background: -ms-linear-gradient(top, #361850 0%, #943bea 100%);
+    background: linear-gradient(to bottom, #361850 0%, #943bea 100%);
     background-size: 150% 150%;
 }
 
@@ -541,6 +542,7 @@ input:focus {
     -webkit-overflow-scrolling: touch;
 }
 
+/*
 .btn {
     border-width: 2px;
     background-color: transparent;
@@ -552,6 +554,9 @@ input:focus {
     color: #888888;
 }
 
+*/
+
+/*
 .btn:hover, .btn:focus, .btn:active, .btn.active,
 .open > .btn.dropdown-toggle {
     background-color: transparent;
@@ -559,6 +564,9 @@ input:focus {
     border-color: #777777;
 }
 
+*/
+
+/*
 .btn.disabled, .btn.disabled:hover, .btn.disabled:focus, .btn.disabled.focus, .btn.disabled:active, .btn.disabled.active, .btn:disabled, .btn:disabled:hover, .btn:disabled:focus, .btn:disabled.focus, .btn:disabled:active, .btn:disabled.active, .btn[disabled], .btn[disabled]:hover, .btn[disabled]:focus, .btn[disabled].focus, .btn[disabled]:active, .btn[disabled].active,
 fieldset[disabled] .btn,
 fieldset[disabled] .btn:hover,
@@ -569,6 +577,10 @@ fieldset[disabled] .btn.active {
     background-color: transparent;
     border-color: #888888;
 }
+
+*/
+
+/*
 
 .btn.btn-fill {
     color: #FFFFFF;
