@@ -247,7 +247,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="<?php echo BASE_URL; ?>" class="nav-link">
+                    <a href="<?php echo BASE_URL; ?>/login/deslogar" class="nav-link">
                         <i class="pe-7s-home"></i>
                         <p>SAIR</p>
                     </a>
@@ -607,23 +607,7 @@
         </div>
 
 
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
 
-                    </ul>
-                </nav>
-                <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                </p>
-            </div>
-        </footer>
 
     </div>
 </div>

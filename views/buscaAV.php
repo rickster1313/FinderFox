@@ -231,7 +231,6 @@
                         <div class="form-group">
                             <form >
                                 <input type="text" name="cep_txt" autocomplete="off" placeholder="Buscar serviços..." class="film-font" >
-                                <button type="submit" name="enviar_cep" value="BUSCAR" class="btn-ef btn-5 btn-5b icon-cart"> <span>Buscar</span></button>
                             </form>
                         </div>
                         <br></div>
