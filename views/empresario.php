@@ -191,6 +191,34 @@
                 width: 245px;
               }
 
+              .watch {
+  display: inline-block;
+  height: 200px;
+  position: relative;
+  width: 200px;
+}
+
+.watch:hover::after {
+  visibility: visible
+}
+
+.watch img {
+  width: 100%
+}
+
+.watch::after {
+  background: url("<?php echo BASE_URL; ?>"assets/images/switch-camera.png) no-repeat;
+  background-position: 45% 55%;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 100%
+}
+
              
         </style>
 
@@ -205,8 +233,9 @@
             <div class="logo">
                 <a href="#" class="simple-text">
                    <h3> Empresário </h3>
-
+                    <div class="watch">
                     <img src="<?php echo BASE_URL; ?>assets/images/goku.jpg" class="rounded-circle" alt="Cinque Terre" width="200" height="200">
+                    </div>
                 </a>
 
               <br>
