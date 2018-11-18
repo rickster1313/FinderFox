@@ -354,6 +354,34 @@ $j(document).ready(function(){
             });
 
     });
+    $j(".atv_func").bind("click", function(){
+        var valuer = $j(this).val();
+        $j.ajax({
+            url: 'empresario/ativarFunc',
+            type:'POST',
+            data:{funcao:valuer},
+            success:function(){
+               window.location.href = "empresario";
+            },
+            error:function(){
+                console.log("error no ajax");
+            }
+        });
+    });
+    $j(".dstv_func").bind("click", function(){
+        var valuer2 = $j(this).val();
+        $j.ajax({
+            url: 'empresario/desativarFunc',
+            type:'POST',
+            data:{funcao:valuer2},
+            success:function(){
+                window.location.href = "empresario";
+            },
+            error:function(){
+                console.log("error no ajax");
+            }
+        });
+    });
 
     // %%%%%%%%%%%%%%  Aqui é a parte de salvar as config do av  %%%%%%%%%%%%%%%%%%%%%%%
 

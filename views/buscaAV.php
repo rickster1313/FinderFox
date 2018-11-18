@@ -196,7 +196,7 @@
 
                 <p class="replay-font" style="color: #ffffff; text-shadow: 2px 8px 11px #232323;">FinderFox</p>
                 <ul class="nav navbar-expand" >
-                    <div class="botão" style="margin-top: 20px;margin-right: 20px">
+                    <div class="botão" style="margin-top: 20px;margin-right: 20px;">
                         <?php if (isset($_SESSION['id'])) { ?>
                             <a href="<?php echo BASE_URL ?>login/deslogar" style= "float: right;margin: 0px;text-align: center;width: 50px;margin-left: 30px;text-decoration: none;color: white">
                                 <img src="<?php echo BASE_URL; ?>assets/images/entrar.png" style="width: 50px;margin: 0px">
@@ -265,23 +265,31 @@
                     <div class="content_avs">
                         <?php
                         //print_r($dataAV);
-                        foreach ($dataAV as $key => $value) {
-                            ?>
 
-                            <div class="av_iten">
-                                <a href="<?php echo BASE_URL . $value[0]['url']; ?>">
-                                    <div class="av_block">
-                                        <img src="<?php echo BASE_URL; ?>assets/images/AV/<?php echo $value[0]['img']; ?>" style="height: 100px; float: left;">
-                                        <div class="av_info">
-                                            <strong><span style="font-size: 18px "><?php echo $value[0]['nome_av']; ?></span></strong><br>
-                                            <p style="margin:0px;opacity: 0.7"><span>Distância:</span> <?php echo $value['distancia']; ?>  KM (aprox.)</p>
-                                            <p style="margin:0px;opacity: 0.7"><span>Categoria: </span><?php echo $value[0]['categoria']; ?></p>
-                                            <p style="margin:0px;opacity: 0.7"><span>Cidade: </span><?php echo $value['cidade'] . " - " . $value['estado']; ?></p>
+                        if ($dataAV != NULL) {
+                            foreach ($dataAV as $key => $value) {
+                                if(isset($value[0])){
+                                ?>
+
+                                <div class="av_iten">
+                                    <a href="<?php echo BASE_URL . $value[0]['url']; ?>">
+                                        <div class="av_block">
+                                            <img src="<?php echo BASE_URL; ?>assets/images/AV/<?php echo $value[0]['img']; ?>" style="height: 100px; float: left;">
+                                            <div class="av_info">
+                                                <strong><span style="font-size: 18px "><?php echo $value[0]['nome_av']; ?></span></strong><br>
+                                                <p style="margin:0px;opacity: 0.7"><span>Distância:</span> <?php echo $value['distancia']; ?>  KM (aprox.)</p>
+                                                <p style="margin:0px;opacity: 0.7"><span>Categoria: </span><?php echo $value[0]['categoria']; ?></p>
+                                                <p style="margin:0px;opacity: 0.7"><span>Cidade: </span><?php echo $value['cidade'] . " - " . $value['estado']; ?></p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        <?php } ?>  
+                                    </a>
+                                </div>
+                            <?php } }
+                        } else { ?> 
+                            <div class="alert alert-danger">
+                                <strong>Ops!</strong> Nenhum ambiente foi encontrado.
+                            </div>    
+<?php } ?>  
                     </div>
 
 

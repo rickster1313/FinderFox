@@ -14,6 +14,11 @@
         <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/owl.carousel.min.css">
         <!-- Main css -->
         <link href="<?php echo BASE_URL; ?>assets/css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
         <style>
 
@@ -274,11 +279,12 @@
                                         echo "Instagram";
                                     }
                                     ?></a>
-                            <?php }
+                                <?php
+                            }
                         } else {
                             ?>
                             <a class="btn btn-success"> Sem redes sociais</a>
-<?php } ?>
+                        <?php } ?>
                     </div>
                     <p class="text-primary"><small><i>Acesse também nossas redes sociais. </i></small></p>
                 </div>
@@ -299,7 +305,7 @@
                         foreach ($enderecos as $value) {
                             ?>
                             <p class="mb-2"> <span class="ti-location-pin mr-2"></span> <?php echo $value['rua'] . ' nº ' . $value['numero'] . ', ' . $value['cidade'] . ' - ' . $value['estado']; ?></p>
-<?php } ?>
+                        <?php } ?>
                         <div class="d-block d-sm-inline-block">
                             <p class="mb-0">
                                 <span class="ti-headphone-alt mr-2"></span> <a href="<?php echo $dadosUser['telefone']; ?>"><?php echo $dadosUser['telefone']; ?></a>
@@ -316,12 +322,67 @@
                     </div>
                 </div>
 
+                <?php
+                $valor = explode(",", $func);
+                if (in_array('3', $valor)) {
+                    ?>
+                    <button type = "button" class = "btn btn-primary" data-toggle = "modal" data-target = "#myModal" style = "position:fixed; bottom: 0px; right:5px;">
+                        Mensagem
+                    </button>
+                <?php }
+                ?>
+
             </div>
 
         </div>
+
+
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <?php if (isset($_SESSION["nvl_acesso"]) && $_SESSION["nvl_acesso"] == 'usuario') { ?>
+                            <form id="chat">
+                                <div class = "form-group">
+                                    <label for = "comment">Mensagem:</label>
+                                    <textarea class = "form-control" rows = "6" id = "msg" ></textarea>
+                                </div>
+                                <input type="hidden" id="user_av" value="<?php echo $user_id; ?>">
+                                <input type="hidden" id="user_logado" value="<?php echo $_SESSION['id']; ?>">
+                                <button type = "submit" id="enviar_msg" class = "btn btn-primary">Enviar</button>
+                            </form>
+                            <?php } else {
+                            ?>
+                            <div class = "alert alert-warning">
+                                <strong>Aviso!</strong> Para mandar menssagem, precisa estar logado.
+                                <a href = "<?php echo BASE_URL; ?>login" class = "alert-link"><button>Logar</button></a>
+                            </div>
+                        <?php }
+                        ?>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         <!-- // end .section -->
         <footer class="my-5 text-center">
-            <!-- Copyright removal is not prohibited! -->
+
             <p class="mb-2"><small>COPYRIGHT © 2018. TODOS OS DIREITOS RESERVADOS</small></p>
 
         </footer>
@@ -332,6 +393,7 @@
         <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/owl.carousel.min.js"></script>
         <!-- Custom JS -->
         <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/script.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/av.js"></script>
     </body>
 </html>
 
