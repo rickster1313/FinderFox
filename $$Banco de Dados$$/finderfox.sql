@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Nov-2018 às 04:36
+-- Generation Time: 19-Nov-2018 às 00:37
 -- Versão do servidor: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -41,7 +41,11 @@ CREATE TABLE `notificacao` (
 --
 
 INSERT INTO `notificacao` (`id_notificacao`, `lida`, `user_id`, `origem_id`, `notificacao`) VALUES
-(2, 0, 6, 12, 'VocÃª possui uma nova mensagem!');
+(2, 0, 6, 12, 'VocÃª possui uma nova mensagem!'),
+(3, 0, 6, 12, 'VocÃª possui uma nova mensagem!'),
+(4, 0, 6, 13, 'VocÃª possui uma nova mensagem!'),
+(5, 0, 6, 12, 'VocÃª possui uma nova mensagem!'),
+(6, 0, 13, 6, 'VocÃª possui uma nova mensagem!');
 
 -- --------------------------------------------------------
 
@@ -90,7 +94,7 @@ CREATE TABLE `tbl_avs` (
 --
 
 INSERT INTO `tbl_avs` (`id_av`, `user_id`, `url`, `nome_av`, `slogan_av`, `logo_av`, `categoria`, `func`, `palavras_chave`, `img_home_active`, `img_home`, `part1_active`, `part1_title`, `part1_nome1`, `part1_text1`, `part1_nome2`, `part1_text2`, `part1_nome3`, `part1_text3`, `part2_active`, `part2_nome1`, `part2_text1`, `part2_nome2`, `part2_text2`, `part2_nome3`, `part2_text3`, `part2_img`, `galery_active`, `galery_title`, `fotos`, `tipos`, `tipos_val`, `created`) VALUES
-(1, 6, 'empre-ambiental', 'empre ambiental', 'meu solgan eu ligando', 'logo-empre-ambiental.jpeg', '', '3,1', '', 'no', '', 'yes', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'no', '', '', '', '', '2018-11-17 20:29:01');
+(1, 6, 'empre-ambiental', 'empre ambiental', 'meu solgan eu ligando', 'logo-empre-ambiental.jpeg', '', '3', '', 'no', '', 'yes', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'no', '', '', '', '', '2018-11-17 20:29:01');
 
 -- --------------------------------------------------------
 
@@ -111,7 +115,19 @@ CREATE TABLE `tbl_chat` (
 --
 
 INSERT INTO `tbl_chat` (`id_msg`, `remetente_id`, `destinatario_id`, `hora`, `msg`) VALUES
-(4, 12, 6, '2018-11-18 00:41:21', 'cuasda');
+(4, 12, 6, '2018-11-18 00:41:21', 'cuasda'),
+(5, 12, 6, '2018-11-18 18:24:07', 'oi tudo bom bb'),
+(6, 13, 6, '2018-11-18 18:26:02', 'petunia delivia de ere\n'),
+(7, 12, 6, '2018-11-18 18:46:54', 'cocoa beans\n'),
+(8, 6, 12, '2018-11-18 21:03:28', 'wehtjae'),
+(9, 6, 12, '2018-11-18 21:03:32', 'wehtjaelalal'),
+(10, 6, 12, '2018-11-18 21:03:53', 'Teste'),
+(11, 6, 12, '2018-11-18 21:04:40', 'h9uhuhhguhjghuh\\shgaoepgagahgÃ§jÃ§hggjegÃ§  reagjkaenÃ§kgjaer'),
+(12, 6, 13, '2018-11-18 21:06:19', 'Acabou?'),
+(13, 6, 12, '2018-11-18 21:10:52', 'jhjhj'),
+(14, 6, 12, '2018-11-18 21:25:44', '123456789123456789123456789123456789123456789123456789123456789'),
+(15, 6, 13, '2018-11-18 21:34:13', 'coe rapÃ¡'),
+(16, 6, 13, '2018-11-18 21:36:27', 'coe rapÃ¡');
 
 -- --------------------------------------------------------
 
@@ -192,7 +208,8 @@ CREATE TABLE `tbl_usuarios` (
 
 INSERT INTO `tbl_usuarios` (`id`, `nome`, `nvl_acesso`, `email`, `senha`, `CPF_CNPJ`, `telefone`, `status`, `created`, `modified`) VALUES
 (6, 'empresario', 'empresario', 'empre', '$2y$10$ur7mbGCxpLnNEirAYnI2ue0C3wra.TuH97l30fg5OGlxXi.MH5wcy', '23.423.452/2342-34', '(67) 567567565', 0, '2018-08-03 08:22:05', NULL),
-(12, 'usuario1', 'usuario', 'user', '$2y$10$ji0v6oAEKEJEV2qz.tGdPO3fe9mvxig3rp6uBVB8u5ouRSv5zXe5C', '123.242.135-12', '(21) 323123123', 0, '2018-08-13 02:15:25', NULL);
+(12, 'usuario1', 'usuario', 'user', '$2y$10$ji0v6oAEKEJEV2qz.tGdPO3fe9mvxig3rp6uBVB8u5ouRSv5zXe5C', '123.242.135-12', '(21) 323123123', 0, '2018-08-13 02:15:25', NULL),
+(13, 'luciano', 'usuario', 'user2', '$2y$10$702IB5svEKGU6apnZMBtcOP0kxR8SyvZFNxIS/ZuB5Soh/84wBBzK', '123.141.242-14', '(13) 132131232', 0, '2018-11-18 18:25:13', NULL);
 
 --
 -- Indexes for dumped tables
@@ -242,7 +259,7 @@ ALTER TABLE `tbl_usuarios`
 -- AUTO_INCREMENT for table `notificacao`
 --
 ALTER TABLE `notificacao`
-  MODIFY `id_notificacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_notificacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_avs`
@@ -254,7 +271,7 @@ ALTER TABLE `tbl_avs`
 -- AUTO_INCREMENT for table `tbl_chat`
 --
 ALTER TABLE `tbl_chat`
-  MODIFY `id_msg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_msg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbl_endereco`
@@ -272,7 +289,7 @@ ALTER TABLE `tbl_funcoes`
 -- AUTO_INCREMENT for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

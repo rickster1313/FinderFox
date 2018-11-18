@@ -26,5 +26,22 @@ class funcaoModel extends Model {
         $sql->bindValue(3, $notificacao);
         $sql->execute();
     }
+    public function getMsg($id) {
+        $sql = "SELECT * from tbl_chat WHERE destinatario_id = ? ORDER BY hora DESC";
+        $sql = $this->pdo->prepare($sql);
+        $sql->bindValue(1, $id);
+        $sql->execute();
+        return $sql;
+    }
+    public function getChat($reme, $dest) {
+        $sql = "SELECT * from tbl_chat WHERE destinatario_id = ? AND remetente_id = ? OR destinatario_id = ? AND remetente_id = ? ORDER BY hora";
+        $sql = $this->pdo->prepare($sql);
+        $sql->bindValue(1, $dest);
+        $sql->bindValue(2, $reme);
+        $sql->bindValue(3, $reme);
+        $sql->bindValue(4, $dest);
+        $sql->execute();
+        return $sql;
+    }
 }
 ?>						
