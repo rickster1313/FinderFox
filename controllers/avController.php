@@ -14,6 +14,14 @@
 			}
 			$this->loadView($nomePag, $dados);
 		}
+                public function enviarMsg() {
+                    $funcaoModel = new funcaoModel();
+                    $msg = $_POST['msg'];
+                    $remetente = $_POST['remt'];
+                    $destinatario = $_POST['dest'];
+                    $funcaoModel->novaMsg($msg, $remetente, $destinatario);
+                    $funcaoModel->gerarNotificacao($destinatario, $remetente, "Você possui uma nova mensagem!");
+                }
 	}
 
 ?>
