@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Nov-2018 às 03:48
+-- Generation Time: 18-Nov-2018 às 04:36
 -- Versão do servidor: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -90,7 +90,7 @@ CREATE TABLE `tbl_avs` (
 --
 
 INSERT INTO `tbl_avs` (`id_av`, `user_id`, `url`, `nome_av`, `slogan_av`, `logo_av`, `categoria`, `func`, `palavras_chave`, `img_home_active`, `img_home`, `part1_active`, `part1_title`, `part1_nome1`, `part1_text1`, `part1_nome2`, `part1_text2`, `part1_nome3`, `part1_text3`, `part2_active`, `part2_nome1`, `part2_text1`, `part2_nome2`, `part2_text2`, `part2_nome3`, `part2_text3`, `part2_img`, `galery_active`, `galery_title`, `fotos`, `tipos`, `tipos_val`, `created`) VALUES
-(1, 6, 'empre-ambiental', 'empre ambiental', 'meu solgan eu ligando', 'logo-empre-ambiental.jpeg', '', '3', '', 'no', '', 'yes', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'no', '', '', '', '', '2018-11-17 20:29:01');
+(1, 6, 'empre-ambiental', 'empre ambiental', 'meu solgan eu ligando', 'logo-empre-ambiental.jpeg', '', '3,1', '', 'no', '', 'yes', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'no', '', '', '', '', '2018-11-17 20:29:01');
 
 -- --------------------------------------------------------
 
@@ -153,18 +153,19 @@ CREATE TABLE `tbl_funcoes` (
   `descricao` varchar(660) NOT NULL,
   `tipo_func` varchar(110) NOT NULL,
   `status_func` varchar(110) NOT NULL,
-  `created` datetime NOT NULL
+  `created` datetime NOT NULL,
+  `href` varchar(110) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `tbl_funcoes`
 --
 
-INSERT INTO `tbl_funcoes` (`id_func`, `nome_func`, `descricao`, `tipo_func`, `status_func`, `created`) VALUES
-(1, 'agendamento', '', 'sistema', 'ativo', '2018-09-05 00:00:00'),
-(2, 'formulário de contato', '', 'contato', 'ativo', '2018-09-05 00:00:00'),
-(3, 'chat', '', 'comunicacao', 'ativo', '2018-09-05 00:00:00'),
-(4, 'divulgação', '', 'comunicacao', 'ativo', '2018-09-05 00:00:00');
+INSERT INTO `tbl_funcoes` (`id_func`, `nome_func`, `descricao`, `tipo_func`, `status_func`, `created`, `href`) VALUES
+(1, 'agendamento', '', 'sistema', 'ativo', '2018-09-05 00:00:00', 'agendar'),
+(2, 'formulário de contato', '', 'contato', 'ativo', '2018-09-05 00:00:00', ''),
+(3, 'chat', '', 'comunicacao', 'ativo', '2018-09-05 00:00:00', 'chat'),
+(4, 'divulgacao', '', 'comunicacao', 'ativo', '2018-09-05 00:00:00', '');
 
 -- --------------------------------------------------------
 

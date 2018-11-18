@@ -285,11 +285,21 @@
                                 <p>Gerenciar</p>
                             </a>
 
-
-                            <a href="#" data-toggle="collapse" class="" style="color: #fff;">
-                                <i class="pe-7s-tools"></i>
-                                <p>Função 1</p>
-                            </a>
+                            <?php
+                            $avsModel = new avsModel();
+                            $funcaoModel = new funcaoModel();
+                            $sqlFunc = $funcaoModel->getAllactive();
+                            $sql = $avsModel->procuraAV($_SESSION['id']);
+                            $dadosFunc = $sqlFunc->fetchAll();
+                            $dados = $sql->fetch();
+                            $func = explode(",", $dados['func']);
+                            foreach ($func as $value) {
+                                ?>
+                                <a href="#<?php echo $dadosFunc[$value - 1]["href"]; ?>" data-toggle="tab" class="" style="color: #fff;">
+                                    <i class="pe-7s-tools"></i>
+                                    <p><?php echo $dadosFunc[$value - 1]["nome_func"]; ?></p>
+                                </a>
+                            <?php } ?>
                         </div>
 
                         <li class="nav-item">
@@ -642,69 +652,75 @@
                                         $AvModel = new avsModel();
                                         $f = $avsModel->procuraAV($_SESSION['id']);
                                         $sql3 = $f->fetch();
-                                        if($sql3['func'] == ""){
+                                        if ($sql3['func'] == "") {
                                             $func = array();
-                                        }else{
-                                            $func = explode(",",$sql3['func']);
+                                        } else {
+                                            $func = explode(",", $sql3['func']);
                                         }
                                         foreach ($dadosFunc as $value) {
                                             ?>
                                             <div class="funcao1" style="width: 100%; height: 200px; background: #333;color: white">
-                                                
-                                                <?php echo $value['nome_func'];
+
+                                                <?php
+                                                echo $value['nome_func'];
                                                 $resposta = false;
-                                                foreach($func as $valor){
-                                                    if($valor == $value['id_func']){
+                                                foreach ($func as $valor) {
+                                                    if ($valor == $value['id_func']) {
                                                         $resposta = true;
                                                     }
                                                 }
-                                                if($resposta){ ?>
+                                                if ($resposta) {
+                                                    ?>
                                                     <button class="dstv_func" value="<?php echo $value['id_func']; ?>">Desativar</button>
-                                                <?php }else{ ?>
+                                                <?php } else { ?>
                                                     <button class="atv_func" value="<?php echo $value['id_func']; ?>">Ativar</button>
                                                 <?php }
                                                 ?>
-                                                
-                                                
-                                                
+
+
+
                                             </div>
                                         <?php } ?>
 
 
                                     </div>
                                 </div>
-
+                                <div class="tab-pane container fade" id="chat">
+                                    chat
+                                </div>
+                                <div class="tab-pane container fade" id="agendar">
+                                    agendamento
+                                </div>
                             </div>
                         </div>
+
+
+
+
                     </div>
-
-
-
-
                 </div>
+
             </div>
 
-        </div>
 
 
 
-    </body>
 
-    <!--   Core JS Files   -->
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>        
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/clipboard.min.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/cssParser.js"></script>
-    <script src="<?php echo BASE_URL; ?>assets/js/modalEffects.js"></script>
+            <!--   Core JS Files   -->
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>        
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/clipboard.min.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/owl.carousel.min.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/cssParser.js"></script>
+            <script src="<?php echo BASE_URL; ?>assets/js/modalEffects.js"></script>
 
-    <script>
+            <script>
                                         (function () {
                                             // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
                                             if (!String.prototype.trim) {
@@ -773,16 +789,16 @@
 
 
                                         var polyfilter_scriptpath = '/js/';
-    </script>
+            </script>
 
-    <script type="text/javascript">
-        $j(document).ready(function () {
+            <script type="text/javascript">
+                $j(document).ready(function () {
 
-            $j(".funcoes").owlCarousel();
+                    $j(".funcoes").owlCarousel();
 
-        });
-    </script>
-
+                });
+            </script>
+    </body>
 </html>
 
 
