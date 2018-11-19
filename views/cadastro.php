@@ -226,16 +226,19 @@
                 </div>
             </div>
             <div class="container-fluid" style="">
-                <div class="row">
+                <div class="row d-flex align-items-center">
                     <div class="col-md-12" style="">
                         <div class="formularioUser" style="color: white">
                             <div class="formularios" style="">
-                                
+                              <center>
                                 <div class="limiter">
                                 <div class="wrap-login100">
+
                                     <div class="login100-pic js-tilt" data-tilt>
-                                        <img src="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" alt="IMG">
+                                        <img src="<?php echo BASE_URL; ?>assets/images/user.png" alt="IMG">
+                                           <h3 style="color: #232323">Bem-Vindo Usuario</h3>
                                     </div>
+
                                 <form method="POST" id="novo_user" class="login100-form validate-form">
                                     <span class="login100-form-title film-font">
                                         DADOS DE PERFIL DO USUARIO
@@ -265,12 +268,22 @@
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                             </span>
                                     </div>
-
+                                        <center>
                                     <div class="form-group slideInRight animated">
-                                        <label class="" style="font-size: 20px; color: #232323;">Tipo de pessoa</label> <br>
-                                        <input type="radio" name="pessoa" value="fisica" checked="checked"><label style="color: black;">Física</label><br>
-                                        <input type="radio" name="pessoa" value="juridica" style="color: #232323;"><label style="color: black">Jurídica</label>
+                                        <label class="" style="color: #232323;">Tipo de pessoa</label> <br>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" name="pessoa" value="fisica" checked="checked" id="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio" style="color: #232323;">Fisica</label>
                                     </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" name="pessoa" value="juridica" id="customRadio2" class="custom-control-input">
+                                                <label class="custom-control-label" for="customRadio2" style="color: #232323;">Juridica</label>
+                                            </div><br>
+                                                </div>
+                                        </center>
+
+                                        
+                                   
 
                                     <div class="slideInLeft animated wrap-input100 validate-input">
                                         <input class="cpf_cnpj input100" type="text" name="cpf_cnpj_txt" required="required" placeholder="CPF">
@@ -306,6 +319,7 @@
                             </div>
                         
                     </div>
+                </center>
                             </div>
 
                         </div>
@@ -319,9 +333,12 @@
                         
                         
                         <div class="limiter">
+
+                            <center>
                                 <div class="wrap-login100">
                                     <div class="login100-pic js-tilt" data-tilt>
-                                        <img src="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" alt="IMG">
+                                        <img src="<?php echo BASE_URL; ?>assets/images/Icono Empresario.png" alt="IMG">
+                                        <h3 style="color: #232323; ">Bem-Vindo Empresário</h3>
                                     </div>
                         <form method="POST" id="novo_empre" style="" class="login100-form validate-form">
 
@@ -354,11 +371,19 @@
                             </span>
                             </div>
 
+                    <center>
                             <div class="form-group slideInRight animated">
-                                        <label class="" style="font-size: 20px; color: #232323;">Tipo de pessoa</label> <br>
-                                        <input type="radio" name="pessoa" value="fisica" checked="checked"><label style="color: black;">Física</label><br>
-                                        <input type="radio" name="pessoa" value="juridica" style="color: #232323;"><label style="color: black">Jurídica</label>
+                                        <label class="" style="color: #232323;">Tipo de pessoa</label> <br>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" name="pessoa" value="fisica" checked="checked" id="customRadio3" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio3" style="color: #232323;">Fisica</label>
                                     </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" name="pessoa" value="juridica" id="customRadio4" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio4" style="color: #232323;">Juridica</label>
+                                    </div>
+                                    </div>
+                    </center>
 
                             <div class="slideInLeft wrap-input100 animated validate-input">
                                 <input class="cpf_cnpj input100" placeholder="CPF" type="text" name="cpf_cnpj_txt" required="required">
@@ -437,6 +462,7 @@
 
                         </form>
                     </div>
+                </center>
                 </div>
                     </div>
                 </div>

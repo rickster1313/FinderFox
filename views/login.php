@@ -63,18 +63,19 @@
 
 
 
-
         <div class="limiter">
-
-
 
             <div class="container-login100">
                 <a href="<?php echo BASE_URL; ?>">
                     <img src="<?php echo BASE_URL; ?>assets/images/seta.png" style="width: 40px;" class="float-right">
                 </a>
+
+
                 <div class="wrap-login100">
                     <div class="login100-pic js-tilt" data-tilt>
+                        
                         <img src="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" alt="IMG">
+                        <h3>Faça login, É Gratis!</h3>
                     </div>
 
                     <form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" class="login100-form validate-form">
@@ -129,8 +130,10 @@
                         </div>
                     </form>
                 </div>
+                
             </div>
         </div>
+    
 
 
         <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
