@@ -325,6 +325,15 @@ class empresarioController extends Controller {
             
         }
     }
+    
+    public function setMsg(){
+        $destinatario = $_POST['destinatario'];
+        $msg = $_POST['msgChat'];
+        $remetente = $_SESSION['id'];
+        $funcaoModel = new funcaoModel();
+        $funcaoModel->novaMsg($msg, $remetente, $destinatario);
+        $funcaoModel->gerarNotificacao($destinatario, $remetente, "Você possui uma nova mensagem!");
+    }
 
 }
 
