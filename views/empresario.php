@@ -366,11 +366,11 @@
 
                 <div class="sidebar-wrapper">
                     <div class="logo">
-                        <a href="#" class="simple-text">
+                        <a href="#" class="simple-text" >
                             <h3> Empresário </h3>
-                            <div class="watch">
-                                <img src="<?php echo BASE_URL; ?>assets/images/goku.jpg" class="rounded-circle" alt="Cinque Terre" width="200" height="200">
-                            </div>
+                            
+                                <img src="<?php echo BASE_URL; ?>assets/images/pericles.jpg" id="imagemperf" class="rounded-circle"  alt="Cinque Terre" width="200" height="200">
+                            
                         </a>
 
                         <br>
@@ -378,6 +378,8 @@
 
                         <a href="">  
                         </a>
+
+ 
 
                     </div>
 
@@ -889,10 +891,68 @@
             </div>
 
 
+            <div class="modal fade" id="modalPerfil">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Meu Perfil</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <center>
+        <span class="input input--yoko">
+            <input class="input__field input__field--yoko" type="text" id="nome" required="required" name="nome_perfil" autocomplete="off" />
+                    <label class="input__label input__label--yoko" for="nome">
+                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Nome</span>
+                   </label>
+        </span>
+
+
+        <span class="input input--yoko">
+            <input class="input__field input__field--yoko" type="text" id="senha" required="required" name="senha_perfil" autocomplete="off" />
+                    <label class="input__label input__label--yoko" for="senha">
+                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Senha</span>
+                    </label>
+                    
+      </span>
+
+      <span class="input input--yoko">
+            <input class="input__field input__field--yoko" type="text" id="confsenha" required="required" name="confsenha_perfil" autocomplete="off" />
+                    <label class="input__label input__label--yoko" for="confsenha">
+                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Confirmar Senha</span>
+                    </label>
+                    
+      </span>
+
+      <h3>Selecionar nova imagem</h3>
+
+      <img src="<?php BASE_URL;?>assets/images/GogetaFusionRebornDVD.png" class="rounded-circle" width="100">
+      <img src="<?php BASE_URL;?>assets/images/GogetaFusionRebornDVD.png" class="rounded-circle" width="100"  >
+      <img src="<?php BASE_URL;?>assets/images/GogetaFusionRebornDVD.png" class="rounded-circle" width="100">
+      <img src="<?php BASE_URL;?>assets/images/GogetaFusionRebornDVD.png" class="rounded-circle" width="100">
+
+  </center>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark">ALTERAR</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 
 
 
             <!--   Core JS Files   -->
+            
             <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
             <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
             <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>        
@@ -984,6 +1044,19 @@
 
                 });
             </script>
+
+            <script>
+$j(document).ready(function(){
+    $j("#imagemperf").click(function(){
+        $j("#modalPerfil").modal();
+    });
+});
+</script>
+
+
+
+
+
     </body>
 </html>
 
