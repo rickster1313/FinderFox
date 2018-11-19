@@ -154,10 +154,10 @@ var $j = jQuery.noConflict();
             	}
             	$j("#novo_empre .cpf_cnpj").val("");
             	if(pessoa2 == "fisica"){
-            		$j("#novo_empre #label_cpf").html("CPF");
+            		$j("#novo_empre .cpf_cnpj").attr("placeholder", "CPF");
             		$j("#novo_empre .cpf_cnpj").mask("000.000.000-00");
             	}else{
-            		$j("#novo_empre #label_cpf").html("CNPJ");
+            		$j("#novo_empre .cpf_cnpj").attr("placeholder", "CNPJ");
             		$j("#novo_empre .cpf_cnpj").mask("00.000.000/0000-00");
             	}
 			});

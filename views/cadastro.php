@@ -15,6 +15,9 @@
         <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
         <link rel="icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
         <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/main-login.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/util-login.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
 
 
@@ -111,10 +114,9 @@
                 padding-top: 100px;
                 padding-left: 120px; 
             }
-            .formularios form{
-                padding-left: 130px;
+           
 
-            }
+
 
             @font-face {
 
@@ -175,6 +177,8 @@
                 border-color: #fff;
             }
 
+
+
             
             
         </style>
@@ -221,49 +225,87 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid" style="background-image: url(assets/images/fundo.jpg); background-size: cover;">
+            <div class="container-fluid" style="">
                 <div class="row">
                     <div class="col-md-12" style="">
                         <div class="formularioUser" style="color: white">
                             <div class="formularios" style="">
-                                <h1 class="">Dados de perfil do usuário</h1>
+                                
+                                <div class="limiter">
+                                <div class="wrap-login100">
+                                    <div class="login100-pic js-tilt" data-tilt>
+                                        <img src="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" alt="IMG">
+                                    </div>
+                                <form method="POST" id="novo_user" class="login100-form validate-form">
+                                    <span class="login100-form-title film-font">
+                                        DADOS DE PERFIL DO USUARIO
+                                    </span>
+                                
 
+                                    <div class="slideInLeft wrap-input100 animated validate-input">
+                                        <input type="text" class="input100" name="nome_txt" required="required" autocomplete="off" placeholder="Nome">
+                                        <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </span>
+                                    </div>
 
+                                    <div class="slideInLeft wrap-input100 animated validate-input">
+                                         <input class="email input100" type="email" name="email_txt" required="required" placeholder="email">
+                                        <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+                                    </div>
 
-                                <form method="POST" id="novo_user" class="" style=" right: 10%; transform: translate(-10%);">
-                                    <div class="form-group slideInLeft animated">
-                                        <label class="" style="font-size: 20px;">Nome</label> <input type="text" class="form-control" name="nome_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+                                    <div class="slideInLeft animated wrap-input100 validate-input">
+                                        <input class="input100 telefone" type="text" name="telefone_txt" required="required" placeholder="telefone">
+                                        <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </span>
                                     </div>
 
                                     <div class="form-group slideInRight animated">
-                                        <label class="" style="font-size: 20px;">E-mail</label> <input class="email form-control" type="email" name="email_txt" required="required" style="outline: none;color: #d3d3d3;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+                                        <label class="" style="font-size: 20px; color: #232323;">Tipo de pessoa</label> <br>
+                                        <input type="radio" name="pessoa" value="fisica" checked="checked"><label style="color: black;">Física</label><br>
+                                        <input type="radio" name="pessoa" value="juridica" style="color: #232323;"><label style="color: black">Jurídica</label>
                                     </div>
 
-                                    <div class="form-group slideInLeft animated">
-                                        <label class="" style="font-size: 20px;">Telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+                                    <div class="slideInLeft animated wrap-input100 validate-input">
+                                        <input class="cpf_cnpj input100" type="text" name="cpf_cnpj_txt" required="required" placeholder="CPF">
+                                        <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
                                     </div>
+                                    
 
-                                    <div class="form-group slideInRight animated">
-                                        <label class="" style="font-size: 20px;">Tipo de pessoa</label> <br>
-                                        <input type="radio" name="pessoa" value="fisica" checked="checked">Física 
-                                        <input type="radio" name="pessoa" value="juridica">Jurídica<br>
+                                    <div class="slideInLeft animated wrap-input100 validate-input">
+                                         <input class="senha input100" type="password" name="senha_txt" required="required" placeholder="Senha">
+                                         <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
                                     </div>
+                                    
 
-                                    <div class="form-group slideInLeft animated">
-                                        <input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" placeholder="CPF..." style="color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"><br><br>
+                                    <div class="slideInLeft animated wrap-input100 validate-input">
+                                         <input type="password" class="input100 senha_confirm" name="senha_confirm_txt" placeholder="confirmar senha">
+                                         <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
                                     </div>
+                                    
 
-                                    <div class="form-group slideInRight animated">
-                                        <label class="" style="font-size: 20px;">Senha</label> <input class="senha form-control" type="password" name="senha_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
-                                    </div>
-
-                                    <div class="form-group slideInLeft animated">
-                                        <label class="" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control senha_confirm" name="senha_confirm_txt" required="required" style="outline: none;color: #d3d3d3; background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
-                                    </div>
-
-
-                                    <input type="submit" name="novo_user" value="Cadastrar" class="btn btn-outline-light wow slideInRight">
+                                    <div class="container-login100-form-btn">
+                                    <input type="submit" name="novo_user" value="Cadastrar" class="login100-form-btn film-font wow slideInRight">
+                                </div>
                                 </form>
+                            </div>
+                        
+                    </div>
                             </div>
 
                         </div>
@@ -271,71 +313,131 @@
                 </div>
             </div>
 
-            <div class="container-fluid" style="background-image: url(assets/images/fundo2.jpg); background-size: cover;">
+            <div class="container-fluid" style="">
                 <div class="formularioEmpre" style="color: white">
                     <div class="formularios">
                         
-                        <h1 class="">Dados de perfil do Empresário</h1><br><br>
+                        
+                        <div class="limiter">
+                                <div class="wrap-login100">
+                                    <div class="login100-pic js-tilt" data-tilt>
+                                        <img src="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" alt="IMG">
+                                    </div>
+                        <form method="POST" id="novo_empre" style="" class="login100-form validate-form">
 
-                        <form method="POST" id="novo_empre" style=" right: 10%; transform: translate(-10%);">
-                            <div class="form-group slideInLeft animated">
-                                <label class="" style="font-size: 20px;">Nome</label> <input type="text" name="nome_txt" class="form-control" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+
+                            <span class="login100-form-title film-font">
+                                        DADOS DE PERFIL DO EMPRESÁRIO
+                            </span>
+
+                            <div class="slideInLeft wrap-input100 animated validate-input">
+                                 <input type="text" name="nome_txt" class="input100" placeholder="nome" required="required">
+                                 <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </span>
+                            </div>
+
+                            <div class="slideInLeft wrap-input100 animated validate-input">
+                                 <input class="email input100" type="email" placeholder="email" name="email_txt" required="required" >
+                                 <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+                            </div>
+
+                            <div class="slideInLeft wrap-input100 animated validate-input">
+                                 <input class="telefone input100" placeholder="telefone" type="text" name="telefone_txt" required="required">
+                                 <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </span>
                             </div>
 
                             <div class="form-group slideInRight animated">
-                                <label class="" style="font-size: 20px;">e-mail</label> <input class="email form-control" type="email" name="email_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+                                        <label class="" style="font-size: 20px; color: #232323;">Tipo de pessoa</label> <br>
+                                        <input type="radio" name="pessoa" value="fisica" checked="checked"><label style="color: black;">Física</label><br>
+                                        <input type="radio" name="pessoa" value="juridica" style="color: #232323;"><label style="color: black">Jurídica</label>
+                                    </div>
+
+                            <div class="slideInLeft wrap-input100 animated validate-input">
+                                <input class="cpf_cnpj input100" placeholder="CPF" type="text" name="cpf_cnpj_txt" required="required">
+                                <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </span>
                             </div>
 
-                            <div class="form-group slideInLeft animated">
-                                <label class="" style="font-size: 20px;">telefone</label> <input class="telefone form-control" type="text" name="telefone_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+                            <div class="slideInLeft wrap-input100 animated validate-input">
+                                 <input type="password" class="input100" placeholder="senha" name="senha_txt" required="required">
+                                 <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
                             </div>
 
-                            <div class="form-group slideInRight animated">
-                                <label class="" style="font-size: 20px;">Tipo de pessoa</label> - 
-                                <input type="radio" name="pessoa" value="fisica" checked="checked" class="film-font" style="font-size: 18px;">Física 
-                                <input type="radio" name="pessoa" value="juridica" class="film-font" style="font-size: 18px;">Jurídica<br>
-                            </div>
-
-                            <div class="form-group slideInLeft animated">
-                                <label class="" style="font-size: 20px;" id="label_cpf">CPF</label><input class="cpf_cnpj form-control" type="text" name="cpf_cnpj_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
-                            </div>
-
-                            <div class="form-group slideInRight animated">
-                                <label class="" style="font-size: 20px;">senha</label> <input type="password" class="form-control" name="senha_txt" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
-                            </div>
-
-                            <div class="form-group slideInLeft animated">
-                                <label class="" style="font-size: 20px;">Confirmar senha</label> <input type="password" class="form-control" name="senha_confirm" required="required" style="outline: none;background:transparent; border-radius: 15px; border: 2px solid #fff;"> <br>
+                            <div class="slideInLeft wrap-input100 animated validate-input">
+                                 <input type="password" class="input100" placeholder="confirmar senha" name="senha_confirm" required="required">
+                                 <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
                             </div>
 
 
-                            <hr><h1 style="" class="">Dados de localização</h1><br><br>
-                            <div class="form-group slideInRight animated">
-                                <label class="film-font" style="font-size: 20px;">CEP</label> <input id="CEP" type="text" name="cep_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;">
+                            <hr><span class="login100-form-title film-font">
+                                        DADOS DE LOCALIZAÇÃO
+                            </span>
+                            <div class="slideInLeft wrap-input100 animated validate-input">
+                                 <input id="CEP" type="text" name="cep_txt" class="input100" placeholder="CEP">
+                                 <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-map" aria-hidden="true"></i>
+                            </span>
                                 <label style="display: none;" id="erro">ERRO: cep invalido</label>
                             </div>
                             <div id="localiza" style="display: none">
-                                <div class="form-group slideInLeft animated">
-                                    <label class="" style="font-size: 20px;">Rua</label> <input id="rua" type="text" name="rua_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+                                <div class="slideInLeft wrap-input100 animated validate-input">
+                                    <input id="rua" type="text" name="rua_txt" class="input100" placeholder="rua">
+                                    <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-map" aria-hidden="true"></i>
+                            </span>
                                 </div>
 
-                                <div class="form-group slideInRight animated">
-                                    <label class="" style="font-size: 20px;">Estado</label> <input id="estado" type="text" name="estado_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+                                <div class="slideInLeft wrap-input100 animated validate-input">
+                                     <input id="estado" type="text" name="estado_txt" class="input100" placeholder="estado">
+                                     <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-map" aria-hidden="true"></i>
+                            </span>
                                 </div>
 
-                                <div class="form-group slideInLeft animated">
-                                    <label class="" style="font-size: 20px;">Cidade</label> <input id="cid" type="text" name="cid_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+                                <div class="slideInLeft wrap-input100 animated validate-input">
+                                 <input id="cid" type="text" name="cid_txt" class="input100" placeholder="cidade">
+                                 <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-map" aria-hidden="true"></i>
+                            </span>
                                 </div>
 
-                                <div class="form-group slideInRight animated">
-                                    <label class="" style="font-size: 20px;">Nº</label> <input id="num" type="text" name="num_txt" class="form-control" style="background:transparent; border-radius: 15px; border: 2px solid #fff;"><br>
+                                <div class="slideInLeft wrap-input100 animated validate-input">
+                                     <input id="num" type="text" name="num_txt" class="input100" placeholder="N°">
+                                     <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                            </span>
                                 </div>
 
-                                <input type="submit" name="novo_empre" value="Cadastrar" class="btn btn-outline-light">
+                                <div class="container-login100-form-btn">
+                                    <input type="submit" name="novo_empre" value="Cadastrar" class="login100-form-btn film-font wow slideInRight">
+                                </div>
                             </div>
 
 
                         </form>
+                    </div>
+                </div>
                     </div>
                 </div>
             </div>
@@ -353,6 +455,8 @@
             <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/modernizr.custom.js"></script>
             <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/toucheffects.js"></script>
             <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/wow.js"></script>	
-            <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.easing.1.3.js"></script>	
+            <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery.easing.1.3.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL ?>assets/vendor/tilt/tilt.jquery.min.js"></script>
+            <script src="<?php echo BASE_URL; ?>assets/js/main-login.js"></script>	
     </body>
 </html>

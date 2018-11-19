@@ -222,6 +222,8 @@
                 width: 100%
             }
 
+            
+
 
 
 
@@ -560,7 +562,7 @@
                                                 <div class="modal-content">
 
                                                     <!-- Modal Header -->
-                                                    <div class="modal-header" style="background: linear-gradient(45deg, #68319b , #A491BA);">
+                                                    <div class="modal-header" style="background: #68319B">
                                                         <h4 class="modal-title">Novo Endereço / SEDE</h4>
                                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                     </div>
@@ -586,21 +588,21 @@
 
                                                         <div id="novo_part2" style="display: none">
                                                             <span class="input input--yoko">
-                                                                <input class="input__field input__field--yoko " style="background: #CFC1DE;opacity: 1" type="text" id="rua" required="required" name="rua_txt" />
+                                                                <input class="input__field input__field--yoko " style="background: #5F5F5F;opacity: 1" type="text" id="rua" required="required" name="rua_txt" />
                                                                 <label class="input__label input__label--yoko" for="rua">
                                                                     <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Rua</span>
                                                                 </label>
                                                             </span>
 
                                                             <span class="input input--yoko">
-                                                                <input class="input__field input__field--yoko" style="background: #CFC1DE;opacity: 1" type="text" id="cid" required="required" name="cid_txt" />
+                                                                <input class="input__field input__field--yoko" style="background: #5F5F5F;opacity: 1" type="text" id="cid" required="required" name="cid_txt" />
                                                                 <label class="input__label input__label--yoko" for="cid">
                                                                     <span class="input__label-content input__label-content--yoko " style="font-size: 17px; color: #232323;">Cidade</span>
                                                                 </label>
                                                             </span>
 
                                                             <span class="input input--yoko">
-                                                                <input class="input__field input__field--yoko" style="background: #CFC1DE;opacity: 1" type="text" id="est" required="required" name="est_txt" />
+                                                                <input class="input__field input__field--yoko" style="background: #5F5F5F;opacity: 1" type="text" id="est" required="required" name="est_txt" />
                                                                 <label class="input__label input__label--yoko" for="est">
                                                                     <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Estado</span>
                                                                 </label>
@@ -621,7 +623,7 @@
                                                     </div>
 
                                                     <!-- Modal footer -->
-                                                    <div class="modal-footer" style="background: linear-gradient(45deg, #68319b , #A491BA);">
+                                                    <div class="modal-footer" style="background: #68319b">
                                                         <button type="button" id="btn_clear_new" class="btn btn-outline-dark" data-dismiss="modal">Fechar</button>
                                                     </div>
 

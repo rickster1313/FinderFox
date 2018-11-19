@@ -16,6 +16,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">
         <link rel="icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
         <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 
         <!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">-->
 
@@ -141,6 +142,12 @@
                 font-family: "Champagne & Limousines Bold";
                 font-size: 25px;  
             }  
+
+            body{
+
+                font-family: 'Bree Serif', serif;
+
+            }
 
 
         </style>
