@@ -16,12 +16,14 @@
             $usuariosModel = new usuariosModel();
             $sqlpessoa = $usuariosModel->getDados($dados['remetente_id']);
             $dadosPessoa = $sqlpessoa->fetch();
+            
+            
 ?>
-<div class="chat_list active_chat pessoa">
+<div class="chat_list active_chat pessoa" >
     <div class="chat_people">
-        <div class="chat_ib">
-            <h5><?php echo $dadosPessoa['nome']; ?> <span class="chat_date"><?php echo date("d M - H:i", strtotime($dados['hora'])); ?></span></h5>
-            <input type="hidden" value="<?php echo $dados['remetente_id']; ?>"/>
+        <span class="badge badge-pill noti badge-primary" style="margin-left:8px;">2</span>
+        <div class="chat_ib nova"><h5><?php echo $dadosPessoa['nome']; ?> <span class="chat_date"><?php echo date("d M - H:i", strtotime($dados['hora'])); ?></span></h5>
+            <input class="cont"  type="hidden" value="<?php echo $dados['remetente_id']; ?>"/>
         </div>
     </div>
 </div>
