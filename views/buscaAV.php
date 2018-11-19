@@ -194,7 +194,7 @@
         <div class="container-fluid" style="padding: 0px">
             <header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
 
-                <p class="replay-font" style="color: #ffffff; text-shadow: 2px 8px 11px #232323;">FinderFox</p>
+                <p class="" style="color: #ffffff; text-shadow: 2px 8px 11px #232323;">FinderFox</p>
                 <ul class="nav navbar-expand" >
                     <div class="botão" style="margin-top: 20px;margin-right: 20px;">
                         <?php if (isset($_SESSION['id'])) { ?>
@@ -203,7 +203,7 @@
                                 Deslogar
                             </a>
                         <?php } else { ?>
-                            <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
+                            <a class="btn btn-outline-light" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
                                box-shadow: 3px 3px 5px #232323;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
                            <?php } ?>
 
@@ -215,7 +215,7 @@
                                 Painel 
                             </a>
                         <?php } else { ?>
-                            <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
+                            <a class="btn btn-outline-light" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
                                box-shadow: 3px 3px 5px #232323;" href="<?php echo BASE_URL; ?>login">LOGIN 
                             <?php } ?></a>
 

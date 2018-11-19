@@ -283,10 +283,10 @@
                             }
                         } else {
                             ?>
-                            <a class="btn btn-success"> Sem redes sociais</a>
+                            <a class="btn btn-outline-light"> Sem redes sociais</a>
                         <?php } ?>
                     </div>
-                    <p class="text-primary"><small><i>Acesse também nossas redes sociais. </i></small></p>
+                    <p class="text-light"><small><i>Acesse também nossas redes sociais. </i></small></p>
                 </div>
             </div>
 
@@ -326,7 +326,7 @@
                 $valor = explode(",", $func);
                 if (in_array('3', $valor)) {
                     ?>
-                    <button type = "button" class = "btn btn-primary" data-toggle = "modal" data-target = "#myModal" style = "position:fixed; bottom: 0px; right:5px;">
+                    <button type = "button" class = "btn btn-dark" data-toggle = "modal" data-target = "#myModal" style = "position:fixed; bottom: 0px; right:5px;">
                         Mensagem
                     </button>
                 <?php }
@@ -364,8 +364,8 @@
                             <?php } else {
                             ?>
                             <div class = "alert alert-warning">
-                                <strong>Aviso!</strong> Para mandar menssagem, precisa estar logado.
-                                <a href = "<?php echo BASE_URL; ?>login" class = "alert-link"><button>Logar</button></a>
+                                <strong>Aviso!</strong> Para mandar mensagem, precisa estar logado.
+                                <a href = "<?php echo BASE_URL; ?>login" class = "alert-link"><button class="btn btn-info">Logar</button></a>
                             </div>
                         <?php }
                         ?>
