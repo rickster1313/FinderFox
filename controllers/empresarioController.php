@@ -334,7 +334,29 @@ class empresarioController extends Controller {
         $funcaoModel->novaMsg($msg, $remetente, $destinatario);
         $funcaoModel->gerarNotificacao($destinatario, $remetente, "Você possui uma nova mensagem!");
     }
-
+    
+    public function getInfo(){
+        $id = $_SESSION['id'];
+        $func = new funcaoModel();
+        $func2 = $func->naoLidas($id);
+        $dados = $func2->fetchAll();
+        $info = array(
+            'id' => array(),
+            'qtd' => array()
+        );
+        
+        foreach ($dados as $value) {
+            
+            if(in_array($value['remetente_id'] , $info['id'])){
+                $key = array_search($value['remetente_id'], $info['id']);
+               $info['qtd'][$key]++;
+            } else{
+                array_push($info['id'],$value['remetente_id'] );
+                array_push($info['qtd'],1 );
+            }
+        }
+        echo json_encode($info);
+    }
 }
 
 ?>

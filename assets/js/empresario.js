@@ -388,7 +388,7 @@ $j(document).ready(function () {
         if (typeof msgs != "undefined") {
             clearInterval(msgs);
         }
-        
+
     }
     function ligarClock() {
 
@@ -398,26 +398,55 @@ $j(document).ready(function () {
         pararClock();
         idm = $j(this).find('input').val();
         ligarClock();
-
+        
         msgs = setInterval(ligarClock, 3000);
         $j(".type_msg").show();
         $j("#caixa_msg").val("");
+        $j.ajax({
+            url:"empresario/visualizou",
+            type:"POST",
+            data:{user:idm}
+        });
     });
-    
-    $j("#enviarMsg").bind('click', function(e){
+
+    $j("#enviarMsg").bind('click', function (e) {
         e.preventDefault();
         var msgChat = $j("#caixa_msg").val();
         $j.ajax({
             url: 'empresario/setMsg',
             type: 'POST',
-            data: {msgChat:msgChat, destinatario:idm},
-            success:function(){
+            data: {msgChat: msgChat, destinatario: idm},
+            success: function () {
                 $j("#caixa_msg").val("");
             }
         });
     });
 
-
+    $j("#myInput").on("keyup", function () {
+        var value = $j(this).val().toLowerCase();
+        $j(".pessoa").filter(function () {
+            $j(this).toggle($j(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+    
+    function start(){
+        init = setInterval(function(){
+           $j.ajax({
+               url: 'empresario/getInfo',
+               dataType: 'json',
+               success: function(json){
+                   
+                   
+                   
+               }
+           }); 
+        }, 3000);
+        
+    }
+    
+    if(teste == 3){
+        start();
+    }
 
     // %%%%%%%%%%%%%%  Aqui é a parte de salvar as config do av  %%%%%%%%%%%%%%%%%%%%%%%
 

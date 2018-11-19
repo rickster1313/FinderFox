@@ -321,7 +321,7 @@
                 font-size: 14px;
                 margin: 0; color:#fff;
                 padding: 5px 10px 5px 12px;
-                
+
             }
             .outgoing_msg{ overflow:hidden; margin:26px 0 26px;}
             .sent_msg {
@@ -356,7 +356,9 @@
                 height: 516px;
                 overflow-y: auto;
             }
-
+            .pessoa:hover{
+                cursor:pointer;
+            }
         </style>
 
     </head>
@@ -430,6 +432,15 @@
 
 
                         foreach ($func as $value) {
+
+                            if ($value == 3) {
+                                ?>
+                        
+                                <script>
+                                    teste = 3;
+                                </script>
+
+                            <?php }
                             ?>
                             <li class="nav-item">
                                 <a href="#<?php echo $dadosFunc[$value - 1]["href"]; ?>" data-toggle="tab" class="" style="color: #fff;">
@@ -841,7 +852,7 @@
                                                         </div>
                                                         <div class="srch_bar">
                                                             <div class="stylish-input-group">
-                                                                <input type="text" class="search-bar"  placeholder="Pesquise" >
+                                                                <input type="text" id="myInput" class="search-bar"  placeholder="Pesquise" >
                                                                 <span class="input-group-addon">
                                                                     <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
                                                                 </span> </div>
@@ -849,21 +860,21 @@
                                                     </div>
                                                     <div class="inbox_chat " id="contatos">
 
-                                                        
+
                                                         <?php include ("views/html/contatos.php"); ?>
-               
+
                                                     </div>
                                                 </div>
                                                 <div class="mesgs">
                                                     <div class="msg_history " id="mensagens">
-                                                        
+
                                                     </div>
                                                     <div class="type_msg" style="display:none">
                                                         <div class="input_msg_write">
                                                             <form>
-                                                            <input type="text" id="caixa_msg" class="write_msg" placeholder="Envie uma " />
-                                                            
-                                                            <button id="enviarMsg" class="msg_send_btn" type="submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                                                                <input type="text" id="caixa_msg" autocomplete="off" style="padding-right:50px" class="write_msg" placeholder="Envie uma " />
+
+                                                                <button id="enviarMsg" class="msg_send_btn" co type="submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                                                             </form>
                                                         </div>
                                                     </div>
