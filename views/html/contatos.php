@@ -23,7 +23,7 @@
     <div class="chat_people">
         <span class="badge badge-pill noti badge-primary" style="margin-left:8px;">2</span>
         <div class="chat_ib nova"><h5><?php echo $dadosPessoa['nome']; ?> <span class="chat_date"><?php echo date("d M - H:i", strtotime($dados['hora'])); ?></span></h5>
-            <input  type="hidden" value="<?php echo $dados['remetente_id']; ?>"/>
+            <input class="cont"  type="hidden" value="<?php echo $dados['remetente_id']; ?>"/>
         </div>
     </div>
 </div>

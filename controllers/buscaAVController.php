@@ -50,27 +50,15 @@ class buscaAVController extends Controller {
         } else {
             $array = str_split($_SESSION['cep_ativo'], 5);
             $_SESSION['cep_ativo'] = implode("-", $array);
-            do {
-                $conteudo = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=" . $_SESSION['cep_ativo'] . "&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM");
+                $url = "https://maps.googleapis.com/maps/api/geocode/json?address=" . $_SESSION['cep_ativo'] . "&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM";
+                $conteudo = file_get_contents($url);
                 $json = json_decode($conteudo);
-            } while ($json->status == "OVER_QUERY_LIMIT");
-            if ($json->status == "INVALID_REQUEST") {
-                $_SESSION['msg'] = "<div class='alert alert-warning alert-dismissible w-75' style='left: 50%; transform: translate(-50%);'>
-					<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-    				<strong>Erro no CEP</strong>, tente novamente!
-  					</div>";
-                $retorno['status'] = 'falso';
-            } else if ($json->status == "ZERO_RESULTS") {
-                $_SESSION['msg'] = "<div class='alert alert-warning alert-dismissible w-75' style='left: 50%; transform: translate(-50%);'>
-					<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-    				<strong>Ops!</strong> CEP não encontrado, tente novamente!
-  					</div>";
-                $retorno['status'] = 'falso';
-            } else {
+           
+            
                 $retorno['status'] = 'verdadeiro';
                 $retorno['lat'] = $json->results[0]->geometry->location->lat;
                 $retorno['lon'] = $json->results[0]->geometry->location->lng;
-            }
+            
         }
         return $retorno;
     }

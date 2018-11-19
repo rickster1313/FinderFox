@@ -44,13 +44,21 @@ class funcaoModel extends Model {
         return $sql;
     }
     
-    public function naoLidas($id_dest){
-        $sql = "SELECT * FROM tbl_chat WHERE lida = 0 AND destinatario_id = ? ";
+    public function naoLidas($id_dest, $id_reme){
+        $sql = "SELECT * FROM tbl_chat WHERE lida = 0 AND destinatario_id = ? AND remetente_id = ?";
         $sql = $this->pdo->prepare($sql);
         $sql->bindValue(1, $id_dest);
+        $sql->bindValue(2, $id_reme);
         $sql->execute();
         return $sql;
         
+    }
+    public function lida($id_dest, $id_reme){
+        $sql = "UPDATE tbl_chat SET lida = 1 WHERE lida = 0 AND destinatario_id = ? AND remetente_id = ?";
+        $sql = $this->pdo->prepare($sql);
+        $sql->bindValue(1, $id_dest);
+        $sql->bindValue(2, $id_reme);
+        $sql->execute();
     }
 
 }
