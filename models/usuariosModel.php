@@ -56,7 +56,14 @@
 			}
 		}
                 
-                
+        public function alterarUser($nome, $senha, $id){
+        	$sql = "UPDATE tbl_usuarios SET nome = ?, senha = ? WHERE id = ?";
+        	$sql = $this->pdo->prepare($sql);
+			$sql->bindValue(1, $nome);
+			$sql->bindValue(2, $senha);
+			$sql->bindValue(3, $id);
+			$sql->execute();
+        }     
 		
 
 	}

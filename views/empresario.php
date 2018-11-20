@@ -474,7 +474,7 @@
                                         $newNome = explode(" ", $nome);
                                         echo strtoupper($newNome[0]);
                                         ?></h1>
-                                </div>
+                                </div> 
 
                                 <div class="tab-pane  fade" id="menu2">
                                     <div class="tabela-end" style="margin: 40px;">
@@ -900,11 +900,13 @@
                 </div>
 
             </div>
-
+            
 
             <div class="modal fade" id="modalPerfil">
   <div class="modal-dialog">
     <div class="modal-content">
+
+    <form>
 
       <!-- Modal Header -->
       <div class="modal-header">
@@ -912,11 +914,23 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
+      <?php
+
+        $usuario = new usuariosModel();
+        $dados = $usuario->getDados($_SESSION['id']);
+        $dados2 = $dados->fetchAll();
+
+        foreach ($dados2 as $value) {
+            # code...
+        
+      ?> 
+
       <!-- Modal body -->
       <div class="modal-body">
         <center>
         <span class="input input--yoko">
-            <input class="input__field input__field--yoko" type="text" id="nome" required="required" name="nome_perfil" autocomplete="off" />
+            <input class="input__field input__field--yoko" type="text" id="nomeT" required="required" name="nome_perfil"
+             autocomplete="off" value="<?php echo $value['nome']; ?> " /> 
                     <label class="input__label input__label--yoko" for="nome">
                     <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Nome</span>
                    </label>
@@ -924,9 +938,9 @@
 
 
         <span class="input input--yoko">
-            <input class="input__field input__field--yoko" type="text" id="senha" required="required" name="senha_perfil" autocomplete="off" />
+            <input class="input__field input__field--yoko" type="text" id="senhaT" required="required" name="senha_perfil" autocomplete="off" value="" />
                     <label class="input__label input__label--yoko" for="senha">
-                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Senha</span>
+                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Senha Atual</span>
                     </label>
                     
       </span>
@@ -948,12 +962,12 @@
 
   </center>
       </div>
-
+      <?php } ?>
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark">ALTERAR</button>
+        <button type="submit" class="btn btn-outline-dark" id="alterarPerf">ALTERAR</button>
       </div>
-
+      </form>
     </div>
   </div>
 </div>

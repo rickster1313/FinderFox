@@ -357,6 +357,19 @@ class empresarioController extends Controller {
         $funcoes = new funcaoModel();
         $funcoes->lida($destinatario, $remetente);
     }
+
+    public function alterarUser(){
+        $nome = $_POST['nome'];
+        $senhaA = $_POST['senha'];
+        $senhaN = password_hash($_POST['confsenha']);
+
+        $user = new usuariosModel();
+        $pass = $user->getDados($_SESSION['id']);
+        if (password_verify($senhaA, $pass['senha'])) {
+            $user->alterarUser($nome, $senhaN, $_SESSION['id']);
+        }
+        
+    }
 }
 
 ?>

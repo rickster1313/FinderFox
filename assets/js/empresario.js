@@ -418,7 +418,7 @@ $j(document).ready(function () {
     $j("#enviarMsg").bind('click', function (e) {
         e.preventDefault();
         var msgChat = $j("#caixa_msg").val();
-        var teste = msgChat.replace(/ /g, '');
+        var teste = msgChat.replace(/ /g, ''); 
         
         if(teste.length > 0){
             $j.ajax({
@@ -467,6 +467,26 @@ $j(document).ready(function () {
         start();
         verificaLida();
     }
+
+    $j("#alterarPerf").bind('click', function(e){
+        e.preventDefault();
+
+        var nome = $j("#nomeT").val();
+        var senhaA = $j("#senhaT").val();
+        var senhaN = $j("#confsenha").val();
+
+        if (typeof senhaN != "undefined") {
+            $j.ajax({
+            url: 'empresario/alterarUser',
+            type: 'POST',
+            data: {nome: nome, senha: senhaA, confsenha: senhaN},
+            success: function () {
+                window.location.href = "empresario";
+            }
+        });
+        }
+        
+    });
 
     // %%%%%%%%%%%%%%  Aqui é a parte de salvar as config do av  %%%%%%%%%%%%%%%%%%%%%%%
 
