@@ -10,15 +10,6 @@ var $j = jQuery.noConflict();
 				$j("#cep_busca").focus();
 			}
 		});
-                $j("#tes").bind("click", function(){
-                    var num = $j("#test").val();
-                    $j.ajax({
-                        url: "https://maps.googleapis.com/maps/api/geocode/json?address="+num+"&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM",
-                        dataType:'json',
-                        success:function(json){
-                            
-                        }
-                    });
-                });
+                
 
 	});

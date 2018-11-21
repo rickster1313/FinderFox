@@ -96,94 +96,19 @@
                 font-family: "Typo Hoop";
                 font-size: 16px;  
             }  
-            .form{
-                padding-top: 80px;
-                left: 6%;
-                transform: translate(6%);
+
+            input[type=text]{
+                width: 400px;
+                margin-top: 60px;
 
 
             }
 
-            .form form input[type=text]{
-                width: 70%;
-                height: 40px;
-                font-size: 18px;
-                background-color: transparent;
-                border:none;
-                box-shadow: -10px 2px 1px 0px rgba(54,24,80,0.37);
-                color: rgba(35,35,35,0.7);
-                outline: none;
-                padding-left: 10px;
-
-
-            }
-            .form form input[type=submit]{
-                width: 100px;
-                height: 40px;
-                font-size: 13px;
-
-
-
-            }
             .ladoBaixo{
                 width: 100%;
                 overflow: hidden;
             }
-            .lados{
-                width: 15%;  
-
-                float: left;
-                min-height: 900px;
-            }
-            .centro{
-                width: 70%; 
-                background-color:#FFFFFF; 
-                /*background-color: white; linear-gradient(45deg,  #361850, #68319B);*/
-                float: left;
-                min-height: 900px;
-                overflow: hidden;
-
-
-            }
-            .content_avs{
-                background-color: blue;
-                height: auto; 
-            }
-            .av_iten{
-                float: left;
-                width: 50%;
-                height: 180px;
-                text-align: center;
-                padding-left:10px; 
-                padding-right:10px;
-                align-items: center;
-
-            }
-
-
-            .av_block{
-                background-color: #8B57A7; 
-                height: 120px;
-                width: 100%;
-                padding: 10px;
-                border-radius: 10px;
-                box-shadow: 2px 2px 4px #232323;
-
-            }
-
-            .av_block :hover{
-                color: #ffffff;
-            }
-
-
-            .av_info{
-                float: left;
-                margin-left: 10px;
-                text-align: left;
-            }
-
-
-
+          
         </style>
 
     </head> 
@@ -225,80 +150,10 @@
 
             </header>
             <div class="ladoBaixo" >
-                <div class="lados" ></div>
-                <div class="centro" >
-                    <div class="form" style="overflow: hidden;">
-                        <div class="form-group">
-                            <form >
-                                <input id="myInput99" type="text" name="cep_txt" autocomplete="off" placeholder="Buscar serviços..." class="film-font" >
-                            </form>
-                        </div>
-                        <br></div>
-                    <hr style="border-color: #232323;">
-
-
-
-                    <button class="btn btn-outline-dark btn-lg" data-toggle="collapse" data-target="#demo"
-                            style="float: right; margin-right: 95px;font-size: 14px">Filtro</button>
-
-                    <div class="alert alert-success alert-dismissible" style="width: 30%;margin-left: 50px;font-size: 14px; ">
-                        <button type="button" class="close" id="cancela_cep" data-dismiss="alert">&times;</button>
-                        <strong>Seu cep:</strong> <?php echo $cep_ativo; ?>
-                    </div>
-                    <div id="demo" class="collapse" style="padding-bottom: 0px;">
-                        <form style="padding-left: 20px">
-                            <label>Categoria</label><br>
-                            <select name="cars" class="custom-select custom-select mb-3" style="width: 249px;">
-                                <option selected>Todos</option>
-                                <option value="volvo">1/10</option>
-                                <option value="fiat">3/10</option>
-                                <option value="audi">6/10</option> 
-                                <option value="volvo">8/10</option>
-                                <option value="fiat">9/10</option>
-                                <option value="audi">10/10</option>  
-                            </select>
-                        </form>
-                    </div>    
-                    <hr style="margin-top: 0px;border-color: #232323">
-
-
-                    <div class="content_avs">
-                        <?php
-                        //print_r($dataAV);
-
-                        if ($dataAV != NULL) {
-                            foreach ($dataAV as $key => $value) {
-                                if(isset($value[0])){
-                                ?>
-
-                                <div class="av_iten">
-                                    <a href="<?php echo BASE_URL . $value[0]['url']; ?>">
-                                        <div class="av_block">
-                                            <img src="<?php echo BASE_URL; ?>assets/images/AV/<?php echo $value[0]['img']; ?>" style="height: 100px; float: left;">
-                                            <div class="av_info">
-                                                <strong><span style="font-size: 18px "><?php echo $value[0]['nome_av']; ?></span></strong><br>
-                                                <p style="margin:0px;opacity: 0.7"><span>Distância:</span> <?php echo $value['distancia']; ?>  KM (aprox.)</p>
-                                                <p style="margin:0px;opacity: 0.7"><span>Categoria: </span><?php echo $value[0]['categoria']; ?></p>
-                                                <p style="margin:0px;opacity: 0.7"><span>Cidade: </span><?php echo $value['cidade'] . " - " . $value['estado']; ?></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            <?php } }
-                        } else { ?> 
-                            <div class="alert alert-danger">
-                                <strong>Ops!</strong> Nenhum ambiente foi encontrado.
-                            </div>    
-<?php } ?>  
-                    </div>
-
-
-
-
-
-                </div>
-
-                <div class="lados" style=""></div>
+                <center>
+                    <input type="text" placeholder="Pesquisar AVs...">
+                    <?php echo $_SESSION['cep']; ?>
+                </center>
             </div>   
         </div>
 
