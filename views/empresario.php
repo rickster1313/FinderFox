@@ -962,7 +962,11 @@
 
   </center>
       </div>
-      <?php } ?>
+      <?php }
+
+      
+
+       ?>
       <!-- Modal footer -->
       <div class="modal-footer">
         <button type="submit" class="btn btn-outline-dark" id="alterarPerf">ALTERAR</button>

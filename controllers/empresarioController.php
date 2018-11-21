@@ -361,12 +361,13 @@ class empresarioController extends Controller {
     public function alterarUser(){
         $nome = $_POST['nome'];
         $senhaA = $_POST['senha'];
-        $senhaN = password_hash($_POST['confsenha']);
+        $senhaN = password_hash($_POST['confsenha'], PASSWORD_DEFAULT);
 
         $user = new usuariosModel();
         $pass = $user->getDados($_SESSION['id']);
-        if (password_verify($senhaA, $pass['senha'])) {
-            $user->alterarUser($nome, $senhaN, $_SESSION['id']);
+        $pass2 = $pass->fetch();
+        if (password_verify($senhaA, $pass2['senha'])) {
+            $user->alterarUser($nome, $senhaN, $_SESSION['id']);  
         }
         
     }

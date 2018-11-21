@@ -475,15 +475,15 @@ $j(document).ready(function () {
         var senhaA = $j("#senhaT").val();
         var senhaN = $j("#confsenha").val();
 
-        if (typeof senhaN != "undefined") {
+        if (typeof senhaN != "undefined") { 
             $j.ajax({
             url: 'empresario/alterarUser',
             type: 'POST',
             data: {nome: nome, senha: senhaA, confsenha: senhaN},
-            success: function () {
+                success: function () {
                 window.location.href = "empresario";
-            }
-        });
+                }
+            });
         }
         
     });
