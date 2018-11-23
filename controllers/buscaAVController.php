@@ -15,8 +15,17 @@ class buscaAVController extends Controller {
     }
     public function getAVs(){
         $avsModel = new avsModel();
-        $enderecosModel = new enderecosModel();
+        $sql = $avsModel->getAVs();
+        $dados = $sql->fetchAll();
+        echo json_encode($dados);
         
+        
+    }
+    public function getEndOn(){
+        $enderecosModel = new enderecosModel();
+        $sql = $enderecosModel->endAtivos();
+        $dados = $sql->fetchAll();
+        echo json_encode($dados);
     }
    
 }

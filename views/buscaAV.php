@@ -108,7 +108,23 @@
                 width: 100%;
                 overflow: hidden;
             }
-          
+            /* Pagination links */
+            .pagination a {
+                color: black;
+                float: left;
+                padding: 8px 16px;
+                text-decoration: none;
+                transition: background-color .3s;
+            }
+
+            /* Style the active/current link */
+            .pagination a.active {
+                background-color: dodgerblue;
+                color: white;
+            }
+
+            /* Add a grey background color on mouse-over */
+            .pagination a:hover:not(.active) {background-color: #ddd;}
         </style>
 
     </head> 
@@ -154,6 +170,18 @@
                     <input type="text" placeholder="Pesquisar AVs...">
                     <?php echo $_SESSION['cep']; ?>
                 </center>
+                <div id="all_avs">
+                    <ul>
+
+                    </ul>
+                    <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <div id="paginat">
+
+                        </div>
+                        <a href="#">&raquo;</a>
+                    </div>
+                </div>
             </div>   
         </div>
 
