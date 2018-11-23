@@ -125,6 +125,24 @@
 
             /* Add a grey background color on mouse-over */
             .pagination a:hover:not(.active) {background-color: #ddd;}
+            #all_avs{
+                width: 600px;
+                margin-top: 30px;
+                left: 50%;
+                position: absolute;
+                transform: translateX(-50%);
+
+            }
+            .pagination{
+                margin-top: 20px;
+                left: 50%;
+                position: absolute;
+                transform: translateX(-50%);
+            }
+            a:link 
+            { 
+                text-decoration:none; 
+            } 
         </style>
 
     </head> 
@@ -167,21 +185,22 @@
             </header>
             <div class="ladoBaixo" >
                 <center>
-                    <input type="text" placeholder="Pesquisar AVs...">
+                    <input type="text" id="serchAV" placeholder="Pesquisar AVs...">
                     <?php echo $_SESSION['cep']; ?>
                 </center>
                 <div id="all_avs">
-                    <ul>
+                    <ul  class="list-group">
 
                     </ul>
                     <div class="pagination">
-                        <a href="#">&laquo;</a>
+                        <a id="prevPag">&laquo;</a>
                         <div id="paginat">
 
                         </div>
-                        <a href="#">&raquo;</a>
+                        <a id="nextPag">&raquo;</a>
                     </div>
                 </div>
+
             </div>   
         </div>
 

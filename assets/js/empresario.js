@@ -209,14 +209,32 @@ $j(document).ready(function () {
         var newid = id.substring(2, id.length);
         $j.ajax({
             type: 'POST',
-            url: 'empresario/alterarEnd',
-            data: $j(this).serialize() + "&idpass=" + newid,
+            url: 'empresario/getEnd',
+            data: "idactive=" + newid,
             async: false,
-            success: function () {
-                window.location.href = "login";
-            },
-            error: function () {
-                console.log("error no ajax");
+            dataType: "json",
+            success: function (json) {
+                $j.ajax({
+                    url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + json.cep + "&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM",
+                    dataType: "json",
+                    success: function (coord) {
+                        lat = coord.results[0].geometry.location.lat;
+                        lon = coord.results[0].geometry.location.lng;
+
+                        $j.ajax({
+                            type: 'POST',
+                            url: 'empresario/alterarEnd',
+                            data: $j(this).serialize() + "&idpass=" + newid + "&lati=" + lat + "&longi=" + lon,
+                            async: false,
+                            success: function () {
+                                window.location.href = "login";
+                            },
+                            error: function () {
+                                console.log("error no ajax");
+                            }
+                        });
+                    }
+                });
             }
         });
     });
@@ -258,17 +276,52 @@ $j(document).ready(function () {
         var op = $j(this).val();
         var newid = id.substring(2, id.length);
         var raio = $j("#raio" + newid).val();
-        if (raio.length > 0) {
-            raio = raio.toLowerCase()
-            if (raio != "global") {
-                raio = raio.replace(/ /g, '');
-                raio = raio.replace(/,/g, '.');
-            }
+        if (op == "ativar") {
+            if (raio.length > 0) {
+                raio = raio.toLowerCase()
+                if (raio != "global") {
+                    raio = raio.replace(/ /g, '');
+                    raio = raio.replace(/,/g, '.');
+                }
 
+                $j.ajax({
+                    type: 'POST',
+                    url: 'empresario/getEnd',
+                    data: "idactive=" + newid,
+                    async: false,
+                    dataType: "json",
+                    success: function (json) {
+                        $j.ajax({
+                            url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + json.cep + "&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM",
+                            dataType: "json",
+                            success: function (coords) {
+                                lat = coords.results[0].geometry.location.lat;
+                                lon = coords.results[0].geometry.location.lng;
+
+                                $j.ajax({
+                                    type: 'POST',
+                                    url: 'empresario/activeEnd',
+                                    data: "idactive=" + newid + "&raio=" + raio + "&lati=" + lat + "&longi=" + lon,
+                                    async: false,
+                                    success: function () {
+                                        window.location.href = "login";
+                                    },
+                                    error: function () {
+                                        console.log("error no ajax");
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            } else {
+                $j("#raio" + newid).focus();
+            }
+        } else {
             $j.ajax({
                 type: 'POST',
-                url: 'empresario/activeEnd',
-                data: "idactive=" + newid + "&opcao=" + op + "&raio=" + raio,
+                url: 'empresario/desactiveEnd',
+                data: "idactive=" + newid,
                 async: false,
                 success: function () {
                     window.location.href = "login";
@@ -277,9 +330,8 @@ $j(document).ready(function () {
                     console.log("error no ajax");
                 }
             });
-        } else {
-            $j("#raio" + newid).focus();
         }
+
 
     });
     $j("#check_sobre0").bind("change", function () {
@@ -391,7 +443,7 @@ $j(document).ready(function () {
 
     }
     function ligarClock() {
-        
+
         $j('#mensagens').load('html/abrir/mensagens/' + idm);
         $j.ajax({
             url: "empresario/visualizou",
@@ -407,7 +459,7 @@ $j(document).ready(function () {
         msgs = setInterval(ligarClock, 3000);
         $j(".type_msg").show();
         $j("#caixa_msg").val("");
-        
+
         $j.ajax({
             url: "empresario/visualizou",
             type: "POST",
@@ -418,17 +470,17 @@ $j(document).ready(function () {
     $j("#enviarMsg").bind('click', function (e) {
         e.preventDefault();
         var msgChat = $j("#caixa_msg").val();
-        var teste = msgChat.replace(/ /g, ''); 
-        
-        if(teste.length > 0){
+        var teste = msgChat.replace(/ /g, '');
+
+        if (teste.length > 0) {
             $j.ajax({
-            url: 'empresario/setMsg',
-            type: 'POST',
-            data: {msgChat: msgChat, destinatario: idm},
-            success: function () {
-                $j("#caixa_msg").val("");
-            }
-        });
+                url: 'empresario/setMsg',
+                type: 'POST',
+                data: {msgChat: msgChat, destinatario: idm},
+                success: function () {
+                    $j("#caixa_msg").val("");
+                }
+            });
         }
     });
 
@@ -451,7 +503,7 @@ $j(document).ready(function () {
             dataType: 'json',
             success: function (json) {
                 for (i = 0; i < $j(".cont").length; i++) {
-                    $j(".cont[value="+$j(".cont")[i]['value']+"]").parent().parent().find(".noti").html(json[i]== 0? "" :json[i]);
+                    $j(".cont[value=" + $j(".cont")[i]['value'] + "]").parent().parent().find(".noti").html(json[i] == 0 ? "" : json[i]);
                 }
 
 
@@ -468,24 +520,24 @@ $j(document).ready(function () {
         verificaLida();
     }
 
-    $j("#alterarPerf").bind('click', function(e){
+    $j("#alterarPerf").bind('click', function (e) {
         e.preventDefault();
 
         var nome = $j("#nomeT").val();
         var senhaA = $j("#senhaT").val();
         var senhaN = $j("#confsenha").val();
 
-        if (typeof senhaN != "undefined") { 
+        if (typeof senhaN != "undefined") {
             $j.ajax({
-            url: 'empresario/alterarUser',
-            type: 'POST',
-            data: {nome: nome, senha: senhaA, confsenha: senhaN},
+                url: 'empresario/alterarUser',
+                type: 'POST',
+                data: {nome: nome, senha: senhaA, confsenha: senhaN},
                 success: function () {
-                window.location.href = "empresario";
+                    window.location.href = "empresario";
                 }
             });
         }
-        
+
     });
 
     // %%%%%%%%%%%%%%  Aqui é a parte de salvar as config do av  %%%%%%%%%%%%%%%%%%%%%%%

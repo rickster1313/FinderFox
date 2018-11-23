@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 23-Nov-2018 às 16:52
+-- Generation Time: 23-Nov-2018 às 21:43
 -- Versão do servidor: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -254,7 +254,7 @@ CREATE TABLE `tbl_endereco` (
 --
 
 INSERT INTO `tbl_endereco` (`id_end`, `user_id`, `cep`, `rua`, `estado`, `cidade`, `numero`, `nome`, `active`, `lat`, `lon`, `raio`) VALUES
-(21, 6, '13238-094', 'Rua Teodoro Feliciano de Moraes', 'SP', 'Campo Limpo Paulista', '232', 'vÃ³', 'sim', '-23.2274655', '-46.7794261', '50'),
+(21, 6, '68911-045', 'Avenida Rio Araguaia', 'AP', 'MacapÃ¡', '232', 'amapa', 'sim', '', '', 'global'),
 (22, 6, '13236-184', 'Rua Arapongas', 'SP', 'Campo Limpo Paulista', '452', 'luciano', 'sim', '-23.2122063', '-46.7999641', 'global'),
 (23, 6, '13238-110', 'Rua das AmÃ©ricas', 'SP', 'Campo Limpo Paulista', '545', 'Riquelme', 'sim', '-23.2291995', '-46.7715631', 'global'),
 (24, 6, '13238-094', 'Rua Teodoro Feliciano de Moraes', 'SP', 'Campo Limpo Paulista', '232', 'Sla', 'sim', '-23.2274655', '-46.7794261', 'global'),

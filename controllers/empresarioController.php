@@ -98,10 +98,8 @@ class empresarioController extends Controller {
                 $raio = "global";
             }
         }
-        $funcaoController = new funcaoController();
-        $coordenadas = $funcaoController->coordenadasCep($cep);
-        $lat = $coordenadas['lat'];
-        $lon = $coordenadas['lon'];
+        $lat = addslashes($_POST['lati']);;
+        $lon = addslashes($_POST['longi']);;
         $enderecosModel = new enderecosModel();
         $enderecosModel->alterarEnd($id, $nome, $rua, $num, $cid, $est, $cep, $raio, $lat, $lon);
     }
@@ -112,10 +110,30 @@ class empresarioController extends Controller {
         $enderecosModel->deletarEnd($id);
     }
 
+    public function getEnd() {
+        $array = array(
+            'cepzinho' => ''
+        );
+        $enderecosModel = new enderecosModel();
+        $id = addslashes($_POST['idactive']);
+        $sql = $enderecosModel->getEndId($id);
+        $dados = $sql->fetch();
+        $array["cepzinho"] = $dados["cep"];
+        echo json_encode($array);
+    }
+
+    public function desactiveEnd() {
+        $enderecosModel = new enderecosModel();
+        $id = addslashes($_POST['idactive']);
+        $enderecosModel->offEnd("nao", $id);
+        
+    }
+
     public function activeEnd() {
         $id = addslashes($_POST['idactive']);
-        $opcao = addslashes($_POST['opcao']);
         $raio = addslashes($_POST['raio']);
+        $lat = addslashes($_POST['lati']);
+        $lon = addslashes($_POST['longi']);
         if (!is_numeric($raio)) {
             $raio = strtolower($raio);
             if ($raio != "global") {
@@ -123,22 +141,7 @@ class empresarioController extends Controller {
             }
         }
         $enderecosModel = new enderecosModel();
-        if ($opcao == "ativar") {
-            $sql = $enderecosModel->getEndId($id);
-            $dados = $sql->fetch();
-            $funcaoController = new funcaoController();
-            $coordenadas = $funcaoController->coordenadasCep($dados['cep']);
-
-            if ($coordenadas['status'] == "ok") {
-                $lat = $coordenadas['lat'];
-                $lon = $coordenadas['lon'];
-                $enderecosModel->onEnd("sim", $id, $raio, $lat, $lon);
-            } else {
-                echo "erro";
-            }
-        } else {
-            $enderecosModel->offEnd("nao", $id, $raio);
-        }
+        $enderecosModel->onEnd("sim", $id, $raio, $lat, $lon);
     }
 
     private function seguranca() {
@@ -295,16 +298,15 @@ class empresarioController extends Controller {
             $avsModel = new avsModel();
             $sql = $avsModel->procuraAV($user);
             $dados = $sql->fetch();
-            if($dados['func']==""){
+            if ($dados['func'] == "") {
                 $funcao_new = $funcao;
-            }else{
+            } else {
                 $funcoes_old = explode(",", $dados['func']);
                 array_push($funcoes_old, $funcao);
                 $funcao_new = implode(",", $funcoes_old);
             }
-            
+
             $avsModel->upd_func($funcao_new, $user);
-            
         }
     }
 
@@ -322,11 +324,10 @@ class empresarioController extends Controller {
             }
             $funcao_new = implode(",", $funcoes_old);
             $avsModel->upd_func($funcao_new, $user);
-            
         }
     }
-    
-    public function setMsg(){
+
+    public function setMsg() {
         $destinatario = $_POST['destinatario'];
         $msg = $_POST['msgChat'];
         $remetente = $_SESSION['id'];
@@ -334,31 +335,30 @@ class empresarioController extends Controller {
         $funcaoModel->novaMsg($msg, $remetente, $destinatario);
         $funcaoModel->gerarNotificacao($destinatario, $remetente, "Você possui uma nova mensagem!");
     }
-    
-    public function getInfo(){
+
+    public function getInfo() {
         $contatos = $_POST['contacts'];
         $funcoes = new funcaoModel();
         $qtd = array();
-        foreach ($contatos as $valor){
+        foreach ($contatos as $valor) {
             $sql = $funcoes->naoLidas($_SESSION['id'], $valor);
-            if($sql->rowCount() > 0){
+            if ($sql->rowCount() > 0) {
                 array_push($qtd, $sql->rowCount());
-                
-            }else{
+            } else {
                 array_push($qtd, 0);
             }
-            
         }
         echo json_encode($qtd);
     }
-    public function visualizou(){
+
+    public function visualizou() {
         $remetente = $_POST['user'];
         $destinatario = $_SESSION['id'];
         $funcoes = new funcaoModel();
         $funcoes->lida($destinatario, $remetente);
     }
 
-    public function alterarUser(){
+    public function alterarUser() {
         $nome = $_POST['nome'];
         $senhaA = $_POST['senha'];
         $senhaN = password_hash($_POST['confsenha'], PASSWORD_DEFAULT);
@@ -369,12 +369,12 @@ class empresarioController extends Controller {
         $pass2 = $pass->fetch();
         if (password_verify($senhaA, $pass2['senha'])) {
             $_SESSION['msg'] = 'Atualizado!';
-            $user->alterarUser($nome, $senhaN, $_SESSION['id']);  
-        }else{
+            $user->alterarUser($nome, $senhaN, $_SESSION['id']);
+        } else {
             $_SESSION['msg'] = 'Senha incorreta!';
         }
-        
     }
+
 }
 
 ?>

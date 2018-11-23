@@ -35,39 +35,79 @@ $j(document).ready(function () {
         dist = number_format(dist, 2, '.', '');
         return dist;
     }
-    function montarAVs(pagina){
-        console.log(dados);
-        var total = dados.length;
-        var pagina_size = 3;
-        if(typeof pagina == 'undefined'){
-            var pagina_num = 1;
+    function montarAVs(pagina) {
+        //console.log(dados);
+        if(typeof dadosPesq == 'undefined'){
+            data = dados;
         }else{
-            var pagina_num = pagina;
+            data = dadosPesq;
         }
-        var offset = (pagina_num * pagina_size)-pagina_size;
-        var x =0;
-        for(var i = offset ; i < total; i++){
-            if(x === pagina_size){
+        total = data.length;
+        pagina_size = 2;
+        if (typeof pagina == 'undefined') {
+            pagina_num = 1;
+        } else {
+            pagina_num = pagina;
+        }
+        offset = (pagina_num * pagina_size) - pagina_size;
+        var x = 0;
+        for (var i = offset; i < total; i++) {
+            if (x === pagina_size) {
                 break;
             }
             x++;
-            $j("#all_avs ul").append("<a href='../../"+dados[i].url+"'><li>"+dados[i].nome_av+" - ID: "+dados[i].id_end+"</li></a>");
+            $j("#all_avs ul").append("<a href='../../" + data[i].url + "'><li style='overflow:hidden;margin-bottom:10px' class = 'list-group-item list-group-item-light' ><div style='float:left;padding-right:10px'><img style='width:100px' src='../../assets/images/AV/" + data[i].logo_av + "'></div><strong>" + data[i].nome_av.toUpperCase() + "</strong> <br>Distância: " + data[i].distancia + " KM<br> " + data[i].cidade + " - " + data[i].estado + "</li></a>");
         }
-        var numbers = Math.ceil(total/pagina_size);
-        for(var z = 1; z <= numbers; z++){
-            if(pagina_num == z){
-                $j("#paginat").append("<a class='mudar_pag active'>"+z+"</a>");
-            }else{
-                $j("#paginat").append("<a class='mudar_pag'>"+z+"</a>");
+        numbersX = Math.ceil(total / pagina_size);
+        for (var z = 1; z <= numbersX; z++) {
+            if (pagina_num == z) {
+                $j("#paginat").append("<a class='mudar_pag active'>" + z + "</a>");
+            } else {
+                $j("#paginat").append("<a class='mudar_pag'>" + z + "</a>");
             }
-            
+
         }
-        
+
     }
-    $j(document).on('click', '.mudar_pag', function(){
+    $j(document).on('click', '.mudar_pag', function () {
         $j("#all_avs ul").html("");
         $j("#paginat").html("");
         montarAVs($j(this).html());
+    });
+    $j("#prevPag").bind("click", function () {
+        pagina_numFloat = parseFloat(pagina_num);
+        if (pagina_numFloat - 1 > 0) {
+            $j("#all_avs ul").html("");
+            $j("#paginat").html("");
+            montarAVs(pagina_num - 1);
+        }
+    });
+    $j("#nextPag").bind("click", function () {
+        pagina_numFloat = parseFloat(pagina_num);
+        if (pagina_numFloat + 1 <= numbersX) {
+            $j("#all_avs ul").html("");
+            $j("#paginat").html("");
+            montarAVs(pagina_num + 1);
+        }
+    });
+    $j("#serchAV").bind("keyup", function () {
+        dadosPesq = new Array();
+        var teste = $j("#serchAV").val().replace(/ /g, '');
+        if (teste.length > 0) {
+            dados.filter(function (e) {
+                if (e.nome_av.toLowerCase().indexOf($j("#serchAV").val()) > -1 || e.cidade.toLowerCase().indexOf($j("#serchAV").val()) > -1 || e.estado.toLowerCase().indexOf($j("#serchAV").val()) > -1) {
+                    dadosPesq.push(e);
+                    $j("#all_avs ul").html("");
+                    $j("#paginat").html("");
+                    montarAVs();
+                }
+            });
+
+        }else{
+            delete dadosPesq;
+        }
+        ;
+
     });
     function loadAV(cep) {
         dados = new Array();
@@ -90,20 +130,21 @@ $j(document).ready(function () {
                                 lon = coord.results[0].geometry.location.lng;
                                 for (i in avs) {
                                     for (z in ends) {
-                                        if(ends[z].user_id === avs[i].user_id){
-                                            var dist = distanciaPontos(lat, lon,ends[z].lat , ends[z].lon);
+                                        if (ends[z].user_id === avs[i].user_id) {
+                                            var dist = distanciaPontos(lat, lon, ends[z].lat, ends[z].lon);
                                             dist = parseFloat(dist);
-                                            
-                                            if(ends[z].raio == "global" ){;
-                                                dados.push({"id_av":avs[i].id_av,"user_id": avs[i].user_id, "id_end":ends[z].id_end, "nome_av": avs[i].nome_av,"url": avs[i].url,"logo_av": avs[i].logo_av, "distancia":dist, "cidade":ends[z].cidade , "estado":ends[z].estado});
-                                            }else{
+
+                                            if (ends[z].raio == "global") {
+                                                ;
+                                                dados.push({"id_av": avs[i].id_av, "user_id": avs[i].user_id, "id_end": ends[z].id_end, "nome_av": avs[i].nome_av, "url": avs[i].url, "logo_av": avs[i].logo_av, "distancia": dist, "cidade": ends[z].cidade, "estado": ends[z].estado});
+                                            } else {
                                                 raioFloat = parseFloat(ends[z].raio);
-                                                if(raioFloat >= dist){
-                                                    dados.push({"id_av":avs[i].id_av,"user_id": avs[i].user_id, "id_end":ends[z].id_end, "nome_av": avs[i].nome_av,"url": avs[i].url,"logo_av": avs[i].logo_av, "distancia":dist, "cidade":ends[z].cidade , "estado":ends[z].estado});
+                                                if (raioFloat >= dist) {
+                                                    dados.push({"id_av": avs[i].id_av, "user_id": avs[i].user_id, "id_end": ends[z].id_end, "nome_av": avs[i].nome_av, "url": avs[i].url, "logo_av": avs[i].logo_av, "distancia": dist, "cidade": ends[z].cidade, "estado": ends[z].estado});
                                                 }
                                             }
                                         }
-                                        
+
                                     }
 
                                 }
