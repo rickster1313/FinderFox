@@ -384,7 +384,11 @@
  
 
                     </div>
-
+                    <?php 
+                        if (isset($_SESSION['msg'])) {
+                            echo $_SESSION['msg'];
+                        }
+                     ?>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
                             <a href="#menu1" class="nav-link active" data-toggle="tab">
@@ -938,7 +942,7 @@
 
 
         <span class="input input--yoko">
-            <input class="input__field input__field--yoko" type="text" id="senhaT" required="required" name="senha_perfil" autocomplete="off" value="" />
+            <input class="input__field input__field--yoko" type="password" id="senhaT" required="required" name="senha_perfil" autocomplete="off" value="" />
                     <label class="input__label input__label--yoko" for="senha">
                     <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Senha Atual</span>
                     </label>
@@ -946,7 +950,7 @@
       </span>
 
       <span class="input input--yoko">
-            <input class="input__field input__field--yoko" type="text" id="confsenha" required="required" name="confsenha_perfil" autocomplete="off" />
+            <input class="input__field input__field--yoko" type="password" id="confsenha" required="required" name="confsenha_perfil" autocomplete="off" />
                     <label class="input__label input__label--yoko" for="confsenha">
                     <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Confirmar Senha</span>
                     </label>
@@ -955,10 +959,10 @@
 
       <h3>Selecionar nova imagem</h3>
 
-      <img src="<?php BASE_URL;?>assets/images/GogetaFusionRebornDVD.png" class="rounded-circle" width="100">
-      <img src="<?php BASE_URL;?>assets/images/GogetaFusionRebornDVD.png" class="rounded-circle" width="100"  >
-      <img src="<?php BASE_URL;?>assets/images/GogetaFusionRebornDVD.png" class="rounded-circle" width="100">
-      <img src="<?php BASE_URL;?>assets/images/GogetaFusionRebornDVD.png" class="rounded-circle" width="100">
+      <img src="<?php BASE_URL;?>assets/images/losangulo.png" class="rounded-circle A" value="1" width="100" >
+      <img src="<?php BASE_URL;?>assets/images/circulo.png" class="rounded-circle B" value="2" width="100"  >
+      <img src="<?php BASE_URL;?>assets/images/quadradado.png" class="rounded-circle C" value="3" width="100">
+      <img src="<?php BASE_URL;?>assets/images/triangulo-equilatero.png" class="rounded-circle D" value="4" width="100">
 
   </center>
       </div>

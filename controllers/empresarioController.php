@@ -362,12 +362,16 @@ class empresarioController extends Controller {
         $nome = $_POST['nome'];
         $senhaA = $_POST['senha'];
         $senhaN = password_hash($_POST['confsenha'], PASSWORD_DEFAULT);
+        $img = $_POST['imagem'];
 
         $user = new usuariosModel();
         $pass = $user->getDados($_SESSION['id']);
         $pass2 = $pass->fetch();
         if (password_verify($senhaA, $pass2['senha'])) {
+            $_SESSION['msg'] = 'Atualizado!';
             $user->alterarUser($nome, $senhaN, $_SESSION['id']);  
+        }else{
+            $_SESSION['msg'] = 'Senha incorreta!';
         }
         
     }
