@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 23-Nov-2018 às 21:43
--- Versão do servidor: 10.1.22-MariaDB
--- PHP Version: 7.1.4
+-- Generation Time: 24-Nov-2018 às 04:13
+-- Versão do servidor: 10.1.21-MariaDB
+-- PHP Version: 7.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -301,6 +299,7 @@ CREATE TABLE `tbl_usuarios` (
   `senha` varchar(220) NOT NULL,
   `CPF_CNPJ` varchar(220) DEFAULT NULL,
   `telefone` varchar(220) NOT NULL,
+  `img` varchar(222) DEFAULT NULL,
   `status` int(11) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL
@@ -310,12 +309,12 @@ CREATE TABLE `tbl_usuarios` (
 -- Extraindo dados da tabela `tbl_usuarios`
 --
 
-INSERT INTO `tbl_usuarios` (`id`, `nome`, `nvl_acesso`, `email`, `senha`, `CPF_CNPJ`, `telefone`, `status`, `created`, `modified`) VALUES
-(6, 'empresario 1', 'empresario', 'empre', '$2y$10$ji0v6oAEKEJEV2qz.tGdPO3fe9mvxig3rp6uBVB8u5ouRSv5zXe5C', '23.423.452/2342-34', '(67) 567567565', 0, '2018-08-03 08:22:05', NULL),
-(12, 'usuario1', 'usuario', 'user', '$2y$10$ji0v6oAEKEJEV2qz.tGdPO3fe9mvxig3rp6uBVB8u5ouRSv5zXe5C', '123.242.135-12', '(21) 323123123', 0, '2018-08-13 02:15:25', NULL),
-(13, 'luciano', 'usuario', 'user2', '$2y$10$702IB5svEKGU6apnZMBtcOP0kxR8SyvZFNxIS/ZuB5Soh/84wBBzK', '123.141.242-14', '(13) 132131232', 0, '2018-11-18 18:25:13', NULL),
-(14, 'riquelme', 'empresario', 'r', '$2y$10$hYfgOi37KvRynEtsvKkkS.Pdkaf7zFQClFuZiYLNP812ycvvGt7Re', '12.345.654/3212-34', '(23) 412343212', 0, '2018-11-19 16:09:07', NULL),
-(15, '   h', 'empresario', 'k@g.h', '$2y$10$gWXgvn5O18W/e0MroI.p4eN57B6adXMnukRjJY1oBkil3zsvy1wV2', '777.777.777-77', '(77) 777777777', 0, '2018-11-19 17:23:24', NULL);
+INSERT INTO `tbl_usuarios` (`id`, `nome`, `nvl_acesso`, `email`, `senha`, `CPF_CNPJ`, `telefone`, `img`, `status`, `created`, `modified`) VALUES
+(6, 'empresario   ', 'empresario', 'empre', '$2y$10$ejUja4ziZl0g/qlhywCNj.LOxjoyu8fNjYD9tyZvR7AymyiPB0Zqy', '23.423.452/2342-34', '(67) 567567565', 'assets/images/losangulo.png', 0, '2018-08-03 08:22:05', NULL),
+(12, 'usuario1', 'usuario', 'user', '$2y$10$ji0v6oAEKEJEV2qz.tGdPO3fe9mvxig3rp6uBVB8u5ouRSv5zXe5C', '123.242.135-12', '(21) 323123123', 'assets/images/user_icon-icons.com_57997.png', 0, '2018-08-13 02:15:25', NULL),
+(13, 'luciano', 'usuario', 'user2', '$2y$10$702IB5svEKGU6apnZMBtcOP0kxR8SyvZFNxIS/ZuB5Soh/84wBBzK', '123.141.242-14', '(13) 132131232', 'assets/images/user_icon-icons.com_57997.png', 0, '2018-11-18 18:25:13', NULL),
+(14, 'riquelme', 'empresario', 'r', '$2y$10$hYfgOi37KvRynEtsvKkkS.Pdkaf7zFQClFuZiYLNP812ycvvGt7Re', '12.345.654/3212-34', '(23) 412343212', 'assets/images/user_icon-icons.com_57997.png', 0, '2018-11-19 16:09:07', NULL),
+(15, '   h', 'empresario', 'k@g.h', '$2y$10$gWXgvn5O18W/e0MroI.p4eN57B6adXMnukRjJY1oBkil3zsvy1wV2', '777.777.777-77', '(77) 777777777', 'assets/images/user_icon-icons.com_57997.png', 0, '2018-11-19 17:23:24', NULL);
 
 --
 -- Indexes for dumped tables
@@ -366,38 +365,31 @@ ALTER TABLE `tbl_usuarios`
 --
 ALTER TABLE `notificacao`
   MODIFY `id_notificacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
-
 --
 -- AUTO_INCREMENT for table `tbl_avs`
 --
 ALTER TABLE `tbl_avs`
   MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `tbl_chat`
 --
 ALTER TABLE `tbl_chat`
   MODIFY `id_msg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
-
 --
 -- AUTO_INCREMENT for table `tbl_endereco`
 --
 ALTER TABLE `tbl_endereco`
   MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
-
 --
 -- AUTO_INCREMENT for table `tbl_funcoes`
 --
 ALTER TABLE `tbl_funcoes`
   MODIFY `id_func` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
