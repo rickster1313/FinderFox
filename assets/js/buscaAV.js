@@ -75,19 +75,21 @@ $j(document).ready(function () {
         montarAVs($j(this).html());
     });
     $j("#prevPag").bind("click", function () {
-        pagina_numFloat = parseFloat(pagina_num);
+           pagina_numFloat = parseFloat(pagina_num);
         if (pagina_numFloat - 1 > 0) {
             $j("#all_avs ul").html("");
             $j("#paginat").html("");
-            montarAVs(pagina_num - 1);
+            pagina_num--;
+            montarAVs(pagina_numFloat - 1);
         }
     });
     $j("#nextPag").bind("click", function () {
         pagina_numFloat = parseFloat(pagina_num);
-        if (pagina_numFloat + 1 <= numbersX) {
+        if ((pagina_numFloat + 1) <= numbersX) {
             $j("#all_avs ul").html("");
             $j("#paginat").html("");
-            montarAVs(pagina_num + 1);
+            pagina_num++;
+            montarAVs(pagina_numFloat + 1);
         }
     });
     $j("#serchAV").bind("keyup", function () {

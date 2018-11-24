@@ -143,6 +143,9 @@
             { 
                 text-decoration:none; 
             } 
+            .pagination:hover{
+                cursor:default;
+            }
         </style>
 
     </head> 
@@ -186,7 +189,6 @@
             <div class="ladoBaixo" >
                 <center>
                     <input type="text" id="serchAV" placeholder="Pesquisar AVs...">
-                    <?php echo $_SESSION['cep']; ?>
                 </center>
                 <div id="all_avs">
                     <ul  class="list-group">
