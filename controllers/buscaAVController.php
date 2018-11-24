@@ -27,7 +27,12 @@ class buscaAVController extends Controller {
         $dados = $sql->fetchAll();
         echo json_encode($dados);
     }
-   
+   public function createError(){
+        $msg = $_POST['msg'];
+        $_SESSION['msg'] = "<div class='alert alert-warning alert-dismissible w-75' style='left: 50%; transform: translate(-50%);'>
+                    <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    ".$msg."</div>";
+    }
 }
 
 ?>

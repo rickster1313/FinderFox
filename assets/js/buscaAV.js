@@ -37,9 +37,9 @@ $j(document).ready(function () {
     }
     function montarAVs(pagina) {
         //console.log(dados);
-        if(typeof dadosPesq == 'undefined'){
+        if (typeof dadosPesq == 'undefined') {
             data = dados;
-        }else{
+        } else {
             data = dadosPesq;
         }
         total = data.length;
@@ -75,7 +75,7 @@ $j(document).ready(function () {
         montarAVs($j(this).html());
     });
     $j("#prevPag").bind("click", function () {
-           pagina_numFloat = parseFloat(pagina_num);
+        pagina_numFloat = parseFloat(pagina_num);
         if (pagina_numFloat - 1 > 0) {
             $j("#all_avs ul").html("");
             $j("#paginat").html("");
@@ -105,7 +105,7 @@ $j(document).ready(function () {
                 }
             });
 
-        }else{
+        } else {
             delete dadosPesq;
         }
         ;
@@ -128,29 +128,38 @@ $j(document).ready(function () {
                                 //console.log(coord);
                                 //console.log(avs);
                                 //console.log(ends);
-                                lat = coord.results[0].geometry.location.lat;
-                                lon = coord.results[0].geometry.location.lng;
-                                for (i in avs) {
-                                    for (z in ends) {
-                                        if (ends[z].user_id === avs[i].user_id) {
-                                            var dist = distanciaPontos(lat, lon, ends[z].lat, ends[z].lon);
-                                            dist = parseFloat(dist);
+                                if (coord.status == "OK") {
+                                    lat = coord.results[0].geometry.location.lat;
+                                    lon = coord.results[0].geometry.location.lng;
+                                    for (i in avs) {
+                                        for (z in ends) {
+                                            if (ends[z].user_id === avs[i].user_id) {
+                                                var dist = distanciaPontos(lat, lon, ends[z].lat, ends[z].lon);
+                                                dist = parseFloat(dist);
 
-                                            if (ends[z].raio == "global") {
-                                                ;
-                                                dados.push({"id_av": avs[i].id_av, "user_id": avs[i].user_id, "id_end": ends[z].id_end, "nome_av": avs[i].nome_av, "url": avs[i].url, "logo_av": avs[i].logo_av, "distancia": dist, "cidade": ends[z].cidade, "estado": ends[z].estado});
-                                            } else {
-                                                raioFloat = parseFloat(ends[z].raio);
-                                                if (raioFloat >= dist) {
+                                                if (ends[z].raio == "global") {
+                                                    ;
                                                     dados.push({"id_av": avs[i].id_av, "user_id": avs[i].user_id, "id_end": ends[z].id_end, "nome_av": avs[i].nome_av, "url": avs[i].url, "logo_av": avs[i].logo_av, "distancia": dist, "cidade": ends[z].cidade, "estado": ends[z].estado});
+                                                } else {
+                                                    raioFloat = parseFloat(ends[z].raio);
+                                                    if (raioFloat >= dist) {
+                                                        dados.push({"id_av": avs[i].id_av, "user_id": avs[i].user_id, "id_end": ends[z].id_end, "nome_av": avs[i].nome_av, "url": avs[i].url, "logo_av": avs[i].logo_av, "distancia": dist, "cidade": ends[z].cidade, "estado": ends[z].estado});
+                                                    }
                                                 }
                                             }
+
                                         }
 
                                     }
-
+                                    montarAVs();
+                                } else {
+                                    $j.ajax({
+                                        url: "../createError",
+                                        type:"post",
+                                        data:{"msg":"Não conseguimos localizar este CEP"}
+                                    });
+                                    window.location.href = "../../";
                                 }
-                                montarAVs();
                             }
                         });
                     }

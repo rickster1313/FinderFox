@@ -157,7 +157,7 @@
             <header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
 
                 <p class="" style="color: #ffffff; text-shadow: 2px 8px 11px #232323;">FinderFox</p>
-                <ul class="nav navbar-expand" >
+                <div class="nav navbar-expand" >
                     <div class="botão" style="margin-top: 20px;margin-right: 20px;">
                         <?php if (isset($_SESSION['id'])) { ?>
                             <a href="<?php echo BASE_URL ?>login/deslogar" style= "float: right;margin: 0px;text-align: center;width: 50px;margin-left: 30px;text-decoration: none;color: white">
@@ -183,7 +183,7 @@
 
                     </div>
 
-                </ul>
+                </div>
 
             </header>
             <div class="ladoBaixo" >
