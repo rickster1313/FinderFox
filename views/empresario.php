@@ -357,21 +357,25 @@
             .pessoa:hover{
                 cursor:pointer;
             }
+            .imsA:hover { background-color: #C0C0C0; }
         </style>
-
+<?php 
+    $usuario = new usuariosModel();
+    $t = $usuario->getDados($_SESSION['id']);
+    $user = $t->fetch();
+ ?>
     </head>
     <body>
 
         <div class="wrapper">
-            <div class="sidebar" data-color="purple" data-image="<?php echo BASE_URL; ?>assets/img/sidebar-5.jpg">
+            <div class="sidebar" data-color="purple" data-image="<?php echo BASE_URL; ?>assets/imag/sidebar-5.jpg">
 
 
                 <div class="sidebar-wrapper">
                     <div class="logo">
                         <a href="#" class="simple-text" >
                             <h3> Empresário </h3>
-                            
-                                <img src="<?php echo BASE_URL; ?>assets/images/pericles.jpg" id="imagemperf" class="rounded-circle"  alt="Cinque Terre" width="200" height="200">
+                                <img src="<?php echo BASE_URL.$user['img']; ?>" id="imagemperf" class="rounded-circle"  alt="Cinque Terre" width="200" height="200">
                             
                         </a>
 
@@ -385,8 +389,13 @@
 
                     </div>
                     <?php 
-                        if (isset($_SESSION['msg'])) {
-                            echo $_SESSION['msg'];
+                        if (isset($_SESSION['msg']) && $_SESSION['msg'] == 'Alterações realizadas com sucesso.') {
+                            echo "<div class='alert alert-success'><strong>OK!</strong> ".$_SESSION['msg']."</div>";
+                            unset($_SESSION['msg']); 
+                            
+                        }else if(isset($_SESSION['msg']) && $_SESSION['msg'] == 'Senha incorreta!'){
+                            echo "<div class='alert alert-danger'><strong>Erro!</strong>" .$_SESSION['msg']."</div>";
+                            unset($_SESSION['msg']); 
                         }
                      ?>
                     <ul class="nav nav-tabs">
@@ -927,7 +936,7 @@
         foreach ($dados2 as $value) {
             # code...
         
-      ?> 
+      ?>  
 
       <!-- Modal body -->
       <div class="modal-body">
@@ -959,10 +968,10 @@
 
       <h3>Selecionar nova imagem</h3>
 
-      <img src="<?php BASE_URL;?>assets/images/losangulo.png" class="rounded-circle A" value="1" width="100" >
-      <img src="<?php BASE_URL;?>assets/images/circulo.png" class="rounded-circle B" value="2" width="100"  >
-      <img src="<?php BASE_URL;?>assets/images/quadradado.png" class="rounded-circle C" value="3" width="100">
-      <img src="<?php BASE_URL;?>assets/images/triangulo-equilatero.png" class="rounded-circle D" value="4" width="100">
+      <img src="<?php BASE_URL;?>assets/images/losangulo.png" class="rounded-cir imsA A" width="100" >
+      <img src="<?php BASE_URL;?>assets/images/circulo.png" class="rounded-cir imsA A" width="100"  >
+      <img src="<?php BASE_URL;?>assets/images/quadradado.png" class="rounded-cir imsA A" width="100">
+      <img src="<?php BASE_URL;?>assets/images/triangulo-equilatero.png" class="rounded-cir imsA A" width="100">
 
   </center>
       </div>
