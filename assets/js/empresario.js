@@ -520,6 +520,10 @@ $j(document).ready(function () {
         verificaLida();
     }
 
+    $j(".A").bind('click', function(){
+        link = $j(this).attr("src");
+        });
+
     $j("#alterarPerf").bind('click', function (e) {
         e.preventDefault();
 
@@ -531,7 +535,7 @@ $j(document).ready(function () {
             $j.ajax({
                 url: 'empresario/alterarUser',
                 type: 'POST',
-                data: {nome: nome, senha: senhaA, confsenha: senhaN},
+                data: {nome: nome, senha: senhaA, confsenha: senhaN, img: link},
                 success: function () {
                     window.location.href = "empresario";
                 }

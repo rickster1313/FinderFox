@@ -41,7 +41,7 @@
 		}
 
 		public function cadastraUsuario($nome, $email, $telefone, $cpf_cnpj, $senha, $tipo){
-			$sql = "INSERT INTO tbl_usuarios(nome, nvl_acesso, email, senha, CPF_CNPJ, telefone, status, created) VALUES (?, ?, ?, ?, ?, ?, 0, NOW() ) ";
+			$sql = "INSERT INTO tbl_usuarios(nome, nvl_acesso, email, senha, CPF_CNPJ, telefone, img, status, created) VALUES (?, ?, ?, ?, ?, ?, 'assets/images/user_icon-icons.com_57997.png', 0, NOW() ) ";
 			$sql = $this->pdo->prepare($sql);
 			$sql->bindValue(1, $nome);
 			$sql->bindValue(2, $tipo);
@@ -56,12 +56,13 @@
 			}
 		}
                 
-        public function alterarUser($nome, $senha, $id){
-        	$sql = "UPDATE tbl_usuarios SET nome = ?, senha = ? WHERE id = ?";
+        public function alterarUser($nome, $senha, $id, $img){
+        	$sql = "UPDATE tbl_usuarios SET nome = ?, senha = ?, img = ? WHERE id = ?";
         	$sql = $this->pdo->prepare($sql);
 			$sql->bindValue(1, $nome);
 			$sql->bindValue(2, $senha);
-			$sql->bindValue(3, $id);
+			$sql->bindValue(3, $img);
+			$sql->bindValue(4, $id);
 			$sql->execute();
         }     
 		
