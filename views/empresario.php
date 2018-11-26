@@ -368,7 +368,7 @@
     <body>
 
         <div class="wrapper">
-            <div class="sidebar" data-color="purple" data-image="<?php echo BASE_URL; ?>assets/imag/sidebar-5.jpg">
+            <div class="sidebar" data-image="<?php echo BASE_URL; ?>assets/imag/sidebar-5.jpg" style="background-color: #393D3F;">
 
 
                 <div class="sidebar-wrapper">
@@ -788,7 +788,7 @@
                                     </div>
                                 </div>
 
-                                <div class="tab-pane container fade" id="menu3">
+                                <div class="tab-pane fade" id="menu3">
                                     <?php
                                     include($av_status);
 
@@ -822,7 +822,7 @@
                                         }
                                         foreach ($dadosFunc as $value) {
                                             ?>
-                                            <div class="funcao1" style="width: 100%; height: 200px; background: #68319B;color: white; border: 1px solid white;">
+                                            <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
                                                 <center>
                                                     <?php
                                                     echo $value['nome_func'];

@@ -54,6 +54,12 @@
                 font-family: "Champagne & Limousines Bold";
                 font-size: 20px;  
             }  
+
+            .p-t-136 :hover {
+                color: #999;
+                text-decoration: none;
+            }   
+
         </style>
 
 
@@ -66,10 +72,7 @@
         <div class="limiter">
 
             <div class="container-login100">
-                <a href="<?php echo BASE_URL; ?>">
-                    <img src="<?php echo BASE_URL; ?>assets/images/seta.png" style="width: 40px;" class="float-right">
-                </a>
-
+                
 
                 <div class="wrap-login100">
                     <div class="login100-pic js-tilt" data-tilt>
@@ -123,6 +126,12 @@
                         </div>
 
                         <div class="text-center p-t-136">
+
+                            <a class="txt2 film-font" href="<?php echo BASE_URL; ?>">
+                               <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
+                                Voltar
+                            </a>
+                            /
                             <a class="txt2 film-font" href="<?php echo BASE_URL; ?>/cadastro">
                                 Crie sua conta
                                 <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
