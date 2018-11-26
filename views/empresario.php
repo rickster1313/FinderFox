@@ -359,11 +359,11 @@
             }
             .imsA:hover { background-color: #C0C0C0; }
         </style>
-<?php 
-    $usuario = new usuariosModel();
-    $t = $usuario->getDados($_SESSION['id']);
-    $user = $t->fetch();
- ?>
+        <?php
+        $usuario = new usuariosModel();
+        $t = $usuario->getDados($_SESSION['id']);
+        $user = $t->fetch();
+        ?>
     </head>
     <body>
 
@@ -375,8 +375,8 @@
                     <div class="logo">
                         <a href="#" class="simple-text" >
                             <h3> Empresário </h3>
-                                <img src="<?php echo BASE_URL.$user['img']; ?>" id="imagemperf" class="rounded-circle"  alt="Cinque Terre" width="200" height="200">
-                            
+                            <img src="<?php echo BASE_URL . $user['img']; ?>" id="imagemperf" class="rounded-circle"  alt="Cinque Terre" width="200" height="200">
+
                         </a>
 
                         <br>
@@ -385,19 +385,18 @@
                         <a href="">  
                         </a>
 
- 
+
 
                     </div>
-                    <?php 
-                        if (isset($_SESSION['msg']) && $_SESSION['msg'] == 'Alterações realizadas com sucesso.') {
-                            echo "<div class='alert alert-success'><strong>OK!</strong> ".$_SESSION['msg']."</div>";
-                            unset($_SESSION['msg']); 
-                            
-                        }else if(isset($_SESSION['msg']) && $_SESSION['msg'] == 'Senha incorreta!'){
-                            echo "<div class='alert alert-danger'><strong>Erro!</strong>" .$_SESSION['msg']."</div>";
-                            unset($_SESSION['msg']); 
-                        }
-                     ?>
+                    <?php
+                    if (isset($_SESSION['msg']) && $_SESSION['msg'] == 'Alterações realizadas com sucesso.') {
+                        echo "<div class='alert alert-success'><strong>OK!</strong> " . $_SESSION['msg'] . "</div>";
+                        unset($_SESSION['msg']);
+                    } else if (isset($_SESSION['msg']) && $_SESSION['msg'] == 'Senha incorreta!') {
+                        echo "<div class='alert alert-danger'><strong>Erro!</strong>" . $_SESSION['msg'] . "</div>";
+                        unset($_SESSION['msg']);
+                    }
+                    ?>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
                             <a href="#menu1" class="nav-link active" data-toggle="tab">
@@ -442,19 +441,21 @@
                         } else {
                             $func = explode(",", $dados['func']);
                         }
-
-
+                        ?>
+                        <script>
+                            teste = 0;
+                        </script>
+                        <?php
                         foreach ($func as $value) {
 
                             if ($value == 3) {
                                 ?>
-                        
+
                                 <script>
                                     teste = 3;
                                 </script>
 
-                            <?php }
-                            ?>
+                            <?php } ?>
                             <li class="nav-item">
                                 <a href="#<?php echo $dadosFunc[$value - 1]["href"]; ?>" data-toggle="tab" class="" style="color: #fff;">
                                     <i class="pe-7s-tools"></i>
@@ -484,9 +485,9 @@
 
                                 <div class="tab-pane fade" id="menu1">
                                     <h1>Olá <?php
-                                        $newNome = explode(" ", $nome);
-                                        echo strtoupper($newNome[0]);
-                                        ?></h1>
+                        $newNome = explode(" ", $nome);
+                        echo strtoupper($newNome[0]);
+                        ?></h1>
                                 </div> 
 
                                 <div class="tab-pane  fade" id="menu2">
@@ -913,88 +914,83 @@
                 </div>
 
             </div>
-            
+
 
             <div class="modal fade" id="modalPerfil">
-  <div class="modal-dialog">
-    <div class="modal-content">
+                <div class="modal-dialog">
+                    <div class="modal-content">
 
-    <form>
+                        <form>
 
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Meu Perfil</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Meu Perfil</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
 
-      <?php
+                            <?php
+                            $usuario = new usuariosModel();
+                            $dados = $usuario->getDados($_SESSION['id']);
+                            $dados2 = $dados->fetchAll();
 
-        $usuario = new usuariosModel();
-        $dados = $usuario->getDados($_SESSION['id']);
-        $dados2 = $dados->fetchAll();
+                            foreach ($dados2 as $value) {
+                                # code...
+                                ?>  
 
-        foreach ($dados2 as $value) {
-            # code...
-        
-      ?>  
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        <center>
-        <span class="input input--yoko">
-            <input class="input__field input__field--yoko" type="text" id="nomeT" required="required" name="nome_perfil"
-             autocomplete="off" value="<?php echo $value['nome']; ?> " /> 
-                    <label class="input__label input__label--yoko" for="nome">
-                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Nome</span>
-                   </label>
-        </span>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <center>
+                                        <span class="input input--yoko">
+                                            <input class="input__field input__field--yoko" type="text" id="nomeT" required="required" name="nome_perfil"
+                                                   autocomplete="off" value="<?php echo $value['nome']; ?> " /> 
+                                            <label class="input__label input__label--yoko" for="nome">
+                                                <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Nome</span>
+                                            </label>
+                                        </span>
 
 
-        <span class="input input--yoko">
-            <input class="input__field input__field--yoko" type="password" id="senhaT" required="required" name="senha_perfil" autocomplete="off" value="" />
-                    <label class="input__label input__label--yoko" for="senha">
-                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Senha Atual</span>
-                    </label>
-                    
-      </span>
+                                        <span class="input input--yoko">
+                                            <input class="input__field input__field--yoko" type="password" id="senhaT" required="required" name="senha_perfil" autocomplete="off" value="" />
+                                            <label class="input__label input__label--yoko" for="senha">
+                                                <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Senha Atual</span>
+                                            </label>
 
-      <span class="input input--yoko">
-            <input class="input__field input__field--yoko" type="password" id="confsenha" required="required" name="confsenha_perfil" autocomplete="off" />
-                    <label class="input__label input__label--yoko" for="confsenha">
-                    <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Confirmar Senha</span>
-                    </label>
-                    
-      </span>
+                                        </span>
 
-      <h3>Selecionar nova imagem</h3>
+                                        <span class="input input--yoko">
+                                            <input class="input__field input__field--yoko" type="password" id="confsenha" required="required" name="confsenha_perfil" autocomplete="off" />
+                                            <label class="input__label input__label--yoko" for="confsenha">
+                                                <span class="input__label-content input__label-content--yoko" style="font-size: 17px; color: #232323;">Confirmar Senha</span>
+                                            </label>
 
-      <img src="<?php BASE_URL;?>assets/images/losangulo.png" class="rounded-cir imsA A" width="100" >
-      <img src="<?php BASE_URL;?>assets/images/circulo.png" class="rounded-cir imsA A" width="100"  >
-      <img src="<?php BASE_URL;?>assets/images/quadradado.png" class="rounded-cir imsA A" width="100">
-      <img src="<?php BASE_URL;?>assets/images/triangulo-equilatero.png" class="rounded-cir imsA A" width="100">
+                                        </span>
 
-  </center>
-      </div>
-      <?php }
+                                        <h3>Selecionar nova imagem</h3>
 
-      
+                                        <img src="<?php BASE_URL; ?>assets/images/losangulo.png" class="rounded-cir imsA A" width="100" >
+                                        <img src="<?php BASE_URL; ?>assets/images/circulo.png" class="rounded-cir imsA A" width="100"  >
+                                        <img src="<?php BASE_URL; ?>assets/images/quadradado.png" class="rounded-cir imsA A" width="100">
+                                        <img src="<?php BASE_URL; ?>assets/images/triangulo-equilatero.png" class="rounded-cir imsA A" width="100">
 
-       ?>
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-outline-dark" id="alterarPerf">ALTERAR</button>
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
+                                    </center>
+                                </div>
+<?php }
+?>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-outline-dark" id="alterarPerf">ALTERAR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
 
 
 
 
             <!--   Core JS Files   -->
-            
+
             <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
             <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
             <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>        
@@ -1009,74 +1005,74 @@
             <script src="<?php echo BASE_URL; ?>assets/js/modalEffects.js"></script>
 
             <script>
-                                        (function () {
-                                            // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-                                            if (!String.prototype.trim) {
-                                                (function () {
-                                                    // Make sure we trim BOM and NBSP
-                                                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-                                                    String.prototype.trim = function () {
-                                                        return this.replace(rtrim, '');
-                                                    };
-                                                })();
-                                            }
-
-                                            [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
-                                                // in case the input is already filled..
-                                                if (inputEl.value.trim() !== '') {
-                                                    classie.add(inputEl.parentNode, 'input--filled');
-                                                }
-
-                                                // events:
-                                                inputEl.addEventListener('focus', onInputFocus);
-                                                inputEl.addEventListener('blur', onInputBlur);
-                                            });
-
-                                            function onInputFocus(ev) {
-                                                classie.add(ev.target.parentNode, 'input--filled');
-                                            }
-
-                                            function onInputBlur(ev) {
-                                                if (ev.target.value.trim() === '') {
-                                                    classie.remove(ev.target.parentNode, 'input--filled');
-                                                }
-                                            }
-                                        })();
-
-
-                                        (function () {
-                                            [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
-                                                var menuItems = menu.querySelectorAll('.menu__link'),
-                                                        setCurrent = function (ev) {
-                                                            ev.preventDefault();
-                                                            var item = ev.target.parentNode; // li
-                                                            // return if already current
-                                                            if (classie.has(item, 'menu__item--current')) {
-                                                                return false;
-                                                            }
-                                                            // remove current
-                                                            classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
-                                                            // set current
-                                                            classie.add(item, 'menu__item--current');
+                                            (function () {
+                                                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                                                if (!String.prototype.trim) {
+                                                    (function () {
+                                                        // Make sure we trim BOM and NBSP
+                                                        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                                                        String.prototype.trim = function () {
+                                                            return this.replace(rtrim, '');
                                                         };
-                                                [].slice.call(menuItems).forEach(function (el) {
-                                                    el.addEventListener('click', setCurrent);
+                                                    })();
+                                                }
+
+                                                [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+                                                    // in case the input is already filled..
+                                                    if (inputEl.value.trim() !== '') {
+                                                        classie.add(inputEl.parentNode, 'input--filled');
+                                                    }
+
+                                                    // events:
+                                                    inputEl.addEventListener('focus', onInputFocus);
+                                                    inputEl.addEventListener('blur', onInputBlur);
                                                 });
-                                            });
-                                            [].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
-                                                link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
-                                                new Clipboard(link);
-                                                link.addEventListener('click', function () {
-                                                    classie.add(link, 'link-copy--animate');
-                                                    setTimeout(function () {
-                                                        classie.remove(link, 'link-copy--animate');
-                                                    }, 300);
-                                                });
-                                            });
-                                        })(window);
+
+                                                function onInputFocus(ev) {
+                                                    classie.add(ev.target.parentNode, 'input--filled');
+                                                }
+
+                                                function onInputBlur(ev) {
+                                                    if (ev.target.value.trim() === '') {
+                                                        classie.remove(ev.target.parentNode, 'input--filled');
+                                                    }
+                                                }
+                                            })();
 
 
-                                        var polyfilter_scriptpath = '/js/';
+                                            (function () {
+                                                [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
+                                                    var menuItems = menu.querySelectorAll('.menu__link'),
+                                                            setCurrent = function (ev) {
+                                                                ev.preventDefault();
+                                                                var item = ev.target.parentNode; // li
+                                                                // return if already current
+                                                                if (classie.has(item, 'menu__item--current')) {
+                                                                    return false;
+                                                                }
+                                                                // remove current
+                                                                classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                                                                // set current
+                                                                classie.add(item, 'menu__item--current');
+                                                            };
+                                                    [].slice.call(menuItems).forEach(function (el) {
+                                                        el.addEventListener('click', setCurrent);
+                                                    });
+                                                });
+                                                [].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
+                                                    link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+                                                    new Clipboard(link);
+                                                    link.addEventListener('click', function () {
+                                                        classie.add(link, 'link-copy--animate');
+                                                        setTimeout(function () {
+                                                            classie.remove(link, 'link-copy--animate');
+                                                        }, 300);
+                                                    });
+                                                });
+                                            })(window);
+
+
+                                            var polyfilter_scriptpath = '/js/';
             </script>
 
             <script type="text/javascript">
@@ -1088,12 +1084,12 @@
             </script>
 
             <script>
-$j(document).ready(function(){
-    $j("#imagemperf").click(function(){
-        $j("#modalPerfil").modal();
-    });
-});
-</script>
+                $j(document).ready(function () {
+                    $j("#imagemperf").click(function () {
+                        $j("#modalPerfil").modal();
+                    });
+                });
+            </script>
 
 
 

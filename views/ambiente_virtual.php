@@ -9,13 +9,13 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
         -->
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/themify-icons.css">
+        
         <!-- Owl carousel -->
-        <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" type="text/css"  href="<?php echo BASE_URL; ?>assets/css/owl.carousel.min.css">
         <!-- Main css -->
-        <link href="<?php echo BASE_URL; ?>assets/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css"  href="<?php echo BASE_URL; ?>assets/css/style.css" >
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -222,6 +222,7 @@
             </div>
         // fim PARTE 3 -->
 
+        
         <?php if ($galery_active == "yes") { ?>
             <div class="section light-bg" id="gallery">
                 <div class="container">
@@ -235,7 +236,7 @@
                         $photos = explode("$!$", $fotos);
                         foreach ($photos as $value) {
                             ?>
-                            <img src="<?php echo BASE_URL . 'assets/images/AV/' . $value; ?>" alt="image">
+                            <img src="<?php echo BASE_URL.'assets/images/AV/'.$value; ?>" alt="image" />
                         <?php } ?>
                     </div>
 
@@ -364,7 +365,7 @@
                             <?php } else {
                             ?>
                             <div class = "alert alert-warning">
-                                <strong>Aviso!</strong> Para mandar mensagem, precisa estar logado.
+                                <strong>Aviso!</strong> Para mandar mensagem, precisa estar logado como usuario.
                                 <a href = "<?php echo BASE_URL; ?>login" class = "alert-link"><button class="btn btn-info">Logar</button></a>
                             </div>
                         <?php }
@@ -386,14 +387,16 @@
             <p class="mb-2"><small>COPYRIGHT © 2018. TODOS OS DIREITOS RESERVADOS</small></p>
 
         </footer>
-        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
+        
+        
+        <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
         <!-- Plugins JS -->
-        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/owl.carousel.min.js"></script>
         <!-- Custom JS -->
-        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/script.js"></script>
-        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/av.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/av.js"></script>
+        
     </body>
 </html>
 

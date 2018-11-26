@@ -165,7 +165,7 @@
                             <div id="content_sobre3">
                                 <label><strong>Titulo</strong></label><br>
                                 <input type="text" name="galery_title_txt" size="60" placeholder="titulo" class="form-control" 
-                                       style="outline: none; border-radius: 6px; border: 1px solid #68319b;" required="required" value="<?php echo $dadosAV['galery_title']; ?>" >
+                                       style="outline: none; border-radius: 6px; border: 1px solid #68319b;" value="<?php echo $dadosAV['galery_title']; ?>" >
                                 <label><strong>Selecione as Imagens</strong></label><br>
                                 <a href="#"><label for='selecao-arquivo2'><img class="img-fluid" style="width: 69px;" src="<?php echo BASE_URL; ?>assets/images/logoAdd.png"></label></a>
                                 <input id='selecao-arquivo2' type="file" name="galery_imagens[]" multiple><br>

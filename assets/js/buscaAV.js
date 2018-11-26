@@ -36,7 +36,7 @@ $j(document).ready(function () {
         return dist;
     }
     function montarAVs(pagina) {
-        //console.log(dados);
+        console.log(dados);
         if (typeof dadosPesq == 'undefined') {
             data = dados;
         } else {

@@ -122,7 +122,7 @@ var $j = jQuery.noConflict();
 				       	data:$j("#novo_user").serialize()+"&user=one",
 				       	async: false,
 				        success:function(){
-				       		window.location.href = "login";
+				       		//window.location.href = "login";
 				      	},
 				        error:function(){
 				      		console.log("error no ajax");

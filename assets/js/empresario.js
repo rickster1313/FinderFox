@@ -207,36 +207,31 @@ $j(document).ready(function () {
         form.preventDefault();
         var id = $j(this).attr("id");
         var newid = id.substring(2, id.length);
-        $j.ajax({
-            type: 'POST',
-            url: 'empresario/getEnd',
-            data: "idactive=" + newid,
-            async: false,
-            dataType: "json",
-            success: function (json) {
-                $j.ajax({
-                    url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + json.cep + "&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM",
-                    dataType: "json",
-                    success: function (coord) {
-                        lat = coord.results[0].geometry.location.lat;
-                        lon = coord.results[0].geometry.location.lng;
+        var dadoszinho = $j(this).serialize();
 
-                        $j.ajax({
-                            type: 'POST',
-                            url: 'empresario/alterarEnd',
-                            data: $j(this).serialize() + "&idpass=" + newid + "&lati=" + lat + "&longi=" + lon,
-                            async: false,
-                            success: function () {
-                                window.location.href = "login";
-                            },
-                            error: function () {
-                                console.log("error no ajax");
-                            }
-                        });
+        $j.ajax({
+            url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + $j(this).find(".cep_alt").val() + "&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM",
+            dataType: "json",
+            success: function (coord) {
+                lat = coord.results[0].geometry.location.lat;
+                lon = coord.results[0].geometry.location.lng;
+
+                $j.ajax({
+                    type: 'POST',
+                    url: 'empresario/alterarEnd',
+                    data: dadoszinho + "&idpass=" + newid + "&lati=" + lat + "&longi=" + lon,
+                    async: false,
+                    success: function () {
+                        window.location.href = "login";
+                    },
+                    error: function () {
+                        console.log("error no ajax");
                     }
                 });
             }
         });
+
+
     });
     $j(".cep_alt").mask("00000-000");
     $j(".cep_alt").bind("keyup", function () {
@@ -292,7 +287,7 @@ $j(document).ready(function () {
                     dataType: "json",
                     success: function (json) {
                         $j.ajax({
-                            url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + json.cep + "&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM",
+                            url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + json.cepzinho + "&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM",
                             dataType: "json",
                             success: function (coords) {
                                 lat = coords.results[0].geometry.location.lat;
@@ -520,9 +515,9 @@ $j(document).ready(function () {
         verificaLida();
     }
 
-    $j(".A").bind('click', function(){
+    $j(".A").bind('click', function () {
         link = $j(this).attr("src");
-        });
+    });
 
     $j("#alterarPerf").bind('click', function (e) {
         e.preventDefault();
