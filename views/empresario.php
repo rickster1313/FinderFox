@@ -358,7 +358,15 @@
                 cursor:pointer;
             }
             .imsA:hover { background-color: #C0C0C0; }
+
+            .modalcor{
+                background-color: #393D3F;
+            }
+
         </style>
+
+
+        
         <?php
         $usuario = new usuariosModel();
         $t = $usuario->getDados($_SESSION['id']);
@@ -803,7 +811,7 @@
 
                                 <div class="tab-pane container fade" id="menu4">
                                     <div class="section-title">
-                                        <h3>Funções</h3>
+                                        <h3>Funções mais utilizadas</h3>
                                         <a href="<?php echo BASE_URL; ?>views/template.php">lalalalal</a>
                                     </div>
 
@@ -854,6 +862,70 @@
 
 
                                     </div>
+
+                                    <div class="section-title">
+                                        <h3>Funções</h3>
+                                    </div>
+
+                                    <div class="img-gallery owl-carousel owl-theme funcoes" style="position: relative;">
+                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">    
+                                            <center>
+                                            <p>Agendamento</p>
+                                            <a href="#agendamento" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/agendamento.png" style="width: 35%;"></a>
+                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                        </center>
+                                        </div>
+
+                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
+                                            <center>
+                                            <p>Formulário de contato</p>
+                                             <a href="#form_contato" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/contato.png" style="width: 35%;"></a> 
+                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                        </center>
+                                        </div>
+
+                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
+                                            <center>
+                                            <p>Chat</p>
+                                            <a href="#chat1" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/chat.png" style="width: 35%;"></a>
+                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                        </center>
+                                        </div>
+
+                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
+                                            <center>
+                                            <p>Divulgação</p>
+                                            <a href="#divulgacao" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/divulgacao.png" style="width: 35%;"></a>
+                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                        </center>
+                                        </div>
+
+                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
+                                            <center>
+                                            <p>Anotações</p>
+                                            <a href="#anotacoes" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/anotacoes.png" style="width: 35%;"></a>
+                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                        </center>
+                                        </div>
+
+                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
+                                            <center>
+                                            <p>Estatisticas</p>
+                                            <a href="#estatisticas" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/estatisticas.png" style="width: 35%;"></a>
+                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                        </center>
+                                        </div>
+
+                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
+                                            <center>
+                                            <p>Cep</p>
+                                            <a href="#cep" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/cep.png" style="width: 35%;"></a>
+                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                        </center>
+                                        </div>
+
+                                    </div>
+
                                 </div>
                                 <div class="tab-pane container active" id="chat">
                                     <div class="container2">
@@ -984,6 +1056,184 @@
                     </div>
                 </div>
             </div>
+
+
+
+<div class="modal fade" id="agendamento">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header modalcor">
+        <h4 class="modal-title" style="color: #fff">Agendamento</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        1
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer modalcor">
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="form_contato">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header modalcor">
+        <h4 class="modal-title" style="color: #fff">Formulário de contato</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        2
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer modalcor">
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="chat1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header modalcor">
+        <h4 class="modal-title" style="color: #fff">Chat</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        3
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer modalcor">
+    
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="divulgacao">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header modalcor">
+        <h4 class="modal-title" style="color: #fff">Divulgação</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        4
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer modalcor">
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="anotacoes">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header modalcor">
+        <h4 class="modal-title" style="color: #fff">Anotações</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        5
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer modalcor">
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="estatisticas">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header modalcor">
+        <h4 class="modal-title" style="color: #fff">Estatisticas</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        6
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer modalcor">
+    
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="cep">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header modalcor">
+        <h4 class="modal-title" style="color: #fff">Cep</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        7
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer modalcor">
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 
 
 
