@@ -61,5 +61,21 @@ class funcaoModel extends Model {
         $sql->execute();
     }
 
+    public function funcAvs($id){
+        $sql = "SELECT * FROM tbl_avs WHERE user_id = ?"; 
+        $sql = $this->pdo->prepare($sql);;
+        $sql->bindValue(1, $id);
+        $sql->execute();
+        return $sql;
+    }
+
+    public function notificacaoNaoLidas($id){
+        $sql = "SELECT * FROM tbl_chat WHERE user_id = ? AND lida = 0"; 
+        $sql = $this->pdo->prepare($sql);
+        $sql->bindValue(1, $id);
+        $sql->execute();
+        return $sql;
+    }
+
 }
 ?>						

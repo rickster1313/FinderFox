@@ -81,6 +81,14 @@
             $sql->execute();
         }
 
+        public function qtdFunc($id){
+            $sql = "SELECT * FROM tbl_avs WHERE user_id = ?";
+            $sql = $this->pdo->prepare($sql);
+            $sql->bindValue(1, $id);
+            $sql->execute();
+            return $sql;
+        }
+
     }
 
 

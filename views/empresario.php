@@ -358,15 +358,7 @@
                 cursor:pointer;
             }
             .imsA:hover { background-color: #C0C0C0; }
-
-            .modalcor{
-                background-color: #393D3F;
-            }
-
         </style>
-
-
-        
         <?php
         $usuario = new usuariosModel();
         $t = $usuario->getDados($_SESSION['id']);
@@ -407,28 +399,28 @@
                     ?>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a href="#menu1" class="nav-link active" data-toggle="tab">
+                            <a id="q" href="#menu1" class="nav-link active" data-toggle="tab"> 
                                 <i class="pe-7s-graph3"></i>
                                 <p>Estátisticas</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="#menu2" data-toggle="tab" class="nav-link">
+                            <a id="w" href="#menu2" data-toggle="tab" class="nav-link">
                                 <i class="pe-7s-map-2"></i>
                                 <p>Endereços/Sedes</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="#menu3" data-toggle="tab" class="nav-link">
+                            <a id="e" href="#menu3" data-toggle="tab" class="nav-link">
                                 <i class="pe-7s-monitor"></i>
                                 <p>Ambiente Virtual</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="#menu4" data-toggle="tab" class="nav-link" >
+                            <a id="r" href="#menu4" data-toggle="tab" class="nav-link" >
                                 <i class="pe-7s-tools"></i>
                                 <p>Funções</p>
                             </a>
@@ -489,16 +481,54 @@
 
                     <div class="content">
                         <div class="container-fluid">
-                            <div class="tab-content">
+                            <div class="tab-content"> 
 
-                                <div class="tab-pane fade" id="menu1">
+                                <div class="tab-pane fade active" id="menu1">
                                     <h1>Olá <?php
-                        $newNome = explode(" ", $nome);
-                        echo strtoupper($newNome[0]);
-                        ?></h1>
+                                        $newNome = explode(" ", $nome);
+                                        echo strtoupper($newNome[0]);
+
+                                        $AmbienteV = new avsModel();
+                                        $qtdFunc = $AmbienteV->qtdFunc($_SESSION['id']);
+                                        $qtdFunc = $qtdFunc->rowCount();
+
+                                        $enderecos = new enderecosModel();
+                                        $enderecosQtd = $enderecos->getEnderecos($_SESSION['id']);
+                                        $enderecoQtd = $enderecosQtd->rowCount();
+
+                                        $funcao = new funcaoModel();
+                                        $func = $funcao->funcAvs($_SESSION['id']);
+                                        $func2 = $func->fetch();
+
+                                        $ativo = explode(",", $func2['func']);
+
+                                        foreach ($ativo as $value) {
+                                            if ($value == 3) {
+                                                $func = $funcao->notificacaoNaoLidas($_SESSION['id']);
+                                                $qtd = $func->rowCount();
+                                            }
+                                        }
+
+                                            ?>
+                                    </h1>
+
+                                    <?php echo "<br>
+                                         <h3>Notificações $qtd</h3>
+                                         <h3>Funções ativas $qtdFunc</h3>
+                                         <h3>Endereços cadastrados $enderecoQtd</h3><br>
+                                    "; ?>
+
+
+                                <form action="/action_page.php">
+                                    <div class="form-group">
+                                      <label for="comment">Precisa de ajuda?</label>
+                                      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                  </form>
                                 </div> 
 
-                                <div class="tab-pane  fade" id="menu2">
+                                <div class="tab-pane fade" id="menu2">
                                     <div class="tabela-end" style="margin: 40px;">
                                         <div class=" end-tbl">
                                             <table class="table">
@@ -811,7 +841,7 @@
 
                                 <div class="tab-pane container fade" id="menu4">
                                     <div class="section-title">
-                                        <h3>Funções mais utilizadas</h3>
+                                        <h3>Funções</h3>
                                         <a href="<?php echo BASE_URL; ?>views/template.php">lalalalal</a>
                                     </div>
 
@@ -862,72 +892,8 @@
 
 
                                     </div>
-
-                                    <div class="section-title">
-                                        <h3>Funções</h3>
-                                    </div>
-
-                                    <div class="img-gallery owl-carousel owl-theme funcoes" style="position: relative;">
-                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">    
-                                            <center>
-                                            <p>Agendamento</p>
-                                            <a href="#agendamento" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/agendamento.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
-                                        </div>
-
-                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
-                                            <center>
-                                            <p>Formulário de contato</p>
-                                             <a href="#form_contato" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/contato.png" style="width: 35%;"></a> 
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
-                                        </div>
-
-                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
-                                            <center>
-                                            <p>Chat</p>
-                                            <a href="#chat1" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/chat.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
-                                        </div>
-
-                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
-                                            <center>
-                                            <p>Divulgação</p>
-                                            <a href="#divulgacao" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/divulgacao.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
-                                        </div>
-
-                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
-                                            <center>
-                                            <p>Anotações</p>
-                                            <a href="#anotacoes" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/anotacoes.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
-                                        </div>
-
-                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
-                                            <center>
-                                            <p>Estatisticas</p>
-                                            <a href="#estatisticas" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/estatisticas.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
-                                        </div>
-
-                                        <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
-                                            <center>
-                                            <p>Cep</p>
-                                            <a href="#cep" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/cep.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
-                                        </div>
-
-                                    </div>
-
                                 </div>
-                                <div class="tab-pane container active" id="chat">
+                                <div class="tab-pane container" id="chat">
                                     <div class="container2">
                                         <div class="messaging">
                                             <div class="inbox_msg">
@@ -1056,184 +1022,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-<div class="modal fade" id="agendamento">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Agendamento</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        1
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-        
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-<div class="modal fade" id="form_contato">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Formulário de contato</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        2
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-        
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="chat1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Chat</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        3
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-    
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="divulgacao">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Divulgação</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        4
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="anotacoes">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Anotações</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        5
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-        
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="estatisticas">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Estatisticas</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        6
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-    
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="cep">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Cep</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        7
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-        
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
 
 
 

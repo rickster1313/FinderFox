@@ -516,6 +516,7 @@ $j(document).ready(function () {
     }
 
     $j(".A").bind('click', function () {
+        $j(this).css("background-color", "#C0C0C0");
         link = $j(this).attr("src");
     });
 
@@ -538,6 +539,7 @@ $j(document).ready(function () {
         }
 
     });
+    
 
     // %%%%%%%%%%%%%%  Aqui é a parte de salvar as config do av  %%%%%%%%%%%%%%%%%%%%%%%
 
