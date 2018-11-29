@@ -82,7 +82,7 @@
                     </div>
 
                     <form method="POST" action="<?php echo BASE_URL ?>login/valida" name="login" class="login100-form validate-form">
-                        <div class="msg-deslogado">
+                        <div class="msg-deslogado text-center">
                             <?php
                             if (isset($_SESSION['msg'])) {
                                 echo $_SESSION['msg'];

@@ -14,6 +14,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/common.css">
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style_circ.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/animate.css" />
         <link rel="icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
         <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/finderlogopng2.png" type="image/x-icon"/>
         <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
@@ -166,29 +167,29 @@
             
             <header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
 
-                <p class="replay-font" style="color: #ffffff; text-shadow: 2px 8px 11px #232323;">FinderFox</p>
+                <p class="replay-font slideInLeft animated" style="color: #ffffff; text-shadow: 2px 8px 11px #232323; margin-left: 5%; ">FinderFox</p>
                 <ul class="nav navbar-expand" >
-                    <div class="botão" style="margin-top: 20px;margin-right: 20px">
+                    <div class="botão slideInLeft animated" style="margin-top: 20px;margin-right: 20px">
                         <?php if (isset($_SESSION['id'])) { ?>
                             <a href="<?php echo BASE_URL ?>login/deslogar" style= "float: right;margin: 0px;text-align: center;width: 50px;margin-left: 30px;text-decoration: none;color: white">
-                                <img src="<?php echo BASE_URL; ?>assets/images/entrar.png" style="width: 50px;margin: 0px">
+                                <img src="<?php echo BASE_URL; ?>assets/images/icones/icons8-exportar-52.png" style="width: 45px;margin-left: 15px">
                                 Deslogar
                             </a>
                         <?php } else { ?>
                             <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
-                               box-shadow: 3px 3px 5px #232323;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
+                               box-shadow: 3px 3px 5px #232323; margin-top: 15px;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
                            <?php } ?>
 
 
 
                         <?php if (isset($_SESSION['id'])) { ?>
                             <a href="<?php echo BASE_URL; ?>login" style= "float: right;text-align: center;width:50px;text-decoration: none;color: white">
-                                <img src="<?php echo BASE_URL; ?>assets/images/carinha.png" style="width: 50px; margin: 0px;" >
+                                <img src="<?php echo BASE_URL; ?>assets/images/icones/icons8-menu-de-usuário-masculino-52.png" style="width:45px;margin: 0px;" >
                                 Painel 
                             </a>
                         <?php } else { ?>
                             <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
-                               box-shadow: 3px 3px 5px #232323;" href="<?php echo BASE_URL; ?>login">LOGIN 
+                               box-shadow: 3px 3px 5px #232323; margin-top: 15px;" href="<?php echo BASE_URL; ?>login">LOGIN 
                             <?php } ?></a>
 
                     </div>
@@ -206,14 +207,14 @@
                         unset($_SESSION['msg']);
                     }
                     ?>
-                    <img class="img-fluid" src="<?php echo BASE_URL; ?>assets/images/finderlogopng.png" width="300">
-                    <div class="informação">
+                    <img class="img-fluid slideInLeft animated" src="<?php echo BASE_URL; ?>assets/images/finderlogopng.png" width="300">
+                    <div class="informação slideInLeft animated">
 
                         <p class="replay-font" style="font-size: 25px;">Informe-nos seu cep <br></p>
                     </div>
-                    <form id="form_buscar_cep">
+                    <form id="form_buscar_cep" class="slideInLeft animated">
                         <div class="form-group">
-                            <input type="text" name="cep_txt" id="cep_busca" autocomplete="off" placeholder="Digite seu CEP" class="film-font" style="font-size: 22px; border: 2px solid;">
+                            <input type="text" name="cep_txt" id="cep_busca" autocomplete="off" placeholder="Digite seu CEP" class="film-font " style="font-size: 22px; border: 2px solid;">
                             <input type="submit" name="enviar_cep" value="BUSCAR" class="film-font" style="font-size: 23px; background-color: #361850;" >
                         </div>
                         <p class="replay-font" style="font-size: 20px;"> encontraremos os servicos disponiveis para sua localizacao</p>
@@ -237,6 +238,8 @@
         <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
         <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.79639.js"></script>
         <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/home.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL ?>assets/js/wow.js"></script>
+
         <!--<script type="text/javascript" charset="utf8" src="htpps://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>-->
 
     </body>

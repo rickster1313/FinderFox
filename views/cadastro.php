@@ -192,7 +192,7 @@
             <div class="container-fluid">
 
                 <a href="<?php echo BASE_URL; ?>">
-                    <img src="<?php echo BASE_URL; ?>assets/images/seta.png" style="width: 51px; position: absolute; z-index: 2;
+                    <img src="<?php echo BASE_URL; ?>assets/images/icones/icons8-voltar-52.png" style="width: 45px; position: absolute; z-index: 2;
                          margin-top: 11px; margin-left: 11px;">
                 </a>
 
