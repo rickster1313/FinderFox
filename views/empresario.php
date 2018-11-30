@@ -27,7 +27,7 @@
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
         <link href="<?php echo BASE_URL; ?>assets/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet"> 
 
 
         <style type="text/css"> 
@@ -498,14 +498,10 @@
                             <div class="tab-content"> 
 
                                 <div class="tab-pane fade active" id="menu1">
-                                    <center>
                                     <h1>Olá <?php
                                         $newNome = explode(" ", $nome);
                                         echo strtoupper($newNome[0]);
-
-                                        $AmbienteV = new avsModel();
-                                        $qtdFunc = $AmbienteV->qtdFunc($_SESSION['id']);
-                                        $qtdFunc = $qtdFunc->rowCount();
+                                        echo "</h1>";
 
                                         $enderecos = new enderecosModel();
                                         $enderecosQtd = $enderecos->getEnderecos($_SESSION['id']);
@@ -517,16 +513,17 @@
 
                                         $ativo = explode(",", $func2['func']);
 
-                                        foreach ($ativo as $value) {
-                                            if ($value == 3) {
-                                                $func = $funcao->notificacaoNaoLidas($_SESSION['id']);
-                                                $qtd = $func->rowCount();
+                                        $Quantidade = count($ativo);
+                                            if (in_array(3, $ativo)) {
+                                                $func33 = $funcao->notificacaoNaoLidas($_SESSION['id']);
+                                                $qtd = $func33->rowCount();
+                                            }else{
+                                                $qtd = 0;
                                             }
-                                        }
 
                                             ?>
-                                    </h1>
-                                </center>
+                                    
+                                
 
                                         <div class="conteudo" style="display: flex; justify-content: space-around; top: 50px; position: relative;">
                                         
@@ -539,7 +536,7 @@
                                         </div>
 
                                      <div class="fun" style="width: 300px; height: 150px; background-color: #393D3F; border-radius: 15px; color: #fff;">
-                                         <h1 style="position: relative; left: 20px;"> <?php echo "$qtdFunc"; ?></h1>
+                                         <h1 style="position: relative; left: 20px;"> <?php echo "$Quantidade"; ?></h1>
                                          <h3 style="position: relative; bottom: 20px; left: 15px;">Funções ativas</h3>
                                          <img src="<?php BASE_URL;?>assets/images/icones/icons8-selecionado-52.png" style="width: 50px; position: relative; left: 220px; bottom: 100px;">
                                      </div>
