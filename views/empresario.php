@@ -532,20 +532,20 @@
                                         
                                          <div class="notif" style="width: 300px; height: 150px; background-color: #393D3F; border-radius: 15px; color: #fff;">
                                                 
-                                          <h1 style="position: relative; left: 20px;"><?php echo "$qtd" ?></h1>
+                                          <h1 style="position: relative; left: 20px;"><?php echo "$qtd"; ?></h1>
                                           <h3 style="position: relative; bottom: 20px; left: 15px;">Notificações</h3>
                                           <img src="<?php BASE_URL;?>assets/images/icones/icons8-sino-52.png" style="width: 50px; position: relative; left: 220px; bottom: 100px;">
                                           
                                         </div>
 
                                      <div class="fun" style="width: 300px; height: 150px; background-color: #393D3F; border-radius: 15px; color: #fff;">
-                                         <h1 style="position: relative; left: 20px;"> <?php echo "$qtdFunc" ?></h1>
+                                         <h1 style="position: relative; left: 20px;"> <?php echo "$qtdFunc"; ?></h1>
                                          <h3 style="position: relative; bottom: 20px; left: 15px;">Funções ativas</h3>
                                          <img src="<?php BASE_URL;?>assets/images/icones/icons8-selecionado-52.png" style="width: 50px; position: relative; left: 220px; bottom: 100px;">
                                      </div>
 
                                      <div class="end" style="width: 300px; height: 150px; background-color: #393D3F; border-radius: 15px; color: #fff;">  
-                                         <h1 style="position: relative; left: 20px;"><?php echo "$enderecoQtd" ?></h1>
+                                         <h1 style="position: relative; left: 20px;"><?php echo "$enderecoQtd"; ?></h1>
                                          <h3 style="position: relative; bottom: 20px; left: 15px;">Endereços</h3>
                                          <img src="<?php BASE_URL;?>assets/images/icones/icons8-localização-mundial-52.png" style="width: 50px; position: relative; left: 220px; bottom: 100px;">
                                      </div>
