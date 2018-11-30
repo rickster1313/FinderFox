@@ -165,27 +165,27 @@
 
                 <p class="" style="color: #ffffff; text-shadow: 2px 8px 11px #232323; margin-left: 5%;">FinderFox</p>
                 <div class="nav navbar-expand" >
-                    <div class="botão" style="margin-top: 20px;margin-right: 20px;">
+                    <div class="botão slideInLeft animated" style="margin-top: 20px;margin-right: 20px">
                         <?php if (isset($_SESSION['id'])) { ?>
                             <a href="<?php echo BASE_URL ?>login/deslogar" style= "float: right;margin: 0px;text-align: center;width: 50px;margin-left: 30px;text-decoration: none;color: white">
-                                <img src="<?php echo BASE_URL; ?>assets/images/entrar.png" style="width: 45px;margin-left: 15px;">
+                                <img src="<?php echo BASE_URL; ?>assets/images/icones/icons8-exportar-52.png" style="width: 45px;margin-left: 15px">
                                 Deslogar
                             </a>
                         <?php } else { ?>
-                            <a class="btn btn-outline-light" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
-                               box-shadow: 3px 3px 5px #232323;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
+                            <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
+                               box-shadow: 3px 3px 5px #232323; margin-top: 15px;" href="<?php echo BASE_URL; ?>cadastro">CADASTRE-SE JÁ</a>
                            <?php } ?>
 
 
 
                         <?php if (isset($_SESSION['id'])) { ?>
                             <a href="<?php echo BASE_URL; ?>login" style= "float: right;text-align: center;width:50px;text-decoration: none;color: white">
-                                <img src="<?php echo BASE_URL; ?>assets/images/carinha.png" style="width: 50px; margin: 0px;" >
+                                <img src="<?php echo BASE_URL; ?>assets/images/icones/icons8-menu-de-usuário-masculino-52.png" style="width:45px;margin: 0px;" >
                                 Painel 
                             </a>
                         <?php } else { ?>
-                            <a class="btn btn-outline-light" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
-                               box-shadow: 3px 3px 5px #232323;" href="<?php echo BASE_URL; ?>login">LOGIN 
+                            <a class="btn btn-outline-light film-font" style="border-radius: 15px; border: 2px solid; font-size: 18px; 
+                               box-shadow: 3px 3px 5px #232323; margin-top: 15px;" href="<?php echo BASE_URL; ?>login">LOGIN 
                             <?php } ?></a>
 
                     </div>

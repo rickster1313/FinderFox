@@ -405,6 +405,7 @@
             </script>
             <?php
         }
+        
         ?>
     </head>
     <body>
@@ -431,6 +432,7 @@
 
                     </div>
                     <?php
+                    
                     if (isset($_SESSION['msg']) && $_SESSION['msg'] == 'Alterações realizadas com sucesso.') {
                         echo "<div class='alert alert-success'><strong>OK!</strong> " . $_SESSION['msg'] . "</div>";
                         unset($_SESSION['msg']);
@@ -531,7 +533,7 @@
                         <div class="container-fluid">
                             <div class="tab-content"> 
 
-                                <div class="tab-pane fade active" id="menu1">
+                                <div class="tab-pane fade" id="menu1">
                                     <h1>Olá <?php
                                         $newNome = explode(" ", $nome);
                                         echo strtoupper($newNome[0]);
@@ -546,8 +548,12 @@
                                             $func2 = $func->fetch();
 
                                             $ativo = explode(",", $func2['func']);
-
-                                        $Quantidade = count($ativo);
+                                        
+                                        if(count($ativo) == 1 && $ativo[0] == ""){
+                                            $Quantidade = 0;
+                                        }else{
+                                            $Quantidade = count($ativo);
+                                        }
                                             if (in_array(3, $ativo)) {
                                                 $func33 = $funcao->notificacaoNaoLidas($_SESSION['id']);
                                                 $qtd = $func33->rowCount();
@@ -561,13 +567,7 @@
 
                                         <div class="conteudo" style="display: flex; justify-content: space-around; top: 50px; position: relative;">
                                         
-                                         <div class="notif" style="width: 300px; height: 150px; background-color: #393D3F; border-radius: 15px; color: #fff;">
-                                                
-                                          <h1 style="position: relative; left: 20px;"><?php echo "$qtd"; ?></h1>
-                                          <h3 style="position: relative; bottom: 20px; left: 15px;">Notificações</h3>
-                                          <img src="<?php BASE_URL;?>assets/images/icones/icons8-sino-52.png" style="width: 50px; position: relative; left: 220px; bottom: 100px;">
-                                          
-                                        </div>
+                                         
 
                                      <div class="fun" style="width: 300px; height: 150px; background-color: #393D3F; border-radius: 15px; color: #fff;">
                                          <h1 style="position: relative; left: 20px;"> <?php echo "$Quantidade"; ?></h1>
@@ -580,20 +580,9 @@
                                          <h3 style="position: relative; bottom: 20px; left: 15px;">Endereços</h3>
                                          <img src="<?php BASE_URL;?>assets/images/icones/icons8-localização-mundial-52.png" style="width: 50px; position: relative; left: 220px; bottom: 100px;">
                                      </div>
-
+                                           
                                  </div>
-                                 
-                                     <br>
-                                
-                                <center>
-                                <form action="/action_page.php" style="position: relative; top: 100px;">
-                                    <div class="form-group">
-                                      <label for="comment">Precisa de ajuda? Envie-nos uma mensagem</label>
-                                      <textarea class="form-control" rows="5" style="width: 35%;" id="comment" name="text"></textarea>
-                                        </h1>
-                                    </center>
 
-                                    <br>
 
 
                                 </div> 

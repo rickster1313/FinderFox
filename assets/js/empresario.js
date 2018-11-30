@@ -329,58 +329,60 @@ $j(document).ready(function () {
 
 
     });
-    $j("#check_sobre0").bind("change", function () {
-        if (this.checked) {
+    if ($j('#check_sobre0').length) {
+        $j("#check_sobre0").bind("change", function () {
+            if (this.checked) {
+                $j("#content_sobre0").slideDown();
+            } else {
+                $j("#content_sobre0").slideUp();
+            }
+
+        });
+        $j("#check_sobre1").bind("change", function () {
+            if (this.checked) {
+                $j("#content_sobre1").slideDown();
+            } else {
+                $j("#content_sobre1").slideUp();
+            }
+
+        });
+
+        $j("#check_sobre2").bind("change", function () {
+            if (this.checked) {
+                $j("#content_sobre2").slideDown();
+            } else {
+                $j("#content_sobre2").slideUp();
+            }
+
+        });
+        $j("#check_sobre3").bind("change", function () {
+            if (this.checked) {
+                $j("#content_sobre3").slideDown();
+            } else {
+                $j("#content_sobre3").slideUp();
+            }
+
+        });
+        if ($j("#check_sobre0")[0].checked) {
             $j("#content_sobre0").slideDown();
         } else {
             $j("#content_sobre0").slideUp();
         }
-
-    });
-    $j("#check_sobre1").bind("change", function () {
-        if (this.checked) {
+        if ($j("#check_sobre1")[0].checked) {
             $j("#content_sobre1").slideDown();
         } else {
             $j("#content_sobre1").slideUp();
         }
-
-    });
-
-    $j("#check_sobre2").bind("change", function () {
-        if (this.checked) {
+        if ($j("#check_sobre2")[0].checked) {
             $j("#content_sobre2").slideDown();
         } else {
             $j("#content_sobre2").slideUp();
         }
-
-    });
-    $j("#check_sobre3").bind("change", function () {
-        if (this.checked) {
-            $j("#content_sobre3").slideDown();
+        if ($j("#check_sobre3")[0].checked) {
+            $j("#content_sobre3 ").slideDown();
         } else {
-            $j("#content_sobre3").slideUp();
+            $j("#content_sobre3 ").slideUp();
         }
-
-    });
-    if ($j("#check_sobre0")[0].checked) {
-        $j("#content_sobre0").slideDown();
-    } else {
-        $j("#content_sobre0").slideUp();
-    }
-    if ($j("#check_sobre1")[0].checked) {
-        $j("#content_sobre1").slideDown();
-    } else {
-        $j("#content_sobre1").slideUp();
-    }
-    if ($j("#check_sobre2")[0].checked) {
-        $j("#content_sobre2").slideDown();
-    } else {
-        $j("#content_sobre2").slideUp();
-    }
-    if ($j("#check_sobre3")[0].checked) {
-        $j("#content_sobre3 ").slideDown();
-    } else {
-        $j("#content_sobre3 ").slideUp();
     }
     $j("#form_att_av").bind("submit", function (e) {
         e.preventDefault();
@@ -539,19 +541,19 @@ $j(document).ready(function () {
         }
 
     });
-    if(pagi == 1){
+    if (pagi == 1) {
         $j("#menu1").removeClass("fade");
         $j("#menu1").addClass("active");
         $j("#q").addClass("active");
-    }else if(pagi == 2){
+    } else if (pagi == 2) {
         $j("#menu2").removeClass("fade");
         $j("#menu2").addClass("active");
         $j("#w").addClass("active");
-    }else if(pagi == 3){
+    } else if (pagi == 3) {
         $j("#menu3").removeClass("fade");
         $j("#menu3").addClass("active");
         $j("#e").addClass("active");
-    }else if(pagi == 4){
+    } else if (pagi == 4) {
         $j("#menu4").removeClass("fade");
         $j("#menu4").addClass("active");
         $j("#r").addClass("active");
@@ -563,5 +565,5 @@ $j(document).ready(function () {
     telefone_stats = false;
     cpf_cnpj_stats = false;
     senha_stats = false;
-    
+
 });

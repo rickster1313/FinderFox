@@ -415,7 +415,7 @@
                         <div class="container-fluid">
                             <div class="tab-content"> 
 
-                                <div class="tab-pane container fade in active" id="home">
+                                <div class="tab-pane container in active" id="home">
                                     <h2 class="text-center">Bem vindo usuario</h2>
 
                                     <div class="row">
@@ -440,13 +440,13 @@
 
                                     </div>
                                     <br>
-                                    <form action="">
+                                    <form  >
                                             <div class="form-group">
                                               <label for="comment">Deixe seu comentario:</label>
-                                              <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                                              <textarea class="form-control" id="textmsg" rows="5" id="comment" name="text"></textarea>
                                             </div>
-                                            <button type="submit" class="btn btn-dark">Enviar</button>
-                                          </form>
+                                            <button id="enviarComments" type="submit" class="btn btn-dark">Enviar</button>
+                                     </form>
                                 </div>
                                         <div class="tab-pane container fade" id="pag2">
                                     <div class="container2">

@@ -1,6 +1,6 @@
 var $j = jQuery.noConflict();
 $j(document).ready(function () {
-  
+
     function pararClock() {
         if (typeof msgs != "undefined") {
             clearInterval(msgs);
@@ -24,7 +24,7 @@ $j(document).ready(function () {
         msgs = setInterval(ligarClock, 3000);
         $j(".type_msg").show();
         $j("#caixa_msg").val("");
-        
+
         $j.ajax({
             url: "usuario/visualizou",
             type: "POST",
@@ -36,16 +36,18 @@ $j(document).ready(function () {
         e.preventDefault();
         var msgChat = $j("#caixa_msg").val();
         var teste = msgChat.replace(/ /g, '');
-        if(teste.length > 0){
-        $j.ajax({
-            url: 'usuario/setMsg',
-            type: 'POST',
-            data: {msgChat: msgChat, destinatario: idm},
-            success: function () {
-                $j("#caixa_msg").val("");
-            }
-        });
-    }
+        
+        if (teste.length > 0) {
+            $j.ajax({
+                url: 'usuario/setMsg',
+                type: 'POST',
+                data: {msgChat: msgChat, destinatario: idm},
+                async: false,
+                success: function () {
+                    $j("#caixa_msg").val("");
+                }
+            });
+        }
     });
 
     $j("#myInput").on("keyup", function () {
@@ -67,7 +69,7 @@ $j(document).ready(function () {
             dataType: 'json',
             success: function (json) {
                 for (i = 0; i < $j(".cont").length; i++) {
-                    $j(".cont[value="+$j(".cont")[i]['value']+"]").parent().parent().find(".noti").html(json[i]== 0? "" :json[i]);
+                    $j(".cont[value=" + $j(".cont")[i]['value'] + "]").parent().parent().find(".noti").html(json[i] == 0 ? "" : json[i]);
                 }
 
 
@@ -78,9 +80,17 @@ $j(document).ready(function () {
     function start() {
         init = setInterval(verificaLida, 3000);
     }
+    $j("#enviarComments").bind("click", function (e) {
+        e.preventDefault();
+        var values3 = $j("#textmsg").val();
+        if (values3 != "") {
+            $j("#textmsg").val("");
+            alert("Mensagem enviada com sucesso");
+        }
 
-   
-        start();
-        verificaLida();
-    
+    });
+
+    start();
+    verificaLida();
+
 });
