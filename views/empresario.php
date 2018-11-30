@@ -548,6 +548,7 @@
                                             <img src="<?php BASE_URL; ?>assets/images/icones/icons8-localização-mundial-52.png" style="width: 50px; position: relative; left: 220px; bottom: 100px;">
                                         </div>
 
+
                                     </div>
 
                                     <br>

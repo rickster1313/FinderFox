@@ -412,6 +412,27 @@
 
                                 <div class="tab-pane container fade in active" id="home">
                                     <h2 class="text-center">Bem vindo usuario</h2>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h4>Precisa de ajuda?</h4>
+                                            <p>Esta com dificuldades em navegar em nosso sistema? tem alguma duvida ou deseja fazer uma critica?</p>
+                                            <p>Mande uma menssagem e retornaremos assim que possivel!</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h4>O que achou da FinderFox?</h4>
+                                            <p>Voce tambem pode contar oque achou de interessante e oque podemos mudar!</p>
+                                            <p>FinderFox estara analisando todos os comentarios e estara melhorando sempre ;) </p>
+                                        </div>
+
+                                    </div>
+                                    <form action="">
+                                            <div class="form-group">
+                                              <label for="comment">Deixe seu comentario:</label>
+                                              <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Enviar</button>
+                                          </form>
                                 </div>
                                         <div class="tab-pane container fade" id="pag2">
                                     <div class="container2">
