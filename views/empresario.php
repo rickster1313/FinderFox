@@ -364,7 +364,7 @@
             }
 
             .nav-link :hover{
-                    color: #fff;
+                color: #fff;
 
             }
 
@@ -377,6 +377,34 @@
         $usuario = new usuariosModel();
         $t = $usuario->getDados($_SESSION['id']);
         $user = $t->fetch();
+
+        if (isset($_GET["pag"])) {
+            if ($_GET["pag"] == "end") {
+                ?>
+            <script>
+                pagi = 2;
+            </script>
+            <?php
+            }else if($_GET["pag"] == "av"){
+                ?>
+            <script>
+                pagi = 3;
+            </script>
+            <?php
+            }else if($_GET["pag"] == "func"){
+                ?>
+            <script>
+                pagi = 4;
+            </script>
+            <?php
+            }
+        } else {
+            ?>
+            <script>
+                pagi = 1;
+            </script>
+            <?php
+        }
         ?>
     </head>
     <body>
@@ -413,7 +441,7 @@
                     ?>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a id="q" href="#menu1" class="nav-link active" data-toggle="tab"> 
+                            <a id="q" href="#menu1" class="nav-link" data-toggle="tab"> 
                                 <i class="pe-7s-graph3"></i>
                                 <p>Estátisticas</p>
                             </a>
@@ -478,6 +506,12 @@
                             </li>
                         <?php } ?>
 
+                            <li class="nav-item">
+                            <a href="<?php echo BASE_URL; ?>" class="nav-link">
+                                <i class="pe-7s-back"></i>
+                                <p>voltar</p>
+                            </a>
+                        </li>
 
                         <li class="nav-item">
                             <a href="<?php echo BASE_URL; ?>/login/deslogar" class="nav-link">
@@ -503,15 +537,15 @@
                                         echo strtoupper($newNome[0]);
                                         echo "</h1>";
 
-                                        $enderecos = new enderecosModel();
-                                        $enderecosQtd = $enderecos->getEnderecos($_SESSION['id']);
-                                        $enderecoQtd = $enderecosQtd->rowCount();
+                                            $enderecos = new enderecosModel();
+                                            $enderecosQtd = $enderecos->getEnderecos($_SESSION['id']);
+                                            $enderecoQtd = $enderecosQtd->rowCount();
 
-                                        $funcao = new funcaoModel();
-                                        $func = $funcao->funcAvs($_SESSION['id']);
-                                        $func2 = $func->fetch();
+                                            $funcao = new funcaoModel();
+                                            $func = $funcao->funcAvs($_SESSION['id']);
+                                            $func2 = $func->fetch();
 
-                                        $ativo = explode(",", $func2['func']);
+                                            $ativo = explode(",", $func2['func']);
 
                                         $Quantidade = count($ativo);
                                             if (in_array(3, $ativo)) {
@@ -556,12 +590,13 @@
                                     <div class="form-group">
                                       <label for="comment">Precisa de ajuda? Envie-nos uma mensagem</label>
                                       <textarea class="form-control" rows="5" style="width: 35%;" id="comment" name="text"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-dark">Enviar</button>
-                                  </form>
-                              </center>
-                                </div> 
+                                        </h1>
+                                    </center>
 
+                                    <br>
+
+
+                                </div> 
                                 <div class="tab-pane fade" id="menu2">
                                     <div class="tabela-end" style="margin: 40px;">
                                         <div class=" end-tbl">
@@ -859,7 +894,6 @@
                                         </form>
                                     </div>
                                 </div>
-
                                 <div class="tab-pane fade" id="menu3">
                                     <?php
                                     include($av_status);
@@ -872,7 +906,6 @@
 
                                     <?php } ?>
                                 </div>
-
                                 <div class="tab-pane container fade" id="menu4">
                                     <div class="section-title">
                                         <h3>Funções mais utilizadas</h3>
@@ -935,58 +968,58 @@
                                     <div class="img-gallery owl-carousel owl-theme funcoes" style="position: relative;">
                                         <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">    
                                             <center>
-                                            <p>Agendamento</p>
-                                            <a href="#agendamento" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/agendamento.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
+                                                <p>Agendamento</p>
+                                                <a href="#agendamento" data-toggle="modal"><img src="<?php echo BASE_URL; ?>assets/images/icones/agendamento.png" style="width: 35%;"></a>
+                                                <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                            </center>
                                         </div>
 
                                         <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
                                             <center>
-                                            <p>Formulário de contato</p>
-                                             <a href="#form_contato" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/contato.png" style="width: 35%;"></a> 
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
+                                                <p>Formulário de contato</p>
+                                                <a href="#form_contato" data-toggle="modal"><img src="<?php echo BASE_URL; ?>assets/images/icones/contato.png" style="width: 35%;"></a> 
+                                                <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                            </center>
                                         </div>
 
                                         <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
                                             <center>
-                                            <p>Chat</p>
-                                            <a href="#chat1" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/chat.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
+                                                <p>Chat</p>
+                                                <a href="#chat1" data-toggle="modal"><img src="<?php echo BASE_URL; ?>assets/images/icones/chat.png" style="width: 35%;"></a>
+                                                <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                            </center>
                                         </div>
 
                                         <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
                                             <center>
-                                            <p>Divulgação</p>
-                                            <a href="#divulgacao" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/divulgacao.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
+                                                <p>Divulgação</p>
+                                                <a href="#divulgacao" data-toggle="modal"><img src="<?php echo BASE_URL; ?>assets/images/icones/divulgacao.png" style="width: 35%;"></a>
+                                                <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                            </center>
                                         </div>
 
                                         <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
                                             <center>
-                                            <p>Anotações</p>
-                                            <a href="#anotacoes" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/anotacoes.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
+                                                <p>Anotações</p>
+                                                <a href="#anotacoes" data-toggle="modal"><img src="<?php echo BASE_URL; ?>assets/images/icones/anotacoes.png" style="width: 35%;"></a>
+                                                <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                            </center>
                                         </div>
 
                                         <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
                                             <center>
-                                            <p>Estatisticas</p>
-                                            <a href="#estatisticas" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/estatisticas.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
+                                                <p>Estatisticas</p>
+                                                <a href="#estatisticas" data-toggle="modal"><img src="<?php echo BASE_URL; ?>assets/images/icones/estatisticas.png" style="width: 35%;"></a>
+                                                <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                            </center>
                                         </div>
 
                                         <div class="funcao1" style="width: 100%; height: 200px; background: #393D3F;color: white; border: 1px solid white;">
                                             <center>
-                                            <p>Cep</p>
-                                            <a href="#cep" data-toggle="modal"><img src="<?php echo BASE_URL;?>assets/images/icones/cep.png" style="width: 35%;"></a>
-                                            <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
-                                        </center>
+                                                <p>Cep</p>
+                                                <a href="#cep" data-toggle="modal"><img src="<?php echo BASE_URL; ?>assets/images/icones/cep.png" style="width: 35%;"></a>
+                                                <button class="btn btn-outline-light" style="position: absolute; top: 80%; left: 73%;">Ativar</button>
+                                            </center>
                                         </div>
 
                                     </div>
@@ -1111,8 +1144,8 @@
 
                                     </center>
                                 </div>
-<?php }
-?>
+                            <?php }
+                            ?>
                             <!-- Modal footer -->
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-outline-dark" id="alterarPerf">ALTERAR</button>
@@ -1123,197 +1156,197 @@
             </div>
 
             <div class="modal fade" id="agendamento">
-  <div class="modal-dialog">
-    <div class="modal-content">
+                <div class="modal-dialog">
+                    <div class="modal-content">
 
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title text-center" style="color: #fff;">Agendamento</h4>
-        <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
-      </div>
+                        <!-- Modal Header -->
+                        <div class="modal-header modalcor">
+                            <h4 class="modal-title text-center" style="color: #fff;">Agendamento</h4>
+                            <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                        </div>
 
-      <!-- Modal body -->
-      <div class="modal-body">
-    <center>
-        <h4>Descrição da função</h4>
-        <p>Essa função serve para realizar o agendamento de qualquer tipo de serviço, por exemplo se você possuir um consultório ou salão de
-        cabeleireiro, poderá agendar um horário de atendimento.</p>
-    </center>
-      </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <center>
+                                <h4>Descrição da função</h4>
+                                <p>Essa função serve para realizar o agendamento de qualquer tipo de serviço, por exemplo se você possuir um consultório ou salão de
+                                    cabeleireiro, poderá agendar um horário de atendimento.</p>
+                            </center>
+                        </div>
 
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-        
-      </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer modalcor">
 
-    </div>
-  </div>
-</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
 
-<div class="modal fade" id="form_contato">
-  <div class="modal-dialog">
-    <div class="modal-content">
+            <div class="modal fade" id="form_contato">
+                <div class="modal-dialog">
+                    <div class="modal-content">
 
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Formulário de contato</h4>
-        <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
-      </div>
+                        <!-- Modal Header -->
+                        <div class="modal-header modalcor">
+                            <h4 class="modal-title" style="color: #fff">Formulário de contato</h4>
+                            <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                        </div>
 
-      <!-- Modal body -->
-      <div class="modal-body">
-    <center>
-        <h4>Descrição da função</h4>
-        <p>Essa função disponibiliza um formulário de contato para o envio de mensagens direcionadas ao empresário.</p>
-    </center>
-      </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <center>
+                                <h4>Descrição da função</h4>
+                                <p>Essa função disponibiliza um formulário de contato para o envio de mensagens direcionadas ao empresário.</p>
+                            </center>
+                        </div>
 
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-        
-      </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer modalcor">
 
-    </div>
-  </div>
-</div>
+                        </div>
 
-<div class="modal fade" id="chat1">
-  <div class="modal-dialog">
-    <div class="modal-content">
+                    </div>
+                </div>
+            </div>
 
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Chat</h4>
-        <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
-      </div>
+            <div class="modal fade" id="chat1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
 
-      <!-- Modal body -->
-      <div class="modal-body">
-    <center>
-        <h4>Descrição da função</h4>
-        <p>Essa função disponibiliza um bate-papo para relacionar o empresário com seu cliente através da troca de mensagens
-        onde o cliente poderá esclarecer suas possiveis duvidas.</p>
-    </center>
-      </div>
+                        <!-- Modal Header -->
+                        <div class="modal-header modalcor">
+                            <h4 class="modal-title" style="color: #fff">Chat</h4>
+                            <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                        </div>
 
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-    
-      </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <center>
+                                <h4>Descrição da função</h4>
+                                <p>Essa função disponibiliza um bate-papo para relacionar o empresário com seu cliente através da troca de mensagens
+                                    onde o cliente poderá esclarecer suas possiveis duvidas.</p>
+                            </center>
+                        </div>
 
-    </div>
-  </div>
-</div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer modalcor">
 
-<div class="modal fade" id="divulgacao">
-  <div class="modal-dialog">
-    <div class="modal-content">
+                        </div>
 
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Divulgação</h4>
-        <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
-      </div>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Modal body -->
-      <div class="modal-body">
-    <center>
-        <h4>Descrição da função</h4>
-        <p>Essa função tem como intuito realizar a divulgação de um determinado produto oferecido pelo
-        empresário, onde o método principal da função é o uso de galerias.</p>
-    </center>
-      </div>
+            <div class="modal fade" id="divulgacao">
+                <div class="modal-dialog">
+                    <div class="modal-content">
 
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
+                        <!-- Modal Header -->
+                        <div class="modal-header modalcor">
+                            <h4 class="modal-title" style="color: #fff">Divulgação</h4>
+                            <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                        </div>
 
-      </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <center>
+                                <h4>Descrição da função</h4>
+                                <p>Essa função tem como intuito realizar a divulgação de um determinado produto oferecido pelo
+                                    empresário, onde o método principal da função é o uso de galerias.</p>
+                            </center>
+                        </div>
 
-    </div>
-  </div>
-</div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer modalcor">
 
-<div class="modal fade" id="anotacoes">
-  <div class="modal-dialog">
-    <div class="modal-content">
+                        </div>
 
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Anotações</h4>
-        <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
-      </div>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Modal body -->
-      <div class="modal-body">
-    <center>
-        <h4>Descrição da função</h4>
-        <p>Essa função disponibilza um espaço especifico voltado para a realização de anotaçãoes do empresário</p>
-    </center>
-      </div>
+            <div class="modal fade" id="anotacoes">
+                <div class="modal-dialog">
+                    <div class="modal-content">
 
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-        
-      </div>
+                        <!-- Modal Header -->
+                        <div class="modal-header modalcor">
+                            <h4 class="modal-title" style="color: #fff">Anotações</h4>
+                            <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                        </div>
 
-    </div>
-  </div>
-</div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <center>
+                                <h4>Descrição da função</h4>
+                                <p>Essa função disponibilza um espaço especifico voltado para a realização de anotaçãoes do empresário</p>
+                            </center>
+                        </div>
 
-<div class="modal fade" id="estatisticas">
-  <div class="modal-dialog">
-    <div class="modal-content">
+                        <!-- Modal footer -->
+                        <div class="modal-footer modalcor">
 
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Estatisticas</h4>
-        <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
-      </div>
+                        </div>
 
-      <!-- Modal body -->
-      <div class="modal-body">
-    <center>
-        <h4>Descrição da função</h4>
-        <p>Serve para apresentar estatisticas empresariais do empresario através de tabelas e/ou graficos.</p>
-    </center>
-      </div>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-    
-      </div>
+            <div class="modal fade" id="estatisticas">
+                <div class="modal-dialog">
+                    <div class="modal-content">
 
-    </div>
-  </div>
-</div>
+                        <!-- Modal Header -->
+                        <div class="modal-header modalcor">
+                            <h4 class="modal-title" style="color: #fff">Estatisticas</h4>
+                            <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                        </div>
 
-<div class="modal fade" id="cep">
-  <div class="modal-dialog">
-    <div class="modal-content">
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <center>
+                                <h4>Descrição da função</h4>
+                                <p>Serve para apresentar estatisticas empresariais do empresario através de tabelas e/ou graficos.</p>
+                            </center>
+                        </div>
 
-      <!-- Modal Header -->
-      <div class="modal-header modalcor">
-        <h4 class="modal-title" style="color: #fff">Cep</h4>
-        <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
-      </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer modalcor">
 
-      <!-- Modal body -->
-      <div class="modal-body">
-    <center>
-        <h4>Descrição da função</h4>
-        <p>Função que serve para busca de cep e filtragem de conteudos a partir do mesmo.</p>
-    </center>
-      </div>
+                        </div>
 
-      <!-- Modal footer -->
-      <div class="modal-footer modalcor">
-        
-      </div>
+                    </div>
+                </div>
+            </div>
 
-    </div>
-  </div>
-</div>
+            <div class="modal fade" id="cep">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header modalcor">
+                            <h4 class="modal-title" style="color: #fff">Cep</h4>
+                            <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <center>
+                                <h4>Descrição da função</h4>
+                                <p>Função que serve para busca de cep e filtragem de conteudos a partir do mesmo.</p>
+                            </center>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer modalcor">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -1335,74 +1368,74 @@
             <script src="<?php echo BASE_URL; ?>assets/js/modalEffects.js"></script>
 
             <script>
-                                            (function () {
-                                                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-                                                if (!String.prototype.trim) {
-                                                    (function () {
-                                                        // Make sure we trim BOM and NBSP
-                                                        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-                                                        String.prototype.trim = function () {
-                                                            return this.replace(rtrim, '');
+                                        (function () {
+                                            // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                                            if (!String.prototype.trim) {
+                                                (function () {
+                                                    // Make sure we trim BOM and NBSP
+                                                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                                                    String.prototype.trim = function () {
+                                                        return this.replace(rtrim, '');
+                                                    };
+                                                })();
+                                            }
+
+                                            [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+                                                // in case the input is already filled..
+                                                if (inputEl.value.trim() !== '') {
+                                                    classie.add(inputEl.parentNode, 'input--filled');
+                                                }
+
+                                                // events:
+                                                inputEl.addEventListener('focus', onInputFocus);
+                                                inputEl.addEventListener('blur', onInputBlur);
+                                            });
+
+                                            function onInputFocus(ev) {
+                                                classie.add(ev.target.parentNode, 'input--filled');
+                                            }
+
+                                            function onInputBlur(ev) {
+                                                if (ev.target.value.trim() === '') {
+                                                    classie.remove(ev.target.parentNode, 'input--filled');
+                                                }
+                                            }
+                                        })();
+
+
+                                        (function () {
+                                            [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
+                                                var menuItems = menu.querySelectorAll('.menu__link'),
+                                                        setCurrent = function (ev) {
+                                                            ev.preventDefault();
+                                                            var item = ev.target.parentNode; // li
+                                                            // return if already current
+                                                            if (classie.has(item, 'menu__item--current')) {
+                                                                return false;
+                                                            }
+                                                            // remove current
+                                                            classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                                                            // set current
+                                                            classie.add(item, 'menu__item--current');
                                                         };
-                                                    })();
-                                                }
-
-                                                [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
-                                                    // in case the input is already filled..
-                                                    if (inputEl.value.trim() !== '') {
-                                                        classie.add(inputEl.parentNode, 'input--filled');
-                                                    }
-
-                                                    // events:
-                                                    inputEl.addEventListener('focus', onInputFocus);
-                                                    inputEl.addEventListener('blur', onInputBlur);
+                                                [].slice.call(menuItems).forEach(function (el) {
+                                                    el.addEventListener('click', setCurrent);
                                                 });
-
-                                                function onInputFocus(ev) {
-                                                    classie.add(ev.target.parentNode, 'input--filled');
-                                                }
-
-                                                function onInputBlur(ev) {
-                                                    if (ev.target.value.trim() === '') {
-                                                        classie.remove(ev.target.parentNode, 'input--filled');
-                                                    }
-                                                }
-                                            })();
-
-
-                                            (function () {
-                                                [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
-                                                    var menuItems = menu.querySelectorAll('.menu__link'),
-                                                            setCurrent = function (ev) {
-                                                                ev.preventDefault();
-                                                                var item = ev.target.parentNode; // li
-                                                                // return if already current
-                                                                if (classie.has(item, 'menu__item--current')) {
-                                                                    return false;
-                                                                }
-                                                                // remove current
-                                                                classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
-                                                                // set current
-                                                                classie.add(item, 'menu__item--current');
-                                                            };
-                                                    [].slice.call(menuItems).forEach(function (el) {
-                                                        el.addEventListener('click', setCurrent);
-                                                    });
+                                            });
+                                            [].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
+                                                link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+                                                new Clipboard(link);
+                                                link.addEventListener('click', function () {
+                                                    classie.add(link, 'link-copy--animate');
+                                                    setTimeout(function () {
+                                                        classie.remove(link, 'link-copy--animate');
+                                                    }, 300);
                                                 });
-                                                [].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
-                                                    link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
-                                                    new Clipboard(link);
-                                                    link.addEventListener('click', function () {
-                                                        classie.add(link, 'link-copy--animate');
-                                                        setTimeout(function () {
-                                                            classie.remove(link, 'link-copy--animate');
-                                                        }, 300);
-                                                    });
-                                                });
-                                            })(window);
+                                            });
+                                        })(window);
 
 
-                                            var polyfilter_scriptpath = '/js/';
+                                        var polyfilter_scriptpath = '/js/';
             </script>
 
             <script type="text/javascript">

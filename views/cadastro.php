@@ -145,6 +145,7 @@
 
             body{
                 font-family: 'Bree Serif', serif;
+                overflow-x: hidden;
             }
 
             .header{
@@ -154,14 +155,13 @@
             }
 
             .container-fluid{
-                padding: 0px;
+                padding: 0;
             }
 
             .replay-font{
                 font-family: "BPreplayBold";
                 font-size: 29px;
-                padding: 15px;
-                margin-left: 1100px;
+                
             }
 
             input[type=text]:focus{
@@ -187,9 +187,9 @@
 
 
 
-        <div class="container-fluid">
+        
 
-            <div class="container-fluid">
+            <div class="container-fluid" style="">
 
                 <a href="<?php echo BASE_URL; ?>">
                     <img src="<?php echo BASE_URL; ?>assets/images/icones/icons8-voltar-52.png" style="width: 45px; position: absolute; z-index: 2;
@@ -224,8 +224,8 @@
                         </figure>
                     </div>
                 </div>
-            </div>
-            <div class="container-fluid" style="">
+        
+            
                 <div class="row d-flex align-items-center">
                     <div class="col-md-12" style="">
                         <div class="formularioUser" style="color: white">
@@ -235,7 +235,7 @@
                                 <div class="wrap-login100">
 
                                     <div class="login100-pic js-tilt" data-tilt>
-                                        <img src="<?php echo BASE_URL; ?>assets/images/user.png" alt="IMG">
+                                        <img src="<?php echo BASE_URL; ?>assets/images/customer-512.png" alt="IMG">
                                            <h3 style="color: #232323">Bem-Vindo Usuario</h3>
                                     </div>
 
@@ -325,9 +325,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            
 
-            <div class="container-fluid" style="">
+            
                 <div class="formularioEmpre" style="color: white">
                     <div class="formularios">
                         

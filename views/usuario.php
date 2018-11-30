@@ -389,7 +389,12 @@
                             </a>
                         </li>
 
-                            
+                            <li class="nav-item">
+                            <a href="<?php echo BASE_URL; ?>" class="nav-link">
+                                <i class="pe-7s-back"></i>
+                                <p>voltar</p>
+                            </a>
+                        </li>
 
 
                         <li class="nav-item">
@@ -414,24 +419,33 @@
                                     <h2 class="text-center">Bem vindo usuario</h2>
 
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-6 text-center" >
+                                            <div style="width: 450px; height: 190px; background-color: #393D3F;border-radius: 15px; color: #fff">
                                             <h4>Precisa de ajuda?</h4>
                                             <p>Esta com dificuldades em navegar em nosso sistema? tem alguma duvida ou deseja fazer uma critica?</p>
-                                            <p>Mande uma menssagem e retornaremos assim que possivel!</p>
+                                            <hr>
+                                            <p>Mande uma mensagem e retornaremos assim que possivel!</p>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <h4>O que achou da FinderFox?</h4>
-                                            <p>Voce tambem pode contar oque achou de interessante e oque podemos mudar!</p>
-                                            <p>FinderFox estara analisando todos os comentarios e estara melhorando sempre ;) </p>
                                         </div>
 
+                                        
+                                        <div class="col-sm-6 text-center">
+                                            <div style="width: 450px; height: 190px; background-color: #393D3F;border-radius: 15px; color: #fff">
+                                            <h4>O que achou da FinderFox?</h4>
+                                            <p>Voce tambem pode contar oque achou de interessante e o que podemos mudar!</p>
+                                            <hr>
+                                            <p>FinderFox estara analisando todos os comentarios e estara melhorando sempre ;) </p>
+                                        </div>
                                     </div>
+
+                                    </div>
+                                    <br>
                                     <form action="">
                                             <div class="form-group">
                                               <label for="comment">Deixe seu comentario:</label>
                                               <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Enviar</button>
+                                            <button type="submit" class="btn btn-dark">Enviar</button>
                                           </form>
                                 </div>
                                         <div class="tab-pane container fade" id="pag2">

@@ -108,7 +108,7 @@ $j(document).ready(function () {
                 contentType: false,
                 processData: false,
                 success: function () {
-                    window.location.href = "empresario";
+                    window.location.href = "empresario?pag=av";
                 },
                 error: function () {
                     console.log("error no ajax");
@@ -166,7 +166,7 @@ $j(document).ready(function () {
             data: $j("#form_novo_end").serialize() + "&user=three",
             async: false,
             success: function () {
-                window.location.href = "login";
+                window.location.href = "empresario?pag=end";
             },
             error: function () {
                 console.log("error no ajax");
@@ -194,7 +194,7 @@ $j(document).ready(function () {
                 data: 'iddel=' + newid,
                 async: false,
                 success: function () {
-                    window.location.href = "login";
+                    window.location.href = "empresario?pag=end";
                 },
                 error: function () {
                     console.log("error no ajax");
@@ -222,7 +222,7 @@ $j(document).ready(function () {
                     data: dadoszinho + "&idpass=" + newid + "&lati=" + lat + "&longi=" + lon,
                     async: false,
                     success: function () {
-                        window.location.href = "login";
+                        window.location.href = "empresario?pag=end";
                     },
                     error: function () {
                         console.log("error no ajax");
@@ -299,7 +299,7 @@ $j(document).ready(function () {
                                     data: "idactive=" + newid + "&raio=" + raio + "&lati=" + lat + "&longi=" + lon,
                                     async: false,
                                     success: function () {
-                                        window.location.href = "login";
+                                        window.location.href = "empresario?pag=end";
                                     },
                                     error: function () {
                                         console.log("error no ajax");
@@ -319,7 +319,7 @@ $j(document).ready(function () {
                 data: "idactive=" + newid,
                 async: false,
                 success: function () {
-                    window.location.href = "login";
+                    window.location.href = "empresario?pag=end";
                 },
                 error: function () {
                     console.log("error no ajax");
@@ -393,7 +393,7 @@ $j(document).ready(function () {
             processData: false,
             async: false,
             success: function () {
-                window.location.href = "empresario";
+                window.location.href = "empresario?pag=av";
             },
             error: function () {
                 console.log("error no ajax");
@@ -408,7 +408,7 @@ $j(document).ready(function () {
             type: 'POST',
             data: {funcao: valuer},
             success: function () {
-                window.location.href = "empresario";
+                window.location.href = "empresario?pag=func";
             },
             error: function () {
                 console.log("error no ajax");
@@ -422,7 +422,7 @@ $j(document).ready(function () {
             type: 'POST',
             data: {funcao: valuer2},
             success: function () {
-                window.location.href = "empresario";
+                window.location.href = "empresario?pag=func";
             },
             error: function () {
                 console.log("error no ajax");
@@ -539,7 +539,23 @@ $j(document).ready(function () {
         }
 
     });
-    
+    if(pagi == 1){
+        $j("#menu1").removeClass("fade");
+        $j("#menu1").addClass("active");
+        $j("#q").addClass("active");
+    }else if(pagi == 2){
+        $j("#menu2").removeClass("fade");
+        $j("#menu2").addClass("active");
+        $j("#w").addClass("active");
+    }else if(pagi == 3){
+        $j("#menu3").removeClass("fade");
+        $j("#menu3").addClass("active");
+        $j("#e").addClass("active");
+    }else if(pagi == 4){
+        $j("#menu4").removeClass("fade");
+        $j("#menu4").addClass("active");
+        $j("#r").addClass("active");
+    }
 
     // %%%%%%%%%%%%%%  Aqui é a parte de salvar as config do av  %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -547,5 +563,5 @@ $j(document).ready(function () {
     telefone_stats = false;
     cpf_cnpj_stats = false;
     senha_stats = false;
-
+    
 });
