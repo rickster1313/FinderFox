@@ -506,6 +506,12 @@
                             </li>
                         <?php } ?>
 
+                            <li class="nav-item">
+                            <a href="<?php echo BASE_URL; ?>" class="nav-link">
+                                <i class="pe-7s-back"></i>
+                                <p>voltar</p>
+                            </a>
+                        </li>
 
                         <li class="nav-item">
                             <a href="<?php echo BASE_URL; ?>/login/deslogar" class="nav-link">

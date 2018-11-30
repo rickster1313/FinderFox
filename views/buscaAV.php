@@ -195,7 +195,7 @@
             </header>
             <div class="ladoBaixo" >
                 <center>
-                    <input type="text" id="serchAV" placeholder="Pesquisar AVs...">
+                    <input type="text" id="serchAV" placeholder="Pesquisar AVs..." class="form-control" style="border-radius: 15px;">
                 </center>
                 <div id="all_avs">
                     <ul  class="list-group">
