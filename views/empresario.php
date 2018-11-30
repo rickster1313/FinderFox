@@ -901,7 +901,7 @@
                                 <div class="tab-pane container fade" id="menu4">
                                     <div class="section-title">
                                         <h3>Funções mais utilizadas</h3>
-                                        <a href="<?php echo BASE_URL; ?>views/template.php">lalalalal</a>
+                                        
                                     </div>
 
                                     <div class="img-gallery owl-carousel owl-theme funcoes" style="position: relative;">
