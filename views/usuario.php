@@ -1,42 +1,200 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
     <head>
-        <!-- Required meta tags-->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="au theme template">
-        <meta name="author" content="Hau Nguyen">
-        <meta name="keywords" content="au theme template">
-
-        <!-- Title Page-->
-        <title>Dashboard</title>
-
-        <!-- Fontfaces CSS-->
-        <link href="<?php echo BASE_URL; ?>assets/css/font-face.css" rel="stylesheet" media="all">
-        <link href="<?php echo BASE_URL; ?>assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-        <link href="<?php echo BASE_URL; ?>assets/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-        <link href="<?php echo BASE_URL; ?>assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta name="viewport" content="width=device-width" />
+        <title>usuario</title>
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/w3.css">
-        
-        <!-- Bootstrap CSS-->
-        <link href="<?php echo BASE_URL; ?>assets/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set2.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/set1.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/icons.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/component1.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style2.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/owl.carousel.min.css">
+        <link type="text/css" href="<?php echo BASE_URL; ?>assets/css/animate.min.css" rel="stylesheet"/>
+        <link type="text/css" href="<?php echo BASE_URL; ?>assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+        <link href="<?php echo BASE_URL; ?>assets/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 
-        <!-- Vendor CSS-->
-        <link href="<?php echo BASE_URL; ?>assets/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-        <link href="<?php echo BASE_URL; ?>assets/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-        <link href="<?php echo BASE_URL; ?>assets/vendor/wow/animate.css" rel="stylesheet" media="all">
-        <link href="<?php echo BASE_URL; ?>assets/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-        <link href="<?php echo BASE_URL; ?>assets/vendor/slick/slick.css" rel="stylesheet" media="all">
-        <link href="<?php echo BASE_URL; ?>assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
-        <link href="<?php echo BASE_URL; ?>assets/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
 
-        <!-- Main CSS-->
-        <link href="<?php echo BASE_URL; ?>assets/css/theme.css" rel="stylesheet" media="all">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <style>
+        <style type="text/css"> 
+
+
+            .legenda .quadradinho{
+                width: 13px;
+                height: 13px;
+                display: flex;
+                align-items: center;    
+                padding-left: 13px;
+                margin-bottom:5px;
+            }
+            .legenda{
+                padding: 3px;
+                width: 40%;
+                float: right;
+                background-color: #EAE8E3;
+            }
+            .raio{
+                margin: 0px;
+                background-color: transparent;  
+                outline: none;
+                border: none;
+            }
+            .end-tbl{
+                height: 600px;
+                background-color: #EAE8E3;
+                margin-bottom: 10px;
+                overflow: auto;
+                border-radius: 10px;
+                box-shadow: 6px 6px 10px #777570;
+            }
+            .btn-tbl{
+                width: 120px;
+                margin: 2px;
+
+
+            }
+            .tam{
+                font-size: 15px;
+            }
+            body{
+                background-color: #fff;
+                font-family: 'Bree Serif', serif;
+                width: 100%;
+            }
+
+            html{
+                width: 100%;
+            }
+
+            input[type='file'] {
+                display: none
+            }
+            .sla:hover {
+                background-color: #dfcdef;
+                text-decoration: none;
+                color: #232323;
+            }
+
+            @font-face {
+
+                font-family: "BPreplayBold";
+                src: url("assets/fonts/BPreplayBold.otf") format("opentype");
+
+            }
+
+
+            .replay-font{
+                font-family: "BPreplayBold";
+
+            }
+
+            @font-face {
+
+                font-family: "Champagne & Limousines Bold";
+                src: url("assets/fonts/Champagne & Limousines Bold.ttf") format("truetype");
+
+            }
+
+            .film-font{
+                font-family: "Champagne & Limousines Bold";
+                font-size: 25px;  
+            }  
+
+            @font-face {
+
+                font-family: "Typo Hoop";
+                src: url("assets/fonts/Typo Hoop_Light Demo.otf") format("opentype");
+
+            }
+
+            .topfont{
+                font-family: "Typo Hoop";
+                font-size: 16px;  
+            }
+
+
+
+            .esquerda{
+                background: linear-gradient(45deg, #68319B, #361850);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 800px;
+            }
+
+            .direita{
+                background: #fff; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 800px;
+            }
+
+            @media only screen and (min-width: 780px){
+
+            }
+            @media only screen and (max-width: 780px){
+
+            }
+            .main{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+
+            input[type=text]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            input[type=email]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            input[type=password]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            textarea[type=text]:focus{
+                box-shadow: none;
+                border-color: #fff;
+            }
+            input:select{
+                box-shadow: none;
+                border-color: #fff;
+            }
+
+            .nav-item{
+                width: 245px;
+            }
+
+            .nav-item:hover{
+                width: 245px;
+            }
+
+            .nav-tabs:hover{
+                width: 245px;
+            }
+
+            .nav-tabs{
+                width: 245px;
+            }
+
+            
+            
             .container2{max-width:1170px; margin:auto; }
             img{ max-width:100%;}
             .inbox_people {
@@ -174,111 +332,89 @@
             .pessoa:hover{
                 cursor:pointer;
             }
+            .imsA:hover { background-color: #C0C0C0; }
+
+            .modalcor{
+                background-color: #393D3F;
+            }
+
+            .nav-link :hover{
+                    color: #fff;
+
+            }
+
+            .nav-item :hover{
+                color: #fff;
+            }
+
         </style>
-
-
+        
     </head>
+    <body>
 
-    <body class="animsition">
-        <div class="page-wrapper">
-            <!-- HEADER MOBILE-->
-            <header class="header-mobile d-block d-lg-none">
-                <div class="header-mobile__bar">
-                    <div class="container-fluid">
-                        <div class="header-mobile-inner">
-                            <a class="logo" href="index.html">
-                                <img src="<?php echo BASE_URL; ?>assets/images/logo.png" alt="CoolAdmin" />
+        <div class="wrapper">
+            <div class="sidebar" data-image="<?php echo BASE_URL; ?>assets/imag/sidebar-5.jpg" data-color="purple">
+
+
+                <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <a href="#" class="simple-text" >
+                            <h3> Usuario </h3>
+                            <img src="<?php echo BASE_URL . $user['img']; ?>" id="imagemperf" class="rounded-circle"  alt="Cinque Terre" width="200" height="200">
+
+                        </a>
+
+                        <br>
+
+
+                        <a href="">  
+                        </a>
+
+
+
+                    </div>
+                    
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a id="q" href="#home" class="nav-link active" data-toggle="tab"> 
+                                <i class="pe-7s-home"></i>
+                                <p>Home</p>
                             </a>
-                            <button class="hamburger hamburger--slider" type="button">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a id="r" href="#pag2" data-toggle="tab" class="nav-link" >
+                                <i class="pe-7s-headphones"></i>
+                                <p>Chat</p>
+                            </a>
+                        </li>
+
+                            
+
+
+                        <li class="nav-item">
+                            <a href="<?php echo BASE_URL; ?>/login/deslogar" class="nav-link">
+                                <i class="pe-7s-back-2"></i>
+                                <p>SAIR</p>
+                            </a>
+                        </li>
+
+                    </ul>
                 </div>
-                <nav class="navbar-mobile nav nav-tabs">
-                    <div class="container-fluid">
-                        <ul class="navbar-mobile__list list-unstyled">
-                            <li class="active">
-                                <a data-toggle="tab" href="#home">
-                                    <i class="fas fa-tachometer-alt"></i>Dashboardgg</a>
+            </div>
 
-                            </li>
-                            <li>
-                                <a data-toggle="tab" href="#pag2">
-                                    <i class="fas fa-chart-bar"></i>Chat</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo BASE_URL; ?>/login/deslogar"> Sair</a>
-                            </li>
+            <div class="main-panel">
+                <div class="main">
 
-
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-            <!-- END HEADER MOBILE-->
-
-            <!-- MENU SIDEBAR-->
-            <aside class="menu-sidebar d-none d-lg-block">
-                <div class="logo">
-                    <a href="#">
-                        <img src="<?php echo BASE_URL; ?>assets/images/logo.png" alt="Cool Admin" />
-                    </a>
-                </div>
-                <div class="menu-sidebar__content js-scrollbar1">
-                    <nav class="navbar-sidebar nav nav-tabs">
-                        <ul class="list-unstyled navbar__list">
-                            <li class="active" >
-                                <a data-toggle="tab" href="#home">
-                                    <i class="fas fa-tachometer-alt"></i>Dashboardgg</a>
-
-                            </li>
-                            <li>
-                                <a data-toggle="tab" href="#pag2">
-                                    <i class="fas fa-chart-bar"></i>Chat</a>
-                            </li>
-
-
-
-                        </ul>
-                    </nav>
-                </div>
-            </aside>
-            <!-- END MENU SIDEBAR-->
-
-            <!-- PAGE CONTAINER-->
-            <div class="page-container">
-                <!-- HEADER DESKTOP-->
-                <header class="header-desktop d-none d-lg-block">
-
-                    <div class="section__content section__content--p30">
+                    <div class="content">
                         <div class="container-fluid">
-                            <div class="header-wrap">
-                                <div class=" au-input--xl" /></div>
-                            <div class="header-button">
-                                <a href="<?php echo BASE_URL; ?>/login/deslogar"><button type="button" class="btn btn-outline-danger" style="width: 100px;border: red 1px solid ">Sair</button></a>
-                            </div>
-                        </div>
-                    </div>
+                            <div class="tab-content"> 
 
-                </header>
-                <!-- HEADER DESKTOP-->
-
-
-
-                <!-- MAIN CONTENT-->
-                <div class="main-content"> 
-                    <div class="section__content section__content--p30">
-
-                        <div class="tab-content">
-                            <div id="home" class="tab-pane fade in active">
-                                Teste
-                            </div>
-
-                            <div id="pag2" class="tab-pane fade">
-                                <div class="container2">
+                                <div class="tab-pane container fade in active" id="home">
+                                    <h2 class="text-center">Bem vindo usuario</h2>
+                                </div>
+                                        <div class="tab-pane container fade" id="pag2">
+                                    <div class="container2">
                                         <div class="messaging">
                                             <div class="inbox_msg">
                                                 <div class="inbox_people">
@@ -322,43 +458,137 @@
 
 
                                         </div></div>
+                                </div>
+
+                                </div>
+                            
+                                
                             </div>
                         </div>
 
+
+
+
                     </div>
                 </div>
-                <!-- END MAIN CONTENT-->
-                <!-- END PAGE CONTAINER-->
+
             </div>
 
-        </div>
 
-        <!-- Jquery JS-->
-        <script src="<?php echo BASE_URL; ?>assets/vendor/jquery-3.2.1.min.js"></script>
-        <script src="<?php echo BASE_URL; ?>assets/js/usuario.js"></script>
-        <!-- Bootstrap JS-->
-        <script src="<?php echo BASE_URL; ?>assets/vendor/bootstrap-4.1/popper.min.js"></script>
-        <script src="<?php echo BASE_URL; ?>assets/vendor/bootstrap-4.1/bootstrap.min.js"></script>
-        <!-- Vendor JS       -->
-        <script src="<?php echo BASE_URL; ?>assets/vendor/slick/slick.min.js">
-        </script>
-        <script src="<?php echo BASE_URL; ?>assets/vendor/wow/wow.min.js"></script>
-        <script src="<?php echo BASE_URL; ?>assets/vendor/animsition/animsition.min.js"></script>
-        <script src="<?php echo BASE_URL; ?>assets/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-        </script>
-        <script src="<?php echo BASE_URL; ?>assets/vendor/counter-up/jquery.waypoints.min.js"></script>
-        <script src="<?php echo BASE_URL; ?>assets/vendor/counter-up/jquery.counterup.min.js">
-        </script>
-        <script src="<?php echo BASE_URL; ?>assets/vendor/circle-progress/circle-progress.min.js"></script>
-        <script src="<?php echo BASE_URL; ?>assets/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-        <script src="<?php echo BASE_URL; ?>assets/vendor/chartjs/Chart.bundle.min.js"></script>
-        <script src="<?php echo BASE_URL; ?>assets/vendor/select2/select2.min.js">
-        </script>
+            
 
-        <!-- Main JS-->
-        <script src="<?php echo BASE_URL; ?>assets/js/templa_adm.js"></script>
+
+
+
+
+            <!--   Core JS Files   -->
+
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.3.1.min.js"></script>
+            <script src="<?php echo BASE_URL; ?>assets/js/usuario.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.mask.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>        
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/modernizr.custom.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/empresario.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/classie.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/clipboard.min.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/owl.carousel.min.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
+            <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/cssParser.js"></script>
+            <script src="<?php echo BASE_URL; ?>assets/js/modalEffects.js"></script>
+
+            <script>
+                                            (function () {
+                                                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                                                if (!String.prototype.trim) {
+                                                    (function () {
+                                                        // Make sure we trim BOM and NBSP
+                                                        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                                                        String.prototype.trim = function () {
+                                                            return this.replace(rtrim, '');
+                                                        };
+                                                    })();
+                                                }
+
+                                                [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+                                                    // in case the input is already filled..
+                                                    if (inputEl.value.trim() !== '') {
+                                                        classie.add(inputEl.parentNode, 'input--filled');
+                                                    }
+
+                                                    // events:
+                                                    inputEl.addEventListener('focus', onInputFocus);
+                                                    inputEl.addEventListener('blur', onInputBlur);
+                                                });
+
+                                                function onInputFocus(ev) {
+                                                    classie.add(ev.target.parentNode, 'input--filled');
+                                                }
+
+                                                function onInputBlur(ev) {
+                                                    if (ev.target.value.trim() === '') {
+                                                        classie.remove(ev.target.parentNode, 'input--filled');
+                                                    }
+                                                }
+                                            })();
+
+
+                                            (function () {
+                                                [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
+                                                    var menuItems = menu.querySelectorAll('.menu__link'),
+                                                            setCurrent = function (ev) {
+                                                                ev.preventDefault();
+                                                                var item = ev.target.parentNode; // li
+                                                                // return if already current
+                                                                if (classie.has(item, 'menu__item--current')) {
+                                                                    return false;
+                                                                }
+                                                                // remove current
+                                                                classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                                                                // set current
+                                                                classie.add(item, 'menu__item--current');
+                                                            };
+                                                    [].slice.call(menuItems).forEach(function (el) {
+                                                        el.addEventListener('click', setCurrent);
+                                                    });
+                                                });
+                                                [].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
+                                                    link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+                                                    new Clipboard(link);
+                                                    link.addEventListener('click', function () {
+                                                        classie.add(link, 'link-copy--animate');
+                                                        setTimeout(function () {
+                                                            classie.remove(link, 'link-copy--animate');
+                                                        }, 300);
+                                                    });
+                                                });
+                                            })(window);
+
+
+                                            var polyfilter_scriptpath = '/js/';
+            </script>
+
+            <script type="text/javascript">
+                $j(document).ready(function () {
+
+                    $j(".funcoes").owlCarousel();
+
+                });
+            </script>
+
+            <script>
+                $j(document).ready(function () {
+                    $j("#imagemperf").click(function () {
+                        $j("#modalPerfil").modal();
+                    });
+                });
+            </script>
+
+
+
+
 
     </body>
-
 </html>
-<!-- end document-->
+
+

@@ -481,7 +481,7 @@
 
                         <li class="nav-item">
                             <a href="<?php echo BASE_URL; ?>/login/deslogar" class="nav-link">
-                                <i class="pe-7s-home"></i>
+                                <i class="pe-7s-back-2"></i>
                                 <p>SAIR</p>
                             </a>
                         </li>

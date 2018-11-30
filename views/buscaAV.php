@@ -119,7 +119,12 @@
 
             /* Style the active/current link */
             .pagination a.active {
-                background-color: dodgerblue;
+                background-color: #361850;
+                color: white;
+            }
+
+            .pagination a:hover.active {
+                background-color: #361850;
                 color: white;
             }
 
@@ -146,6 +151,8 @@
             .pagination:hover{
                 cursor:default;
             }
+
+           
         </style>
 
     </head> 
@@ -156,12 +163,12 @@
         <div class="container-fluid" style="padding: 0px">
             <header class="header" style="background: linear-gradient(45deg,  #361850, #68319B);">
 
-                <p class="" style="color: #ffffff; text-shadow: 2px 8px 11px #232323;">FinderFox</p>
+                <p class="" style="color: #ffffff; text-shadow: 2px 8px 11px #232323; margin-left: 5%;">FinderFox</p>
                 <div class="nav navbar-expand" >
                     <div class="botão" style="margin-top: 20px;margin-right: 20px;">
                         <?php if (isset($_SESSION['id'])) { ?>
                             <a href="<?php echo BASE_URL ?>login/deslogar" style= "float: right;margin: 0px;text-align: center;width: 50px;margin-left: 30px;text-decoration: none;color: white">
-                                <img src="<?php echo BASE_URL; ?>assets/images/entrar.png" style="width: 50px;margin: 0px">
+                                <img src="<?php echo BASE_URL; ?>assets/images/entrar.png" style="width: 45px;margin-left: 15px;">
                                 Deslogar
                             </a>
                         <?php } else { ?>
