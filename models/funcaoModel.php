@@ -57,7 +57,7 @@ class funcaoModel extends Model {
         $sql = "UPDATE tbl_chat SET lida = 1 WHERE lida = 0 AND destinatario_id = ? AND remetente_id = ?";
         $sql = $this->pdo->prepare($sql);
         $sql->bindValue(1, $id_dest);
-        $sql->bindValue(2, $id_reme);
+        $sql->bindValue(2, $id_reme); 
         $sql->execute();
     }
 
@@ -70,7 +70,7 @@ class funcaoModel extends Model {
     }
 
     public function notificacaoNaoLidas($id){
-        $sql = "SELECT * FROM tbl_chat WHERE user_id = ? AND lida = 0"; 
+        $sql = "SELECT * FROM tbl_chat WHERE remetente_id = ? AND lida = 0"; 
         $sql = $this->pdo->prepare($sql);
         $sql->bindValue(1, $id);
         $sql->execute();
