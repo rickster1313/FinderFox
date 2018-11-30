@@ -377,6 +377,34 @@
         $usuario = new usuariosModel();
         $t = $usuario->getDados($_SESSION['id']);
         $user = $t->fetch();
+
+        if (isset($_GET["pag"])) {
+            if ($_GET["pag"] == "end") {
+                ?>
+            <script>
+                pagi = 2;
+            </script>
+            <?php
+            }else if($_GET["pag"] == "av"){
+                ?>
+            <script>
+                pagi = 3;
+            </script>
+            <?php
+            }else if($_GET["pag"] == "func"){
+                ?>
+            <script>
+                pagi = 4;
+            </script>
+            <?php
+            }
+        } else {
+            ?>
+            <script>
+                pagi = 1;
+            </script>
+            <?php
+        }
         ?>
     </head>
     <body>
@@ -413,7 +441,7 @@
                     ?>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a id="q" href="#menu1" class="nav-link active" data-toggle="tab"> 
+                            <a id="q" href="#menu1" class="nav-link" data-toggle="tab"> 
                                 <i class="pe-7s-graph3"></i>
                                 <p>Estátisticas</p>
                             </a>
@@ -496,7 +524,7 @@
                     <div class="content">
                         <div class="container-fluid">
                             <div class="tab-content"> 
-                                <div class="tab-pane active" id="menu1">
+                                <div class="tab-pane fade" id="menu1">
                                     <center>
                                         <h1>Olá <?php
                                             $newNome = explode(" ", $nome);
