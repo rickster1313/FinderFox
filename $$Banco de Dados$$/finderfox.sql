@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 30-Nov-2018 às 05:09
+-- Generation Time: 01-Dez-2018 às 17:32
 -- Versão do servidor: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -84,7 +84,9 @@ CREATE TABLE `tbl_avs` (
 --
 
 INSERT INTO `tbl_avs` (`id_av`, `user_id`, `url`, `nome_av`, `slogan_av`, `logo_av`, `categoria`, `func`, `palavras_chave`, `img_home_active`, `img_home`, `part1_active`, `part1_title`, `part1_nome1`, `part1_text1`, `part1_nome2`, `part1_text2`, `part1_nome3`, `part1_text3`, `part2_active`, `part2_nome1`, `part2_text1`, `part2_nome2`, `part2_text2`, `part2_nome3`, `part2_text3`, `part2_img`, `galery_active`, `galery_title`, `fotos`, `tipos`, `tipos_val`, `created`) VALUES
-(2, 1, 'ambiente-do-empre', 'ambiente do empre', 'Esse Ã© o slogan do AV do empre', 'logo-ambiente-do-empre.jpeg', '', '3', '', 'yes', 'photoHome-1-30-11-2018-04-45-19.jpeg', 'yes', 'Fatos dos AVs', 'Simples', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Personalizavel', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Seguro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'no', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem ', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'yes', 'Galeria do empre', 'photoGalery-1-30-11-2018-04-46-14-0.jpeg$!$photoGalery-1-30-11-2018-04-46-14-1.jpeg$!$photoGalery-1-30-11-2018-04-46-14-2.jpeg', 'youtube,face', 'https://www.youtube.com/$!$https://www.facebook.com/', '2018-11-30 01:45:08');
+(2, 1, 'ambiente-do-empre', 'ambiente do empre', 'Esse Ã© o slogan do AV do empre', 'logo-ambiente-do-empre.jpeg', '', '3', '', 'yes', 'photoHome-1-30-11-2018-04-45-19.jpeg', 'yes', 'Fatos dos AVs', 'Simples', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Personalizavel', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Seguro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'no', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem ', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'yes', 'Galeria do empre', 'photoGalery-1-30-11-2018-04-46-14-0.jpeg$!$photoGalery-1-30-11-2018-04-46-14-1.jpeg$!$photoGalery-1-30-11-2018-04-46-14-2.jpeg', 'youtube,face', 'https://www.youtube.com/$!$https://www.facebook.com/', '2018-11-30 01:45:08'),
+(3, 5, 'poha', 'poha', 'ahhaahahahahahahah que nojo', 'logo-poha.jpeg', '', '', '', 'no', '', 'yes', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem  ', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'yes', 'titulo', 'photoGalery-5-01-12-2018-16-46-23-0.jpeg$!$photoGalery-5-01-12-2018-16-46-23-1.jpeg$!$photoGalery-5-01-12-2018-16-46-23-2.jpeg', 'youtube', 'https://www.youtube.com/', '2018-12-01 13:45:41'),
+(4, 6, 'legal', 'legal', 'Esse Ã© o slogan do AV do empre', 'logo-legal.jpeg', '', '', '', 'yes', 'photoHome-6-01-12-2018-17-29-22.jpeg', 'yes', 'Features you love', 'Simple', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Customize', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'Secure', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque', 'yes', 'Crie sua conta', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem ', 'Compartilhe com seus amigos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', 'Viva la vida', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem', NULL, 'no', '', '', '', '', '2018-12-01 14:29:10');
 
 -- --------------------------------------------------------
 
@@ -128,7 +130,9 @@ CREATE TABLE `tbl_endereco` (
 
 INSERT INTO `tbl_endereco` (`id_end`, `user_id`, `cep`, `rua`, `estado`, `cidade`, `numero`, `nome`, `active`, `lat`, `lon`, `raio`) VALUES
 (1, 1, '13238-110', 'Rua das AmÃ©ricas', 'SP', 'Campo Limpo Paulista', '304', 'principal', 'sim', '-23.2291995', '-46.77156309999999', '75'),
-(2, 1, '13238-094', 'Rua Teodoro Feliciano de Moraes', 'SP', 'Campo Limpo Paulista', '131', 'VOCE FOI2', 'sim', '-23.2274655', '-46.77942609999999', 'global');
+(2, 1, '13238-094', 'Rua Teodoro Feliciano de Moraes', 'SP', 'Campo Limpo Paulista', '131', 'VOCE FOI2', 'sim', '-23.2274655', '-46.77942609999999', 'global'),
+(3, 5, '69307-242', 'Rua Sucuba', 'RR', 'Boa Vista', '123', 'principal', 'sim', '2.8518565', '-60.66542199999999', '4000'),
+(4, 6, '71070-035', 'QE 42 Conjunto C', 'DF', 'BrasÃ­lia', '123', 'principal', 'sim', '-15.8472191', '-47.967475', '300');
 
 -- --------------------------------------------------------
 
@@ -182,7 +186,9 @@ CREATE TABLE `tbl_usuarios` (
 
 INSERT INTO `tbl_usuarios` (`id`, `nome`, `nvl_acesso`, `email`, `senha`, `CPF_CNPJ`, `telefone`, `img`, `status`, `created`, `modified`) VALUES
 (1, 'empresario', 'empresario', 'empre', '$2y$10$oUOJRMja5YULHokGFrXaMuWduRgvuoTjMCjfBqZEXhU8lQ1BuqMwC', '12.312.312/3123-12', '(12) 312312313', 'assets/images/user_icon-icons.com_57997.png', 0, '2018-11-30 01:31:22', NULL),
-(4, 'usuario', 'usuario', 'user', '$2y$10$QVYyMbH7iPoePlbhRi0IourWEC4XmGve/2n/dzv8WHDmRYfyETEt.', '213.423.423-42', '(12) 313423423', 'assets/images/user_icon-icons.com_57997.png', 0, '2018-11-30 01:54:06', NULL);
+(4, 'usuario', 'usuario', 'user', '$2y$10$QVYyMbH7iPoePlbhRi0IourWEC4XmGve/2n/dzv8WHDmRYfyETEt.', '213.423.423-42', '(12) 313423423', 'assets/images/user_icon-icons.com_57997.png', 0, '2018-11-30 01:54:06', NULL),
+(5, 'teste', 'empresario', 'test@gmail.com', '$2y$10$wCU9lLC8CIvNg9wqQSiyzuDY81aesLwpL30ZJGrB5GNSTkCsfTlKm', '123.123.231-21', '(31) 234123123', 'assets/images/user_icon-icons.com_57997.png', 0, '2018-12-01 13:45:10', NULL),
+(6, 'VOCE FOI', 'empresario', 'fudeu@gmail.com', '$2y$10$edcjbBGdhuH15KCikVgryODABZvKlU.u6hRJ0y4tB.uVHSEgMwu4a', '12.342.342/1421-33', '(13) 421342342', 'assets/images/user_icon-icons.com_57997.png', 0, '2018-12-01 14:28:27', NULL);
 
 --
 -- Indexes for dumped tables
@@ -232,25 +238,25 @@ ALTER TABLE `tbl_usuarios`
 -- AUTO_INCREMENT for table `notificacao`
 --
 ALTER TABLE `notificacao`
-  MODIFY `id_notificacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_notificacao` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_avs`
 --
 ALTER TABLE `tbl_avs`
-  MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_av` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_chat`
 --
 ALTER TABLE `tbl_chat`
-  MODIFY `id_msg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_msg` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_endereco`
 --
 ALTER TABLE `tbl_endereco`
-  MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_end` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_funcoes`
@@ -262,7 +268,7 @@ ALTER TABLE `tbl_funcoes`
 -- AUTO_INCREMENT for table `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
