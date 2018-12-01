@@ -121,6 +121,7 @@ $j(document).ready(function () {
                     url: "../getEndOn",
                     dataType: "json",
                     success: function (ends) {
+                       
                         $j.ajax({
                             url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + cep + "&key=AIzaSyBKs6xziUpkbpZUFEqUl4XMgNvLtFbL_gM",
                             dataType: "json",
@@ -155,8 +156,8 @@ $j(document).ready(function () {
                                 } else {
                                     $j.ajax({
                                         url: "../createError",
-                                        type:"post",
-                                        data:{"msg":"Não conseguimos localizar este CEP"}
+                                        type: "post",
+                                        data: {"msg": "Não conseguimos localizar este CEP"}
                                     });
                                     window.location.href = "../../";
                                 }
@@ -171,14 +172,10 @@ $j(document).ready(function () {
 
     }
 
-    $j.ajax({
-        url: "../getCep",
-        dataType: "json",
-        success: function (json) {
-            cep = json;
-            loadAV(cep);
-        }
-    });
+   if (cep !== "undefined") {
+        loadAV(cep);
+    }
+
 
 
 

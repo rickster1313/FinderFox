@@ -3,15 +3,9 @@
 class buscaAVController extends Controller {
 
     public function index($cep) {
-        $_SESSION['cep'] = $cep[0] ;
         $nomePag = "buscaAV";
-        $dados = array();
+        $dados = array("cepBusca" => $cep[0]);
         $this->loadView($nomePag, $dados);
-    }
-    public function getCep(){
-        if(isset($_SESSION['cep'])){
-            echo json_encode($_SESSION['cep']);
-        }
     }
     public function getAVs(){
         $avsModel = new avsModel();

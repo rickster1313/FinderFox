@@ -152,11 +152,18 @@
                 cursor:default;
             }
 
-           
+
         </style>
 
     </head> 
     <body>
+        <?php
+        if (isset($cepBusca)) { ?>
+            <script language="javascript">
+                cep ="<?php echo $cepBusca; ?>";
+            </script>
+        <?php }
+        ?>
 
 
 
